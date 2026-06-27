@@ -94,25 +94,25 @@ function pluginCard(array $meta): string
 
     if ($author !== '') {
         $html .= '<span class="pi-item"><span class="pi-label">Author</span>'
-               . '<span class="pi-value">' . esc($author) . '</span></span>';
+            . '<span class="pi-value">' . esc($author) . '</span></span>';
     }
 
     $html .= '<span class="pi-item"><span class="pi-label">Plugin Type</span>'
-           . '<span class="pi-badge ' . $partyBadge . '">' . $partyLabel . '</span></span>';
+        . '<span class="pi-badge ' . $partyBadge . '">' . $partyLabel . '</span></span>';
 
     if ($price !== '') {
         $html .= '<span class="pi-item"><span class="pi-label">Price</span>'
-               . '<span class="pi-badge ' . $badgeClass . '">' . esc($price) . '</span></span>';
+            . '<span class="pi-badge ' . $badgeClass . '">' . esc($price) . '</span></span>';
     }
 
     if ($version !== '') {
         $html .= '<span class="pi-item"><span class="pi-label">Version</span>'
-               . '<span class="pi-value">v' . esc($version) . '</span></span>';
+            . '<span class="pi-value">v' . esc($version) . '</span></span>';
     }
 
     if ($license !== '') {
         $html .= '<span class="pi-item"><span class="pi-label">License</span>'
-               . '<span class="pi-value">' . esc($license) . '</span></span>';
+            . '<span class="pi-value">' . esc($license) . '</span></span>';
     }
 
     $html .= '</div>';
@@ -134,9 +134,9 @@ function pluginCard(array $meta): string
             }
             $label = $labels[$k] ?? ucfirst((string) $k);
             $html .= '<span class="pi-chip">'
-                   . '<span class="pi-chip-label">' . esc($label) . '</span>'
-                   . '<span class="pi-chip-value">' . esc($v) . '</span>'
-                   . '</span>';
+                . '<span class="pi-chip-label">' . esc($label) . '</span>'
+                . '<span class="pi-chip-value">' . esc($v) . '</span>'
+                . '</span>';
         }
         $html .= '</div>';
     }
@@ -193,7 +193,7 @@ Docsmith::make()
     ->readmeIndex("$buildDir/README.md")
     ->output(__DIR__ . '/docs')
     ->title('NativePHP Plugins List')
-    ->description('A curated directory of plugins for NativePHP Mobile.')
+    ->description('Listed all are created and maintained by independent developers, not the NativePHP team. Please review each plugin source code, license, and maintenance status before using it in production.')
     ->customCss(__DIR__ . '/custom.css')
     ->build();
 

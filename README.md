@@ -1,6 +1,6 @@
 # NativePHP Plugins List
 
-A curated directory of plugins for [NativePHP Mobile](https://nativephp.com).
+Listed all are created and maintained by independent developers, not the NativePHP team. Please review each plugin source code, license, and maintenance status before using it in production.
 
 ---
 
@@ -52,6 +52,23 @@ A curated directory of plugins for [NativePHP Mobile](https://nativephp.com).
 - [Mobile Camera](plugins/free/nativephp-mobile-camera.md) — Bifrost Technology
 - [Image Resizer](plugins/free/coyotito-image-resizer.md) — asciito
 - [Mobile Photos](plugins/free/voicecode-mobile-photos.md) — Voicecode
+- [Image Lightbox](plugins/free/pteal79-plugin-image-lightbox.md) — Peter Teal
+- [Mobile Local Notifications](plugins/free/ikromjon1998-nativephp-mobile-local-notifications.md) — Ikromjon Ochilov
+- [Media Library](plugins/free/xlipedc-media-library.md) — Felipe Almeida
+- [TFLite Plugin](plugins/free/1338-nativephp-tflite.md) — 1338
+- [Innerr Media Permissions](plugins/free/voicecode-innerr-media-permissions.md) — Michael Blijleven
+- [Mobile Document Scanner](plugins/free/ikromjon1998-nativephp-mobile-document-scanner.md) — Ikromjon Ochilov
+- [Offline Sync](plugins/free/kromaric-offlinesync.md) — Kromaric
+- [Mobile Haptics](plugins/free/graymattertechnology-nativephp-mobile-haptics.md) — GrayMatter Technology
+- [Mobile Haptics (Laravel 13 Fork)](plugins/free/blessedzulu-nativephp-mobile-haptics.md) — Blessed Zulu
+- [Super Code Highlight](plugins/free/matildevoldsen-super-codehighlight.md) — Matildevoldsen
+- [Super Markdown](plugins/free/matildevoldsen-super-markdown.md) — Matildevoldsen
+- [Health Connect](plugins/free/captenmasin-nativephp-health-connect.md) — captenmasin
+- [Mobile Call Detection](plugins/free/stitch-digital-mobile-call-detection.md) — Stitch Digital
+- [Mobile LA518 Recorder](plugins/free/wojt-janowski-mobile-la518-recorder.md) — Wojt Janowski
+- [SMS Reader](plugins/free/atendwa-nativephp-sms-reader.md) — Anthony Tendwa
+- [AdMob](plugins/free/blessedzulu-nativephp-admob.md) — Blessed Zulu
+- [Firebase Phone Number Verification](plugins/free/tarikmanoar-firebase-pnv.md) — Tarik Manoar
 
 ---
 
