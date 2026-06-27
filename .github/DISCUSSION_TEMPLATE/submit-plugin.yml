@@ -1,0 +1,26 @@
+title: "[Plugin Submission] "
+labels: ["plugin-submission"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Submit a Plugin
+        Thanks for contributing to the NativePHP Plugins List! Fill in the details below and we'll review your submission.
+
+  - type: input
+    id: author_name
+    attributes:
+      label: Author Name
+      description: Your name or GitHub username.
+      placeholder: e.g. CodingwithRK
+    validations:
+      required: true
+
+  - type: input
+    id: repo_url
+    attributes:
+      label: Plugin Repository URL
+      description: Public GitHub (or other) URL where the plugin source code lives.
+      placeholder: e.g. https://github.com/your-username/your-plugin
+    validations:
+      required: true
