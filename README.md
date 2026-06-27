@@ -50,6 +50,8 @@ A curated directory of plugins for [NativePHP Mobile](https://nativephp.com).
 - [Mobile Microphone](plugins/free/nativephp-mobile-microphone.md) — Bifrost Technology
 - [Mobile Device](plugins/free/nativephp-mobile-device.md) — Bifrost Technology
 - [Mobile Camera](plugins/free/nativephp-mobile-camera.md) — Bifrost Technology
+- [Image Resizer](plugins/free/coyotito-image-resizer.md) — asciito
+- [Mobile Photos](plugins/free/voicecode-mobile-photos.md) — Voicecode
 
 ---
 
