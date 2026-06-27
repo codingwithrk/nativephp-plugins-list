@@ -1,0 +1,14 @@
+{
+  "require": {
+    "php": ">=8.3"
+  },
+  "config": {
+    "sort-packages": true
+  },
+  "require-dev": {
+    "mrpunyapal/docsmith": "^0.1.2"
+  },
+  "scripts": {
+    "docs:build": "@php build-docs.php"
+  }
+}
