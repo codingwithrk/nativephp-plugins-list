@@ -21,6 +21,7 @@ Listed all are created and maintained by independent developers, not the NativeP
 - [Secure Storage](plugins/paid/nativephp-mobile-secure-storage.md) — Bifrost Technology
 - [Scanner](plugins/paid/nativephp-mobile-scanner.md) — Bifrost Technology
 - [Geolocation](plugins/paid/nativephp-mobile-geolocation.md) — Bifrost Technology
+- [In-App Purchases](plugins/paid/developernauts-nativephp-inapp-purchases.md) — Developernauts
 
 ---
 
