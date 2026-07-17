@@ -70,6 +70,7 @@ Listed all are created and maintained by independent developers, not the NativeP
 - [SMS Reader](plugins/free/atendwa-nativephp-sms-reader.md) — Anthony Tendwa
 - [AdMob](plugins/free/blessedzulu-nativephp-admob.md) — Blessed Zulu
 - [Firebase Phone Number Verification](plugins/free/tarikmanoar-firebase-pnv.md) — Tarik Manoar
+- [Push Notifications](plugins/free/fatlum-nativephp-push.md) — Fatlum Gjinofci
 
 ---
 
