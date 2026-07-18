@@ -71,6 +71,7 @@ Listed all are created and maintained by independent developers, not the NativeP
 - [AdMob](plugins/free/blessedzulu-nativephp-admob.md) — Blessed Zulu
 - [Firebase Phone Number Verification](plugins/free/tarikmanoar-firebase-pnv.md) — Tarik Manoar
 - [Push Notifications](plugins/free/fatlum-nativephp-push.md) — Fatlum Gjinofci
+- [Device Timezone Plugin](plugins/free/fabianpnke-mobile-device-timezone.md) — fabianpnke
 
 ---
 
