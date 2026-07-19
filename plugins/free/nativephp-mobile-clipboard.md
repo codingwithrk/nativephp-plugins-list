@@ -1,6 +1,6 @@
 ---
 name: "Mobile Clipboard"
-author: "Bifrost Technology"
+author: "Shane Rosenthal"
 price: "Free"
 version: "1.0.0"
 license: "MIT"

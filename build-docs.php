@@ -83,7 +83,8 @@ function pluginCard(array $meta): string
 
     $isPaid         = strtolower($price) !== 'free';
     $badgeClass     = $isPaid ? 'pi-badge-paid' : 'pi-badge-free';
-    $isFirstParty   = strtolower($author) === 'bifrost technology';
+    $isFirstParty   = strtolower($author) === 'bifrost technology'
+        || preg_match('#^https://github\.com/NativePHP/#i', $github);
     $partyBadge     = $isFirstParty ? 'pi-badge-first-party' : 'pi-badge-community';
     $partyLabel     = $isFirstParty ? '1st Party Plugin' : 'Community Plugin';
 

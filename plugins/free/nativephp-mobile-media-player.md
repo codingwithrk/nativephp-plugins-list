@@ -1,6 +1,6 @@
 ---
 name: "Mobile Media Player"
-author: "Bifrost Technology"
+author: "Shane Rosenthal"
 price: "Free"
 version: "1.0.1"
 license: "MIT"
