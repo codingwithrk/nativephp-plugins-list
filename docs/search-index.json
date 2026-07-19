@@ -287,6 +287,27 @@
         "headings": "Features Installation Compatibility Events"
     },
     {
+        "title": "Mobile Media Player",
+        "description": "Bifrost Technology",
+        "url": "/plugins/free/nativephp-mobile-media-player",
+        "content": "AuthorBifrost TechnologyPlugin Type1st Party PluginPriceFreeVersionv1.0.1LicenseMITNativePHP^3.0 || ^4.0iOS16.0+Android26+GitHub → Audio and video playback for NativePHP Mobile — shared background player, full-screen presentation, and an inline <video-player> element. Features Shared background audio/video playback with PHP-controlled transport (pause, resume, seek, volume) Full-screen native system player interface Inline <video-player> element for embedded video surfaces in native views PlaybackEnded and PlaybackError event callbacks Bridge faking and assertion helpers for testing Installation composer require nativephp/mobile-media-player php artisan native:plugin:register nativephp/mobile-media-player Compatibility Platform Minimum Version NativePHP ^3.0 || ^4.0 iOS 16.0+ Android API 26+ Events PlaybackEnded — fired when media playback finishes PlaybackError — fired on playback failure; includes error details",
+        "headings": "Features Installation Compatibility Events"
+    },
+    {
+        "title": "Mobile Vibe",
+        "description": "Bifrost Technology",
+        "url": "/plugins/free/nativephp-mobile-vibe",
+        "content": "AuthorBifrost TechnologyPlugin Type1st Party PluginPriceFreeVersionv1.0.1LicenseMITNativePHP^3.0 || ^4.0PHP^8.3iOS15.0+Android26+GitHub → Native WebSocket client for NativePHP Mobile — delivers live server events over the Pusher protocol, compatible with Laravel Reverb, Vask, or Pusher. Features Public, private, and presence channel subscriptions Whisper support for client-to-client ephemeral events Connection lifecycle management (reconnect, disconnect, error handling) Attribute-based listener registration via #[OnEcho] Automatic subscription cleanup on component unmount Channel reference counting for multi-component scenarios Installation composer require nativephp/mobile-vibe php artisan native:plugin:register nativephp/mobile-vibe Compatibility Platform Minimum Version NativePHP ^3.0 || ^4.0 PHP ^8.3 iOS 15.0+ Android API 26+ Works with Laravel Reverb, Vask, or Pusher as the WebSocket backend.",
+        "headings": "Features Installation Compatibility"
+    },
+    {
+        "title": "Mobile Clipboard",
+        "description": "Bifrost Technology",
+        "url": "/plugins/free/nativephp-mobile-clipboard",
+        "content": "AuthorBifrost TechnologyPlugin Type1st Party PluginPriceFreeVersionv1.0.0LicenseMITNativePHP^3.0 || ^4.0iOS18.2+Android26+GitHub → System clipboard access for NativePHP Mobile — copy and paste plain text with a two-method API. Features writeText(string $text): bool — copies text to the system clipboard readText(): ?string — reads text from the system clipboard Graceful degradation when the native bridge is unavailable Built-in testing helpers (withClipboard, assertCopied, assertNothingCopied) Installation composer require nativephp/mobile-clipboard php artisan native:plugin:register nativephp/mobile-clipboard Compatibility Platform Minimum Version NativePHP ^3.0 || ^4.0 iOS 18.2+ Android API 26+",
+        "headings": "Features Installation Compatibility"
+    },
+    {
         "title": "Image Resizer",
         "description": "asciito",
         "url": "/plugins/free/coyotito-image-resizer",

@@ -51,6 +51,9 @@ Listed all are created and maintained by independent developers, not the NativeP
 - [Mobile Microphone](plugins/free/nativephp-mobile-microphone.md) — Bifrost Technology
 - [Mobile Device](plugins/free/nativephp-mobile-device.md) — Bifrost Technology
 - [Mobile Camera](plugins/free/nativephp-mobile-camera.md) — Bifrost Technology
+- [Mobile Media Player](plugins/free/nativephp-mobile-media-player.md) — Bifrost Technology
+- [Mobile Vibe](plugins/free/nativephp-mobile-vibe.md) — Bifrost Technology
+- [Mobile Clipboard](plugins/free/nativephp-mobile-clipboard.md) — Bifrost Technology
 - [Image Resizer](plugins/free/coyotito-image-resizer.md) — asciito
 - [Mobile Photos](plugins/free/voicecode-mobile-photos.md) — Voicecode
 - [Image Lightbox](plugins/free/pteal79-plugin-image-lightbox.md) — Peter Teal
