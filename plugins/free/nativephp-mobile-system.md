@@ -2,7 +2,7 @@
 name: "NativePHP Mobile System"
 author: "Bifrost Technology"
 price: "Free"
-version: "1.0.2"
+version: "1.0.3"
 license: "MIT"
 github: "https://github.com/NativePHP/mobile-system"
 support: "https://nativephp.com/support"
@@ -14,17 +14,13 @@ install:
   - "composer require nativephp/mobile-system"
 ---
 
-# NativePHP Mobile System
+# System Plugin for NativePHP Mobile
 
-System-level operations for NativePHP Mobile apps — platform detection, device settings, and flashlight control.
+System-level operations for NativePHP Mobile apps.
 
-## Features
+## Overview
 
-- Platform detection (`isIos()`, `isAndroid()`, `isMobile()`)
-- Open app settings interface
-- Toggle device flashlight
-- Permission management workflows
-- PHP (Livewire/Blade) and JavaScript (Vue/React/Inertia) support
+The System API provides access to system-level functionality like platform detection and opening the app's settings page.
 
 ## Installation
 
@@ -32,10 +28,58 @@ System-level operations for NativePHP Mobile apps — platform detection, device
 composer require nativephp/mobile-system
 ```
 
-## Compatibility
+## Usage
 
-| Platform  | Minimum Version |
-| --------- | --------------- |
-| NativePHP | ^3.0            |
-| iOS       | 18.2+           |
-| Android   | API 26+         |
+### PHP (Livewire/Blade)
+
+```php
+use Native\Mobile\Facades\System;
+
+// Platform detection
+System::isIos();       // true on iOS
+System::isAndroid();   // true on Android
+System::isMobile();    // true on either platform
+
+// Open app settings (useful when user denied permissions)
+System::appSettings();
+
+// Toggle the flashlight
+System::flashlight();
+```
+
+### JavaScript (Vue/React/Inertia)
+
+```js
+import { System } from '#nativephp';
+
+// Open app settings
+await System.openAppSettings();
+```
+
+## Methods
+
+### `isIos(): bool`
+
+Returns `true` if the app is running on iOS.
+
+### `isAndroid(): bool`
+
+Returns `true` if the app is running on Android.
+
+### `isMobile(): bool`
+
+Returns `true` if the app is running on iOS or Android.
+
+### `appSettings(): void`
+
+Opens the app's settings screen in the device settings. This is useful when a user has denied a permission and you want to direct them to the settings to grant it.
+
+### `flashlight(): void`
+
+Toggles the device flashlight on/off.
+
+## Use Cases
+
+- Detect the current platform to conditionally render UI
+- Direct users to grant permissions after initial denial
+- Allow users to change notification preferences

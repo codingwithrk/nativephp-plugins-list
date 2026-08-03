@@ -2,7 +2,7 @@
 name: "NativePHP Mobile Device"
 author: "Bifrost Technology"
 price: "Free"
-version: "1.0.2"
+version: "1.0.3"
 license: "MIT"
 github: "https://github.com/NativePHP/mobile-device"
 support: "https://nativephp.com/support"
@@ -14,18 +14,13 @@ install:
   - "composer require nativephp/mobile-device"
 ---
 
-# NativePHP Mobile Device
+# Device Plugin for NativePHP Mobile
 
-Device hardware operations for NativePHP Mobile — vibration, flashlight, device info, and battery status.
+Device hardware operations including vibration, flashlight, device info, and battery status.
 
-## Features
+## Overview
 
-- Device vibration control
-- Flashlight toggle with state reporting
-- Unique device identification
-- Comprehensive device information retrieval
-- Battery level and charging status monitoring
-- Cross-platform support (iOS/Android)
+The Device API provides access to device hardware features and information.
 
 ## Installation
 
@@ -33,20 +28,116 @@ Device hardware operations for NativePHP Mobile — vibration, flashlight, devic
 composer require nativephp/mobile-device
 ```
 
-## Compatibility
+## Usage
 
-| Platform  | Minimum Version |
-| --------- | --------------- |
-| NativePHP | ^3.0            |
-| iOS       | 18.2+           |
-| Android   | API 26+         |
-
-## API
+### PHP (Livewire/Blade)
 
 ```php
+use Native\Mobile\Facades\Device;
+
+// Vibrate the device
 Device::vibrate();
-Device::toggleFlashlight();
-Device::getId();
-Device::getInfo();
-Device::getBatteryInfo();
+
+// Toggle flashlight
+$result = Device::toggleFlashlight();
+// Returns: ['success' => true, 'state' => true|false]
+
+// Get device ID
+$result = Device::getId();
+// Returns: ['id' => 'unique-device-id']
+
+// Get device info
+$result = Device::getInfo();
+// Returns: ['info' => '{"name":"iPhone","model":"iPhone","platform":"ios",...}']
+
+// Get battery info
+$result = Device::getBatteryInfo();
+// Returns: ['info' => '{"batteryLevel":0.85,"isCharging":false}']
 ```
+
+### JavaScript (Vue/React/Inertia)
+
+```js
+import { Device } from '#nativephp';
+
+// Vibrate the device
+await Device.vibrate();
+
+// Toggle flashlight
+const flashResult = await Device.toggleFlashlight();
+console.log('Flashlight state:', flashResult.state);
+
+// Get device ID
+const idResult = await Device.getId();
+console.log('Device ID:', idResult.id);
+
+// Get device info
+const infoResult = await Device.getInfo();
+const info = JSON.parse(infoResult.info);
+console.log('Platform:', info.platform);
+
+// Get battery info
+const batteryResult = await Device.getBatteryInfo();
+const battery = JSON.parse(batteryResult.info);
+console.log('Battery level:', battery.batteryLevel * 100 + '%');
+```
+
+## Methods
+
+### `vibrate(): array`
+
+Vibrate the device.
+
+**Returns:** `{ success: true }`
+
+### `toggleFlashlight(): array`
+
+Toggle the device flashlight on/off.
+
+**Returns:** `{ success: boolean, state: boolean }`
+
+### `getId(): array`
+
+Get the unique device identifier.
+
+**Returns:** `{ id: string }`
+
+- iOS: Uses `identifierForVendor` UUID
+- Android: Uses `ANDROID_ID`
+
+### `getInfo(): array`
+
+Get detailed device information.
+
+**Returns:** `{ info: string }` (JSON string)
+
+Device info includes:
+- `name` - Device name
+- `model` - Device model
+- `platform` - "ios" or "android"
+- `operatingSystem` - OS name
+- `osVersion` - OS version string
+- `manufacturer` - Device manufacturer
+- `language` - Device language as BCP 47 tag (e.g. "en-US")
+- `isVirtual` - Whether running in simulator/emulator
+- `memUsed` - Memory usage in bytes
+- `webViewVersion` - WebView version
+
+### `getBatteryInfo(): array`
+
+Get battery level and charging status.
+
+**Returns:** `{ info: string }` (JSON string)
+
+Battery info includes:
+- `batteryLevel` - Battery level from 0.0 to 1.0
+- `isCharging` - Whether device is charging
+
+## Permissions
+
+### Android
+- `android.permission.VIBRATE` - For vibration
+- `android.permission.FLASHLIGHT` - For flashlight control
+
+### iOS
+No special permissions required.

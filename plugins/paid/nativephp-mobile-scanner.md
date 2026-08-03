@@ -18,16 +18,16 @@ events:
 
 # NativePHP Mobile Scanner
 
-QR code and barcode scanner for NativePHP Mobile — supports multiple barcode formats with continuous scanning.
+QR code and barcode scanner for NativePHP Mobile — native camera-based scanning with multiple format support and continuous scanning mode.
 
 ## Features
 
-- Cross-platform barcode and QR code scanning via native camera
-- Multiple format support: `qr`, `ean13`, `ean8`, `code128`, `code39`, `upca`, `upce`, `all`
-- Continuous scanning mode
-- Customizable prompt text
-- Session identification for multiple scan contexts
-- PHP/Livewire and JavaScript/Vue/React implementations
+- Cross-platform scanning via native camera (AVFoundation / ML Kit)
+- Format support: `qr`, `ean13`, `ean8`, `code128`, `code39`, `upca`, `upce`, `all`
+- Continuous scanning mode (multiple scans per session)
+- Customizable prompt text shown in the scanner overlay
+- Session IDs for managing multiple concurrent scan contexts
+- PHP/Livewire and JavaScript/Vue/React support
 
 ## Installation
 
@@ -36,7 +36,48 @@ QR code and barcode scanner for NativePHP Mobile — supports multiple barcode f
 ```bash
 composer config repositories.nativephp-plugins composer https://plugins.nativephp.com
 composer config http-basic.plugins.nativephp.com your@email.com your-license-key
+php artisan vendor:publish --tag=nativephp-plugins-provider
 composer require nativephp/mobile-scanner
+php artisan native:plugin:register nativephp/mobile-scanner
+```
+
+## PHP Usage
+
+```php
+use NativePHP\MobileScanner\Facades\Scanner;
+
+// Scan a QR code
+Scanner::scan(
+    formats: ['qr'],
+    prompt: 'Scan a QR code to continue.',
+    session: 'checkout',
+    continuous: false,
+);
+
+// Multi-format continuous scan
+Scanner::scan(
+    formats: ['qr', 'ean13', 'code128'],
+    prompt: 'Point at a barcode.',
+    continuous: true,
+);
+
+// Stop continuous scanning
+Scanner::stop();
+```
+
+## Livewire Usage
+
+```php
+use Native\Mobile\Attributes\OnNative;
+use NativePHP\MobileScanner\Events\CodeScanned;
+
+#[OnNative(CodeScanned::class)]
+public function onCodeScanned(string $data, string $format, ?string $session): void
+{
+    if ($session === 'checkout') {
+        $this->processBarcode($data);
+    }
+}
 ```
 
 ## Compatibility
@@ -49,4 +90,12 @@ composer require nativephp/mobile-scanner
 
 ## Events
 
-- `CodeScanned` — fires when a barcode is successfully scanned; returns `data`, `format`, and optional `session` ID
+### `CodeScanned`
+
+Fires when a barcode is successfully decoded.
+
+| Field | Type | Description |
+|-------|------|-------------|
+| `data` | `string` | The decoded barcode value |
+| `format` | `string` | Format detected (e.g. `qr`, `ean13`) |
+| `session` | `string\|null` | Session ID if provided |

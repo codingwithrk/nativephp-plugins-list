@@ -2,7 +2,7 @@
 name: "Mobile Photos"
 author: "Voicecode"
 price: "Free"
-version: "latest"
+version: "1.0.0"
 license: "MIT"
 github: "https://github.com/voicecode-bv/mobile-photos"
 compatibility:
@@ -12,39 +12,35 @@ compatibility:
   android: "29+"
 ---
 
-# Mobile Photos
-
 Save remote images and videos directly to the device photo library (camera roll on iOS, MediaStore gallery on Android) from a NativePHP Mobile app — no share sheet, no extra taps.
-
-## Features
-
-- Save remote images and videos straight to the camera roll / gallery
-- No runtime storage permission needed on Android 10+
-- iOS add-only authorization — users grant minimal access
-- Supports both PHP and JavaScript / TypeScript bridge calls
 
 ## Installation
 
 ```bash
 composer require voicecode-bv/mobile-photos
+```
+
+After install, register the plugin so it gets compiled into the native projects:
+
+```bash
 php artisan native:plugin:register voicecode-bv/mobile-photos
 ```
 
 Then rebuild the iOS and Android projects through the usual NativePHP build flow.
 
-### iOS Notes
+### iOS notes
 
-The plugin declares `NSPhotoLibraryAddUsageDescription` in the manifest. Override the prompt copy in `nativephp/ios/NativePHP/Info.plist` — a key that already exists will not be overwritten by the plugin compiler.
+The plugin manifest declares `NSPhotoLibraryAddUsageDescription`. You can override the prompt copy by setting your own value in `nativephp/ios/NativePHP/Info.plist` — the plugin compiler will not overwrite a key that already exists.
 
-Uses iOS **add-only** authorization (`PHAccessLevel.addOnly`) so users don't need to grant full photo library access.
+The plugin uses iOS' **add-only** authorization (`PHAccessLevel.addOnly`), which means users don't have to give full photo library access just to save a single file.
 
-### Android Notes
+### Android notes
 
-Requires Android 10 (API 29) or higher. Saves go through `MediaStore`, so no runtime storage permission is required.
+Requires Android 10 (API 29) or higher. Saves go through `MediaStore` so no runtime storage permission is needed.
 
 ## Usage
 
-### PHP
+### From PHP
 
 ```php
 use Voicecode\Mobile\Photos\Photos;
@@ -53,14 +49,15 @@ app(Photos::class)->save('https://cdn.example.com/photo.jpg');
 app(Photos::class)->save('https://cdn.example.com/clip.mp4', 'video');
 ```
 
-### JavaScript / TypeScript
+### From JavaScript / TypeScript
 
 ```ts
 import { BridgeCall } from '@nativephp/mobile';
 
 const result = await BridgeCall('Photos.Save', {
     url: 'https://cdn.example.com/photo.jpg',
-    type: 'image', // optional — inferred from URL extension when omitted
+    // type is optional — inferred from the URL extension when omitted.
+    type: 'image',
 });
 
 if (result?.status === 'saved') {
@@ -68,10 +65,4 @@ if (result?.status === 'saved') {
 }
 ```
 
-The call resolves once the asset has been written. On failure, the response includes a `code` and `message`:
-
-| Code                 | Meaning                              |
-| -------------------- | ------------------------------------ |
-| `PERMISSION_DENIED`  | User did not grant photo library access |
-| `EXECUTION_FAILED`   | Native save operation failed         |
-| `INVALID_PARAMETERS` | URL or type parameter is invalid     |
+The call returns synchronously once the asset has been written. On failure the response carries a `code` and `message` (`PERMISSION_DENIED`, `EXECUTION_FAILED`, `INVALID_PARAMETERS`).

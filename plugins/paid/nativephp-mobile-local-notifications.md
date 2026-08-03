@@ -19,12 +19,12 @@ events:
 
 # NativePHP Mobile Local Notifications
 
-Send, schedule, and manage local notifications in NativePHP Mobile apps. Supports immediate and delayed notifications, recurring schedules, action buttons, tap events with URL navigation, custom sounds, badge counts, and silent delivery.
+Send, schedule, and manage local notifications in NativePHP Mobile apps — with recurring schedules, action buttons, custom sounds, deep links, badge management, and a Laravel Notification Channel.
 
 ## Features
 
-- Immediate and delayed notifications
-- Recurring schedules (hourly, daily, weekly, monthly, yearly)
+- Immediate and delayed (scheduled) notifications
+- Recurring schedules: hourly, daily, weekly, monthly, yearly
 - Up to 3 action buttons per notification
 - Custom sound support (.mp3, .wav, .caf, .aiff, .m4a)
 - Badge count management
@@ -40,7 +40,74 @@ Send, schedule, and manage local notifications in NativePHP Mobile apps. Support
 ```bash
 composer config repositories.nativephp-plugins composer https://plugins.nativephp.com
 composer config http-basic.plugins.nativephp.com your@email.com your-license-key
+php artisan vendor:publish --tag=nativephp-plugins-provider
 composer require nativephp/mobile-local-notifications
+php artisan native:plugin:register nativephp/mobile-local-notifications
+```
+
+## PHP Usage
+
+```php
+use NativePHP\MobileLocalNotifications\Facades\LocalNotifications;
+
+// Immediate notification
+LocalNotifications::send(
+    id: 'promo-1',
+    title: 'Welcome back!',
+    body: 'Your session is ready.',
+    url: '/dashboard',
+    data: ['key' => 'value'],
+);
+
+// Scheduled notification (delay in seconds)
+LocalNotifications::schedule(
+    id: 'reminder-1',
+    title: 'Reminder',
+    body: 'Check your tasks.',
+    delay: 3600,
+);
+
+// Recurring notification
+LocalNotifications::recurring(
+    id: 'daily-summary',
+    title: 'Daily Summary',
+    body: 'Your daily report is ready.',
+    frequency: 'daily',
+);
+
+// Cancel notification
+LocalNotifications::cancel('reminder-1');
+
+// Badge management
+LocalNotifications::setBadge(5);
+LocalNotifications::clearBadge();
+
+// Permission
+LocalNotifications::requestPermission();
+```
+
+## Laravel Notification Channel
+
+```php
+use NativePHP\MobileLocalNotifications\Channels\LocalNotificationChannel;
+use NativePHP\MobileLocalNotifications\Messages\LocalNotificationMessage;
+
+class TaskReminderNotification extends Notification
+{
+    public function via($notifiable): array
+    {
+        return [LocalNotificationChannel::class];
+    }
+
+    public function toLocalNotification($notifiable): LocalNotificationMessage
+    {
+        return (new LocalNotificationMessage)
+            ->id('task-reminder')
+            ->title('Task Due')
+            ->body('Your task is due soon.')
+            ->url('/tasks');
+    }
+}
 ```
 
 ## Compatibility
@@ -53,5 +120,10 @@ composer require nativephp/mobile-local-notifications
 
 ## Events
 
-- `NotificationTapped` — fires when the user interacts with a notification
-- `PermissionGranted` — fires when notification permission result is returned
+### `NotificationTapped`
+
+Fires when the user taps a notification. Payload includes `id`, `url`, and `data`.
+
+### `PermissionGranted`
+
+Fires when the permission dialog resolves. Payload includes `granted: bool`.

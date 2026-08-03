@@ -19,18 +19,17 @@ events:
 
 # NativePHP Mobile Firebase
 
-Firebase push notifications via FCM for Android and APNs for iOS in NativePHP Mobile apps, with token management and background processing.
+Firebase Cloud Messaging (FCM) push notifications for NativePHP Mobile — device token management, permission handling, deep linking, and silent background event processing.
 
 ## Features
 
-- Device registration and token lifecycle management
-- Permission flow (check, request, cache tokens)
-- Deep linking from notification taps to specific app routes
-- Data-only silent messages triggering background PHP event processing
-- Server-side sending via FCM v1 API
+- FCM device token registration and lifecycle management
+- Permission checking and requesting on iOS (Android auto-grants)
+- Deep linking from notification taps to app routes
+- Data-only (silent) messages dispatched as Laravel events via ephemeral PHP runtime
+- Server-side FCM v1 API integration helpers
 - Badge count management
-- Ephemeral PHP runtime for background event handling
-- Coexists with the local notifications plugin
+- Compatible with the Local Notifications plugin
 
 ## Installation
 
@@ -39,7 +38,54 @@ Firebase push notifications via FCM for Android and APNs for iOS in NativePHP Mo
 ```bash
 composer config repositories.nativephp-plugins composer https://plugins.nativephp.com
 composer config http-basic.plugins.nativephp.com your@email.com your-license-key
+php artisan vendor:publish --tag=nativephp-plugins-provider
 composer require nativephp/mobile-firebase
+php artisan native:plugin:register nativephp/mobile-firebase
+```
+
+## Setup
+
+1. Create a Firebase project and add iOS and Android apps.
+2. Download `google-services.json` (Android) and `GoogleService-Info.plist` (iOS) and follow the NativePHP Mobile Firebase setup guide.
+3. Enroll the device to receive a push token.
+
+## PHP Usage
+
+```php
+use NativePHP\MobileFirebase\Facades\Firebase;
+
+// Check permission (iOS)
+Firebase::checkPermission();
+
+// Request permission (iOS) 
+Firebase::requestPermission();
+
+// Enroll device — triggers TokenGenerated event
+Firebase::enroll();
+
+// Set badge count
+Firebase::setBadgeCount(3);
+Firebase::clearBadge();
+```
+
+## Livewire Usage
+
+```php
+use Native\Mobile\Attributes\OnNative;
+use NativePHP\MobileFirebase\Events\TokenGenerated;
+use NativePHP\MobileFirebase\Events\PushNotificationReceived;
+
+#[OnNative(TokenGenerated::class)]
+public function onTokenGenerated(string $token): void
+{
+    // Save $token to your server for sending push notifications
+}
+
+#[OnNative(PushNotificationReceived::class)]
+public function onPushReceived(string $event, array $data): void
+{
+    // Handle silent push data-only message
+}
 ```
 
 ## Compatibility
@@ -52,5 +98,10 @@ composer require nativephp/mobile-firebase
 
 ## Events
 
-- `TokenGenerated` — fires when a push token becomes available after enrollment
-- `PushNotificationReceived` — fires for data-only messages containing an `event` key
+### `TokenGenerated`
+
+Fires when a push token becomes available. Payload: `string $token`.
+
+### `PushNotificationReceived`
+
+Fires for data-only messages containing an `event` key. Payload: `string $event`, `array $data`.

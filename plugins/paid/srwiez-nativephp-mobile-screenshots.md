@@ -24,21 +24,57 @@ events:
 
 # NativePHP Mobile Screenshots
 
-A NativePHP plugin for capturing and controlling screenshots on mobile devices.
+Screenshot and screen recording control for NativePHP Mobile — block captures, detect attempts in real-time, and take programmatic screenshots.
 
 ## Features
 
 - Block screenshots and screen recordings (`FLAG_SECURE` on Android; privacy overlay on iOS)
-- Real-time detection of capture attempts via Laravel events
-- Programmatic screenshot capture for bug reports and audit trails
-- Platform-native implementations for iOS 17+ and Android 8+
+- Real-time detection of screenshot/recording attempts via Laravel events
+- Programmatic screenshot capture (for bug reports, audit trails)
+- Screen recording start/stop detection (iOS)
 
 ## Installation
 
+> Requires a license from nativephp.com/plugins.
+
 ```bash
+composer config repositories.nativephp-plugins composer https://plugins.nativephp.com
+composer config http-basic.plugins.nativephp.com your@email.com your-license-key
 composer require srwiez/nativephp-mobile-screenshots
 php artisan vendor:publish --tag=nativephp-plugins-provider
 php artisan native:plugin:register srwiez/nativephp-mobile-screenshots
+```
+
+## PHP Usage
+
+```php
+use Srwiez\NativephpMobileScreenshots\Facades\Screenshots;
+
+// Block all screenshot/recording attempts
+Screenshots::prevent();
+
+// Allow screenshots again
+Screenshots::allow();
+
+// Programmatically capture the screen
+Screenshots::capture();
+
+// Check current prevention state
+$isBlocked = Screenshots::isPreventing();
+```
+
+## Livewire Usage
+
+```php
+use Native\Mobile\Attributes\OnNative;
+use Srwiez\NativephpMobileScreenshots\Events\ScreenshotDetected;
+
+#[OnNative(ScreenshotDetected::class)]
+public function onScreenshotDetected(): void
+{
+    // Log the attempt, warn the user, etc.
+    $this->dispatch('screenshot-detected');
+}
 ```
 
 ## Compatibility
@@ -51,8 +87,8 @@ php artisan native:plugin:register srwiez/nativephp-mobile-screenshots
 
 ## Events
 
-- `ScreenshotDetected` — fires when user captures the screen
-- `ScreenshotCaptured` — fires on successful programmatic capture
-- `ScreenshotCaptureFailed` — fires when programmatic capture fails
-- `ScreenRecordingStarted` *(iOS only)* — fires when screen recording begins
-- `ScreenRecordingStopped` *(iOS only)* — fires when screen recording ends
+- `ScreenshotDetected` — user captured the screen
+- `ScreenshotCaptured` — programmatic capture succeeded
+- `ScreenshotCaptureFailed` — programmatic capture failed
+- `ScreenRecordingStarted` *(iOS only)* — screen recording began
+- `ScreenRecordingStopped` *(iOS only)* — screen recording ended

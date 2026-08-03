@@ -2,7 +2,7 @@
 name: "NativePHP Google Mobile Ads"
 author: "Bhargav Detroja"
 price: "Free"
-version: "latest"
+version: "1.2.0"
 license: "MIT"
 github: "https://github.com/BhargavDetroja/google-mobile-ads"
 compatibility:
@@ -21,8 +21,6 @@ events:
   - RewardEarned
 ---
 
-# NativePHP Google Mobile Ads
-
 Add **Google AdMob** ads to your [NativePHP Mobile](https://nativephp.com) app in minutes. No Kotlin, no Swift, no Gradle edits.
 
 Works with **any frontend** — Livewire, React, Vue, Alpine.js, or plain JavaScript.
@@ -35,8 +33,10 @@ Supports **Banner**, **Interstitial**, **Rewarded**, **Rewarded Interstitial**, 
 
 - PHP 8.2+
 - Laravel 12+
-- NativePHP Mobile 3+
+- NativePHP Mobile 3.x or 4.x
 - An [AdMob account](https://admob.google.com) (free)
+
+> **NativePHP Mobile v4:** this plugin works unchanged under v4's web view — the bridge functions, events, and Blade `<x-google-ads::banner>` component all keep working exactly as they do on v3. SuperNative-native `NativeComponent` screens are not required to use this plugin.
 
 ---
 
@@ -230,7 +230,7 @@ onRewardEarned(({ rewardType, rewardAmount }) => {
 });
 
 // Listen to any event by PHP class name
-onAdEvent('NativePHP\\GoogleMobileAds\\Events\\AdFailedToLoad', ({ adType, errorMessage }) => {
+onAdEvent('NativePHP\GoogleMobileAds\Events\AdFailedToLoad', ({ adType, errorMessage }) => {
     console.warn(`${adType} failed: ${errorMessage}`);
 });
 
@@ -343,7 +343,3 @@ php artisan native:plugin:validate
 ```
 
 ---
-
-## License
-
-MIT

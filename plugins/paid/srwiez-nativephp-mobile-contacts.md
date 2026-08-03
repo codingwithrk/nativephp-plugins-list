@@ -27,22 +27,61 @@ events:
 
 # NativePHP Mobile Contacts
 
-A complete contacts API enabling developers to query contacts with a fluent builder, create and update entries, and manage groups for NativePHP mobile applications.
+Complete contacts management for NativePHP Mobile — fluent search, CRUD operations, group management, iOS 18 limited-access picker, and real-time event dispatching.
 
 ## Features
 
-- Fluent contact search and filtering
-- Full CRUD operations for contacts and groups
+- Fluent contact search and filtering builder
+- Full CRUD for contacts and groups
 - iOS 18+ limited-access contact picker
-- Real-time event dispatching
-- Unified API across iOS and Android platforms
+- Real-time event dispatching for all contact changes
+- Unified API across iOS and Android
 
 ## Installation
 
+> Requires a license from nativephp.com/plugins.
+
 ```bash
+composer config repositories.nativephp-plugins composer https://plugins.nativephp.com
+composer config http-basic.plugins.nativephp.com your@email.com your-license-key
 composer require srwiez/nativephp-mobile-contacts
 php artisan vendor:publish --tag=nativephp-plugins-provider
 php artisan native:plugin:register srwiez/nativephp-mobile-contacts
+```
+
+## PHP Usage
+
+```php
+use Srwiez\NativephpMobileContacts\Facades\Contacts;
+
+// Request access
+Contacts::requestAccess();
+
+// Search contacts
+$contacts = Contacts::query()
+    ->search('John')
+    ->withPhoneNumbers()
+    ->withEmails()
+    ->get();
+
+// Create contact
+Contacts::create([
+    'firstName' => 'Jane',
+    'lastName'  => 'Doe',
+    'phones'    => [['label' => 'mobile', 'number' => '+1234567890']],
+    'emails'    => [['label' => 'work', 'email' => 'jane@example.com']],
+]);
+
+// Update contact
+Contacts::update($contactId, ['firstName' => 'Janet']);
+
+// Delete contact
+Contacts::delete($contactId);
+
+// Group operations
+Contacts::createGroup('VIP Customers');
+Contacts::addToGroup($contactId, $groupId);
+Contacts::deleteGroup($groupId);
 ```
 
 ## Compatibility
@@ -57,9 +96,9 @@ php artisan native:plugin:register srwiez/nativephp-mobile-contacts
 
 - `ContactAccessGranted` — permission granted
 - `ContactAccessDenied` — permission denied
-- `ContactCreated` — new contact created
-- `ContactUpdated` — existing contact updated
-- `ContactDeleted` — contact removed
+- `ContactCreated` — contact created
+- `ContactUpdated` — contact updated
+- `ContactDeleted` — contact deleted
 - `ContactAccessUpdated` — access level changed (iOS 18 limited access)
-- `GroupCreated` — contact group created
-- `GroupDeleted` — contact group removed
+- `GroupCreated` — group created
+- `GroupDeleted` — group deleted

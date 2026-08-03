@@ -13,17 +13,7 @@ install:
   - "composer require kevinbatdorf/nativephp-fullscreen"
 ---
 
-# Fullscreen
-
-Enter and exit fullscreen (immersive) mode for NativePHP Mobile apps — hides the status bar and navigation bar on both iOS and Android.
-
-## Features
-
-- Enter fullscreen mode (hides status bar and navigation bar)
-- Exit fullscreen mode
-- Check active fullscreen status
-- Platform-specific implementations for iOS and Android
-- PHP and JavaScript APIs
+Enter and exit fullscreen (immersive) mode.
 
 ## Installation
 
@@ -31,10 +21,32 @@ Enter and exit fullscreen (immersive) mode for NativePHP Mobile apps — hides t
 composer require kevinbatdorf/nativephp-fullscreen
 ```
 
-## Compatibility
+## Usage
 
-| Platform  | Minimum Version |
-| --------- | --------------- |
-| NativePHP | ^3.0            |
-| iOS       | 15.0+           |
-| Android   | API 21+         |
+```php
+use KevinBatdorf\Fullscreen\Facades\Fullscreen;
+
+// Enter fullscreen (hide status bar + navigation bar)
+Fullscreen::enter();
+
+// Exit fullscreen (show system bars)
+Fullscreen::exit();
+
+// Check if fullscreen mode is active
+$active = Fullscreen::isActive();
+```
+
+## JavaScript
+
+```js
+import { Fullscreen } from '@kevinbatdorf/nativephp-fullscreen';
+
+await Fullscreen.enter();
+await Fullscreen.exit();
+const active = await Fullscreen.isActive();
+```
+
+## Platform Behavior
+
+- **Android**: Uses `WindowInsetsControllerCompat` with `BEHAVIOR_SHOW_TRANSIENT_BARS_BY_SWIPE`. System bars reappear briefly on edge swipe, then auto-hide. Fullscreen persists across page navigations natively.
+- **iOS**: Swizzles the root UIViewController to hide the status bar and home indicator. Negates safe area insets so content extends into the notch/dynamic island. Injects CSS to zero out NativePHP's safe area variables (`--inset-*`, `--sat/sar/sab/sal`) and removes `body.nativephp-safe-area` padding. A `WKUserScript` at document start reads a `sessionStorage` flag to apply fullscreen CSS before the page renders, preventing flash-of-insets on navigation. A KVO observer on `WKWebView.isLoading` re-injects CSS after each page load. Orientation changes are handled automatically.

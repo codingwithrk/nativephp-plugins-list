@@ -15,27 +15,44 @@ install:
   - "php artisan native:plugin:register voicecode-bv/nativephp-plugin-innerr-media-permissions"
 ---
 
-# Innerr Media Permissions
+# Media Permissions Plugin for NativePHP Mobile
 
-A manifest-only NativePHP plugin that injects iOS `Info.plist` usage descriptions for camera, microphone, and photo library access.
+Contributes iOS `Info.plist` usage descriptions required for camera, microphone, and photo library access in the Innerr app.
 
-This plugin contains no bridge functions or native code — its sole purpose is to inject the correct `NS*UsageDescription` keys into the generated iOS `Info.plist` via the NativePHP manifest merge process.
-
-## What It Contributes
-
-| Key | Description |
-| --- | ----------- |
-| `NSCameraUsageDescription` | Camera access for uploading media |
-| `NSMicrophoneUsageDescription` | Microphone access for recording video with audio |
-| `NSPhotoLibraryUsageDescription` | Photo library access for selecting media |
-| `NSPhotoLibraryAddUsageDescription` | Permission to save photos and videos to the library |
+This is a manifest-only plugin: it has no bridge functions or native code. Its sole purpose is to inject the correct `NS*UsageDescription` entries into the generated iOS `Info.plist` via the NativePHP manifest merge process.
 
 ## Installation
 
-```bash
-composer require voicecode-bv/nativephp-plugin-innerr-media-permissions
-php artisan vendor:publish --tag=nativephp-plugins-provider
-php artisan native:plugin:register voicecode-bv/nativephp-plugin-innerr-media-permissions
+Add this package as a path repository in the consuming app's `composer.json`:
+
+```json
+"repositories": [
+    { "type": "path", "url": "./packages/voicecode-bv/nativephp-plugin-innerr-media-permissions" }
+]
 ```
 
-To customise the permission wording, edit `nativephp.json` in the package and rebuild the iOS app. A key that already exists in your `Info.plist` will not be overwritten.
+Then install and register:
+
+```bash
+composer require voicecode-bv/nativephp-plugin-innerr-media-permissions
+
+# First time only: publish the plugins provider
+php artisan vendor:publish --tag=nativephp-plugins-provider
+
+# Register the plugin
+php artisan native:plugin:register voicecode-bv/nativephp-plugin-innerr-media-permissions
+
+# Verify
+php artisan native:plugin:list
+```
+
+## What it contributes
+
+| Key                              | Description                                                                                |
+| -------------------------------- | ------------------------------------------------------------------------------------------ |
+| `NSCameraUsageDescription`       | To upload media to your circles, Innerr requires camera access.                            |
+| `NSMicrophoneUsageDescription`   | To make new recordings, Innerr requires microphone access to record video with audio.      |
+| `NSPhotoLibraryUsageDescription` | Before you can post media to your circles, Innerr requires photo library access to select media. |
+| `NSPhotoLibraryAddUsageDescription` | This app needs permission to save photos and videos to your library.                    |
+
+To change the wording, edit `nativephp.json` in this package and rebuild the iOS app.
