@@ -196,6 +196,8 @@ Docsmith::make()
     ->title('NativePHP Plugins List')
     ->description('Listed all are created and maintained by independent developers, not the NativePHP team. Please review each plugin source code, license, and maintenance status before using it in production.')
     ->customCss(__DIR__ . '/custom.css')
+    ->repositoryUrl('https://github.com/codingwithrk/nativephp-plugins-list')
+    ->rightSidebar()
     ->build();
 
 // ── Cleanup ──────────────────────────────────────────────────────────────────
