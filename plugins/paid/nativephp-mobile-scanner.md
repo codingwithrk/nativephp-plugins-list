@@ -2,7 +2,7 @@
 name: "NativePHP Mobile Scanner"
 author: "Bifrost Technology"
 price: "$49"
-version: "1.0.2"
+version: "1.0.3"
 license: "Proprietary"
 source: "https://nativephp.com/plugins/nativephp/mobile-scanner"
 support: "support@nativephp.com"

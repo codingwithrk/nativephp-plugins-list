@@ -2,7 +2,7 @@
 name: "NativePHP Mobile Calendar"
 author: "Eser Deniz"
 price: "$49"
-version: "1.0.2"
+version: "1.2.0"
 license: "Proprietary"
 source: "https://nativephp.com/plugins/srwiez/nativephp-mobile-calendar"
 support: "https://github.com/SRWieZ/nativephp-mobile-packages"

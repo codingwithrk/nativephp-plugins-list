@@ -2,7 +2,7 @@
 name: "NativePHP Mobile Secure Storage"
 author: "Bifrost Technology"
 price: "$49"
-version: "1.0.1"
+version: "1.0.2"
 license: "Proprietary"
 source: "https://nativephp.com/plugins/nativephp/mobile-secure-storage"
 support: "support@nativephp.com"

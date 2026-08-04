@@ -2,7 +2,7 @@
 name: "In-App Purchases"
 author: "Developernauts"
 price: "$99"
-version: "1.3.1"
+version: "1.4.1"
 license: "Proprietary"
 source: "https://nativephp.com/plugins/developernauts/nativephp-inapp-purchases"
 support: "support@developernauts.com"

@@ -2,7 +2,7 @@
 name: "Open Sound Control (OSC)"
 author: "Context Undefined"
 price: "$29"
-version: "1.0.0"
+version: "1.0.1"
 license: "Proprietary"
 source: "https://nativephp.com/plugins/weswecan/nativephp-mobile-osc"
 support: "support@weswecan.com"

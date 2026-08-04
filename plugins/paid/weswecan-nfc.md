@@ -2,7 +2,7 @@
 name: "NFC"
 author: "Context Undefined"
 price: "$99"
-version: "1.0.1"
+version: "1.0.3"
 license: "Proprietary"
 source: "https://nativephp.com/plugins/weswecan/nfc"
 support: "support@weswecan.com"

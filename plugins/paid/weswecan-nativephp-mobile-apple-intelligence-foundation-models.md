@@ -2,7 +2,7 @@
 name: "Apple Intelligence Foundation Models"
 author: "Context Undefined"
 price: "$29"
-version: "1.0.0"
+version: "1.0.1"
 license: "Proprietary"
 source: "https://nativephp.com/plugins/weswecan/nativephp-mobile-apple-intelligence-foundation-models"
 support: "support@weswecan.com"

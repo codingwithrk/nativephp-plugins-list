@@ -2,7 +2,7 @@
 name: "NativePHP Mobile Social Auth"
 author: "Ikromjon Ochilov"
 price: "$29"
-version: "1.0.1"
+version: "1.0.2"
 license: "Proprietary"
 source: "https://nativephp.com/plugins/ikromjon/nativephp-mobile-social-auth"
 support: "ikromjon1998@gmail.com"

@@ -2,7 +2,7 @@
 name: "NativePHP Mobile Local Notifications"
 author: "Bifrost Technology"
 price: "$99"
-version: "0.0.2"
+version: "0.0.3"
 license: "Proprietary"
 source: "https://nativephp.com/plugins/nativephp/mobile-local-notifications"
 support: "support@nativephp.com"
