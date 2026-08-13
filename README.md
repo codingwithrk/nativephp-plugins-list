@@ -65,6 +65,8 @@ Listed all are created and maintained by independent developers, not the NativeP
 - [Mobile Document Scanner](plugins/free/ikromjon1998-nativephp-mobile-document-scanner.md) — Ikromjon Ochilov
 - [Offline Sync](plugins/free/kromaric-offlinesync.md) — Kromaric
 - [Mobile Haptics](plugins/free/graymattertechnology-nativephp-mobile-haptics.md) — GrayMatter Technology
+- [Enhanced Splash](plugins/free/unlocnl-nativephp-enhanced-splash.md) — Unloc
+- [SVG Component](plugins/free/unlocnl-nativephp-svg-component.md) — Unloc
 - [Mobile Haptics (Laravel 13 Fork)](plugins/free/blessedzulu-nativephp-mobile-haptics.md) — Blessed Zulu
 - [Super Code Highlight](plugins/free/matildevoldsen-super-codehighlight.md) — Matildevoldsen
 - [Super Markdown](plugins/free/matildevoldsen-super-markdown.md) — Matildevoldsen
