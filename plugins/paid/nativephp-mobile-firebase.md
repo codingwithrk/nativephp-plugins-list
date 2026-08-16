@@ -2,7 +2,7 @@
 name: "NativePHP Mobile Firebase"
 author: "Bifrost Technology"
 price: "$99"
-version: "1.1.0"
+version: "1.1.1"
 license: "Proprietary"
 source: "https://nativephp.com/plugins/nativephp/mobile-firebase"
 support: "support@nativephp.com"

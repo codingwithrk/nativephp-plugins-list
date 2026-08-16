@@ -1,0 +1,53 @@
+name: Daily Marketplace Sync
+
+on:
+  schedule:
+    - cron: '0 22 * * *'   # 10pm UTC = 2am Dubai (UTC+4)
+  workflow_dispatch:        # allow manual trigger from GitHub UI
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.3'
+          tools: composer:v2
+          coverage: none
+
+      - name: Install dependencies
+        run: composer install --no-interaction --prefer-dist --no-progress
+
+      - name: Run version sync
+        id: sync
+        run: |
+          OUTPUT=$(php sync-versions.php)
+          echo "$OUTPUT"
+          if echo "$OUTPUT" | grep -q 'CHANGES_FOUND'; then
+            echo "changed=true" >> $GITHUB_OUTPUT
+          else
+            echo "changed=false" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Rebuild docs
+        if: steps.sync.outputs.changed == 'true'
+        run: composer docs:build
+
+      - name: Commit and push
+        if: steps.sync.outputs.changed == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add plugins/ docs/
+          git diff --cached --quiet && echo "Nothing to commit" && exit 0
+          git commit -m "Sync marketplace: $(date +'%Y-%m-%d') — auto-update [skip ci]"
+          git push
