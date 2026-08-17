@@ -78,6 +78,7 @@ Listed all are created and maintained by independent developers, not the NativeP
 - [Firebase Phone Number Verification](plugins/free/tarikmanoar-firebase-pnv.md) — Tarik Manoar
 - [Push Notifications](plugins/free/fatlum-nativephp-push.md) — Fatlum Gjinofci
 - [Device Timezone Plugin](plugins/free/fabianpnke-mobile-device-timezone.md) — fabianpnke
+- [Firebase Crashlytics](plugins/free/codingwithrk-firebase-crashlytics.md) — CodingwithRK
 
 ---
 
