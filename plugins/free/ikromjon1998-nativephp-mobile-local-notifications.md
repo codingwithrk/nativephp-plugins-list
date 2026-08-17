@@ -2,7 +2,7 @@
 name: "Mobile Local Notifications"
 author: "Ikromjon Ochilov"
 price: "Free"
-version: "1.10.1"
+version: "1.11.0"
 license: "MIT"
 github: "https://github.com/Ikromjon1998/nativephp-mobile-local-notifications"
 compatibility:

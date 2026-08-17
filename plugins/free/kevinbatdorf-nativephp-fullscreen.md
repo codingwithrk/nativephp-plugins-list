@@ -2,7 +2,7 @@
 name: "Fullscreen"
 author: "Kevin Batdorf"
 price: "Free"
-version: "0.1.0"
+version: "0.1.1"
 license: "MIT"
 github: "https://github.com/KevinBatdorf/nativephp-fullscreen"
 compatibility:
