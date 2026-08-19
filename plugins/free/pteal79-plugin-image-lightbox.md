@@ -2,7 +2,7 @@
 name: "Image Lightbox"
 author: "Peter Teal"
 price: "Free"
-version: "1.0.10"
+version: "1.0.11"
 license: "MIT"
 github: "https://github.com/pteal79/plugin-image-lightbox"
 compatibility:

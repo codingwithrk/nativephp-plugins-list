@@ -2,7 +2,7 @@
 name: "SVG Component"
 author: "Unloc"
 price: "Free"
-version: "1.0.0"
+version: "1.1.0"
 license: "MIT"
 github: "https://github.com/unlocnl/nativephp-svg-component"
 support: "https://github.com/unlocnl/nativephp-svg-component/issues"
