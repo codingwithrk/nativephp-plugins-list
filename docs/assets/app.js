@@ -1,6 +1,14 @@
 document.addEventListener('DOMContentLoaded', function () {
     document.documentElement.classList.add('docsmith-js');
 
+    if ('scrollRestoration' in window.history) {
+        window.history.scrollRestoration = 'manual';
+    }
+
+    if (window.location.hash === '') {
+        window.scrollTo(0, 0);
+    }
+
     var applyTheme = function (theme) {
         if (theme !== 'dark' && theme !== 'light') {
             return;
@@ -78,41 +86,46 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     };
 
-    Array.prototype.slice.call(document.querySelectorAll('pre > code')).forEach(function (codeBlock) {
-        var pre = codeBlock.parentElement;
+    (function () {
+        var blocks = Array.prototype.slice.call(document.querySelectorAll('pre > code'));
 
-        if (!pre || pre.querySelector('.code-copy-btn')) {
+        if (blocks.length === 0) {
             return;
         }
 
-        var button = document.createElement('button');
-        button.type = 'button';
-        button.className = 'code-copy-btn';
-        button.textContent = 'Copy';
-        button.setAttribute('aria-label', 'Copy code block');
+        blocks.forEach(function (block) {
+            var button = document.createElement('button');
+            var copyIcon = '<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="8" y="8" width="11" height="11" rx="1"></rect><path d="M16 8V5H5v11h3"></path></svg>';
+            var copiedIcon = '<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 4 4L19 6"></path></svg>';
+            button.type = 'button';
+            button.className = 'code-copy-float';
+            button.innerHTML = copyIcon;
+            button.setAttribute('aria-label', 'Copy code block');
+            block.parentElement.appendChild(button);
 
-        button.addEventListener('click', function () {
-            var text = codeBlock.textContent || '';
+            button.addEventListener('click', function () {
+                copyCode(block.textContent || '').then(function () {
+                    button.classList.add('copied');
+                    button.innerHTML = copiedIcon;
+                    button.setAttribute('aria-label', 'Code copied');
 
-            copyCode(text).then(function () {
-                button.classList.add('copied');
-                button.textContent = 'Copied';
+                    window.setTimeout(function () {
+                        button.classList.remove('copied');
+                        button.innerHTML = copyIcon;
+                        button.setAttribute('aria-label', 'Copy code block');
+                    }, 1400);
+                }).catch(function () {
+                    button.textContent = '!';
+                    button.setAttribute('aria-label', 'Copy failed');
 
-                window.setTimeout(function () {
-                    button.classList.remove('copied');
-                    button.textContent = 'Copy';
-                }, 1400);
-            }).catch(function () {
-                button.textContent = 'Failed';
-
-                window.setTimeout(function () {
-                    button.textContent = 'Copy';
-                }, 1400);
+                    window.setTimeout(function () {
+                        button.innerHTML = copyIcon;
+                        button.setAttribute('aria-label', 'Copy code block');
+                    }, 1400);
+                });
             });
         });
-
-        pre.appendChild(button);
-    });
+    })();
 
     var search = document.querySelector('[data-docsmith-search]');
     var nav = document.querySelector('[data-docsmith-nav]');
@@ -132,12 +145,40 @@ document.addEventListener('DOMContentLoaded', function () {
 
     if (sidebar && menuToggle) {
         var setMenuOpen = function (open) {
+            if (open) {
+                syncPanelTop();
+            }
+
             sidebar.classList.toggle('is-open', open);
             document.body.classList.toggle('has-open-sidebar', open);
             menuToggle.classList.toggle('is-open', open);
             menuToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
             menuToggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
         };
+
+        var sidebarPanel = document.querySelector('[data-docsmith-sidebar-panel]');
+
+        var syncPanelTop = function () {
+            if (!sidebarPanel) {
+                return;
+            }
+
+            if (window.matchMedia('(max-width: 900px)').matches) {
+                sidebarPanel.style.top = '0px';
+            } else {
+                sidebarPanel.style.top = '';
+            }
+        };
+
+        syncPanelTop();
+        window.addEventListener('resize', syncPanelTop);
+        window.addEventListener('load', function () {
+            window.setTimeout(syncPanelTop, 60);
+        });
+
+        if (document.fonts && document.fonts.ready) {
+            document.fonts.ready.then(syncPanelTop);
+        }
 
         menuToggle.addEventListener('click', function () {
             setMenuOpen(!sidebar.classList.contains('is-open'));
@@ -317,6 +358,20 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 
+    var normalizeHref = function (url) {
+        var normalized = String(url || '/').replace(/^\/+/, '');
+
+        if (normalized === '') {
+            return rootPrefix;
+        }
+
+        if (!normalized.endsWith('/')) {
+            normalized += '/';
+        }
+
+        return rootPrefix + normalized;
+    };
+
     var update = function () {
         var query = String(search.value || '').toLowerCase().trim();
         var visible = 0;
@@ -363,7 +418,7 @@ document.addEventListener('DOMContentLoaded', function () {
             return;
         }
 
-        if (query.length < 2) {
+        if (query.length < 1) {
             results.innerHTML = '';
             results.hidden = true;
             return;
@@ -432,20 +487,6 @@ document.addEventListener('DOMContentLoaded', function () {
                 return;
             }
 
-            var normalizeHref = function (url) {
-                var normalized = String(url || '/').replace(/^\/+/, '');
-
-                if (normalized === '') {
-                    return rootPrefix;
-                }
-
-                if (!normalized.endsWith('/')) {
-                    normalized += '/';
-                }
-
-                return rootPrefix + normalized;
-            };
-
             results.innerHTML = scored.map(function (entry) {
                 var meta = entry.description !== '' ? entry.description : entry.url;
                 return '<a class="search-result" href="' + normalizeHref(entry.url) + '">'
@@ -471,4 +512,205 @@ document.addEventListener('DOMContentLoaded', function () {
 
     search.addEventListener('input', update);
     update();
+
+    var searchOverlay = document.querySelector('[data-docsmith-search-overlay]');
+    var searchOverlayInput = document.querySelector('[data-docsmith-search-overlay-input]');
+    var searchOverlayResults = document.querySelector('[data-docsmith-search-overlay-results]');
+    var searchOverlayEmpty = document.querySelector('[data-docsmith-search-overlay-empty]');
+
+    if (searchOverlay && searchOverlayInput && searchOverlayResults) {
+        var openSearchOverlay = function () {
+            searchOverlay.hidden = false;
+            searchOverlayInput.value = '';
+            searchOverlayResults.innerHTML = '';
+            if (searchOverlayEmpty) {
+                searchOverlayEmpty.hidden = true;
+            }
+            searchOverlayInput.focus();
+        };
+
+        var closeSearchOverlay = function () {
+            searchOverlay.hidden = true;
+            searchOverlayInput.value = '';
+            searchOverlayResults.innerHTML = '';
+            if (searchOverlayEmpty) {
+                searchOverlayEmpty.hidden = true;
+            }
+        };
+
+        document.addEventListener('keydown', function (event) {
+            if ((event.metaKey || event.ctrlKey) && event.key.toLowerCase() === 'k') {
+                event.preventDefault();
+                openSearchOverlay();
+            }
+        });
+
+        if (search) {
+            search.addEventListener('focus', function () {
+                search.blur();
+                openSearchOverlay();
+            });
+        }
+
+        var overlayCloseTriggers = document.querySelectorAll('[data-docsmith-search-overlay-close]');
+        Array.prototype.slice.call(overlayCloseTriggers).forEach(function (el) {
+            el.addEventListener('click', function () {
+                closeSearchOverlay();
+            });
+        });
+
+        var overlayHighlightIndex = -1;
+        var overlayResultsList = [];
+
+        var updateSearchOverlayHighlight = function () {
+            overlayResultsList.forEach(function (el, index) {
+                el.classList.toggle('is-highlighted', index === overlayHighlightIndex);
+            });
+        };
+
+        searchOverlayInput.addEventListener('keydown', function (event) {
+            if (event.key === 'Escape') {
+                event.preventDefault();
+                closeSearchOverlay();
+                return;
+            }
+
+            if (event.key === 'ArrowDown') {
+                event.preventDefault();
+                overlayHighlightIndex = Math.min(overlayHighlightIndex + 1, overlayResultsList.length - 1);
+                updateSearchOverlayHighlight();
+                if (overlayResultsList[overlayHighlightIndex]) {
+                    overlayResultsList[overlayHighlightIndex].scrollIntoView({ block: 'nearest' });
+                }
+                return;
+            }
+
+            if (event.key === 'ArrowUp') {
+                event.preventDefault();
+                overlayHighlightIndex = Math.max(overlayHighlightIndex - 1, 0);
+                updateSearchOverlayHighlight();
+                if (overlayResultsList[overlayHighlightIndex]) {
+                    overlayResultsList[overlayHighlightIndex].scrollIntoView({ block: 'nearest' });
+                }
+                return;
+            }
+
+            if (event.key === 'Enter') {
+                event.preventDefault();
+                if (overlayHighlightIndex >= 0 && overlayResultsList[overlayHighlightIndex]) {
+                    var link = overlayResultsList[overlayHighlightIndex];
+                    if (link.tagName === 'A') {
+                        window.location.href = link.getAttribute('href');
+                    }
+                }
+                return;
+            }
+        });
+
+        searchOverlayInput.addEventListener('input', function () {
+            var query = String(searchOverlayInput.value || '').toLowerCase().trim();
+
+            if (query.length < 1) {
+                searchOverlayResults.innerHTML = '';
+                if (searchOverlayEmpty) {
+                    searchOverlayEmpty.hidden = true;
+                }
+                overlayHighlightIndex = -1;
+                overlayResultsList = [];
+                return;
+            }
+
+            searchIndexPromise.then(function (entries) {
+                if (!Array.isArray(entries)) {
+                    searchOverlayResults.innerHTML = '';
+                    if (searchOverlayEmpty) {
+                        searchOverlayEmpty.hidden = false;
+                    }
+                    return;
+                }
+
+                var scored = entries.map(function (entry) {
+                    if (!entry || typeof entry !== 'object') {
+                        return null;
+                    }
+
+                    var title = String(entry.title || '');
+                    var description = String(entry.description || '');
+                    var headings = String(entry.headings || '');
+                    var content = String(entry.content || '');
+                    var haystack = (title + ' ' + description + ' ' + headings + ' ' + content).toLowerCase();
+
+                    if (haystack.indexOf(query) === -1) {
+                        return null;
+                    }
+
+                    var score = 1;
+                    var lowerTitle = title.toLowerCase();
+                    var lowerDescription = description.toLowerCase();
+                    var lowerHeadings = headings.toLowerCase();
+
+                    if (lowerTitle === query) {
+                        score += 120;
+                    } else if (lowerTitle.indexOf(query) !== -1) {
+                        score += 70;
+                    }
+
+                    if (lowerHeadings.indexOf(query) !== -1) {
+                        score += 25;
+                    }
+
+                    if (lowerDescription.indexOf(query) !== -1) {
+                        score += 12;
+                    }
+
+                    return {
+                        title: title,
+                        description: description,
+                        url: String(entry.url || '/'),
+                        score: score
+                    };
+                }).filter(function (entry) {
+                    return entry !== null;
+                }).sort(function (left, right) {
+                    if (left.score === right.score) {
+                        return left.title.localeCompare(right.title);
+                    }
+
+                    return right.score - left.score;
+                }).slice(0, 8);
+
+                if (scored.length === 0) {
+                    searchOverlayResults.innerHTML = '';
+                    if (searchOverlayEmpty) {
+                        searchOverlayEmpty.hidden = false;
+                    }
+                    overlayHighlightIndex = -1;
+                    overlayResultsList = [];
+                    return;
+                }
+
+                if (searchOverlayEmpty) {
+                    searchOverlayEmpty.hidden = true;
+                }
+
+                searchOverlayResults.innerHTML = scored.map(function (entry) {
+                    var meta = entry.description !== '' ? entry.description : entry.url;
+                    return '<a class="search-result" href="' + normalizeHref(entry.url) + '">'
+                        + '<span class="search-result-title">' + escapeHtml(entry.title) + '</span>'
+                        + '<span class="search-result-meta">' + escapeHtml(meta) + '</span>'
+                        + '</a>';
+                }).join('');
+
+                overlayResultsList = Array.prototype.slice.call(searchOverlayResults.querySelectorAll('.search-result'));
+                overlayHighlightIndex = -1;
+                updateSearchOverlayHighlight();
+            });
+        });
+
+        searchOverlay.addEventListener('keydown', function (event) {
+            if (event.key === 'Escape') {
+                closeSearchOverlay();
+            }
+        });
+    }
 });
