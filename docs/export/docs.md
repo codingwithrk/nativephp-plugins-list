@@ -1994,6 +1994,87 @@ php artisan native:install ios
 
 ---
 
+# Actions Anywhere
+
+> Neo Nos
+
+<div class="plugin-info"><div class="pi-meta"><span class="pi-item"><span class="pi-label">Author</span><span class="pi-value">Neo Nos</span></span><span class="pi-item"><span class="pi-label">Plugin Type</span><span class="pi-badge pi-badge-community">Community Plugin</span></span><span class="pi-item"><span class="pi-label">Price</span><span class="pi-badge pi-badge-paid">$29</span></span><span class="pi-item"><span class="pi-label">Version</span><span class="pi-value">v0.4.0</span></span><span class="pi-item"><span class="pi-label">License</span><span class="pi-value">Proprietary</span></span></div><div class="pi-compat"><span class="pi-chip"><span class="pi-chip-label">NativePHP</span><span class="pi-chip-value">^3.0 || ^4.0</span></span><span class="pi-chip"><span class="pi-chip-label">iOS</span><span class="pi-chip-value">18.2+</span></span><span class="pi-chip"><span class="pi-chip-label">Android</span><span class="pi-chip-value">26+</span></span></div><div class="pi-links"><a href="https://nativephp.com/plugins/all1web/nativephp-actions-anywhere" class="pi-link pi-link-buy" target="_blank" rel="noopener">Buy on NativePHP →</a></div></div>
+
+# Actions Anywhere
+
+Converts a single Laravel configuration into native integrations across iOS and Android — Siri voice phrases, Spotlight results, Shortcuts automation blocks, and Android Quick Settings tiles — all without writing Swift or Kotlin.
+
+## Features
+
+- **Siri voice integration** — users activate app actions by speaking configured phrases
+- **Spotlight search** — actions appear as searchable, tappable results
+- **Shortcuts app** — actions function as automation building blocks on iOS
+- **Android Quick Settings tiles** — up to 6 tiles placed directly in the notification shade
+- **Deep linking** — every action generates a URL for NFC stickers and QR codes
+- **Background & foreground modes** — choose whether actions launch the app or run silently
+- **Testing utilities** — `AppIntents::fake()` for device-free unit testing
+- **Diagnostics** — `php artisan appintents:doctor` validates your configuration
+- **Zero permissions** — no runtime permissions or entitlements required
+
+## Installation
+
+```bash
+composer config repositories.nativephp-plugins composer https://plugins.nativephp.com
+composer config http-basic.plugins.nativephp.com your@email.com your-license-key
+composer require all1web/nativephp-actions-anywhere
+php artisan native:plugin:register all1web/nativephp-actions-anywhere
+php artisan vendor:publish --tag=appintents-config
+```
+
+## Diagnostics
+
+```bash
+php artisan appintents:doctor
+```
+
+---
+
+# Home Screen Widgets
+
+> Neo Nos
+
+<div class="plugin-info"><div class="pi-meta"><span class="pi-item"><span class="pi-label">Author</span><span class="pi-value">Neo Nos</span></span><span class="pi-item"><span class="pi-label">Plugin Type</span><span class="pi-badge pi-badge-community">Community Plugin</span></span><span class="pi-item"><span class="pi-label">Price</span><span class="pi-badge pi-badge-paid">$49</span></span><span class="pi-item"><span class="pi-label">Version</span><span class="pi-value">v0.7.2</span></span><span class="pi-item"><span class="pi-label">License</span><span class="pi-value">Proprietary</span></span></div><div class="pi-compat"><span class="pi-chip"><span class="pi-chip-label">NativePHP</span><span class="pi-chip-value">^3.3 || ^4.0</span></span><span class="pi-chip"><span class="pi-chip-label">iOS</span><span class="pi-chip-value">18.2+</span></span><span class="pi-chip"><span class="pi-chip-label">Android</span><span class="pi-chip-value">26+</span></span></div><div class="pi-links"><a href="https://nativephp.com/plugins/all1web/nativephp-widgets" class="pi-link pi-link-buy" target="_blank" rel="noopener">Buy on NativePHP →</a></div></div>
+
+# Home Screen Widgets
+
+Adds home-screen presence to your NativePHP Mobile app — real Android home-screen widgets with quick-action and capture buttons, plus iOS app-icon quick actions and badge mirroring (both beta), all driven from Laravel.
+
+## Features
+
+- **Android home-screen widget** — title, content lines, badge counter, and dark mode support
+- **Quick-actions row** — up to 4 icon+label buttons with deep-link navigation
+- **Capture buttons** — camera, voice, and document picker actions from the widget
+- **iOS quick-actions menu** — 3D Touch / long-press shortcuts on the app icon (beta)
+- **App icon badge mirroring** — sync badge count to iOS (beta)
+- **Laravel-driven updates** — update widget content from controllers, observers, or jobs
+- **"Add widget" prompt** — built-in trigger to guide users through widget placement
+- **Offline rendering & empty states** — graceful display when data is unavailable
+- **Testing support** — `Widgets::fake()` with assertions
+- **Diagnostics** — `php artisan widgets:doctor` for setup verification
+
+## Installation
+
+```bash
+composer config repositories.nativephp-plugins composer https://plugins.nativephp.com
+composer config http-basic.plugins.nativephp.com your@email.com your-license-key
+composer require all1web/nativephp-widgets
+php artisan native:plugin:register all1web/nativephp-widgets
+php artisan native:install android --force
+```
+
+## Diagnostics
+
+```bash
+php artisan widgets:doctor
+```
+
+---
+
 # Google Mobile Ads
 
 > Bhargav Detroja
@@ -12452,4 +12533,166 @@ ImageCropped::class;
 
 // Fired when the user dismisses the cropper
 CropCancelled::class;
+```
+
+---
+
+# WiFi Radar
+
+> Neo Nos
+
+<div class="plugin-info"><div class="pi-meta"><span class="pi-item"><span class="pi-label">Author</span><span class="pi-value">Neo Nos</span></span><span class="pi-item"><span class="pi-label">Plugin Type</span><span class="pi-badge pi-badge-community">Community Plugin</span></span><span class="pi-item"><span class="pi-label">Price</span><span class="pi-badge pi-badge-free">Free</span></span><span class="pi-item"><span class="pi-label">Version</span><span class="pi-value">v0.2.2</span></span><span class="pi-item"><span class="pi-label">License</span><span class="pi-value">MIT</span></span></div><div class="pi-compat"><span class="pi-chip"><span class="pi-chip-label">NativePHP</span><span class="pi-chip-value">^3.0 || ^4.0</span></span><span class="pi-chip"><span class="pi-chip-label">iOS</span><span class="pi-chip-value">13.0+ (no public API)</span></span><span class="pi-chip"><span class="pi-chip-label">Android</span><span class="pi-chip-value">23+</span></span></div><div class="pi-links"><a href="https://github.com/all1web/nativephp-wifi-scan" class="pi-link" target="_blank" rel="noopener">GitHub →</a></div></div>
+
+# WiFi Radar
+
+Scans visible WiFi access points from PHP code, reads the currently connected network, and generates device-location fingerprints using BSSID signatures — no Kotlin required.
+
+> **Note:** iOS has no public API for WiFi scanning; this plugin is Android-only for active scanning. iOS returns the connected network info only.
+
+## Features
+
+- **Full AP enumeration** — every access point in range with SSID, BSSID, RSSI, and frequency
+- **Connected network detection** — identify the current access point by BSSID
+- **Place fingerprinting** — order-independent location detection via BSSID signatures
+- **Event-driven** — scan completion fires a native event to PHP/JS
+- **Auto permission handling** — Android 6.0+ location permission managed automatically
+- **JavaScript module** — works with Inertia, Vue, React, and vanilla JS
+- **Diagnostic command** — `php artisan wifi-scan:doctor` for troubleshooting
+
+## Installation
+
+```bash
+composer require all1web/nativephp-wifi-scan
+php artisan native:plugin:register all1web/nativephp-wifi-scan
+php artisan native:install android --force
+```
+
+## Diagnostics
+
+```bash
+php artisan wifi-scan:doctor
+```
+
+---
+
+# Lottie EDGE Component
+
+> Cody P Christian
+
+<div class="plugin-info"><div class="pi-meta"><span class="pi-item"><span class="pi-label">Author</span><span class="pi-value">Cody P Christian</span></span><span class="pi-item"><span class="pi-label">Plugin Type</span><span class="pi-badge pi-badge-community">Community Plugin</span></span><span class="pi-item"><span class="pi-label">Price</span><span class="pi-badge pi-badge-free">Free</span></span><span class="pi-item"><span class="pi-label">Version</span><span class="pi-value">v0.2.2</span></span><span class="pi-item"><span class="pi-label">License</span><span class="pi-value">MIT</span></span></div><div class="pi-compat"><span class="pi-chip"><span class="pi-chip-label">NativePHP</span><span class="pi-chip-value">^4.0</span></span><span class="pi-chip"><span class="pi-chip-label">iOS</span><span class="pi-chip-value">18.0+</span></span><span class="pi-chip"><span class="pi-chip-label">Android</span><span class="pi-chip-value">26+</span></span></div><div class="pi-links"><a href="https://github.com/CodyPChristian/nativephp-lottie" class="pi-link" target="_blank" rel="noopener">GitHub →</a></div></div>
+
+# Lottie EDGE Component
+
+Adds a `<native:lottie-view>` Blade tag that plays dotLottie animations natively — Jetpack Compose on Android and SwiftUI with lottie-spm on iOS. No code generation required.
+
+## Features
+
+- **dotLottie playback** — play animations from bundled assets or remote URLs
+- **Native rendering** — Jetpack Compose (Android) and SwiftUI (iOS) with no wrappers
+- **Configurable looping, sizing, and accessibility labels**
+- **Offline-safe** — bundled asset playback works without a network connection
+- **Auto-converts** dotLottie v2 to v1 for iOS compatibility
+- **Static-renderer plugin** — native dependencies declared cleanly in the manifest
+
+## Installation
+
+```bash
+composer require codypchristian/nativephp-lottie
+php artisan native:plugin:register codypchristian/nativephp-lottie
+```
+
+## Usage
+
+```blade
+<native:lottie-view
+    src="animations/confetti.lottie"
+    :loop="true"
+    accessibility-label="Confetti celebration"
+/>
+```
+
+Supports both local asset paths and HTTPS URLs as the `src` value.
+
+---
+
+# Play Games Services
+
+> Bhargav Detroja
+
+<div class="plugin-info"><div class="pi-meta"><span class="pi-item"><span class="pi-label">Author</span><span class="pi-value">Bhargav Detroja</span></span><span class="pi-item"><span class="pi-label">Plugin Type</span><span class="pi-badge pi-badge-community">Community Plugin</span></span><span class="pi-item"><span class="pi-label">Price</span><span class="pi-badge pi-badge-free">Free</span></span><span class="pi-item"><span class="pi-label">Version</span><span class="pi-value">v1.1.0</span></span><span class="pi-item"><span class="pi-label">License</span><span class="pi-value">MIT</span></span></div><div class="pi-compat"><span class="pi-chip"><span class="pi-chip-label">NativePHP</span><span class="pi-chip-value">^3.0 || ^4.0</span></span><span class="pi-chip"><span class="pi-chip-label">iOS</span><span class="pi-chip-value">14.0+</span></span><span class="pi-chip"><span class="pi-chip-label">Android</span><span class="pi-chip-value">21+</span></span></div><div class="pi-links"><a href="https://github.com/BhargavDetroja/play-games-services" class="pi-link" target="_blank" rel="noopener">GitHub →</a></div></div>
+
+# Play Games Services
+
+Add Google Play Games Services — sign-in, leaderboards, and achievements — to your NativePHP Mobile Android app in minutes. No Kotlin, no Gradle edits.
+
+> **Note:** This plugin targets Android (Google Play Games Services). iOS support is listed for compatibility but Play Games is an Android-first platform.
+
+## Features
+
+- **Google Play Games sign-in** — authenticate users via their Google Play account
+- **Leaderboards** — submit scores and display leaderboard UI natively
+- **Achievements** — unlock achievements and track progress
+- **Named slot configuration** — define leaderboards and achievements by name in config
+- **Auto sign-in** — configurable automatic sign-in on app launch
+- **Event-driven** — PHP and JS listeners for all game service events
+- **Multi-framework** — works with Livewire, React, Vue, and Alpine.js
+
+## Installation
+
+```bash
+composer require bhargavdetroja/nativephp-play-games-services
+php artisan native:plugin:register bhargavdetroja/nativephp-play-games-services
+php artisan vendor:publish --tag=play-games-services-config
+php artisan native:install --force
+```
+
+---
+
+# NativePHP Fetch
+
+> Efekpogua Victory
+
+<div class="plugin-info"><div class="pi-meta"><span class="pi-item"><span class="pi-label">Author</span><span class="pi-value">Efekpogua Victory</span></span><span class="pi-item"><span class="pi-label">Plugin Type</span><span class="pi-badge pi-badge-community">Community Plugin</span></span><span class="pi-item"><span class="pi-label">Price</span><span class="pi-badge pi-badge-free">Free</span></span><span class="pi-item"><span class="pi-label">Version</span><span class="pi-value">v1.0.0</span></span><span class="pi-item"><span class="pi-label">License</span><span class="pi-value">MIT</span></span></div><div class="pi-compat"><span class="pi-chip"><span class="pi-chip-label">NativePHP</span><span class="pi-chip-value">^4.1</span></span><span class="pi-chip"><span class="pi-chip-label">PHP</span><span class="pi-chip-value">^8.4</span></span><span class="pi-chip"><span class="pi-chip-label">iOS</span><span class="pi-chip-value">18.0+</span></span><span class="pi-chip"><span class="pi-chip-label">Android</span><span class="pi-chip-value">29+</span></span></div><div class="pi-links"><a href="https://github.com/victorycodedev/nativephp-fetch" class="pi-link" target="_blank" rel="noopener">GitHub →</a></div></div>
+
+# NativePHP Fetch
+
+Truly asynchronous native HTTP networking for NativePHP Mobile. Performs HTTP requests, file uploads, and file downloads using the platform's own networking stack — not a WebView or PHP stream wrapper.
+
+## Features
+
+- **Async HTTP requests** — GET, POST, PUT, PATCH, DELETE with non-blocking execution
+- **File uploads** — multipart support with real-time upload progress events
+- **File downloads** — streaming to disk with download progress tracking
+- **Native retry policies** — exponential backoff with configurable retry limits
+- **Request cancellation** — cancel in-flight requests by ID
+- **Auth & headers** — bearer token and arbitrary custom header support
+- **Flexible body formats** — JSON, form data, query parameters
+- **JavaScript client** — first-class support for Inertia, Vue, and React
+- **Testing support** — built-in fakes for unit and feature tests
+
+## Installation
+
+```bash
+composer require victorycodedev/nativephp-fetch
+php artisan vendor:publish --tag=nativephp-plugins-provider
+php artisan native:plugin:register victorycodedev/nativephp-fetch
+```
+
+## Usage
+
+```php
+use Victorycodedev\NativephpFetch\Facades\NativeFetch;
+
+// Simple GET request
+NativeFetch::get('https://api.example.com/data', headers: [
+    'Authorization' => 'Bearer ' . $token,
+]);
+
+// POST with JSON body
+NativeFetch::post('https://api.example.com/items', body: [
+    'name' => 'My Item',
+]);
+
+// Download a file
+NativeFetch::download('https://example.com/report.pdf', to: '/local/path/report.pdf');
 ```

@@ -25,6 +25,8 @@ Listed all are created and maintained by independent developers, not the NativeP
 - [Google AdMob](plugins/paid/lrakauskas-nativephp-google-admob.md) — Lukas Rakauskas
 - [Share Target](plugins/paid/all1web-nativephp-share-target.md) — Neo Nos
 - [Widgets](plugins/paid/rubenvdb-nativephp-widgets.md) — Borgman Digital
+- [Actions Anywhere](plugins/paid/all1web-nativephp-actions-anywhere.md) — Neo Nos
+- [Home Screen Widgets](plugins/paid/all1web-nativephp-widgets.md) — Neo Nos
 
 ---
 
@@ -83,6 +85,10 @@ Listed all are created and maintained by independent developers, not the NativeP
 - [Device Timezone Plugin](plugins/free/fabianpnke-mobile-device-timezone.md) — fabianpnke
 - [Firebase Crashlytics](plugins/free/codingwithrk-firebase-crashlytics.md) — CodingwithRK
 - [Image Cropper](plugins/free/vipertecpro-image-cropper.md) — Vipul Walia
+- [WiFi Radar](plugins/free/all1web-nativephp-wifi-scan.md) — Neo Nos
+- [Lottie EDGE Component](plugins/free/codypchristian-nativephp-lottie.md) — Cody P Christian
+- [Play Games Services](plugins/free/bhargavdetroja-nativephp-play-games-services.md) — Bhargav Detroja
+- [NativePHP Fetch](plugins/free/victorycodedev-nativephp-fetch.md) — Efekpogua Victory
 
 ---
 

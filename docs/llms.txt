@@ -23,6 +23,8 @@
 - /plugins/paid/lrakauskas-nativephp-google-admob: Lukas Rakauskas
 - /plugins/paid/all1web-nativephp-share-target: Neo Nos
 - /plugins/paid/rubenvdb-nativephp-widgets: Borgman Digital
+- /plugins/paid/all1web-nativephp-actions-anywhere: Neo Nos
+- /plugins/paid/all1web-nativephp-widgets: Neo Nos
 - /plugins/free/bhargavdetroja-google-mobile-ads: Bhargav Detroja
 - /plugins/free/s2br-nativephp-mobile-splashscreen: Israel Pereira
 - /plugins/free/developernauts-nativephp-mobile-locales: Developernauts
@@ -76,3 +78,7 @@
 - /plugins/free/fabianpnke-mobile-device-timezone: fabianpnke
 - /plugins/free/codingwithrk-firebase-crashlytics: CodingwithRK
 - /plugins/free/vipertecpro-image-cropper: Vipul Walia
+- /plugins/free/all1web-nativephp-wifi-scan: Neo Nos
+- /plugins/free/codypchristian-nativephp-lottie: Cody P Christian
+- /plugins/free/bhargavdetroja-nativephp-play-games-services: Bhargav Detroja
+- /plugins/free/victorycodedev-nativephp-fetch: Efekpogua Victory
