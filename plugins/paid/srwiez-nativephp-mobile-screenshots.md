@@ -2,7 +2,7 @@
 name: "NativePHP Mobile Screenshots"
 author: "Eser Deniz"
 price: "$29"
-version: "1.2.0"
+version: "2.0.0"
 license: "Proprietary"
 source: "https://nativephp.com/plugins/srwiez/nativephp-mobile-screenshots"
 support: "https://github.com/SRWieZ/nativephp-mobile-packages"

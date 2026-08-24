@@ -2,7 +2,7 @@
 name: "Store Review"
 author: "Geof"
 price: "Free"
-version: "1.0.3"
+version: "1.0.4"
 license: "MIT"
 github: "https://github.com/geof-dev/nativephp-store-review"
 support: "geof.dev@gmail.com"
