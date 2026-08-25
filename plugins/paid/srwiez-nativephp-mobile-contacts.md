@@ -2,7 +2,7 @@
 name: "NativePHP Mobile Contacts"
 author: "Eser Deniz"
 price: "$49"
-version: "1.2.0"
+version: "2.0.0"
 license: "Proprietary"
 source: "https://nativephp.com/plugins/srwiez/nativephp-mobile-contacts"
 support: "https://github.com/SRWieZ/nativephp-mobile-packages"

@@ -2,7 +2,7 @@
 name: "Lottie EDGE Component"
 author: "Cody P Christian"
 price: "Free"
-version: "0.2.2"
+version: "0.2.3"
 license: "MIT"
 github: "https://github.com/CodyPChristian/nativephp-lottie"
 support: "https://github.com/CodyPChristian/nativephp-lottie/issues"
