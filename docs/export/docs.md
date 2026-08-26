@@ -2075,6 +2075,130 @@ php artisan widgets:doctor
 
 ---
 
+# DatePicker
+
+> camiant
+
+<div class="plugin-info"><div class="pi-meta"><span class="pi-item"><span class="pi-label">Author</span><span class="pi-value">camiant</span></span><span class="pi-item"><span class="pi-label">Plugin Type</span><span class="pi-badge pi-badge-community">Community Plugin</span></span><span class="pi-item"><span class="pi-label">Price</span><span class="pi-badge pi-badge-paid">$29</span></span><span class="pi-item"><span class="pi-label">Version</span><span class="pi-value">v1.0.0</span></span><span class="pi-item"><span class="pi-label">License</span><span class="pi-value">Proprietary</span></span></div><div class="pi-compat"><span class="pi-chip"><span class="pi-chip-label">NativePHP</span><span class="pi-chip-value">^4.0</span></span><span class="pi-chip"><span class="pi-chip-label">iOS</span><span class="pi-chip-value">15.0+</span></span><span class="pi-chip"><span class="pi-chip-label">Android</span><span class="pi-chip-value">21+</span></span></div><div class="pi-links"><a href="https://nativephp.com/plugins/nativecodeforge/nativephp-datepicker" class="pi-link pi-link-buy" target="_blank" rel="noopener">Buy on NativePHP →</a></div></div>
+
+# DatePicker
+
+A native calendar interface for NativePHP Mobile that renders consistently across iOS (SwiftUI) and Android (Jetpack Compose) — custom calendar grid with an integrated wheel picker, not the OS system picker.
+
+## Features
+
+- **Custom calendar grid** — independent of the OS system date dialog
+- **Wheel picker** for rapid year/month navigation
+- **Theming** via accent and text color options
+- **ISO date format** — returns values as `YYYY-MM-DD`
+- **Dark mode** compatible
+- **Built-in accessibility** support
+
+## Installation
+
+```bash
+composer config repositories.nativephp-plugins composer https://plugins.nativephp.com
+composer config http-basic.plugins.nativephp.com your@email.com your-license-key
+php artisan vendor:publish --tag=nativephp-plugins-provider
+composer require nativecodeforge/nativephp-datepicker
+php artisan native:plugin:register nativecodeforge/nativephp-datepicker
+```
+
+---
+
+# TimePicker
+
+> camiant
+
+<div class="plugin-info"><div class="pi-meta"><span class="pi-item"><span class="pi-label">Author</span><span class="pi-value">camiant</span></span><span class="pi-item"><span class="pi-label">Plugin Type</span><span class="pi-badge pi-badge-community">Community Plugin</span></span><span class="pi-item"><span class="pi-label">Price</span><span class="pi-badge pi-badge-paid">$29</span></span><span class="pi-item"><span class="pi-label">Version</span><span class="pi-value">v1.0.0</span></span><span class="pi-item"><span class="pi-label">License</span><span class="pi-value">Proprietary</span></span></div><div class="pi-compat"><span class="pi-chip"><span class="pi-chip-label">NativePHP</span><span class="pi-chip-value">^4.0</span></span><span class="pi-chip"><span class="pi-chip-label">iOS</span><span class="pi-chip-value">15.0+</span></span><span class="pi-chip"><span class="pi-chip-label">Android</span><span class="pi-chip-value">21+</span></span></div><div class="pi-links"><a href="https://nativephp.com/plugins/nativecodeforge/nativephp-timepicker" class="pi-link pi-link-buy" target="_blank" rel="noopener">Buy on NativePHP →</a></div></div>
+
+# TimePicker
+
+A native scrolling-wheel time picker for NativePHP Mobile — Jetpack Compose on Android and SwiftUI on iOS — with consistent appearance and behavior across both platforms.
+
+## Features
+
+- **Custom scrolling-wheel dialog** — not the OS system time picker
+- **12h (AM/PM) and 24h modes** — configurable display format
+- **Accent color theming**
+- **24h wire format** — values returned as zero-padded `HH:mm` string
+- **Dark mode** compatible
+- **Built-in accessibility** labels and hints
+
+## Installation
+
+```bash
+composer config repositories.nativephp-plugins composer https://plugins.nativephp.com
+composer config http-basic.plugins.nativephp.com your@email.com your-license-key
+php artisan vendor:publish --tag=nativephp-plugins-provider
+composer require nativecodeforge/nativephp-timepicker
+php artisan native:plugin:register nativecodeforge/nativephp-timepicker
+```
+
+---
+
+# FilePicker
+
+> noehassiel
+
+<div class="plugin-info"><div class="pi-meta"><span class="pi-item"><span class="pi-label">Author</span><span class="pi-value">noehassiel</span></span><span class="pi-item"><span class="pi-label">Plugin Type</span><span class="pi-badge pi-badge-community">Community Plugin</span></span><span class="pi-item"><span class="pi-label">Price</span><span class="pi-badge pi-badge-paid">$49</span></span><span class="pi-item"><span class="pi-label">Version</span><span class="pi-value">v0.2.2</span></span><span class="pi-item"><span class="pi-label">License</span><span class="pi-value">MIT</span></span></div><div class="pi-compat"><span class="pi-chip"><span class="pi-chip-label">NativePHP</span><span class="pi-chip-value">^4.0</span></span><span class="pi-chip"><span class="pi-chip-label">iOS</span><span class="pi-chip-value">16.0+</span></span><span class="pi-chip"><span class="pi-chip-label">Android</span><span class="pi-chip-value">26+</span></span></div><div class="pi-links"><a href="https://nativephp.com/plugins/noehassiel/filepicker" class="pi-link pi-link-buy" target="_blank" rel="noopener">Buy on NativePHP →</a></div></div>
+
+# FilePicker
+
+Native document picker for NativePHP Mobile — select one or many files of any type using iOS UIDocumentPicker or the Android Storage Access Framework. Files are automatically copied to app-local storage so no runtime permission management is needed.
+
+## Features
+
+- **Multi-select and single-file modes**
+- **File type filtering** — UTIs on iOS, MIME types on Android
+- **Automatic file copy** to app-local storage (no permission complexity)
+- **Camera capture** — capture directly from the picker on iOS
+- **Photo library access** on iOS
+- **No runtime permissions** required
+- **Event-based delivery** — files arrive via native events
+- **JavaScript / Inertia** integration
+
+## Installation
+
+```bash
+composer config repositories.nativephp-plugins composer https://plugins.nativephp.com
+composer config http-basic.plugins.nativephp.com your@email.com your-license-key
+php artisan vendor:publish --tag=nativephp-plugins-provider
+composer require noehassiel/filepicker
+php artisan native:plugin:register noehassiel/filepicker
+```
+
+---
+
+# NSFW Content Checker
+
+> Cody P Christian
+
+<div class="plugin-info"><div class="pi-meta"><span class="pi-item"><span class="pi-label">Author</span><span class="pi-value">Cody P Christian</span></span><span class="pi-item"><span class="pi-label">Plugin Type</span><span class="pi-badge pi-badge-community">Community Plugin</span></span><span class="pi-item"><span class="pi-label">Price</span><span class="pi-badge pi-badge-paid">$49</span></span><span class="pi-item"><span class="pi-label">Version</span><span class="pi-value">v0.1.2</span></span><span class="pi-item"><span class="pi-label">License</span><span class="pi-value">Proprietary</span></span></div><div class="pi-compat"><span class="pi-chip"><span class="pi-chip-label">NativePHP</span><span class="pi-chip-value">^4.0</span></span><span class="pi-chip"><span class="pi-chip-label">iOS</span><span class="pi-chip-value">17.0+</span></span><span class="pi-chip"><span class="pi-chip-label">Android</span><span class="pi-chip-value">24+</span></span></div><div class="pi-links"><a href="https://nativephp.com/plugins/codypchristian/nativephp-nsfw-checker" class="pi-link pi-link-buy" target="_blank" rel="noopener">Buy on NativePHP →</a></div></div>
+
+# NSFW Content Checker
+
+On-device sensitive image detection for NativePHP Mobile — no data leaves the device, no API calls required. iOS uses Apple's SensitiveContentAnalysis framework; Android uses ML Kit image labeling as a preliminary screening mechanism.
+
+## Features
+
+- **On-device only** — fully private, zero cloud transmission
+- **Platform-specific backends** — Apple's nudity classifier (iOS) and ML Kit heuristics (Android)
+- **Availability detection** — distinguishes unavailable analyzers from actual results
+- **Configurable defaults** for when analysis cannot execute
+- **Comprehensive error handling** with specific exception types
+
+## Installation
+
+```bash
+composer require codypchristian/nativephp-nsfw-checker
+php artisan vendor:publish --tag=nativephp-plugins-provider
+php artisan native:plugin:register codypchristian/nativephp-nsfw-checker
+php artisan native:install --force
+```
+
+---
+
 # Google Mobile Ads
 
 > Bhargav Detroja
@@ -12695,4 +12819,55 @@ NativeFetch::post('https://api.example.com/items', body: [
 
 // Download a file
 NativeFetch::download('https://example.com/report.pdf', to: '/local/path/report.pdf');
+```
+
+---
+
+# ToastKit
+
+> Efekpogua Victory
+
+<div class="plugin-info"><div class="pi-meta"><span class="pi-item"><span class="pi-label">Author</span><span class="pi-value">Efekpogua Victory</span></span><span class="pi-item"><span class="pi-label">Plugin Type</span><span class="pi-badge pi-badge-community">Community Plugin</span></span><span class="pi-item"><span class="pi-label">Price</span><span class="pi-badge pi-badge-free">Free</span></span><span class="pi-item"><span class="pi-label">Version</span><span class="pi-value">v1.0.2</span></span><span class="pi-item"><span class="pi-label">License</span><span class="pi-value">MIT</span></span></div><div class="pi-compat"><span class="pi-chip"><span class="pi-chip-label">NativePHP</span><span class="pi-chip-value">^4.1</span></span><span class="pi-chip"><span class="pi-chip-label">PHP</span><span class="pi-chip-value">^8.4</span></span><span class="pi-chip"><span class="pi-chip-label">iOS</span><span class="pi-chip-value">18.0+</span></span><span class="pi-chip"><span class="pi-chip-label">Android</span><span class="pi-chip-value">29+</span></span></div><div class="pi-links"><a href="https://github.com/victorycodedev/toastkit" class="pi-link" target="_blank" rel="noopener">GitHub →</a></div></div>
+
+# ToastKit
+
+Rich, customizable native toast notifications for NativePHP Mobile — rendered as native overlays using Jetpack Compose (Android) and SwiftUI (iOS).
+
+## Features
+
+- **5 toast variants** — success, error, warning, info, neutral
+- **Customizable styling** — colors, corner radius, padding, shadows
+- **Rich content** — title, message, icons with platform-specific overrides
+- **Native action buttons** with event handling
+- **Queue and stack display strategies**
+- **Live updates** — modify a toast without recreating it
+- **Swipe-to-dismiss** and close controls
+- **JavaScript API** for Inertia, Vue, and React
+- **Testing macros** for assertion-based validation
+
+## Installation
+
+```bash
+composer require victorycodedev/toastkit
+php artisan vendor:publish --tag=nativephp-plugins-provider
+php artisan native:plugin:register victorycodedev/toastkit
+```
+
+## Usage
+
+```php
+use Victorycodedev\Toastkit\Facades\Toast;
+
+Toast::success('Saved!', 'Your changes have been saved.');
+Toast::error('Failed', 'Something went wrong.');
+Toast::warning('Heads up', 'This action cannot be undone.');
+Toast::info('Update available', 'A new version is ready.');
+```
+
+## Events
+
+```php
+use Victorycodedev\Toastkit\Events\ToastShown;
+use Victorycodedev\Toastkit\Events\ToastDismissed;
+use Victorycodedev\Toastkit\Events\ToastActionPressed;
 ```

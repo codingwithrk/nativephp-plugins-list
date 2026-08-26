@@ -27,6 +27,10 @@ Listed all are created and maintained by independent developers, not the NativeP
 - [Widgets](plugins/paid/rubenvdb-nativephp-widgets.md) — Borgman Digital
 - [Actions Anywhere](plugins/paid/all1web-nativephp-actions-anywhere.md) — Neo Nos
 - [Home Screen Widgets](plugins/paid/all1web-nativephp-widgets.md) — Neo Nos
+- [DatePicker](plugins/paid/nativecodeforge-nativephp-datepicker.md) — camiant
+- [TimePicker](plugins/paid/nativecodeforge-nativephp-timepicker.md) — camiant
+- [FilePicker](plugins/paid/noehassiel-filepicker.md) — noehassiel
+- [NSFW Content Checker](plugins/paid/codypchristian-nativephp-nsfw-checker.md) — Cody P Christian
 
 ---
 
@@ -89,6 +93,7 @@ Listed all are created and maintained by independent developers, not the NativeP
 - [Lottie EDGE Component](plugins/free/codypchristian-nativephp-lottie.md) — Cody P Christian
 - [Play Games Services](plugins/free/bhargavdetroja-nativephp-play-games-services.md) — Bhargav Detroja
 - [NativePHP Fetch](plugins/free/victorycodedev-nativephp-fetch.md) — Efekpogua Victory
+- [ToastKit](plugins/free/victorycodedev-toastkit.md) — Efekpogua Victory
 
 ---
 
