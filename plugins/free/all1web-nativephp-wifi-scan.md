@@ -2,7 +2,7 @@
 name: "WiFi Radar"
 author: "Neo Nos"
 price: "Free"
-version: "0.2.2"
+version: "0.2.3"
 license: "MIT"
 github: "https://github.com/all1web/nativephp-wifi-scan"
 support: "https://github.com/all1web/nativephp-wifi-scan/issues"

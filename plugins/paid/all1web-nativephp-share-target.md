@@ -2,7 +2,7 @@
 name: "Share Target"
 author: "Neo Nos"
 price: "$49"
-version: "0.3.1"
+version: "0.3.2"
 license: "Proprietary"
 source: "https://nativephp.com/plugins/all1web/nativephp-share-target"
 support: "https://github.com/all1web/nativephp-share-target/issues"
