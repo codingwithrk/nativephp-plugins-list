@@ -2,7 +2,7 @@
 name: "Mobile Document Scanner"
 author: "Ikromjon Ochilov"
 price: "Free"
-version: "1.3.0"
+version: "1.4.0"
 license: "MIT"
 github: "https://github.com/Ikromjon1998/nativephp-mobile-document-scanner"
 compatibility:
