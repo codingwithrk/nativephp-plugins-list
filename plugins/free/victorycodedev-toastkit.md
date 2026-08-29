@@ -2,7 +2,7 @@
 name: "ToastKit"
 author: "Efekpogua Victory"
 price: "Free"
-version: "1.0.2"
+version: "1.1.0"
 license: "MIT"
 github: "https://github.com/victorycodedev/toastkit"
 support: "https://github.com/victorycodedev/toastkit/issues"

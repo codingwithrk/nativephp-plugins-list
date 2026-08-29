@@ -2,7 +2,7 @@
 name: "FilePicker"
 author: "noehassiel"
 price: "$49"
-version: "0.2.2"
+version: "0.2.4"
 license: "MIT"
 source: "https://nativephp.com/plugins/noehassiel/filepicker"
 support: "contact@noehassiel.com"
