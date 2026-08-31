@@ -13064,3 +13064,44 @@ Native retro emulation for NativePHP Mobile apps — NES, SNES, Game Boy, Game B
 composer require kevinbatdorf/nativephp-retro-emulator
 php artisan native:plugin:register kevinbatdorf/nativephp-retro-emulator
 ```
+
+---
+
+# Signature Pad
+
+> noehassiel
+
+<div class="plugin-info"><div class="pi-meta"><span class="pi-item"><span class="pi-label">Author</span><span class="pi-value">noehassiel</span></span><span class="pi-item"><span class="pi-label">Plugin Type</span><span class="pi-badge pi-badge-community">Community Plugin</span></span><span class="pi-item"><span class="pi-label">Price</span><span class="pi-badge pi-badge-free">Free</span></span><span class="pi-item"><span class="pi-label">Version</span><span class="pi-value">v0.1.3</span></span><span class="pi-item"><span class="pi-label">License</span><span class="pi-value">MIT</span></span></div><div class="pi-compat"><span class="pi-chip"><span class="pi-chip-label">NativePHP</span><span class="pi-chip-value">^4.0</span></span><span class="pi-chip"><span class="pi-chip-label">iOS</span><span class="pi-chip-value">16.0+</span></span><span class="pi-chip"><span class="pi-chip-label">Android</span><span class="pi-chip-value">26+</span></span></div><div class="pi-links"><a href="https://github.com/noehassiel/signature-pad" class="pi-link" target="_blank" rel="noopener">GitHub →</a></div></div>
+
+# Signature Pad
+
+Native freehand signature capture for NativePHP Mobile — rendered with SwiftUI Path (iOS) and Compose Canvas (Android) — exported as a base64-encoded PNG data URL compatible with existing web form endpoints.
+
+## Features
+
+- **EDGE element** — `<native:signature-pad>` Blade tag
+- **No permissions required** on either platform
+- **Customizable** pen color, stroke width, and styling via Tailwind classes
+- **Read-only mode** for displaying existing signatures
+- **Undo and clear** via token-based props
+- **Offline-friendly** — emits on stroke end, no network required
+- **Existing signature display** support
+- **Event-driven** — stroke-end callbacks
+
+## Installation
+
+```bash
+composer require noehassiel/signature-pad
+php artisan vendor:publish --tag=nativephp-plugins-provider
+php artisan native:plugin:register noehassiel/signature-pad
+```
+
+## Usage
+
+```blade
+<native:signature-pad
+    class="w-full h-48 border rounded-lg"
+    pen-color="#000000"
+    stroke-width="3"
+/>
+```

@@ -93,3 +93,4 @@
 - /plugins/free/victorycodedev-nativephp-fetch: Efekpogua Victory
 - /plugins/free/victorycodedev-toastkit: Efekpogua Victory
 - /plugins/free/kevinbatdorf-nativephp-retro-emulator: Kevin Batdorf
+- /plugins/free/noehassiel-signature-pad: noehassiel

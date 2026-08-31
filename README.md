@@ -100,6 +100,7 @@ Listed all are created and maintained by independent developers, not the NativeP
 - [NativePHP Fetch](plugins/free/victorycodedev-nativephp-fetch.md) — Efekpogua Victory
 - [ToastKit](plugins/free/victorycodedev-toastkit.md) — Efekpogua Victory
 - [Retro Emulator](plugins/free/kevinbatdorf-nativephp-retro-emulator.md) — Kevin Batdorf
+- [Signature Pad](plugins/free/noehassiel-signature-pad.md) — noehassiel
 
 ---
 
