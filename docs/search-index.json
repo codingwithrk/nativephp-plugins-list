@@ -182,6 +182,41 @@
         "headings": "Features Installation"
     },
     {
+        "title": "ShazamKit",
+        "description": "thelemon2020",
+        "url": "/plugins/paid/thelemon2020-nativephp-shazamkit",
+        "content": "Authorthelemon2020Plugin TypeCommunity PluginPrice$29Versionv1.0.1LicenseProprietaryNativePHP^4.0iOS18.0+Android29+Buy on NativePHP → Identify songs from ambient audio using Apple's ShazamKit — on both iOS and Android — from a NativePHP Mobile app, no JavaScript required. Features Song recognition powered by Apple's ShazamKit catalog Cross-platform — iOS and Android support Microphone integration for ambient audio matching iOS library saving — add matched songs to the user's Shazam library Event-based results — MatchFound, NoMatch, ListeningError, PermissionDenied, AddedToLibrary, LibraryError PHP/Livewire and JavaScript (Vue/React) integration Backend token resolver for Android developer authentication Installation composer config repositories.nativephp-plugins composer https://plugins.nativephp.com composer config http-basic.plugins.nativephp.com your@email.com your-license-key composer require thelemon2020/nativephp-shazamkit php artisan native:plugin:register thelemon2020/nativephp-shazamkit",
+        "headings": "Features Installation"
+    },
+    {
+        "title": "Background Geofencing",
+        "description": "Neo Nos",
+        "url": "/plugins/paid/all1web-nativephp-geofence",
+        "content": "AuthorNeo NosPlugin TypeCommunity PluginPrice$49Versionv0.2.3LicenseProprietaryNativePHP^3.0 || ^4.0iOS18.0+Android29+Buy on NativePHP → OS-level geofencing that persists when the app is backgrounded, force-quit, or the device reboots. Geofence transitions are reported via HTTPS POST to your configured endpoint directly from native code — bypassing PHP's inability to run background processes on mobile. Features Persistent fencing — survives app death and device reboot on both platforms Direct server reporting — authenticated HTTPS POSTs from native receivers to your endpoint Unified API — same PHP calls across Android and iOS Encrypted credentials — AES-256 on Android, Keychain on iOS Foreground events — optional Laravel events when the app is active Configurable responsiveness — adjustable dwell delay, retry logic, and timeouts Broad capacity — ~100 fences on Android; 20 maximum on iOS Installation composer config repositories.nativephp-plugins composer https://plugins.nativephp.com composer config http-basic.plugins.nativephp.com your@email.com your-license-key composer require all1web/nativephp-geofence php artisan native:plugin:register all1web/nativephp-geofence php artisan native:install android --force",
+        "headings": "Features Installation"
+    },
+    {
+        "title": "Google AdMob",
+        "description": "Cody P Christian",
+        "url": "/plugins/paid/codypchristian-nativephp-admob",
+        "content": "AuthorCody P ChristianPlugin TypeCommunity PluginPrice$49Versionv0.2.0LicenseProprietaryNativePHP^3.0 || ^4.0iOS18.2+Android26+Buy on NativePHP → Google AdMob banner, interstitial, and rewarded ads driven from PHP — with GDPR consent management and frequency capping across iOS and Android. Features Ad formats — banner, interstitial, rewarded video, and rewarded interstitial Consent management — GoogleUserMessagingPlatform integration for EEA/GDPR compliance App Tracking Transparency — iOS ATT prompt support SKAdNetwork — 50 pre-configured identifiers for install attribution Frequency capping — per-format and per-slot display limits Diagnostics page — real-time event logging and troubleshooting tools Testing support — fake bridge for unit testing without devices Synchronous API — calls return immediately without blocking on ad networks Installation php artisan vendor:publish --tag=nativephp-plugins-provider composer require codypchristian/nativephp-admob php artisan native:plugin:register codypchristian/nativephp-admob php artisan native:install --force",
+        "headings": "Features Installation"
+    },
+    {
+        "title": "Native Stripe Payments",
+        "description": "Cody P Christian",
+        "url": "/plugins/paid/codypchristian-nativephp-stripe",
+        "content": "AuthorCody P ChristianPlugin TypeCommunity PluginPrice$99Versionv0.4.0LicenseProprietaryNativePHP^4.0iOS15.0+Android21+Buy on NativePHP → Presents Stripe's native PaymentSheet entirely from PHP — Apple Pay, Google Pay, Link, and saved cards, all without touching Swift or Kotlin. Features Multiple payment methods — card entry, Link, Apple Pay (iOS), Google Pay (Android), saved cards PaymentIntent & SetupIntent — immediate charges or card storage flows Fluent builder API — chainable with completed, canceled, and failed callbacks Stripe Connect — direct charges on connected accounts Server-side control — client secrets created server-side; webhooks finalize orders JavaScript bridge — works with Livewire and Inertia web-view stacks Installation composer require codypchristian/nativephp-stripe:^0.2 php artisan native:plugin:register codypchristian/nativephp-stripe php artisan native:install --force",
+        "headings": "Features Installation"
+    },
+    {
+        "title": "IAP Apple & Google",
+        "description": "Cody P Christian",
+        "url": "/plugins/paid/codypchristian-nativephp-iap",
+        "content": "AuthorCody P ChristianPlugin TypeCommunity PluginPrice$49Versionv0.3.0LicenseProprietaryNativePHP^3.0 || ^4.0iOS18.2+Android26+Buy on NativePHP → Auto-renewing subscriptions and in-app purchases from PHP — StoreKit 2 on iOS and Google Play Billing 8 on Android — with a unified synchronous API across both platforms. Features Subscription management — auto-renewing subscriptions on iOS and Android Server-side verification — signed transaction tokens (iOS) and purchase tokens (Android) Restored purchases and entitlement checking Base plan selection for Android multi-plan products Automatic acknowledgment — Play purchases acknowledged within the 3-day requirement Synchronous PHP surface wrapping asynchronous native operations Consistent error handling — normalized responses across platforms Installation composer config repositories.nativephp-plugins composer https://plugins.nativephp.com composer config http-basic.plugins.nativephp.com your@email.com your-license-key php artisan vendor:publish --tag=nativephp-plugins-provider composer require codypchristian/nativephp-iap php artisan native:plugin:register codypchristian/nativephp-iap php artisan native:install --force",
+        "headings": "Features Installation"
+    },
+    {
         "title": "Google Mobile Ads",
         "description": "Bhargav Detroja",
         "url": "/plugins/free/bhargavdetroja-google-mobile-ads",
@@ -586,5 +621,19 @@
         "url": "/plugins/free/victorycodedev-toastkit",
         "content": "AuthorEfekpogua VictoryPlugin TypeCommunity PluginPriceFreeVersionv1.2.0LicenseMITNativePHP^4.1PHP^8.4iOS18.0+Android29+GitHub → Rich, customizable native toast notifications for NativePHP Mobile — rendered as native overlays using Jetpack Compose (Android) and SwiftUI (iOS). Features 5 toast variants — success, error, warning, info, neutral Customizable styling — colors, corner radius, padding, shadows Rich content — title, message, icons with platform-specific overrides Native action buttons with event handling Queue and stack display strategies Live updates — modify a toast without recreating it Swipe-to-dismiss and close controls JavaScript API for Inertia, Vue, and React Testing macros for assertion-based validation Installation composer require victorycodedev/toastkit php artisan vendor:publish --tag=nativephp-plugins-provider php artisan native:plugin:register victorycodedev/toastkit Usage use Victorycodedev\\Toastkit\\Facades\\Toast; Toast::success('Saved!', 'Your changes have been saved.'); Toast::error('Failed', 'Something went wrong.'); Toast::warning('Heads up', 'This action cannot be undone.'); Toast::info('Update available', 'A new version is ready.'); Events use Victorycodedev\\Toastkit\\Events\\ToastShown; use Victorycodedev\\Toastkit\\Events\\ToastDismissed; use Victorycodedev\\Toastkit\\Events\\ToastActionPressed;",
         "headings": "Features Installation Usage Events"
+    },
+    {
+        "title": "Confetti Celebration",
+        "description": "noehassiel",
+        "url": "/plugins/free/noehassiel-confetti",
+        "content": "AuthornoehassielPlugin TypeCommunity PluginPriceFreeVersionv1.0.1LicenseProprietaryNativePHP^4.0iOS16.0+Android26+Buy on NativePHP → Native confetti animation for NativePHP Mobile via a <native:confetti> EDGE element — Konfetti (Jetpack Compose) on Android and a hand-rolled SwiftUI particle system on iOS. Genuine independent particle movement that web-based alternatives cannot provide. Features 6 animation presets — burst, rain, cannon, explode, festive, corners Customizable particles — count, duration, speed, damping, colors Dual trigger modes — reactive fire-token binding or Confetti::burst() facade Multi-reference support — multiple confetti elements per screen Non-blocking rendering — doesn't intercept underlying UI touches Completion callbacks via _finished attribute JavaScript integration via noehassiel-confetti module Installation composer config repositories.nativephp-plugins composer https://plugins.nativephp.com composer config http-basic.plugins.nativephp.com your@email.com your-license-key composer require noehassiel/confetti php artisan vendor:publish --tag=nativephp-plugins-provider php artisan native:plugin:register noehassiel/confetti Usage <native:confetti preset=\"burst\" /> use Noehassiel\\Confetti\\Facades\\Confetti; Confetti::burst();",
+        "headings": "Features Installation Usage"
+    },
+    {
+        "title": "Signature Pad",
+        "description": "noehassiel",
+        "url": "/plugins/free/noehassiel-signature-pad",
+        "content": "AuthornoehassielPlugin TypeCommunity PluginPriceFreeVersionv0.1.3LicenseProprietaryNativePHP^4.0iOS16.0+Android26+Buy on NativePHP → Native freehand signature capture for NativePHP Mobile — rendered with SwiftUI Path (iOS) and Compose Canvas (Android) — exported as a base64-encoded PNG data URL compatible with existing web form endpoints. Features EDGE element — <native:signature-pad> Blade tag No permissions required on either platform Customizable pen color, stroke width, and styling via Tailwind classes Read-only mode for displaying existing signatures Undo and clear via token-based props Offline-friendly — emits on stroke end, no network required Existing signature display support Event-driven — stroke-end callbacks Installation composer config repositories.nativephp-plugins composer https://plugins.nativephp.com composer config http-basic.plugins.nativephp.com your@email.com your-license-key composer require noehassiel/signature-pad php artisan vendor:publish --tag=nativephp-plugins-provider php artisan native:plugin:register noehassiel/signature-pad Usage <native:signature-pad class=\"w-full h-48 border rounded-lg\" pen-color=\"#000000\" stroke-width=\"3\" />",
+        "headings": "Features Installation Usage"
     }
 ]

@@ -2199,6 +2199,163 @@ php artisan native:install --force
 
 ---
 
+# ShazamKit
+
+> thelemon2020
+
+<div class="plugin-info"><div class="pi-meta"><span class="pi-item"><span class="pi-label">Author</span><span class="pi-value">thelemon2020</span></span><span class="pi-item"><span class="pi-label">Plugin Type</span><span class="pi-badge pi-badge-community">Community Plugin</span></span><span class="pi-item"><span class="pi-label">Price</span><span class="pi-badge pi-badge-paid">$29</span></span><span class="pi-item"><span class="pi-label">Version</span><span class="pi-value">v1.0.1</span></span><span class="pi-item"><span class="pi-label">License</span><span class="pi-value">Proprietary</span></span></div><div class="pi-compat"><span class="pi-chip"><span class="pi-chip-label">NativePHP</span><span class="pi-chip-value">^4.0</span></span><span class="pi-chip"><span class="pi-chip-label">iOS</span><span class="pi-chip-value">18.0+</span></span><span class="pi-chip"><span class="pi-chip-label">Android</span><span class="pi-chip-value">29+</span></span></div><div class="pi-links"><a href="https://nativephp.com/plugins/thelemon2020/nativephp-shazamkit" class="pi-link pi-link-buy" target="_blank" rel="noopener">Buy on NativePHP →</a></div></div>
+
+# ShazamKit
+
+Identify songs from ambient audio using Apple's ShazamKit — on both iOS and Android — from a NativePHP Mobile app, no JavaScript required.
+
+## Features
+
+- **Song recognition** powered by Apple's ShazamKit catalog
+- **Cross-platform** — iOS and Android support
+- **Microphone integration** for ambient audio matching
+- **iOS library saving** — add matched songs to the user's Shazam library
+- **Event-based results** — `MatchFound`, `NoMatch`, `ListeningError`, `PermissionDenied`, `AddedToLibrary`, `LibraryError`
+- **PHP/Livewire and JavaScript** (Vue/React) integration
+- **Backend token resolver** for Android developer authentication
+
+## Installation
+
+```bash
+composer config repositories.nativephp-plugins composer https://plugins.nativephp.com
+composer config http-basic.plugins.nativephp.com your@email.com your-license-key
+composer require thelemon2020/nativephp-shazamkit
+php artisan native:plugin:register thelemon2020/nativephp-shazamkit
+```
+
+---
+
+# Background Geofencing
+
+> Neo Nos
+
+<div class="plugin-info"><div class="pi-meta"><span class="pi-item"><span class="pi-label">Author</span><span class="pi-value">Neo Nos</span></span><span class="pi-item"><span class="pi-label">Plugin Type</span><span class="pi-badge pi-badge-community">Community Plugin</span></span><span class="pi-item"><span class="pi-label">Price</span><span class="pi-badge pi-badge-paid">$49</span></span><span class="pi-item"><span class="pi-label">Version</span><span class="pi-value">v0.2.3</span></span><span class="pi-item"><span class="pi-label">License</span><span class="pi-value">Proprietary</span></span></div><div class="pi-compat"><span class="pi-chip"><span class="pi-chip-label">NativePHP</span><span class="pi-chip-value">^3.0 || ^4.0</span></span><span class="pi-chip"><span class="pi-chip-label">iOS</span><span class="pi-chip-value">18.0+</span></span><span class="pi-chip"><span class="pi-chip-label">Android</span><span class="pi-chip-value">29+</span></span></div><div class="pi-links"><a href="https://nativephp.com/plugins/all1web/nativephp-geofence" class="pi-link pi-link-buy" target="_blank" rel="noopener">Buy on NativePHP →</a></div></div>
+
+# Background Geofencing
+
+OS-level geofencing that persists when the app is backgrounded, force-quit, or the device reboots. Geofence transitions are reported via HTTPS POST to your configured endpoint directly from native code — bypassing PHP's inability to run background processes on mobile.
+
+## Features
+
+- **Persistent fencing** — survives app death and device reboot on both platforms
+- **Direct server reporting** — authenticated HTTPS POSTs from native receivers to your endpoint
+- **Unified API** — same PHP calls across Android and iOS
+- **Encrypted credentials** — AES-256 on Android, Keychain on iOS
+- **Foreground events** — optional Laravel events when the app is active
+- **Configurable responsiveness** — adjustable dwell delay, retry logic, and timeouts
+- **Broad capacity** — ~100 fences on Android; 20 maximum on iOS
+
+## Installation
+
+```bash
+composer config repositories.nativephp-plugins composer https://plugins.nativephp.com
+composer config http-basic.plugins.nativephp.com your@email.com your-license-key
+composer require all1web/nativephp-geofence
+php artisan native:plugin:register all1web/nativephp-geofence
+php artisan native:install android --force
+```
+
+---
+
+# Google AdMob
+
+> Cody P Christian
+
+<div class="plugin-info"><div class="pi-meta"><span class="pi-item"><span class="pi-label">Author</span><span class="pi-value">Cody P Christian</span></span><span class="pi-item"><span class="pi-label">Plugin Type</span><span class="pi-badge pi-badge-community">Community Plugin</span></span><span class="pi-item"><span class="pi-label">Price</span><span class="pi-badge pi-badge-paid">$49</span></span><span class="pi-item"><span class="pi-label">Version</span><span class="pi-value">v0.2.0</span></span><span class="pi-item"><span class="pi-label">License</span><span class="pi-value">Proprietary</span></span></div><div class="pi-compat"><span class="pi-chip"><span class="pi-chip-label">NativePHP</span><span class="pi-chip-value">^3.0 || ^4.0</span></span><span class="pi-chip"><span class="pi-chip-label">iOS</span><span class="pi-chip-value">18.2+</span></span><span class="pi-chip"><span class="pi-chip-label">Android</span><span class="pi-chip-value">26+</span></span></div><div class="pi-links"><a href="https://nativephp.com/plugins/codypchristian/nativephp-admob" class="pi-link pi-link-buy" target="_blank" rel="noopener">Buy on NativePHP →</a></div></div>
+
+# Google AdMob
+
+Google AdMob banner, interstitial, and rewarded ads driven from PHP — with GDPR consent management and frequency capping across iOS and Android.
+
+## Features
+
+- **Ad formats** — banner, interstitial, rewarded video, and rewarded interstitial
+- **Consent management** — GoogleUserMessagingPlatform integration for EEA/GDPR compliance
+- **App Tracking Transparency** — iOS ATT prompt support
+- **SKAdNetwork** — 50 pre-configured identifiers for install attribution
+- **Frequency capping** — per-format and per-slot display limits
+- **Diagnostics page** — real-time event logging and troubleshooting tools
+- **Testing support** — fake bridge for unit testing without devices
+- **Synchronous API** — calls return immediately without blocking on ad networks
+
+## Installation
+
+```bash
+php artisan vendor:publish --tag=nativephp-plugins-provider
+composer require codypchristian/nativephp-admob
+php artisan native:plugin:register codypchristian/nativephp-admob
+php artisan native:install --force
+```
+
+---
+
+# Native Stripe Payments
+
+> Cody P Christian
+
+<div class="plugin-info"><div class="pi-meta"><span class="pi-item"><span class="pi-label">Author</span><span class="pi-value">Cody P Christian</span></span><span class="pi-item"><span class="pi-label">Plugin Type</span><span class="pi-badge pi-badge-community">Community Plugin</span></span><span class="pi-item"><span class="pi-label">Price</span><span class="pi-badge pi-badge-paid">$99</span></span><span class="pi-item"><span class="pi-label">Version</span><span class="pi-value">v0.4.0</span></span><span class="pi-item"><span class="pi-label">License</span><span class="pi-value">Proprietary</span></span></div><div class="pi-compat"><span class="pi-chip"><span class="pi-chip-label">NativePHP</span><span class="pi-chip-value">^4.0</span></span><span class="pi-chip"><span class="pi-chip-label">iOS</span><span class="pi-chip-value">15.0+</span></span><span class="pi-chip"><span class="pi-chip-label">Android</span><span class="pi-chip-value">21+</span></span></div><div class="pi-links"><a href="https://nativephp.com/plugins/codypchristian/nativephp-stripe" class="pi-link pi-link-buy" target="_blank" rel="noopener">Buy on NativePHP →</a></div></div>
+
+# Native Stripe Payments
+
+Presents Stripe's native PaymentSheet entirely from PHP — Apple Pay, Google Pay, Link, and saved cards, all without touching Swift or Kotlin.
+
+## Features
+
+- **Multiple payment methods** — card entry, Link, Apple Pay (iOS), Google Pay (Android), saved cards
+- **PaymentIntent & SetupIntent** — immediate charges or card storage flows
+- **Fluent builder API** — chainable with `completed`, `canceled`, and `failed` callbacks
+- **Stripe Connect** — direct charges on connected accounts
+- **Server-side control** — client secrets created server-side; webhooks finalize orders
+- **JavaScript bridge** — works with Livewire and Inertia web-view stacks
+
+## Installation
+
+```bash
+composer require codypchristian/nativephp-stripe:^0.2
+php artisan native:plugin:register codypchristian/nativephp-stripe
+php artisan native:install --force
+```
+
+---
+
+# IAP Apple & Google
+
+> Cody P Christian
+
+<div class="plugin-info"><div class="pi-meta"><span class="pi-item"><span class="pi-label">Author</span><span class="pi-value">Cody P Christian</span></span><span class="pi-item"><span class="pi-label">Plugin Type</span><span class="pi-badge pi-badge-community">Community Plugin</span></span><span class="pi-item"><span class="pi-label">Price</span><span class="pi-badge pi-badge-paid">$49</span></span><span class="pi-item"><span class="pi-label">Version</span><span class="pi-value">v0.3.0</span></span><span class="pi-item"><span class="pi-label">License</span><span class="pi-value">Proprietary</span></span></div><div class="pi-compat"><span class="pi-chip"><span class="pi-chip-label">NativePHP</span><span class="pi-chip-value">^3.0 || ^4.0</span></span><span class="pi-chip"><span class="pi-chip-label">iOS</span><span class="pi-chip-value">18.2+</span></span><span class="pi-chip"><span class="pi-chip-label">Android</span><span class="pi-chip-value">26+</span></span></div><div class="pi-links"><a href="https://nativephp.com/plugins/codypchristian/nativephp-iap" class="pi-link pi-link-buy" target="_blank" rel="noopener">Buy on NativePHP →</a></div></div>
+
+# IAP Apple & Google (In-App Purchases)
+
+Auto-renewing subscriptions and in-app purchases from PHP — StoreKit 2 on iOS and Google Play Billing 8 on Android — with a unified synchronous API across both platforms.
+
+## Features
+
+- **Subscription management** — auto-renewing subscriptions on iOS and Android
+- **Server-side verification** — signed transaction tokens (iOS) and purchase tokens (Android)
+- **Restored purchases** and entitlement checking
+- **Base plan selection** for Android multi-plan products
+- **Automatic acknowledgment** — Play purchases acknowledged within the 3-day requirement
+- **Synchronous PHP surface** wrapping asynchronous native operations
+- **Consistent error handling** — normalized responses across platforms
+
+## Installation
+
+```bash
+composer config repositories.nativephp-plugins composer https://plugins.nativephp.com
+composer config http-basic.plugins.nativephp.com your@email.com your-license-key
+php artisan vendor:publish --tag=nativephp-plugins-provider
+composer require codypchristian/nativephp-iap
+php artisan native:plugin:register codypchristian/nativephp-iap
+php artisan native:install --force
+```
+
+---
+
 # Google Mobile Ads
 
 > Bhargav Detroja
@@ -12870,4 +13027,91 @@ Toast::info('Update available', 'A new version is ready.');
 use Victorycodedev\Toastkit\Events\ToastShown;
 use Victorycodedev\Toastkit\Events\ToastDismissed;
 use Victorycodedev\Toastkit\Events\ToastActionPressed;
+```
+
+---
+
+# Confetti Celebration
+
+> noehassiel
+
+<div class="plugin-info"><div class="pi-meta"><span class="pi-item"><span class="pi-label">Author</span><span class="pi-value">noehassiel</span></span><span class="pi-item"><span class="pi-label">Plugin Type</span><span class="pi-badge pi-badge-community">Community Plugin</span></span><span class="pi-item"><span class="pi-label">Price</span><span class="pi-badge pi-badge-free">Free</span></span><span class="pi-item"><span class="pi-label">Version</span><span class="pi-value">v1.0.1</span></span><span class="pi-item"><span class="pi-label">License</span><span class="pi-value">Proprietary</span></span></div><div class="pi-compat"><span class="pi-chip"><span class="pi-chip-label">NativePHP</span><span class="pi-chip-value">^4.0</span></span><span class="pi-chip"><span class="pi-chip-label">iOS</span><span class="pi-chip-value">16.0+</span></span><span class="pi-chip"><span class="pi-chip-label">Android</span><span class="pi-chip-value">26+</span></span></div><div class="pi-links"><a href="https://nativephp.com/plugins/noehassiel/confetti" class="pi-link pi-link-buy" target="_blank" rel="noopener">Buy on NativePHP →</a></div></div>
+
+# Confetti Celebration
+
+Native confetti animation for NativePHP Mobile via a `<native:confetti>` EDGE element — Konfetti (Jetpack Compose) on Android and a hand-rolled SwiftUI particle system on iOS. Genuine independent particle movement that web-based alternatives cannot provide.
+
+## Features
+
+- **6 animation presets** — burst, rain, cannon, explode, festive, corners
+- **Customizable particles** — count, duration, speed, damping, colors
+- **Dual trigger modes** — reactive `fire-token` binding or `Confetti::burst()` facade
+- **Multi-reference support** — multiple confetti elements per screen
+- **Non-blocking rendering** — doesn't intercept underlying UI touches
+- **Completion callbacks** via `_finished` attribute
+- **JavaScript integration** via `noehassiel-confetti` module
+
+## Installation
+
+```bash
+composer config repositories.nativephp-plugins composer https://plugins.nativephp.com
+composer config http-basic.plugins.nativephp.com your@email.com your-license-key
+composer require noehassiel/confetti
+php artisan vendor:publish --tag=nativephp-plugins-provider
+php artisan native:plugin:register noehassiel/confetti
+```
+
+## Usage
+
+```blade
+<native:confetti preset="burst" />
+```
+
+```php
+use Noehassiel\Confetti\Facades\Confetti;
+
+Confetti::burst();
+```
+
+---
+
+# Signature Pad
+
+> noehassiel
+
+<div class="plugin-info"><div class="pi-meta"><span class="pi-item"><span class="pi-label">Author</span><span class="pi-value">noehassiel</span></span><span class="pi-item"><span class="pi-label">Plugin Type</span><span class="pi-badge pi-badge-community">Community Plugin</span></span><span class="pi-item"><span class="pi-label">Price</span><span class="pi-badge pi-badge-free">Free</span></span><span class="pi-item"><span class="pi-label">Version</span><span class="pi-value">v0.1.3</span></span><span class="pi-item"><span class="pi-label">License</span><span class="pi-value">Proprietary</span></span></div><div class="pi-compat"><span class="pi-chip"><span class="pi-chip-label">NativePHP</span><span class="pi-chip-value">^4.0</span></span><span class="pi-chip"><span class="pi-chip-label">iOS</span><span class="pi-chip-value">16.0+</span></span><span class="pi-chip"><span class="pi-chip-label">Android</span><span class="pi-chip-value">26+</span></span></div><div class="pi-links"><a href="https://nativephp.com/plugins/noehassiel/signature-pad" class="pi-link pi-link-buy" target="_blank" rel="noopener">Buy on NativePHP →</a></div></div>
+
+# Signature Pad
+
+Native freehand signature capture for NativePHP Mobile — rendered with SwiftUI Path (iOS) and Compose Canvas (Android) — exported as a base64-encoded PNG data URL compatible with existing web form endpoints.
+
+## Features
+
+- **EDGE element** — `<native:signature-pad>` Blade tag
+- **No permissions required** on either platform
+- **Customizable** pen color, stroke width, and styling via Tailwind classes
+- **Read-only mode** for displaying existing signatures
+- **Undo and clear** via token-based props
+- **Offline-friendly** — emits on stroke end, no network required
+- **Existing signature display** support
+- **Event-driven** — stroke-end callbacks
+
+## Installation
+
+```bash
+composer config repositories.nativephp-plugins composer https://plugins.nativephp.com
+composer config http-basic.plugins.nativephp.com your@email.com your-license-key
+composer require noehassiel/signature-pad
+php artisan vendor:publish --tag=nativephp-plugins-provider
+php artisan native:plugin:register noehassiel/signature-pad
+```
+
+## Usage
+
+```blade
+<native:signature-pad
+    class="w-full h-48 border rounded-lg"
+    pen-color="#000000"
+    stroke-width="3"
+/>
 ```

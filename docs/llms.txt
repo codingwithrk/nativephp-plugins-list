@@ -29,6 +29,11 @@
 - /plugins/paid/nativecodeforge-nativephp-timepicker: camiant
 - /plugins/paid/noehassiel-filepicker: noehassiel
 - /plugins/paid/codypchristian-nativephp-nsfw-checker: Cody P Christian
+- /plugins/paid/thelemon2020-nativephp-shazamkit: thelemon2020
+- /plugins/paid/all1web-nativephp-geofence: Neo Nos
+- /plugins/paid/codypchristian-nativephp-admob: Cody P Christian
+- /plugins/paid/codypchristian-nativephp-stripe: Cody P Christian
+- /plugins/paid/codypchristian-nativephp-iap: Cody P Christian
 - /plugins/free/bhargavdetroja-google-mobile-ads: Bhargav Detroja
 - /plugins/free/s2br-nativephp-mobile-splashscreen: Israel Pereira
 - /plugins/free/developernauts-nativephp-mobile-locales: Developernauts
@@ -87,3 +92,5 @@
 - /plugins/free/bhargavdetroja-nativephp-play-games-services: Bhargav Detroja
 - /plugins/free/victorycodedev-nativephp-fetch: Efekpogua Victory
 - /plugins/free/victorycodedev-toastkit: Efekpogua Victory
+- /plugins/free/noehassiel-confetti: noehassiel
+- /plugins/free/noehassiel-signature-pad: noehassiel

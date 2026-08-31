@@ -31,6 +31,11 @@ Listed all are created and maintained by independent developers, not the NativeP
 - [TimePicker](plugins/paid/nativecodeforge-nativephp-timepicker.md) — camiant
 - [FilePicker](plugins/paid/noehassiel-filepicker.md) — noehassiel
 - [NSFW Content Checker](plugins/paid/codypchristian-nativephp-nsfw-checker.md) — Cody P Christian
+- [ShazamKit](plugins/paid/thelemon2020-nativephp-shazamkit.md) — thelemon2020
+- [Background Geofencing](plugins/paid/all1web-nativephp-geofence.md) — Neo Nos
+- [Google AdMob](plugins/paid/codypchristian-nativephp-admob.md) — Cody P Christian
+- [Native Stripe Payments](plugins/paid/codypchristian-nativephp-stripe.md) — Cody P Christian
+- [IAP Apple & Google](plugins/paid/codypchristian-nativephp-iap.md) — Cody P Christian
 
 ---
 
@@ -94,6 +99,8 @@ Listed all are created and maintained by independent developers, not the NativeP
 - [Play Games Services](plugins/free/bhargavdetroja-nativephp-play-games-services.md) — Bhargav Detroja
 - [NativePHP Fetch](plugins/free/victorycodedev-nativephp-fetch.md) — Efekpogua Victory
 - [ToastKit](plugins/free/victorycodedev-toastkit.md) — Efekpogua Victory
+- [Confetti Celebration](plugins/free/noehassiel-confetti.md) — noehassiel
+- [Signature Pad](plugins/free/noehassiel-signature-pad.md) — noehassiel
 
 ---
 
