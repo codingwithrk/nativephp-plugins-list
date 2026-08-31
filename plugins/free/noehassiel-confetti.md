@@ -3,16 +3,14 @@ name: "Confetti Celebration"
 author: "noehassiel"
 price: "Free"
 version: "1.0.1"
-license: "Proprietary"
-source: "https://nativephp.com/plugins/noehassiel/confetti"
+license: "MIT"
+github: "https://github.com/noehassiel/nativephp-confetti"
 support: "https://github.com/noehassiel/nativephp-confetti/issues"
 compatibility:
   nativephp: "^4.0"
   ios: "16.0+"
   android: "26+"
 install:
-  - "composer config repositories.nativephp-plugins composer https://plugins.nativephp.com"
-  - "composer config http-basic.plugins.nativephp.com your@email.com your-license-key"
   - "composer require noehassiel/confetti"
   - "php artisan vendor:publish --tag=nativephp-plugins-provider"
   - "php artisan native:plugin:register noehassiel/confetti"
@@ -35,8 +33,6 @@ Native confetti animation for NativePHP Mobile via a `<native:confetti>` EDGE el
 ## Installation
 
 ```bash
-composer config repositories.nativephp-plugins composer https://plugins.nativephp.com
-composer config http-basic.plugins.nativephp.com your@email.com your-license-key
 composer require noehassiel/confetti
 php artisan vendor:publish --tag=nativephp-plugins-provider
 php artisan native:plugin:register noehassiel/confetti

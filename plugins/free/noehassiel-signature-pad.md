@@ -3,16 +3,14 @@ name: "Signature Pad"
 author: "noehassiel"
 price: "Free"
 version: "0.1.3"
-license: "Proprietary"
-source: "https://nativephp.com/plugins/noehassiel/signature-pad"
+license: "MIT"
+github: "https://github.com/noehassiel/signature-pad"
 support: "https://github.com/noehassiel/signature-pad/issues"
 compatibility:
   nativephp: "^4.0"
   ios: "16.0+"
   android: "26+"
 install:
-  - "composer config repositories.nativephp-plugins composer https://plugins.nativephp.com"
-  - "composer config http-basic.plugins.nativephp.com your@email.com your-license-key"
   - "composer require noehassiel/signature-pad"
   - "php artisan vendor:publish --tag=nativephp-plugins-provider"
   - "php artisan native:plugin:register noehassiel/signature-pad"
@@ -36,8 +34,6 @@ Native freehand signature capture for NativePHP Mobile — rendered with SwiftUI
 ## Installation
 
 ```bash
-composer config repositories.nativephp-plugins composer https://plugins.nativephp.com
-composer config http-basic.plugins.nativephp.com your@email.com your-license-key
 composer require noehassiel/signature-pad
 php artisan vendor:publish --tag=nativephp-plugins-provider
 php artisan native:plugin:register noehassiel/signature-pad
