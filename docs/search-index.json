@@ -623,20 +623,6 @@
         "headings": "Features Installation Usage Events"
     },
     {
-        "title": "Confetti Celebration",
-        "description": "noehassiel",
-        "url": "/plugins/free/noehassiel-confetti",
-        "content": "AuthornoehassielPlugin TypeCommunity PluginPriceFreeVersionv1.0.1LicenseMITNativePHP^4.0iOS16.0+Android26+GitHub → Native confetti animation for NativePHP Mobile via a <native:confetti> EDGE element — Konfetti (Jetpack Compose) on Android and a hand-rolled SwiftUI particle system on iOS. Genuine independent particle movement that web-based alternatives cannot provide. Features 6 animation presets — burst, rain, cannon, explode, festive, corners Customizable particles — count, duration, speed, damping, colors Dual trigger modes — reactive fire-token binding or Confetti::burst() facade Multi-reference support — multiple confetti elements per screen Non-blocking rendering — doesn't intercept underlying UI touches Completion callbacks via _finished attribute JavaScript integration via noehassiel-confetti module Installation composer require noehassiel/confetti php artisan vendor:publish --tag=nativephp-plugins-provider php artisan native:plugin:register noehassiel/confetti Usage <native:confetti preset=\"burst\" /> use Noehassiel\\Confetti\\Facades\\Confetti; Confetti::burst();",
-        "headings": "Features Installation Usage"
-    },
-    {
-        "title": "Signature Pad",
-        "description": "noehassiel",
-        "url": "/plugins/free/noehassiel-signature-pad",
-        "content": "AuthornoehassielPlugin TypeCommunity PluginPriceFreeVersionv0.1.3LicenseMITNativePHP^4.0iOS16.0+Android26+GitHub → Native freehand signature capture for NativePHP Mobile — rendered with SwiftUI Path (iOS) and Compose Canvas (Android) — exported as a base64-encoded PNG data URL compatible with existing web form endpoints. Features EDGE element — <native:signature-pad> Blade tag No permissions required on either platform Customizable pen color, stroke width, and styling via Tailwind classes Read-only mode for displaying existing signatures Undo and clear via token-based props Offline-friendly — emits on stroke end, no network required Existing signature display support Event-driven — stroke-end callbacks Installation composer require noehassiel/signature-pad php artisan vendor:publish --tag=nativephp-plugins-provider php artisan native:plugin:register noehassiel/signature-pad Usage <native:signature-pad class=\"w-full h-48 border rounded-lg\" pen-color=\"#000000\" stroke-width=\"3\" />",
-        "headings": "Features Installation Usage"
-    },
-    {
         "title": "Retro Emulator",
         "description": "Kevin Batdorf",
         "url": "/plugins/free/kevinbatdorf-nativephp-retro-emulator",
