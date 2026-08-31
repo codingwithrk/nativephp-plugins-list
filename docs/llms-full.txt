@@ -723,3 +723,11 @@ AuthornoehassielPlugin TypeCommunity PluginPriceFreeVersionv1.0.1LicensePropriet
 noehassiel
 
 AuthornoehassielPlugin TypeCommunity PluginPriceFreeVersionv0.1.3LicenseProprietaryNativePHP^4.0iOS16.0+Android26+Buy on NativePHP → # Signature Pad Native freehand signature capture for NativePHP Mobile — rendered with SwiftUI Path (iOS) and Compose Canvas (Android) — exported as a base64-encoded PNG data URL compatible with existing web form endpoints. ## Features - **EDGE element** — `` Blade tag - **No permissions required** on either platform - **Customizable** pen color, stroke width, and styling via Tailwind classes - **Read-only mode** for displaying existing signatures - **Undo and clear** via token-based props - **Offline-friendly** — emits on stroke end, no network required - **Existing signature display** support - **Event-driven** — stroke-end callbacks ## Installation ```bash composer config repositories.nativephp-plugins composer https://plugins.nativephp.com composer config http-basic.plugins.nativephp.com your@email.com your-license-key composer require noehassiel/signature-pad php artisan vendor:publish --tag=nativephp-plugins-provider php artisan native:plugin:register noehassiel/signature-pad ``` ## Usage ```blade ```
+
+---
+
+# Retro Emulator
+
+Kevin Batdorf
+
+AuthorKevin BatdorfPlugin TypeCommunity PluginPriceFreeVersionv0.1.3LicenseMITNativePHP^4.0iOS16.0+Android26+GitHub → # Retro Emulator Native retro emulation for NativePHP Mobile apps — NES, SNES, Game Boy, Game Boy Color, Game Boy Advance, and Genesis via swappable cores. No BIOS files, API keys, or extensive setup required. ## Supported Systems - NES - SNES - Game Boy / Game Boy Color - Game Boy Advance - Sega Genesis ## Features - **Save states** with undo and instant rewind - **Multiple controller options** — touch d-pad, physical gamepads, multitap - **Live memory access** — read, write, and monitor memory in real time - **CRT shaders** and presentation controls - **Built-in cheat support** and ROM picker - **Cross-platform event system** — works with Livewire and JavaScript (Vue/React) ## Installation ```bash composer require kevinbatdorf/nativephp-retro-emulator php artisan native:plugin:register kevinbatdorf/nativephp-retro-emulator ```

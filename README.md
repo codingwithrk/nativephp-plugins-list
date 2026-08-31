@@ -101,6 +101,7 @@ Listed all are created and maintained by independent developers, not the NativeP
 - [ToastKit](plugins/free/victorycodedev-toastkit.md) — Efekpogua Victory
 - [Confetti Celebration](plugins/free/noehassiel-confetti.md) — noehassiel
 - [Signature Pad](plugins/free/noehassiel-signature-pad.md) — noehassiel
+- [Retro Emulator](plugins/free/kevinbatdorf-nativephp-retro-emulator.md) — Kevin Batdorf
 
 ---
 

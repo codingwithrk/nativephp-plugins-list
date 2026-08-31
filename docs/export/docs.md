@@ -13115,3 +13115,39 @@ php artisan native:plugin:register noehassiel/signature-pad
     stroke-width="3"
 />
 ```
+
+---
+
+# Retro Emulator
+
+> Kevin Batdorf
+
+<div class="plugin-info"><div class="pi-meta"><span class="pi-item"><span class="pi-label">Author</span><span class="pi-value">Kevin Batdorf</span></span><span class="pi-item"><span class="pi-label">Plugin Type</span><span class="pi-badge pi-badge-community">Community Plugin</span></span><span class="pi-item"><span class="pi-label">Price</span><span class="pi-badge pi-badge-free">Free</span></span><span class="pi-item"><span class="pi-label">Version</span><span class="pi-value">v0.1.3</span></span><span class="pi-item"><span class="pi-label">License</span><span class="pi-value">MIT</span></span></div><div class="pi-compat"><span class="pi-chip"><span class="pi-chip-label">NativePHP</span><span class="pi-chip-value">^4.0</span></span><span class="pi-chip"><span class="pi-chip-label">iOS</span><span class="pi-chip-value">16.0+</span></span><span class="pi-chip"><span class="pi-chip-label">Android</span><span class="pi-chip-value">26+</span></span></div><div class="pi-links"><a href="https://github.com/KevinBatdorf/nativephp-retro-emulator" class="pi-link" target="_blank" rel="noopener">GitHub →</a></div></div>
+
+# Retro Emulator
+
+Native retro emulation for NativePHP Mobile apps — NES, SNES, Game Boy, Game Boy Color, Game Boy Advance, and Genesis via swappable cores. No BIOS files, API keys, or extensive setup required.
+
+## Supported Systems
+
+- NES
+- SNES
+- Game Boy / Game Boy Color
+- Game Boy Advance
+- Sega Genesis
+
+## Features
+
+- **Save states** with undo and instant rewind
+- **Multiple controller options** — touch d-pad, physical gamepads, multitap
+- **Live memory access** — read, write, and monitor memory in real time
+- **CRT shaders** and presentation controls
+- **Built-in cheat support** and ROM picker
+- **Cross-platform event system** — works with Livewire and JavaScript (Vue/React)
+
+## Installation
+
+```bash
+composer require kevinbatdorf/nativephp-retro-emulator
+php artisan native:plugin:register kevinbatdorf/nativephp-retro-emulator
+```
