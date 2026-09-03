@@ -2,7 +2,7 @@
 name: "NativePHP Fetch"
 author: "Efekpogua Victory"
 price: "Free"
-version: "1.0.1"
+version: "1.1.0"
 license: "MIT"
 github: "https://github.com/victorycodedev/nativephp-fetch"
 support: "https://github.com/victorycodedev/nativephp-fetch/issues"
