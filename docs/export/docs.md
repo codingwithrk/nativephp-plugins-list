@@ -1877,6 +1877,37 @@ const prev = await restore();
 
 ---
 
+# Mobile BLE
+
+> Bifrost Technology
+
+<div class="plugin-info"><div class="pi-meta"><span class="pi-item"><span class="pi-label">Author</span><span class="pi-value">Bifrost Technology</span></span><span class="pi-item"><span class="pi-label">Plugin Type</span><span class="pi-badge pi-badge-first-party">1st Party Plugin</span></span><span class="pi-item"><span class="pi-label">Price</span><span class="pi-badge pi-badge-paid">$49</span></span><span class="pi-item"><span class="pi-label">Version</span><span class="pi-value">v1.0.0</span></span><span class="pi-item"><span class="pi-label">License</span><span class="pi-value">Proprietary</span></span></div><div class="pi-compat"><span class="pi-chip"><span class="pi-chip-label">NativePHP</span><span class="pi-chip-value">^3.0 || ^4.0</span></span><span class="pi-chip"><span class="pi-chip-label">iOS</span><span class="pi-chip-value">18.2+</span></span><span class="pi-chip"><span class="pi-chip-label">Android</span><span class="pi-chip-value">26+</span></span></div><div class="pi-links"><a href="https://nativephp.com/plugins/nativephp/mobile-ble" class="pi-link pi-link-buy" target="_blank" rel="noopener">Buy on NativePHP →</a></div></div>
+
+# Mobile BLE
+
+Bluetooth Low Energy scanning and connection tracking for NativePHP Mobile — scan peripherals, connect to them, and monitor presence states from Laravel without reading GATT characteristics.
+
+## Features
+
+- **BLE device scanning** with optional service UUID filtering
+- **Connection management** and state tracking
+- **System peripheral discovery**
+- **Device reconnection** on app launch
+- **Background connection support** on iOS
+- **Event-driven** — `DeviceDiscovered`, `DeviceConnected`, `ConnectionFailed`
+- **Testing utilities** for mocking the BLE radio
+
+## Installation
+
+```bash
+composer config repositories.nativephp-plugins composer https://plugins.nativephp.com
+composer config http-basic.plugins.nativephp.com your@email.com your-license-key
+composer require nativephp/mobile-ble
+php artisan native:plugin:register nativephp/mobile-ble
+```
+
+---
+
 # Google AdMob
 
 > Lukas Rakauskas

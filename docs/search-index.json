@@ -119,6 +119,13 @@
         "headings": "Features Installation PHP Usage JavaScript Usage API Methods Compatibility Notes"
     },
     {
+        "title": "Mobile BLE",
+        "description": "Bifrost Technology",
+        "url": "/plugins/paid/nativephp-mobile-ble",
+        "content": "AuthorBifrost TechnologyPlugin Type1st Party PluginPrice$49Versionv1.0.0LicenseProprietaryNativePHP^3.0 || ^4.0iOS18.2+Android26+Buy on NativePHP → Bluetooth Low Energy scanning and connection tracking for NativePHP Mobile — scan peripherals, connect to them, and monitor presence states from Laravel without reading GATT characteristics. Features BLE device scanning with optional service UUID filtering Connection management and state tracking System peripheral discovery Device reconnection on app launch Background connection support on iOS Event-driven — DeviceDiscovered, DeviceConnected, ConnectionFailed Testing utilities for mocking the BLE radio Installation composer config repositories.nativephp-plugins composer https://plugins.nativephp.com composer config http-basic.plugins.nativephp.com your@email.com your-license-key composer require nativephp/mobile-ble php artisan native:plugin:register nativephp/mobile-ble",
+        "headings": "Features Installation"
+    },
+    {
         "title": "Google AdMob",
         "description": "Lukas Rakauskas",
         "url": "/plugins/paid/lrakauskas-nativephp-google-admob",

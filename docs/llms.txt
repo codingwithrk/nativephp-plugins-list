@@ -20,6 +20,7 @@
 - /plugins/paid/nativephp-mobile-scanner: Bifrost Technology
 - /plugins/paid/nativephp-mobile-geolocation: Bifrost Technology
 - /plugins/paid/developernauts-nativephp-inapp-purchases: Developernauts
+- /plugins/paid/nativephp-mobile-ble: Bifrost Technology
 - /plugins/paid/lrakauskas-nativephp-google-admob: Lukas Rakauskas
 - /plugins/paid/all1web-nativephp-share-target: Neo Nos
 - /plugins/paid/rubenvdb-nativephp-widgets: Borgman Digital

@@ -22,6 +22,7 @@ Listed all are created and maintained by independent developers, not the NativeP
 - [Scanner](plugins/paid/nativephp-mobile-scanner.md) — Bifrost Technology
 - [Geolocation](plugins/paid/nativephp-mobile-geolocation.md) — Bifrost Technology
 - [In-App Purchases](plugins/paid/developernauts-nativephp-inapp-purchases.md) — Developernauts
+- [Mobile BLE](plugins/paid/nativephp-mobile-ble.md) — Bifrost Technology
 - [Google AdMob](plugins/paid/lrakauskas-nativephp-google-admob.md) — Lukas Rakauskas
 - [Share Target](plugins/paid/all1web-nativephp-share-target.md) — Neo Nos
 - [Widgets](plugins/paid/rubenvdb-nativephp-widgets.md) — Borgman Digital
