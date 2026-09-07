@@ -2,7 +2,7 @@
 name: "NativePHP Mobile Geolocation"
 author: "Bifrost Technology"
 price: "$49"
-version: "2.0.0"
+version: "2.1.0"
 license: "Proprietary"
 source: "https://nativephp.com/plugins/nativephp/mobile-geolocation"
 support: "support@nativephp.com"
