@@ -95,3 +95,5 @@
 - /plugins/free/victorycodedev-toastkit: Efekpogua Victory
 - /plugins/free/kevinbatdorf-nativephp-retro-emulator: Kevin Batdorf
 - /plugins/free/noehassiel-signature-pad: noehassiel
+- /plugins/free/khalidmaquilang-sensors-plus: khalidmaquilang
+- /plugins/free/vikas5914-fluidaudio: Vikas Kapadiya

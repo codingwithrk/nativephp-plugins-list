@@ -13136,3 +13136,76 @@ php artisan native:plugin:register noehassiel/signature-pad
     stroke-width="3"
 />
 ```
+
+---
+
+# Sensor Plus
+
+> khalidmaquilang
+
+<div class="plugin-info"><div class="pi-meta"><span class="pi-item"><span class="pi-label">Author</span><span class="pi-value">khalidmaquilang</span></span><span class="pi-item"><span class="pi-label">Plugin Type</span><span class="pi-badge pi-badge-community">Community Plugin</span></span><span class="pi-item"><span class="pi-label">Price</span><span class="pi-badge pi-badge-free">Free</span></span><span class="pi-item"><span class="pi-label">Version</span><span class="pi-value">v1.0.2</span></span><span class="pi-item"><span class="pi-label">License</span><span class="pi-value">MIT</span></span></div><div class="pi-compat"><span class="pi-chip"><span class="pi-chip-label">NativePHP</span><span class="pi-chip-value">^4.0</span></span><span class="pi-chip"><span class="pi-chip-label">iOS</span><span class="pi-chip-value">15.0+</span></span><span class="pi-chip"><span class="pi-chip-label">Android</span><span class="pi-chip-value">21+</span></span></div><div class="pi-links"><a href="https://github.com/khalidmaquilang/sensor-plus" class="pi-link" target="_blank" rel="noopener">GitHub →</a></div></div>
+
+# Sensor Plus
+
+Exposes the accelerometer, user-accelerometer (gravity removed), gyroscope, magnetometer, and barometer sensors to your Laravel/Livewire mobile app.
+
+## Features
+
+- **5 sensors** — accelerometer, user-accelerometer (gravity removed), gyroscope, magnetometer, barometer
+- **Configurable sampling rates** — FASTEST, GAME, UI, NORMAL intervals
+- **Sensor availability checking** and status monitoring
+- **Asynchronous event-based readings**
+- **PHP and JavaScript** (Vue/React) integration support
+
+## Installation
+
+```bash
+composer require khalidmaquilang/sensors-plus
+php artisan native:plugin:register khalidmaquilang/sensors-plus
+```
+
+## Usage
+
+```php
+use Khalidmaquilang\SensorsPlus\Facades\SensorPlus;
+
+// Start listening to the accelerometer
+SensorPlus::accelerometer()->start();
+
+// Stop
+SensorPlus::accelerometer()->stop();
+```
+
+---
+
+# FluidAudio
+
+> Vikas Kapadiya
+
+<div class="plugin-info"><div class="pi-meta"><span class="pi-item"><span class="pi-label">Author</span><span class="pi-value">Vikas Kapadiya</span></span><span class="pi-item"><span class="pi-label">Plugin Type</span><span class="pi-badge pi-badge-community">Community Plugin</span></span><span class="pi-item"><span class="pi-label">Price</span><span class="pi-badge pi-badge-free">Free</span></span><span class="pi-item"><span class="pi-label">Version</span><span class="pi-value">v1.1.0</span></span><span class="pi-item"><span class="pi-label">License</span><span class="pi-value">MIT</span></span></div><div class="pi-compat"><span class="pi-chip"><span class="pi-chip-label">NativePHP</span><span class="pi-chip-value">^3.0 || ^4.0</span></span><span class="pi-chip"><span class="pi-chip-label">iOS</span><span class="pi-chip-value">18.0+</span></span><span class="pi-chip"><span class="pi-chip-label">Android</span><span class="pi-chip-value">29+ (stub only)</span></span></div><div class="pi-links"><a href="https://github.com/vikas5914/fluidaudio" class="pi-link" target="_blank" rel="noopener">GitHub →</a></div></div>
+
+# FluidAudio
+
+On-device speech recognition via FluidAudio (Apple Core ML) for NativePHP Mobile. Transcribe audio files or stream from the microphone in real time — all on-device, no cloud required.
+
+> **Note:** Android support is a stub only. Full functionality is iOS-only.
+
+## Features
+
+- **Batch file ASR** — download model packs, then transcribe audio files with `transcribeFile()`
+- **Microphone streaming** — real-time partial transcripts using Parakeet EOU models
+- **Non-blocking** — all calls return immediately with request IDs; results arrive via events
+- **Multiple model variants** — English v2 or multilingual v3 for batch; 160ms/320ms/1280ms latency options for streaming
+- **Model caching** — downloaded models persist on-device for reuse
+- **JavaScript client** — `@vikas5914/fluidaudio` npm package for Inertia/Vue/React
+
+## Installation
+
+```bash
+composer require vikas5914/fluidaudio
+php artisan native:plugin:register vikas5914/fluidaudio
+```
+
+## iOS Permissions
+
+The plugin declares `NSMicrophoneUsageDescription` and audio background mode automatically.

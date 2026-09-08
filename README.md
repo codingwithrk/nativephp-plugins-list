@@ -102,6 +102,8 @@ Listed all are created and maintained by independent developers, not the NativeP
 - [ToastKit](plugins/free/victorycodedev-toastkit.md) — Efekpogua Victory
 - [Retro Emulator](plugins/free/kevinbatdorf-nativephp-retro-emulator.md) — Kevin Batdorf
 - [Signature Pad](plugins/free/noehassiel-signature-pad.md) — noehassiel
+- [Sensor Plus](plugins/free/khalidmaquilang-sensors-plus.md) — khalidmaquilang
+- [FluidAudio](plugins/free/vikas5914-fluidaudio.md) — Vikas Kapadiya
 
 ---
 
