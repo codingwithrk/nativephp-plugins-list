@@ -21,6 +21,7 @@
 - /plugins/paid/nativephp-mobile-geolocation: Bifrost Technology
 - /plugins/paid/developernauts-nativephp-inapp-purchases: Developernauts
 - /plugins/paid/nativephp-mobile-ble: Bifrost Technology
+- /plugins/paid/tether-nativephp-client: Lukas Rakauskas
 - /plugins/paid/lrakauskas-nativephp-google-admob: Lukas Rakauskas
 - /plugins/paid/all1web-nativephp-share-target: Neo Nos
 - /plugins/paid/rubenvdb-nativephp-widgets: Borgman Digital
@@ -97,3 +98,4 @@
 - /plugins/free/noehassiel-signature-pad: noehassiel
 - /plugins/free/khalidmaquilang-sensors-plus: khalidmaquilang
 - /plugins/free/vikas5914-fluidaudio: Vikas Kapadiya
+- /plugins/free/codingwithrk-nativephp-datetime-picker: CodingwithRK

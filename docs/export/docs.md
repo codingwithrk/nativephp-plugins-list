@@ -1908,6 +1908,38 @@ php artisan native:plugin:register nativephp/mobile-ble
 
 ---
 
+# Tether Client
+
+> Lukas Rakauskas
+
+<div class="plugin-info"><div class="pi-meta"><span class="pi-item"><span class="pi-label">Author</span><span class="pi-value">Lukas Rakauskas</span></span><span class="pi-item"><span class="pi-label">Plugin Type</span><span class="pi-badge pi-badge-community">Community Plugin</span></span><span class="pi-item"><span class="pi-label">Price</span><span class="pi-badge pi-badge-paid">$99</span></span><span class="pi-item"><span class="pi-label">Version</span><span class="pi-value">v1.2.0</span></span><span class="pi-item"><span class="pi-label">License</span><span class="pi-value">Proprietary</span></span></div><div class="pi-compat"><span class="pi-chip"><span class="pi-chip-label">NativePHP</span><span class="pi-chip-value">^3.0 || ^4.0</span></span><span class="pi-chip"><span class="pi-chip-label">iOS</span><span class="pi-chip-value">18.2+</span></span><span class="pi-chip"><span class="pi-chip-label">Android</span><span class="pi-chip-value">26+</span></span></div><div class="pi-links"><a href="https://nativephp.com/plugins/tether/nativephp-client" class="pi-link pi-link-buy" target="_blank" rel="noopener">Buy on NativePHP →</a></div></div>
+
+# Tether Client
+
+Integrates Laravel Tether's offline-first synchronization framework with NativePHP Mobile — automatically triggers sync when the app resumes or the device reconnects to the network, with the entire sync engine running in PHP.
+
+## Features
+
+- **Auto-sync** on app resume and network reconnection
+- **Mobile lifecycle events** — app foreground/background exposed as Laravel events
+- **Connectivity events** — network state changes as Laravel events
+- **Background sync** support when `nativephp/mobile-background-tasks` is present
+- **Cooldown mechanism** to prevent repeated sync attempts
+- **Full and partial sync** options
+- **No native code** — cross-platform iOS and Android in pure PHP
+
+## Installation
+
+```bash
+composer config repositories.nativephp-plugins composer https://plugins.nativephp.com
+composer config http-basic.plugins.nativephp.com your@email.com your-license-key
+composer require tether/nativephp-client
+php artisan native:plugin:register tether/nativephp-client
+php artisan vendor:publish --tag=tether-nativephp-config
+```
+
+---
+
 # Google AdMob
 
 > Lukas Rakauskas
@@ -13209,3 +13241,32 @@ php artisan native:plugin:register vikas5914/fluidaudio
 ## iOS Permissions
 
 The plugin declares `NSMicrophoneUsageDescription` and audio background mode automatically.
+
+---
+
+# Datetime Picker
+
+> CodingwithRK
+
+<div class="plugin-info"><div class="pi-meta"><span class="pi-item"><span class="pi-label">Author</span><span class="pi-value">CodingwithRK</span></span><span class="pi-item"><span class="pi-label">Plugin Type</span><span class="pi-badge pi-badge-community">Community Plugin</span></span><span class="pi-item"><span class="pi-label">Price</span><span class="pi-badge pi-badge-free">Free</span></span><span class="pi-item"><span class="pi-label">Version</span><span class="pi-value">v1.0.0</span></span><span class="pi-item"><span class="pi-label">License</span><span class="pi-value">MIT</span></span></div><div class="pi-compat"><span class="pi-chip"><span class="pi-chip-label">NativePHP</span><span class="pi-chip-value">^3.0 || ^4.0</span></span><span class="pi-chip"><span class="pi-chip-label">iOS</span><span class="pi-chip-value">15.0+</span></span><span class="pi-chip"><span class="pi-chip-label">Android</span><span class="pi-chip-value">24+</span></span></div><div class="pi-links"><a href="https://github.com/codingwithrk/nativephp-datetime-picker" class="pi-link" target="_blank" rel="noopener">GitHub →</a></div></div>
+
+# Datetime Picker
+
+Native date, time, and datetime picker for NativePHP Mobile — iOS wheel-style UIDatePicker bottom sheet and Android native platform dialogs, with no Material 3 dependency.
+
+## Features
+
+- **3 picker modes** — date, time (12h/24h), and datetime
+- **iOS bottom sheet** with wheel-style interface
+- **Android platform dialogs** with theme compatibility
+- **Min/max bounds** and initial value support
+- **Locale hints** for regional formatting
+- **Change event streaming** (iOS)
+- **Livewire and Inertia** (Vue/React) support
+
+## Installation
+
+```bash
+composer require codingwithrk/nativephp-datetime-picker
+php artisan native:plugin:register codingwithrk/nativephp-datetime-picker
+```

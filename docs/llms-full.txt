@@ -142,6 +142,14 @@ AuthorBifrost TechnologyPlugin Type1st Party PluginPrice$49Versionv1.0.0LicenseP
 
 ---
 
+# Tether Client
+
+Lukas Rakauskas
+
+AuthorLukas RakauskasPlugin TypeCommunity PluginPrice$99Versionv1.2.0LicenseProprietaryNativePHP^3.0 || ^4.0iOS18.2+Android26+Buy on NativePHP → # Tether Client Integrates Laravel Tether's offline-first synchronization framework with NativePHP Mobile — automatically triggers sync when the app resumes or the device reconnects to the network, with the entire sync engine running in PHP. ## Features - **Auto-sync** on app resume and network reconnection - **Mobile lifecycle events** — app foreground/background exposed as Laravel events - **Connectivity events** — network state changes as Laravel events - **Background sync** support when `nativephp/mobile-background-tasks` is present - **Cooldown mechanism** to prevent repeated sync attempts - **Full and partial sync** options - **No native code** — cross-platform iOS and Android in pure PHP ## Installation ```bash composer config repositories.nativephp-plugins composer https://plugins.nativephp.com composer config http-basic.plugins.nativephp.com your@email.com your-license-key composer require tether/nativephp-client php artisan native:plugin:register tether/nativephp-client php artisan vendor:publish --tag=tether-nativephp-config ```
+
+---
+
 # Google AdMob
 
 Lukas Rakauskas
@@ -747,3 +755,11 @@ AuthorkhalidmaquilangPlugin TypeCommunity PluginPriceFreeVersionv1.0.2LicenseMIT
 Vikas Kapadiya
 
 AuthorVikas KapadiyaPlugin TypeCommunity PluginPriceFreeVersionv1.1.0LicenseMITNativePHP^3.0 || ^4.0iOS18.0+Android29+ (stub only)GitHub → # FluidAudio On-device speech recognition via FluidAudio (Apple Core ML) for NativePHP Mobile. Transcribe audio files or stream from the microphone in real time — all on-device, no cloud required. > **Note:** Android support is a stub only. Full functionality is iOS-only. ## Features - **Batch file ASR** — download model packs, then transcribe audio files with `transcribeFile()` - **Microphone streaming** — real-time partial transcripts using Parakeet EOU models - **Non-blocking** — all calls return immediately with request IDs; results arrive via events - **Multiple model variants** — English v2 or multilingual v3 for batch; 160ms/320ms/1280ms latency options for streaming - **Model caching** — downloaded models persist on-device for reuse - **JavaScript client** — `@vikas5914/fluidaudio` npm package for Inertia/Vue/React ## Installation ```bash composer require vikas5914/fluidaudio php artisan native:plugin:register vikas5914/fluidaudio ``` ## iOS Permissions The plugin declares `NSMicrophoneUsageDescription` and audio background mode automatically.
+
+---
+
+# Datetime Picker
+
+CodingwithRK
+
+AuthorCodingwithRKPlugin TypeCommunity PluginPriceFreeVersionv1.0.0LicenseMITNativePHP^3.0 || ^4.0iOS15.0+Android24+GitHub → # Datetime Picker Native date, time, and datetime picker for NativePHP Mobile — iOS wheel-style UIDatePicker bottom sheet and Android native platform dialogs, with no Material 3 dependency. ## Features - **3 picker modes** — date, time (12h/24h), and datetime - **iOS bottom sheet** with wheel-style interface - **Android platform dialogs** with theme compatibility - **Min/max bounds** and initial value support - **Locale hints** for regional formatting - **Change event streaming** (iOS) - **Livewire and Inertia** (Vue/React) support ## Installation ```bash composer require codingwithrk/nativephp-datetime-picker php artisan native:plugin:register codingwithrk/nativephp-datetime-picker ```

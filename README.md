@@ -23,6 +23,7 @@ Listed all are created and maintained by independent developers, not the NativeP
 - [Geolocation](plugins/paid/nativephp-mobile-geolocation.md) — Bifrost Technology
 - [In-App Purchases](plugins/paid/developernauts-nativephp-inapp-purchases.md) — Developernauts
 - [Mobile BLE](plugins/paid/nativephp-mobile-ble.md) — Bifrost Technology
+- [Tether Client](plugins/paid/tether-nativephp-client.md) — Lukas Rakauskas
 - [Google AdMob](plugins/paid/lrakauskas-nativephp-google-admob.md) — Lukas Rakauskas
 - [Share Target](plugins/paid/all1web-nativephp-share-target.md) — Neo Nos
 - [Widgets](plugins/paid/rubenvdb-nativephp-widgets.md) — Borgman Digital
@@ -104,6 +105,7 @@ Listed all are created and maintained by independent developers, not the NativeP
 - [Signature Pad](plugins/free/noehassiel-signature-pad.md) — noehassiel
 - [Sensor Plus](plugins/free/khalidmaquilang-sensors-plus.md) — khalidmaquilang
 - [FluidAudio](plugins/free/vikas5914-fluidaudio.md) — Vikas Kapadiya
+- [Datetime Picker](plugins/free/codingwithrk-nativephp-datetime-picker.md) — CodingwithRK
 
 ---
 
