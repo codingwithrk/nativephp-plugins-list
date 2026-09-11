@@ -99,3 +99,4 @@
 - /plugins/free/khalidmaquilang-sensors-plus: khalidmaquilang
 - /plugins/free/vikas5914-fluidaudio: Vikas Kapadiya
 - /plugins/free/codingwithrk-nativephp-datetime-picker: CodingwithRK
+- /plugins/free/stupidbrains-mobile-sfx: Kirill

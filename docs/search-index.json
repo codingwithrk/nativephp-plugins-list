@@ -670,5 +670,12 @@
         "url": "/plugins/free/codingwithrk-nativephp-datetime-picker",
         "content": "AuthorCodingwithRKPlugin TypeCommunity PluginPriceFreeVersionv1.0.0LicenseMITNativePHP^3.0 || ^4.0iOS15.0+Android24+GitHub → Native date, time, and datetime picker for NativePHP Mobile — iOS wheel-style UIDatePicker bottom sheet and Android native platform dialogs, with no Material 3 dependency. Features 3 picker modes — date, time (12h/24h), and datetime iOS bottom sheet with wheel-style interface Android platform dialogs with theme compatibility Min/max bounds and initial value support Locale hints for regional formatting Change event streaming (iOS) Livewire and Inertia (Vue/React) support Installation composer require codingwithrk/nativephp-datetime-picker php artisan native:plugin:register codingwithrk/nativephp-datetime-picker",
         "headings": "Features Installation"
+    },
+    {
+        "title": "Mobile SFX",
+        "description": "Kirill",
+        "url": "/plugins/free/stupidbrains-mobile-sfx",
+        "content": "AuthorKirillPlugin TypeCommunity PluginPriceFreeVersionv1.0.0LicenseMITNativePHP^4.3PHP^8.4iOS15.0+Android21+GitHub → Low-latency short-sound playback for NativePHP Mobile — preload audio files, trigger them by name, and release them when done. Features Preload multiple audio files with Sfx::preload() Play by name with Sfx::play() Unload sounds when no longer needed with Sfx::unload() Overlapping playback — up to 4 simultaneous sounds on Android Respects iOS silent switch behavior Format — 16-bit PCM WAV at 44.1 kHz (mono) Installation composer require stupidbrains/mobile-sfx php artisan native:plugin:register stupidbrains/mobile-sfx Usage use Stupidbrains\\MobileSfx\\Facades\\Sfx; // Preload a sound file Sfx::preload('click', 'sounds/click.wav'); // Play it Sfx::play('click'); // Release when done Sfx::unload('click');",
+        "headings": "Features Installation Usage"
     }
 ]

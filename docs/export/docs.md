@@ -13270,3 +13270,46 @@ Native date, time, and datetime picker for NativePHP Mobile — iOS wheel-style 
 composer require codingwithrk/nativephp-datetime-picker
 php artisan native:plugin:register codingwithrk/nativephp-datetime-picker
 ```
+
+---
+
+# Mobile SFX
+
+> Kirill
+
+<div class="plugin-info"><div class="pi-meta"><span class="pi-item"><span class="pi-label">Author</span><span class="pi-value">Kirill</span></span><span class="pi-item"><span class="pi-label">Plugin Type</span><span class="pi-badge pi-badge-community">Community Plugin</span></span><span class="pi-item"><span class="pi-label">Price</span><span class="pi-badge pi-badge-free">Free</span></span><span class="pi-item"><span class="pi-label">Version</span><span class="pi-value">v1.0.0</span></span><span class="pi-item"><span class="pi-label">License</span><span class="pi-value">MIT</span></span></div><div class="pi-compat"><span class="pi-chip"><span class="pi-chip-label">NativePHP</span><span class="pi-chip-value">^4.3</span></span><span class="pi-chip"><span class="pi-chip-label">PHP</span><span class="pi-chip-value">^8.4</span></span><span class="pi-chip"><span class="pi-chip-label">iOS</span><span class="pi-chip-value">15.0+</span></span><span class="pi-chip"><span class="pi-chip-label">Android</span><span class="pi-chip-value">21+</span></span></div><div class="pi-links"><a href="https://github.com/kirilldakhniuk/nativephp-mobile-sfx" class="pi-link" target="_blank" rel="noopener">GitHub →</a></div></div>
+
+# Mobile SFX
+
+Low-latency short-sound playback for NativePHP Mobile — preload audio files, trigger them by name, and release them when done.
+
+## Features
+
+- **Preload** multiple audio files with `Sfx::preload()`
+- **Play by name** with `Sfx::play()`
+- **Unload** sounds when no longer needed with `Sfx::unload()`
+- **Overlapping playback** — up to 4 simultaneous sounds on Android
+- **Respects iOS silent switch** behavior
+- **Format** — 16-bit PCM WAV at 44.1 kHz (mono)
+
+## Installation
+
+```bash
+composer require stupidbrains/mobile-sfx
+php artisan native:plugin:register stupidbrains/mobile-sfx
+```
+
+## Usage
+
+```php
+use Stupidbrains\MobileSfx\Facades\Sfx;
+
+// Preload a sound file
+Sfx::preload('click', 'sounds/click.wav');
+
+// Play it
+Sfx::play('click');
+
+// Release when done
+Sfx::unload('click');
+```

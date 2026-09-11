@@ -106,6 +106,7 @@ Listed all are created and maintained by independent developers, not the NativeP
 - [Sensor Plus](plugins/free/khalidmaquilang-sensors-plus.md) — khalidmaquilang
 - [FluidAudio](plugins/free/vikas5914-fluidaudio.md) — Vikas Kapadiya
 - [Datetime Picker](plugins/free/codingwithrk-nativephp-datetime-picker.md) — CodingwithRK
+- [Mobile SFX](plugins/free/stupidbrains-mobile-sfx.md) — Kirill
 
 ---
 
