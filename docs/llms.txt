@@ -100,3 +100,4 @@
 - /plugins/free/vikas5914-fluidaudio: Vikas Kapadiya
 - /plugins/free/codingwithrk-nativephp-datetime-picker: CodingwithRK
 - /plugins/free/stupidbrains-mobile-sfx: Kirill
+- /plugins/free/codingwithrk-nativephp-social-auth: CodingwithRK

@@ -13313,3 +13313,32 @@ Sfx::play('click');
 // Release when done
 Sfx::unload('click');
 ```
+
+---
+
+# Social Auth
+
+> CodingwithRK
+
+<div class="plugin-info"><div class="pi-meta"><span class="pi-item"><span class="pi-label">Author</span><span class="pi-value">CodingwithRK</span></span><span class="pi-item"><span class="pi-label">Plugin Type</span><span class="pi-badge pi-badge-community">Community Plugin</span></span><span class="pi-item"><span class="pi-label">Price</span><span class="pi-badge pi-badge-free">Free</span></span><span class="pi-item"><span class="pi-label">Version</span><span class="pi-value">v1.0.0</span></span><span class="pi-item"><span class="pi-label">License</span><span class="pi-value">MIT</span></span></div><div class="pi-compat"><span class="pi-chip"><span class="pi-chip-label">NativePHP</span><span class="pi-chip-value">^3.0 || ^4.0</span></span><span class="pi-chip"><span class="pi-chip-label">PHP</span><span class="pi-chip-value">^8.2</span></span><span class="pi-chip"><span class="pi-chip-label">Laravel</span><span class="pi-chip-value">11 || 12</span></span><span class="pi-chip"><span class="pi-chip-label">iOS</span><span class="pi-chip-value">18.0+</span></span><span class="pi-chip"><span class="pi-chip-label">Android</span><span class="pi-chip-value">29+</span></span></div><div class="pi-links"><a href="https://github.com/codingwithrk/nativephp-social-auth" class="pi-link" target="_blank" rel="noopener">GitHub →</a></div></div>
+
+# Social Auth
+
+Native Apple Sign-In and Google Sign-In for NativePHP Mobile apps — using actual platform SDKs, not browser-based OAuth redirects.
+
+## Features
+
+- **Apple Sign-In** on iOS
+- **Google Sign-In** on iOS and Android
+- **Apple credential state verification** (iOS only)
+- **Google sign-out** support
+- **Asynchronous event-based** authentication flows
+- **Server-side JWT token verification** support
+- **Livewire and JavaScript** (Vue/React) integration
+
+## Installation
+
+```bash
+composer require codingwithrk/nativephp-social-auth
+php artisan native:plugin:register codingwithrk/nativephp-social-auth
+```

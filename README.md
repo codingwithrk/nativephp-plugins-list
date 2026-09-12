@@ -107,6 +107,7 @@ Listed all are created and maintained by independent developers, not the NativeP
 - [FluidAudio](plugins/free/vikas5914-fluidaudio.md) — Vikas Kapadiya
 - [Datetime Picker](plugins/free/codingwithrk-nativephp-datetime-picker.md) — CodingwithRK
 - [Mobile SFX](plugins/free/stupidbrains-mobile-sfx.md) — Kirill
+- [Social Auth](plugins/free/codingwithrk-nativephp-social-auth.md) — CodingwithRK
 
 ---
 

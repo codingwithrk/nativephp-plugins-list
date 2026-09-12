@@ -677,5 +677,12 @@
         "url": "/plugins/free/stupidbrains-mobile-sfx",
         "content": "AuthorKirillPlugin TypeCommunity PluginPriceFreeVersionv1.0.0LicenseMITNativePHP^4.3PHP^8.4iOS15.0+Android21+GitHub → Low-latency short-sound playback for NativePHP Mobile — preload audio files, trigger them by name, and release them when done. Features Preload multiple audio files with Sfx::preload() Play by name with Sfx::play() Unload sounds when no longer needed with Sfx::unload() Overlapping playback — up to 4 simultaneous sounds on Android Respects iOS silent switch behavior Format — 16-bit PCM WAV at 44.1 kHz (mono) Installation composer require stupidbrains/mobile-sfx php artisan native:plugin:register stupidbrains/mobile-sfx Usage use Stupidbrains\\MobileSfx\\Facades\\Sfx; // Preload a sound file Sfx::preload('click', 'sounds/click.wav'); // Play it Sfx::play('click'); // Release when done Sfx::unload('click');",
         "headings": "Features Installation Usage"
+    },
+    {
+        "title": "Social Auth",
+        "description": "CodingwithRK",
+        "url": "/plugins/free/codingwithrk-nativephp-social-auth",
+        "content": "AuthorCodingwithRKPlugin TypeCommunity PluginPriceFreeVersionv1.0.0LicenseMITNativePHP^3.0 || ^4.0PHP^8.2Laravel11 || 12iOS18.0+Android29+GitHub → Native Apple Sign-In and Google Sign-In for NativePHP Mobile apps — using actual platform SDKs, not browser-based OAuth redirects. Features Apple Sign-In on iOS Google Sign-In on iOS and Android Apple credential state verification (iOS only) Google sign-out support Asynchronous event-based authentication flows Server-side JWT token verification support Livewire and JavaScript (Vue/React) integration Installation composer require codingwithrk/nativephp-social-auth php artisan native:plugin:register codingwithrk/nativephp-social-auth",
+        "headings": "Features Installation"
     }
 ]
