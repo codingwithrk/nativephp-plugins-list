@@ -779,3 +779,19 @@ AuthorKirillPlugin TypeCommunity PluginPriceFreeVersionv1.0.0LicenseMITNativePHP
 CodingwithRK
 
 AuthorCodingwithRKPlugin TypeCommunity PluginPriceFreeVersionv1.0.0LicenseMITNativePHP^3.0 || ^4.0PHP^8.2Laravel11 || 12iOS18.0+Android29+GitHub → # Social Auth Native Apple Sign-In and Google Sign-In for NativePHP Mobile apps — using actual platform SDKs, not browser-based OAuth redirects. ## Features - **Apple Sign-In** on iOS - **Google Sign-In** on iOS and Android - **Apple credential state verification** (iOS only) - **Google sign-out** support - **Asynchronous event-based** authentication flows - **Server-side JWT token verification** support - **Livewire and JavaScript** (Vue/React) integration ## Installation ```bash composer require codingwithrk/nativephp-social-auth php artisan native:plugin:register codingwithrk/nativephp-social-auth ```
+
+---
+
+# Contacts Picker
+
+Mohammad Shoriful Islam Ronju
+
+AuthorMohammad Shoriful Islam RonjuPlugin TypeCommunity PluginPriceFreeVersionv1.1.0LicenseMITNativePHP^3.0 || ^4.0iOS15.0+Android21+GitHub → # Contacts Picker Presents the system contact picker for NativePHP Mobile and returns the chosen contact's name and phone number — no contacts permission required. The system UI mediates all access. ## Features - **Native system picker** on iOS and Android - **Returns** contact display name and phone number - **No permissions required** — system UI handles all authorization - **Fire-and-forget API** with asynchronous event delivery - **Graceful cancellation** — returns null values when dismissed - **First phone number** returned when a contact has multiple ## Installation ```bash composer require smronju/nativephp-contacts-picker php artisan vendor:publish --tag=nativephp-plugins-provider php artisan native:plugin:register smronju/nativephp-contacts-picker ```
+
+---
+
+# Document Picker
+
+Mohammad Shoriful Islam Ronju
+
+AuthorMohammad Shoriful Islam RonjuPlugin TypeCommunity PluginPriceFreeVersionv1.1.2LicenseMITNativePHP^3.0 || ^4.0iOS15.0+Android21+GitHub → # Document Picker Integrates system document pickers into NativePHP Mobile — open a foreign file or save one back out to a user-chosen location, with no permission requests required. ## Features - **Open files** — iOS `UIDocumentPickerViewController` and Android `ACTION_OPEN_DOCUMENT` - **Save files** — iOS `forExporting` and Android `ACTION_CREATE_DOCUMENT` - **No permission requests** — system UI handles all authorization through user selection - **MIME type filtering** — restrict selectable file types - **Event-driven** — results via `DocumentPicked` and `DocumentSaved` events ## Installation ```bash composer require smronju/nativephp-document-picker php artisan vendor:publish --tag=nativephp-plugins-provider php artisan native:plugin:register smronju/nativephp-document-picker ```

@@ -101,3 +101,5 @@
 - /plugins/free/codingwithrk-nativephp-datetime-picker: CodingwithRK
 - /plugins/free/stupidbrains-mobile-sfx: Kirill
 - /plugins/free/codingwithrk-nativephp-social-auth: CodingwithRK
+- /plugins/free/smronju-nativephp-contacts-picker: Mohammad Shoriful Islam Ronju
+- /plugins/free/smronju-nativephp-document-picker: Mohammad Shoriful Islam Ronju

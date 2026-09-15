@@ -108,6 +108,8 @@ Listed all are created and maintained by independent developers, not the NativeP
 - [Datetime Picker](plugins/free/codingwithrk-nativephp-datetime-picker.md) — CodingwithRK
 - [Mobile SFX](plugins/free/stupidbrains-mobile-sfx.md) — Kirill
 - [Social Auth](plugins/free/codingwithrk-nativephp-social-auth.md) — CodingwithRK
+- [Contacts Picker](plugins/free/smronju-nativephp-contacts-picker.md) — Mohammad Shoriful Islam Ronju
+- [Document Picker](plugins/free/smronju-nativephp-document-picker.md) — Mohammad Shoriful Islam Ronju
 
 ---
 

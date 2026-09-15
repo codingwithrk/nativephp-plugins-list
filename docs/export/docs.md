@@ -13342,3 +13342,60 @@ Native Apple Sign-In and Google Sign-In for NativePHP Mobile apps — using actu
 composer require codingwithrk/nativephp-social-auth
 php artisan native:plugin:register codingwithrk/nativephp-social-auth
 ```
+
+---
+
+# Contacts Picker
+
+> Mohammad Shoriful Islam Ronju
+
+<div class="plugin-info"><div class="pi-meta"><span class="pi-item"><span class="pi-label">Author</span><span class="pi-value">Mohammad Shoriful Islam Ronju</span></span><span class="pi-item"><span class="pi-label">Plugin Type</span><span class="pi-badge pi-badge-community">Community Plugin</span></span><span class="pi-item"><span class="pi-label">Price</span><span class="pi-badge pi-badge-free">Free</span></span><span class="pi-item"><span class="pi-label">Version</span><span class="pi-value">v1.1.0</span></span><span class="pi-item"><span class="pi-label">License</span><span class="pi-value">MIT</span></span></div><div class="pi-compat"><span class="pi-chip"><span class="pi-chip-label">NativePHP</span><span class="pi-chip-value">^3.0 || ^4.0</span></span><span class="pi-chip"><span class="pi-chip-label">iOS</span><span class="pi-chip-value">15.0+</span></span><span class="pi-chip"><span class="pi-chip-label">Android</span><span class="pi-chip-value">21+</span></span></div><div class="pi-links"><a href="https://github.com/smronju/nativephp-contacts-picker" class="pi-link" target="_blank" rel="noopener">GitHub →</a></div></div>
+
+# Contacts Picker
+
+Presents the system contact picker for NativePHP Mobile and returns the chosen contact's name and phone number — no contacts permission required. The system UI mediates all access.
+
+## Features
+
+- **Native system picker** on iOS and Android
+- **Returns** contact display name and phone number
+- **No permissions required** — system UI handles all authorization
+- **Fire-and-forget API** with asynchronous event delivery
+- **Graceful cancellation** — returns null values when dismissed
+- **First phone number** returned when a contact has multiple
+
+## Installation
+
+```bash
+composer require smronju/nativephp-contacts-picker
+php artisan vendor:publish --tag=nativephp-plugins-provider
+php artisan native:plugin:register smronju/nativephp-contacts-picker
+```
+
+---
+
+# Document Picker
+
+> Mohammad Shoriful Islam Ronju
+
+<div class="plugin-info"><div class="pi-meta"><span class="pi-item"><span class="pi-label">Author</span><span class="pi-value">Mohammad Shoriful Islam Ronju</span></span><span class="pi-item"><span class="pi-label">Plugin Type</span><span class="pi-badge pi-badge-community">Community Plugin</span></span><span class="pi-item"><span class="pi-label">Price</span><span class="pi-badge pi-badge-free">Free</span></span><span class="pi-item"><span class="pi-label">Version</span><span class="pi-value">v1.1.2</span></span><span class="pi-item"><span class="pi-label">License</span><span class="pi-value">MIT</span></span></div><div class="pi-compat"><span class="pi-chip"><span class="pi-chip-label">NativePHP</span><span class="pi-chip-value">^3.0 || ^4.0</span></span><span class="pi-chip"><span class="pi-chip-label">iOS</span><span class="pi-chip-value">15.0+</span></span><span class="pi-chip"><span class="pi-chip-label">Android</span><span class="pi-chip-value">21+</span></span></div><div class="pi-links"><a href="https://github.com/smronju/nativephp-document-picker" class="pi-link" target="_blank" rel="noopener">GitHub →</a></div></div>
+
+# Document Picker
+
+Integrates system document pickers into NativePHP Mobile — open a foreign file or save one back out to a user-chosen location, with no permission requests required.
+
+## Features
+
+- **Open files** — iOS `UIDocumentPickerViewController` and Android `ACTION_OPEN_DOCUMENT`
+- **Save files** — iOS `forExporting` and Android `ACTION_CREATE_DOCUMENT`
+- **No permission requests** — system UI handles all authorization through user selection
+- **MIME type filtering** — restrict selectable file types
+- **Event-driven** — results via `DocumentPicked` and `DocumentSaved` events
+
+## Installation
+
+```bash
+composer require smronju/nativephp-document-picker
+php artisan vendor:publish --tag=nativephp-plugins-provider
+php artisan native:plugin:register smronju/nativephp-document-picker
+```
