@@ -2,7 +2,7 @@
 name: "Push Notifications"
 author: "Fatlum Gjinofci"
 price: "Free"
-version: "0.1.3"
+version: "0.1.4"
 license: "MIT"
 github: "https://github.com/FatlumGjinofci/nativephp-push"
 compatibility:
