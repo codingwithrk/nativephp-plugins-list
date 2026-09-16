@@ -1940,6 +1940,168 @@ php artisan vendor:publish --tag=tether-nativephp-config
 
 ---
 
+# Home Screen Shortcuts
+
+> Paul (PARTek)
+
+<div class="plugin-info"><div class="pi-meta"><span class="pi-item"><span class="pi-label">Author</span><span class="pi-value">Paul (PARTek)</span></span><span class="pi-item"><span class="pi-label">Plugin Type</span><span class="pi-badge pi-badge-community">Community Plugin</span></span><span class="pi-item"><span class="pi-label">Price</span><span class="pi-badge pi-badge-paid">$49</span></span><span class="pi-item"><span class="pi-label">Version</span><span class="pi-value">v3.0.2</span></span><span class="pi-item"><span class="pi-label">License</span><span class="pi-value">Proprietary</span></span></div><div class="pi-compat"><span class="pi-chip"><span class="pi-chip-label">NativePHP</span><span class="pi-chip-value">^3.0 || ^4.0</span></span><span class="pi-chip"><span class="pi-chip-label">iOS</span><span class="pi-chip-value">14.0+</span></span><span class="pi-chip"><span class="pi-chip-label">Android</span><span class="pi-chip-value">24+</span></span></div><div class="pi-links"><a href="https://nativephp.com/plugins/partek/home-screen-shortcuts" class="pi-link pi-link-buy" target="_blank" rel="noopener">Buy on NativePHP →</a></div></div>
+
+# Home Screen Shortcuts
+
+Registers home screen long-press shortcuts (iOS `UIApplicationShortcutItem` / Android App Shortcuts) that deep-link into named routes — one facade, no native code required.
+
+## Features
+
+- **Up to 4 shortcuts** per app on the long-press launcher menu
+- **Route or path targets** — named Laravel route or raw relative path per shortcut
+- **Optional subtitle** per shortcut (shown on iOS)
+- **PHP facade** — `HomeScreenShortcuts::set([...])` and `HomeScreenShortcuts::clear()`
+- **JavaScript API** — pass pre-built deeplink URLs
+- **No extra permissions** required on either platform
+- Requires `NATIVEPHP_DEEPLINK_SCHEME` set in `.env`
+
+## Installation
+
+```bash
+composer config repositories.nativephp-plugins composer https://plugins.nativephp.com
+composer config http-basic.plugins.nativephp.com your@email.com your-license-key
+php artisan vendor:publish --tag=nativephp-plugins-provider
+composer require partek/home-screen-shortcuts
+php artisan native:plugin:register partek/home-screen-shortcuts
+```
+
+---
+
+# Text to Speech
+
+> Paul (PARTek)
+
+<div class="plugin-info"><div class="pi-meta"><span class="pi-item"><span class="pi-label">Author</span><span class="pi-value">Paul (PARTek)</span></span><span class="pi-item"><span class="pi-label">Plugin Type</span><span class="pi-badge pi-badge-community">Community Plugin</span></span><span class="pi-item"><span class="pi-label">Price</span><span class="pi-badge pi-badge-paid">$29</span></span><span class="pi-item"><span class="pi-label">Version</span><span class="pi-value">v1.0.0</span></span><span class="pi-item"><span class="pi-label">License</span><span class="pi-value">Proprietary</span></span></div><div class="pi-compat"><span class="pi-chip"><span class="pi-chip-label">NativePHP</span><span class="pi-chip-value">^3.0 || ^4.0</span></span><span class="pi-chip"><span class="pi-chip-label">iOS</span><span class="pi-chip-value">18.0+</span></span><span class="pi-chip"><span class="pi-chip-label">Android</span><span class="pi-chip-value">26+</span></span></div><div class="pi-links"><a href="https://nativephp.com/plugins/partek/text-to-speech" class="pi-link pi-link-buy" target="_blank" rel="noopener">Buy on NativePHP →</a></div></div>
+
+# Text to Speech
+
+On-device text-to-speech using the OS's own speech engine — iOS uses `AVSpeechSynthesizer`, Android uses `android.speech.tts.TextToSpeech`. No cloud TTS, no network dependency, no extra permissions.
+
+## Features
+
+- **`TextToSpeech::speak($text, $locale, $rate, $pitch)`** — start speaking
+- **`stop()`, `pause()`, `resume()`, `isSpeaking()`** controls
+- **BCP-47 locale** support (e.g. `en-US`, `en-GB`)
+- **Rate** (0.1–1.0) and **pitch** (0.5–2.0) control
+- **Events** — `SpeechStarted`, `SpeechFinished`, `SpeechFailed`
+- Works with Livewire, Blade, and JavaScript (Vue/React/Inertia)
+- **No permissions required** on either platform
+
+## Installation
+
+```bash
+composer config repositories.nativephp-plugins composer https://plugins.nativephp.com
+composer config http-basic.plugins.nativephp.com your@email.com your-license-key
+php artisan vendor:publish --tag=nativephp-plugins-provider
+composer require partek/text-to-speech
+php artisan native:plugin:register partek/text-to-speech
+```
+
+---
+
+# Force Update
+
+> Paul (PARTek)
+
+<div class="plugin-info"><div class="pi-meta"><span class="pi-item"><span class="pi-label">Author</span><span class="pi-value">Paul (PARTek)</span></span><span class="pi-item"><span class="pi-label">Plugin Type</span><span class="pi-badge pi-badge-community">Community Plugin</span></span><span class="pi-item"><span class="pi-label">Price</span><span class="pi-badge pi-badge-paid">$29</span></span><span class="pi-item"><span class="pi-label">Version</span><span class="pi-value">v1.0.0</span></span><span class="pi-item"><span class="pi-label">License</span><span class="pi-value">Proprietary</span></span></div><div class="pi-compat"><span class="pi-chip"><span class="pi-chip-label">NativePHP</span><span class="pi-chip-value">^3.0 || ^4.0</span></span><span class="pi-chip"><span class="pi-chip-label">iOS</span><span class="pi-chip-value">18.0+</span></span><span class="pi-chip"><span class="pi-chip-label">Android</span><span class="pi-chip-value">26+</span></span></div><div class="pi-links"><a href="https://nativephp.com/plugins/partek/force-update" class="pi-link pi-link-buy" target="_blank" rel="noopener">Buy on NativePHP →</a></div></div>
+
+# Force Update
+
+Cross-platform minimum-version gate and store listing opener. Reads the running app version from `config('nativephp.version')`, compares it via semver against a configured minimum, and opens the correct App Store or Google Play listing.
+
+## Features
+
+- **`ForceUpdate::configure([...])`** — set `minimum`, `latest`, `ios_url`, `android_url`, `mode` (`hard`/`soft`)
+- **`ForceUpdate::status()`** — returns `current`, `minimum`, `latest`, `outdated`, `storeUrl`, `mode`
+- **`ForceUpdate::isOutdated()`** — returns `true` when `current < minimum`
+- **`ForceUpdate::openStore()`** — opens App Store or Play Store natively
+- `DEBUG`/unreadable app versions are never considered outdated
+- No route interception — app handles its own blocking UI
+- **JavaScript** — `openStore()` available (pass `storeUrl` from server)
+
+## Installation
+
+```bash
+composer config repositories.nativephp-plugins composer https://plugins.nativephp.com
+composer config http-basic.plugins.nativephp.com your@email.com your-license-key
+php artisan vendor:publish --tag=nativephp-plugins-provider
+composer require partek/force-update
+php artisan native:plugin:register partek/force-update
+```
+
+---
+
+# Media Pipeline
+
+> Paul (PARTek)
+
+<div class="plugin-info"><div class="pi-meta"><span class="pi-item"><span class="pi-label">Author</span><span class="pi-value">Paul (PARTek)</span></span><span class="pi-item"><span class="pi-label">Plugin Type</span><span class="pi-badge pi-badge-community">Community Plugin</span></span><span class="pi-item"><span class="pi-label">Price</span><span class="pi-badge pi-badge-paid">$99</span></span><span class="pi-item"><span class="pi-label">Version</span><span class="pi-value">v1.0.6</span></span><span class="pi-item"><span class="pi-label">License</span><span class="pi-value">Proprietary</span></span></div><div class="pi-compat"><span class="pi-chip"><span class="pi-chip-label">NativePHP</span><span class="pi-chip-value">^3.0 || ^4.0</span></span><span class="pi-chip"><span class="pi-chip-label">iOS</span><span class="pi-chip-value">18.0+</span></span><span class="pi-chip"><span class="pi-chip-label">Android</span><span class="pi-chip-value">26+</span></span></div><div class="pi-links"><a href="https://nativephp.com/plugins/partek/media-pipeline" class="pi-link pi-link-buy" target="_blank" rel="noopener">Buy on NativePHP →</a></div></div>
+
+# Media Pipeline
+
+On-device photo and video compression for NativePHP Mobile. Takes a local file path and compresses/resizes it natively — iOS uses `UIImage`/`AVAssetExportSession`, Android uses `BitmapFactory`/LightCompressor — without sending originals to a server.
+
+## Features
+
+- **`MediaPipeline::compressImage($path, $maxWidth, $maxHeight, $quality)`** — returns job ID
+- **`MediaPipeline::compressVideo($path, $preset, $maxWidth, $targetBitrateKbps)`** — returns job ID; presets: `low`, `medium`, `high`
+- **`MediaPipeline::cancel($jobId)`** — cancels an in-progress video job
+- **Progress events** — `CompressionProgress` (0–100), `CompressionCompleted`, `CompressionFailed`
+- **Aspect-preserving resize** — never upscales
+- **EXIF orientation correction** on Android for portrait camera photos
+- **No camera/photo permissions declared** — works with paths from `mobile-camera`
+- **JavaScript API** — `CompressImage`, `CompressVideo`, `Cancel`
+
+## Installation
+
+```bash
+composer config repositories.nativephp-plugins composer https://plugins.nativephp.com
+composer config http-basic.plugins.nativephp.com your@email.com your-license-key
+php artisan vendor:publish --tag=nativephp-plugins-provider
+composer require partek/media-pipeline
+php artisan native:plugin:register partek/media-pipeline
+```
+
+---
+
+# Speech to Text
+
+> Paul (PARTek)
+
+<div class="plugin-info"><div class="pi-meta"><span class="pi-item"><span class="pi-label">Author</span><span class="pi-value">Paul (PARTek)</span></span><span class="pi-item"><span class="pi-label">Plugin Type</span><span class="pi-badge pi-badge-community">Community Plugin</span></span><span class="pi-item"><span class="pi-label">Price</span><span class="pi-badge pi-badge-paid">$29</span></span><span class="pi-item"><span class="pi-label">Version</span><span class="pi-value">v1.0.0</span></span><span class="pi-item"><span class="pi-label">License</span><span class="pi-value">Proprietary</span></span></div><div class="pi-compat"><span class="pi-chip"><span class="pi-chip-label">NativePHP</span><span class="pi-chip-value">^3.0 || ^4.0</span></span><span class="pi-chip"><span class="pi-chip-label">iOS</span><span class="pi-chip-value">18.0+</span></span><span class="pi-chip"><span class="pi-chip-label">Android</span><span class="pi-chip-value">26+</span></span></div><div class="pi-links"><a href="https://nativephp.com/plugins/partek/speech-to-text" class="pi-link pi-link-buy" target="_blank" rel="noopener">Buy on NativePHP →</a></div></div>
+
+# Speech to Text
+
+On-device speech recognition / dictation for NativePHP Mobile — iOS uses `SFSpeechRecognizer`, Android uses `SpeechRecognizer`/`RecognizerIntent`. Returns text via events, does not save audio recordings.
+
+## Features
+
+- **`SpeechToText::listen($locale, $partial)`** — BCP-47 locale (e.g. `en-US`), optional partial results
+- **`SpeechToText::stop()`** — ends session and keeps final transcript
+- **`SpeechToText::cancel()`** — ends session and discards transcript
+- **Events** — `SpeechPartial` (live hypothesis), `SpeechResult` (final + `isFinal`), `SpeechFailed`, `PermissionDenied`
+- **Prefers on-device recognition** where available (iOS and Android API 31+)
+- **Runtime permissions** — `RECORD_AUDIO` on Android; microphone + speech recognition on iOS
+- **Android silence timeout** extended to 3000ms (vs OS default ~1000ms)
+- **JavaScript API** — `listen()`, `stop()`, `cancel()` from `partek-speech-to-text`
+
+## Installation
+
+```bash
+composer config repositories.nativephp-plugins composer https://plugins.nativephp.com
+composer config http-basic.plugins.nativephp.com your@email.com your-license-key
+php artisan vendor:publish --tag=nativephp-plugins-provider
+composer require partek/speech-to-text
+php artisan native:plugin:register partek/speech-to-text
+```
+
+---
+
 # Google AdMob
 
 > Lukas Rakauskas
@@ -13398,4 +13560,49 @@ Integrates system document pickers into NativePHP Mobile — open a foreign file
 composer require smronju/nativephp-document-picker
 php artisan vendor:publish --tag=nativephp-plugins-provider
 php artisan native:plugin:register smronju/nativephp-document-picker
+```
+
+---
+
+# NativePHP Charts
+
+> donmanueldev
+
+<div class="plugin-info"><div class="pi-meta"><span class="pi-item"><span class="pi-label">Author</span><span class="pi-value">donmanueldev</span></span><span class="pi-item"><span class="pi-label">Plugin Type</span><span class="pi-badge pi-badge-community">Community Plugin</span></span><span class="pi-item"><span class="pi-label">Price</span><span class="pi-badge pi-badge-free">Free</span></span><span class="pi-item"><span class="pi-label">Version</span><span class="pi-value">v1.0.0</span></span><span class="pi-item"><span class="pi-label">License</span><span class="pi-value">MIT</span></span></div><div class="pi-compat"><span class="pi-chip"><span class="pi-chip-label">NativePHP</span><span class="pi-chip-value">^4.0</span></span><span class="pi-chip"><span class="pi-chip-label">PHP</span><span class="pi-chip-value">^8.4</span></span><span class="pi-chip"><span class="pi-chip-label">iOS</span><span class="pi-chip-value">18.2+</span></span><span class="pi-chip"><span class="pi-chip-label">Android</span><span class="pi-chip-value">26+</span></span></div><div class="pi-links"><a href="https://github.com/donmanueldev/nativephp-charts" class="pi-link" target="_blank" rel="noopener">GitHub →</a></div></div>
+
+# NativePHP Charts
+
+Eight native chart types for NativePHP Mobile — Swift Charts + SwiftUI Canvas on iOS, Jetpack Compose Canvas on Android. No WebView, no JavaScript chart library, no third-party native dependencies.
+
+## Chart Types
+
+| Blade tag | Chart |
+|-----------|-------|
+| `<native:line-chart>` | Line |
+| `<native:area-chart>` | Area |
+| `<native:bar-chart>` | Bar |
+| `<native:scatter-chart>` | Scatter |
+| `<native:candlestick-chart>` | Candlestick |
+| `<native:radar-chart>` | Radar |
+| `<native:pie-chart>` | Pie |
+| `<native:donut-chart>` | Donut |
+
+## Features
+
+- **Fully native rendering** — no WebView, no JS, no network calls
+- **Multi-series** with grouped bars, stacked area fills, and multi-series radar
+- **X-axis types** — `category`, `number`, `date` (`YYYY-MM-DD`), `datetime` (RFC 3339)
+- **Localized value formatting** — `number`, `currency` (e.g. `USD`), `percent`
+- **Selection callbacks** — bind `_select` to a PHP method; payload includes `series_id`, `point_id`, `value`
+- **Configurable legends** — `position`, `alignment`, font, color, marker size
+- **Native animations** — reveal and update (disable with `animated="false"`)
+- **Strict validation** — unknown options rejected, IDs must be unique, values must be finite
+- **Fluent PHP API** alongside Blade attribute syntax
+
+## Installation
+
+```bash
+composer require donmanueldev/nativephp-charts:^1.0
+php artisan vendor:publish --tag=nativephp-plugins-provider --no-interaction
+php artisan native:plugin:register donmanueldev/nativephp-charts --no-interaction
 ```

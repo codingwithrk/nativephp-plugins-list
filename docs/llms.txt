@@ -22,6 +22,11 @@
 - /plugins/paid/developernauts-nativephp-inapp-purchases: Developernauts
 - /plugins/paid/nativephp-mobile-ble: Bifrost Technology
 - /plugins/paid/tether-nativephp-client: Lukas Rakauskas
+- /plugins/paid/partek-home-screen-shortcuts: Paul (PARTek)
+- /plugins/paid/partek-text-to-speech: Paul (PARTek)
+- /plugins/paid/partek-force-update: Paul (PARTek)
+- /plugins/paid/partek-media-pipeline: Paul (PARTek)
+- /plugins/paid/partek-speech-to-text: Paul (PARTek)
 - /plugins/paid/lrakauskas-nativephp-google-admob: Lukas Rakauskas
 - /plugins/paid/all1web-nativephp-share-target: Neo Nos
 - /plugins/paid/rubenvdb-nativephp-widgets: Borgman Digital
@@ -103,3 +108,4 @@
 - /plugins/free/codingwithrk-nativephp-social-auth: CodingwithRK
 - /plugins/free/smronju-nativephp-contacts-picker: Mohammad Shoriful Islam Ronju
 - /plugins/free/smronju-nativephp-document-picker: Mohammad Shoriful Islam Ronju
+- /plugins/free/donmanueldev-nativephp-charts: donmanueldev

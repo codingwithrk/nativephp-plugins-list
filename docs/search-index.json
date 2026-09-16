@@ -133,6 +133,41 @@
         "headings": "Features Installation"
     },
     {
+        "title": "Home Screen Shortcuts",
+        "description": "Paul (PARTek)",
+        "url": "/plugins/paid/partek-home-screen-shortcuts",
+        "content": "AuthorPaul (PARTek)Plugin TypeCommunity PluginPrice$49Versionv3.0.2LicenseProprietaryNativePHP^3.0 || ^4.0iOS14.0+Android24+Buy on NativePHP → Registers home screen long-press shortcuts (iOS UIApplicationShortcutItem / Android App Shortcuts) that deep-link into named routes — one facade, no native code required. Features Up to 4 shortcuts per app on the long-press launcher menu Route or path targets — named Laravel route or raw relative path per shortcut Optional subtitle per shortcut (shown on iOS) PHP facade — HomeScreenShortcuts::set([...]) and HomeScreenShortcuts::clear() JavaScript API — pass pre-built deeplink URLs No extra permissions required on either platform Requires NATIVEPHP_DEEPLINK_SCHEME set in .env Installation composer config repositories.nativephp-plugins composer https://plugins.nativephp.com composer config http-basic.plugins.nativephp.com your@email.com your-license-key php artisan vendor:publish --tag=nativephp-plugins-provider composer require partek/home-screen-shortcuts php artisan native:plugin:register partek/home-screen-shortcuts",
+        "headings": "Features Installation"
+    },
+    {
+        "title": "Text to Speech",
+        "description": "Paul (PARTek)",
+        "url": "/plugins/paid/partek-text-to-speech",
+        "content": "AuthorPaul (PARTek)Plugin TypeCommunity PluginPrice$29Versionv1.0.0LicenseProprietaryNativePHP^3.0 || ^4.0iOS18.0+Android26+Buy on NativePHP → On-device text-to-speech using the OS's own speech engine — iOS uses AVSpeechSynthesizer, Android uses android.speech.tts.TextToSpeech. No cloud TTS, no network dependency, no extra permissions. Features TextToSpeech::speak($text, $locale, $rate, $pitch) — start speaking stop(), pause(), resume(), isSpeaking() controls BCP-47 locale support (e.g. en-US, en-GB) Rate (0.1–1.0) and pitch (0.5–2.0) control Events — SpeechStarted, SpeechFinished, SpeechFailed Works with Livewire, Blade, and JavaScript (Vue/React/Inertia) No permissions required on either platform Installation composer config repositories.nativephp-plugins composer https://plugins.nativephp.com composer config http-basic.plugins.nativephp.com your@email.com your-license-key php artisan vendor:publish --tag=nativephp-plugins-provider composer require partek/text-to-speech php artisan native:plugin:register partek/text-to-speech",
+        "headings": "Features Installation"
+    },
+    {
+        "title": "Force Update",
+        "description": "Paul (PARTek)",
+        "url": "/plugins/paid/partek-force-update",
+        "content": "AuthorPaul (PARTek)Plugin TypeCommunity PluginPrice$29Versionv1.0.0LicenseProprietaryNativePHP^3.0 || ^4.0iOS18.0+Android26+Buy on NativePHP → Cross-platform minimum-version gate and store listing opener. Reads the running app version from config('nativephp.version'), compares it via semver against a configured minimum, and opens the correct App Store or Google Play listing. Features ForceUpdate::configure([...]) — set minimum, latest, ios_url, android_url, mode (hard/soft) ForceUpdate::status() — returns current, minimum, latest, outdated, storeUrl, mode ForceUpdate::isOutdated() — returns true when current < minimum ForceUpdate::openStore() — opens App Store or Play Store natively DEBUG/unreadable app versions are never considered outdated No route interception — app handles its own blocking UI JavaScript — openStore() available (pass storeUrl from server) Installation composer config repositories.nativephp-plugins composer https://plugins.nativephp.com composer config http-basic.plugins.nativephp.com your@email.com your-license-key php artisan vendor:publish --tag=nativephp-plugins-provider composer require partek/force-update php artisan native:plugin:register partek/force-update",
+        "headings": "Features Installation"
+    },
+    {
+        "title": "Media Pipeline",
+        "description": "Paul (PARTek)",
+        "url": "/plugins/paid/partek-media-pipeline",
+        "content": "AuthorPaul (PARTek)Plugin TypeCommunity PluginPrice$99Versionv1.0.6LicenseProprietaryNativePHP^3.0 || ^4.0iOS18.0+Android26+Buy on NativePHP → On-device photo and video compression for NativePHP Mobile. Takes a local file path and compresses/resizes it natively — iOS uses UIImage/AVAssetExportSession, Android uses BitmapFactory/LightCompressor — without sending originals to a server. Features MediaPipeline::compressImage($path, $maxWidth, $maxHeight, $quality) — returns job ID MediaPipeline::compressVideo($path, $preset, $maxWidth, $targetBitrateKbps) — returns job ID; presets: low, medium, high MediaPipeline::cancel($jobId) — cancels an in-progress video job Progress events — CompressionProgress (0–100), CompressionCompleted, CompressionFailed Aspect-preserving resize — never upscales EXIF orientation correction on Android for portrait camera photos No camera/photo permissions declared — works with paths from mobile-camera JavaScript API — CompressImage, CompressVideo, Cancel Installation composer config repositories.nativephp-plugins composer https://plugins.nativephp.com composer config http-basic.plugins.nativephp.com your@email.com your-license-key php artisan vendor:publish --tag=nativephp-plugins-provider composer require partek/media-pipeline php artisan native:plugin:register partek/media-pipeline",
+        "headings": "Features Installation"
+    },
+    {
+        "title": "Speech to Text",
+        "description": "Paul (PARTek)",
+        "url": "/plugins/paid/partek-speech-to-text",
+        "content": "AuthorPaul (PARTek)Plugin TypeCommunity PluginPrice$29Versionv1.0.0LicenseProprietaryNativePHP^3.0 || ^4.0iOS18.0+Android26+Buy on NativePHP → On-device speech recognition / dictation for NativePHP Mobile — iOS uses SFSpeechRecognizer, Android uses SpeechRecognizer/RecognizerIntent. Returns text via events, does not save audio recordings. Features SpeechToText::listen($locale, $partial) — BCP-47 locale (e.g. en-US), optional partial results SpeechToText::stop() — ends session and keeps final transcript SpeechToText::cancel() — ends session and discards transcript Events — SpeechPartial (live hypothesis), SpeechResult (final + isFinal), SpeechFailed, PermissionDenied Prefers on-device recognition where available (iOS and Android API 31+) Runtime permissions — RECORD_AUDIO on Android; microphone + speech recognition on iOS Android silence timeout extended to 3000ms (vs OS default ~1000ms) JavaScript API — listen(), stop(), cancel() from partek-speech-to-text Installation composer config repositories.nativephp-plugins composer https://plugins.nativephp.com composer config http-basic.plugins.nativephp.com your@email.com your-license-key php artisan vendor:publish --tag=nativephp-plugins-provider composer require partek/speech-to-text php artisan native:plugin:register partek/speech-to-text",
+        "headings": "Features Installation"
+    },
+    {
         "title": "Google AdMob",
         "description": "Lukas Rakauskas",
         "url": "/plugins/paid/lrakauskas-nativephp-google-admob",
@@ -698,5 +733,12 @@
         "url": "/plugins/free/smronju-nativephp-document-picker",
         "content": "AuthorMohammad Shoriful Islam RonjuPlugin TypeCommunity PluginPriceFreeVersionv1.1.2LicenseMITNativePHP^3.0 || ^4.0iOS15.0+Android21+GitHub → Integrates system document pickers into NativePHP Mobile — open a foreign file or save one back out to a user-chosen location, with no permission requests required. Features Open files — iOS UIDocumentPickerViewController and Android ACTION_OPEN_DOCUMENT Save files — iOS forExporting and Android ACTION_CREATE_DOCUMENT No permission requests — system UI handles all authorization through user selection MIME type filtering — restrict selectable file types Event-driven — results via DocumentPicked and DocumentSaved events Installation composer require smronju/nativephp-document-picker php artisan vendor:publish --tag=nativephp-plugins-provider php artisan native:plugin:register smronju/nativephp-document-picker",
         "headings": "Features Installation"
+    },
+    {
+        "title": "NativePHP Charts",
+        "description": "donmanueldev",
+        "url": "/plugins/free/donmanueldev-nativephp-charts",
+        "content": "AuthordonmanueldevPlugin TypeCommunity PluginPriceFreeVersionv1.0.0LicenseMITNativePHP^4.0PHP^8.4iOS18.2+Android26+GitHub → Eight native chart types for NativePHP Mobile — Swift Charts + SwiftUI Canvas on iOS, Jetpack Compose Canvas on Android. No WebView, no JavaScript chart library, no third-party native dependencies. Chart Types Blade tag Chart <native:line-chart> Line <native:area-chart> Area <native:bar-chart> Bar <native:scatter-chart> Scatter <native:candlestick-chart> Candlestick <native:radar-chart> Radar <native:pie-chart> Pie <native:donut-chart> Donut Features Fully native rendering — no WebView, no JS, no network calls Multi-series with grouped bars, stacked area fills, and multi-series radar X-axis types — category, number, date (YYYY-MM-DD), datetime (RFC 3339) Localized value formatting — number, currency (e.g. USD), percent Selection callbacks — bind _select to a PHP method; payload includes series_id, point_id, value Configurable legends — position, alignment, font, color, marker size Native animations — reveal and update (disable with animated=\"false\") Strict validation — unknown options rejected, IDs must be unique, values must be finite Fluent PHP API alongside Blade attribute syntax Installation composer require donmanueldev/nativephp-charts:^1.0 php artisan vendor:publish --tag=nativephp-plugins-provider --no-interaction php artisan native:plugin:register donmanueldev/nativephp-charts --no-interaction",
+        "headings": "Chart Types Features Installation"
     }
 ]

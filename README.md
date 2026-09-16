@@ -24,6 +24,11 @@ Listed all are created and maintained by independent developers, not the NativeP
 - [In-App Purchases](plugins/paid/developernauts-nativephp-inapp-purchases.md) — Developernauts
 - [Mobile BLE](plugins/paid/nativephp-mobile-ble.md) — Bifrost Technology
 - [Tether Client](plugins/paid/tether-nativephp-client.md) — Lukas Rakauskas
+- [Home Screen Shortcuts](plugins/paid/partek-home-screen-shortcuts.md) — Paul (PARTek)
+- [Text to Speech](plugins/paid/partek-text-to-speech.md) — Paul (PARTek)
+- [Force Update](plugins/paid/partek-force-update.md) — Paul (PARTek)
+- [Media Pipeline](plugins/paid/partek-media-pipeline.md) — Paul (PARTek)
+- [Speech to Text](plugins/paid/partek-speech-to-text.md) — Paul (PARTek)
 - [Google AdMob](plugins/paid/lrakauskas-nativephp-google-admob.md) — Lukas Rakauskas
 - [Share Target](plugins/paid/all1web-nativephp-share-target.md) — Neo Nos
 - [Widgets](plugins/paid/rubenvdb-nativephp-widgets.md) — Borgman Digital
@@ -110,6 +115,7 @@ Listed all are created and maintained by independent developers, not the NativeP
 - [Social Auth](plugins/free/codingwithrk-nativephp-social-auth.md) — CodingwithRK
 - [Contacts Picker](plugins/free/smronju-nativephp-contacts-picker.md) — Mohammad Shoriful Islam Ronju
 - [Document Picker](plugins/free/smronju-nativephp-document-picker.md) — Mohammad Shoriful Islam Ronju
+- [NativePHP Charts](plugins/free/donmanueldev-nativephp-charts.md) — donmanueldev
 
 ---
 
