@@ -266,6 +266,13 @@
         "headings": "Features Installation"
     },
     {
+        "title": "Native Share",
+        "description": "Paul (PARTek)",
+        "url": "/plugins/paid/partek-native-share",
+        "content": "AuthorPaul (PARTek)Plugin TypeCommunity PluginPrice$29Versionv1.1.0LicenseProprietaryNativePHP^3.0 || ^4.0iOS15.0+Android21+Buy on NativePHP → Clipboard copy and plain-text OS share sheet for NativePHP Mobile — no permissions required on either platform. Complements the free nativephp/mobile-share plugin (which handles URLs and files). This plugin is focused on plain-text sharing and clipboard writing. Features NativeShare::copy($text) — writes plain text to the system clipboard immediately NativeShare::share($title, $text) — opens the native OS share sheet (Android ACTION_SEND / iOS UIActivityViewController) No permissions required on either platform Testing helpers — assertCopied() and assertShared() for NativePHP's fake bridge JavaScript API — copy() and share() functions with Vite alias Works with Livewire, Blade, and Inertia (Vue/React) Android 13+ shows system \"Copied\" confirmation automatically on clipboard write Installation composer config repositories.nativephp-plugins composer https://plugins.nativephp.com composer config http-basic.plugins.nativephp.com your@email.com your-license-key php artisan vendor:publish --tag=nativephp-plugins-provider composer require partek/native-share php artisan native:plugin:register partek/native-share",
+        "headings": "Features Installation"
+    },
+    {
         "title": "Google Mobile Ads",
         "description": "Bhargav Detroja",
         "url": "/plugins/free/bhargavdetroja-google-mobile-ads",
@@ -740,5 +747,19 @@
         "url": "/plugins/free/donmanueldev-nativephp-charts",
         "content": "AuthordonmanueldevPlugin TypeCommunity PluginPriceFreeVersionv1.1.0LicenseMITNativePHP^4.0PHP^8.4iOS18.2+Android26+GitHub → Eight native chart types for NativePHP Mobile — Swift Charts + SwiftUI Canvas on iOS, Jetpack Compose Canvas on Android. No WebView, no JavaScript chart library, no third-party native dependencies. Chart Types Blade tag Chart <native:line-chart> Line <native:area-chart> Area <native:bar-chart> Bar <native:scatter-chart> Scatter <native:candlestick-chart> Candlestick <native:radar-chart> Radar <native:pie-chart> Pie <native:donut-chart> Donut Features Fully native rendering — no WebView, no JS, no network calls Multi-series with grouped bars, stacked area fills, and multi-series radar X-axis types — category, number, date (YYYY-MM-DD), datetime (RFC 3339) Localized value formatting — number, currency (e.g. USD), percent Selection callbacks — bind _select to a PHP method; payload includes series_id, point_id, value Configurable legends — position, alignment, font, color, marker size Native animations — reveal and update (disable with animated=\"false\") Strict validation — unknown options rejected, IDs must be unique, values must be finite Fluent PHP API alongside Blade attribute syntax Installation composer require donmanueldev/nativephp-charts:^1.0 php artisan vendor:publish --tag=nativephp-plugins-provider --no-interaction php artisan native:plugin:register donmanueldev/nativephp-charts --no-interaction",
         "headings": "Chart Types Features Installation"
+    },
+    {
+        "title": "Directions",
+        "description": "guppylab",
+        "url": "/plugins/free/guppylab-plugin-directions",
+        "content": "AuthorguppylabPlugin TypeCommunity PluginPriceFreeVersionv2.0.1LicenseMITNativePHP^3.0iOS15.0+Android21+GitHub → Real-route distance and ETA from one origin to multiple destinations. iOS uses MapKit MKDirections (on-device, no server). Android uses OSRM over HTTP (self-hosted). Note: Android requires a self-hosted osrm-backend server. Features Batch queries — single origin to many destinations in one call iOS — on-device MapKit routing, no server needed Android — OSRM HTTP routing (configurable self-hosted backend) Graceful fallback — every destination always gets a response (ok: true/false) Directions::isSupported() — check engine availability at runtime Configurable max_destinations (default 25) and timeout Concurrent call support via correlation IDs (UUID) Error codes — unsupported, timeout, over_limit, no_route, failed JavaScript API with TypeScript definitions for Livewire and Inertia (Vue/React) Installation composer require guppylab/plugin-directions php artisan native:plugin:register guppylab/plugin-directions",
+        "headings": "Features Installation"
+    },
+    {
+        "title": "Push Notifications",
+        "description": "guppylab",
+        "url": "/plugins/free/guppylab-plugin-push",
+        "content": "AuthorguppylabPlugin TypeCommunity PluginPriceFreeVersionv2.1.0LicenseMITNativePHP^3.0iOS15.0+Android21+GitHub → Push notifications for NativePHP Mobile — direct APNs (.p8 key, no Firebase SDK) on iOS and Firebase Cloud Messaging on Android. Features iOS — direct APNs via .p8 key, no Firebase dependency Android — FCM with google-services.json MessageReceived event — fires for foreground and silent/data-only pushes NotificationTapped event — fires on tap including cold-start taps TokenGenerated event — device token registration Push::unenroll() — delete token and stop receiving pushes Push::setBadge(n) / Push::clearBadge() — iOS badge count control Push::isSupported() — detect simulator or missing google-services.json Permission states — granted, denied, not_determined, provisional, ephemeral Provisional permission support on iOS JavaScript API with TypeScript definitions for Livewire v3/v4 and Inertia (Vue/React) Installation composer require guppylab/plugin-push php artisan native:plugin:register guppylab/plugin-push php artisan vendor:publish --tag=push-config",
+        "headings": "Features Installation"
     }
 ]

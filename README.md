@@ -43,6 +43,7 @@ Listed all are created and maintained by independent developers, not the NativeP
 - [Google AdMob](plugins/paid/codypchristian-nativephp-admob.md) — Cody P Christian
 - [Native Stripe Payments](plugins/paid/codypchristian-nativephp-stripe.md) — Cody P Christian
 - [IAP Apple & Google](plugins/paid/codypchristian-nativephp-iap.md) — Cody P Christian
+- [Native Share](plugins/paid/partek-native-share.md) — Paul (PARTek)
 
 ---
 
@@ -116,6 +117,8 @@ Listed all are created and maintained by independent developers, not the NativeP
 - [Contacts Picker](plugins/free/smronju-nativephp-contacts-picker.md) — Mohammad Shoriful Islam Ronju
 - [Document Picker](plugins/free/smronju-nativephp-document-picker.md) — Mohammad Shoriful Islam Ronju
 - [NativePHP Charts](plugins/free/donmanueldev-nativephp-charts.md) — donmanueldev
+- [Directions](plugins/free/guppylab-plugin-directions.md) — guppylab
+- [Push Notifications](plugins/free/guppylab-plugin-push.md) — guppylab
 
 ---
 

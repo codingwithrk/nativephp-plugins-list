@@ -20,7 +20,7 @@ events:
   - AppExiting
 ---
 
-![Image](https://raw.githubusercontent.com/codingwithrk/nativephp-mobile-plugins/refs/heads/main/assets/screenshots/double-back-to-close.png)
+<img src="https://raw.githubusercontent.com/codingwithrk/nativephp-mobile-plugins/refs/heads/main/assets/screenshots/double-back-to-close.png" width="300" alt="Double Back to Close screenshot" />
 
 Prompts users to press the back button twice before the app exits.
 

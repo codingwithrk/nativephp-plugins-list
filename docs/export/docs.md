@@ -2581,6 +2581,40 @@ php artisan native:install --force
 
 ---
 
+# Native Share
+
+> Paul (PARTek)
+
+<div class="plugin-info"><div class="pi-meta"><span class="pi-item"><span class="pi-label">Author</span><span class="pi-value">Paul (PARTek)</span></span><span class="pi-item"><span class="pi-label">Plugin Type</span><span class="pi-badge pi-badge-community">Community Plugin</span></span><span class="pi-item"><span class="pi-label">Price</span><span class="pi-badge pi-badge-paid">$29</span></span><span class="pi-item"><span class="pi-label">Version</span><span class="pi-value">v1.1.0</span></span><span class="pi-item"><span class="pi-label">License</span><span class="pi-value">Proprietary</span></span></div><div class="pi-compat"><span class="pi-chip"><span class="pi-chip-label">NativePHP</span><span class="pi-chip-value">^3.0 || ^4.0</span></span><span class="pi-chip"><span class="pi-chip-label">iOS</span><span class="pi-chip-value">15.0+</span></span><span class="pi-chip"><span class="pi-chip-label">Android</span><span class="pi-chip-value">21+</span></span></div><div class="pi-links"><a href="https://nativephp.com/plugins/partek/native-share" class="pi-link pi-link-buy" target="_blank" rel="noopener">Buy on NativePHP →</a></div></div>
+
+# Native Share
+
+Clipboard copy and plain-text OS share sheet for NativePHP Mobile — no permissions required on either platform.
+
+> Complements the free `nativephp/mobile-share` plugin (which handles URLs and files). This plugin is focused on plain-text sharing and clipboard writing.
+
+## Features
+
+- **`NativeShare::copy($text)`** — writes plain text to the system clipboard immediately
+- **`NativeShare::share($title, $text)`** — opens the native OS share sheet (Android `ACTION_SEND` / iOS `UIActivityViewController`)
+- **No permissions required** on either platform
+- **Testing helpers** — `assertCopied()` and `assertShared()` for NativePHP's fake bridge
+- **JavaScript API** — `copy()` and `share()` functions with Vite alias
+- Works with Livewire, Blade, and Inertia (Vue/React)
+- Android 13+ shows system "Copied" confirmation automatically on clipboard write
+
+## Installation
+
+```bash
+composer config repositories.nativephp-plugins composer https://plugins.nativephp.com
+composer config http-basic.plugins.nativephp.com your@email.com your-license-key
+php artisan vendor:publish --tag=nativephp-plugins-provider
+composer require partek/native-share
+php artisan native:plugin:register partek/native-share
+```
+
+---
+
 # Google Mobile Ads
 
 > Bhargav Detroja
@@ -4291,7 +4325,7 @@ For issues, questions, or feature requests:
 
 <div class="plugin-info"><div class="pi-meta"><span class="pi-item"><span class="pi-label">Author</span><span class="pi-value">CodingwithRK</span></span><span class="pi-item"><span class="pi-label">Plugin Type</span><span class="pi-badge pi-badge-community">Community Plugin</span></span><span class="pi-item"><span class="pi-label">Price</span><span class="pi-badge pi-badge-free">Free</span></span><span class="pi-item"><span class="pi-label">Version</span><span class="pi-value">v1.1.0</span></span><span class="pi-item"><span class="pi-label">License</span><span class="pi-value">MIT</span></span></div><div class="pi-compat"><span class="pi-chip"><span class="pi-chip-label">NativePHP</span><span class="pi-chip-value">^3.0</span></span><span class="pi-chip"><span class="pi-chip-label">iOS</span><span class="pi-chip-value">18.2+</span></span><span class="pi-chip"><span class="pi-chip-label">Android</span><span class="pi-chip-value">26+</span></span></div><div class="pi-links"><a href="https://github.com/codingwithrk/double-back-to-close" class="pi-link" target="_blank" rel="noopener">GitHub →</a></div></div>
 
-![Image](https://raw.githubusercontent.com/codingwithrk/nativephp-mobile-plugins/refs/heads/main/assets/screenshots/double-back-to-close.png)
+<img src="https://raw.githubusercontent.com/codingwithrk/nativephp-mobile-plugins/refs/heads/main/assets/screenshots/double-back-to-close.png" width="300" alt="Double Back to Close screenshot" />
 
 Prompts users to press the back button twice before the app exits.
 
@@ -13605,4 +13639,71 @@ Eight native chart types for NativePHP Mobile — Swift Charts + SwiftUI Canvas 
 composer require donmanueldev/nativephp-charts:^1.0
 php artisan vendor:publish --tag=nativephp-plugins-provider --no-interaction
 php artisan native:plugin:register donmanueldev/nativephp-charts --no-interaction
+```
+
+---
+
+# Directions
+
+> guppylab
+
+<div class="plugin-info"><div class="pi-meta"><span class="pi-item"><span class="pi-label">Author</span><span class="pi-value">guppylab</span></span><span class="pi-item"><span class="pi-label">Plugin Type</span><span class="pi-badge pi-badge-community">Community Plugin</span></span><span class="pi-item"><span class="pi-label">Price</span><span class="pi-badge pi-badge-free">Free</span></span><span class="pi-item"><span class="pi-label">Version</span><span class="pi-value">v2.0.1</span></span><span class="pi-item"><span class="pi-label">License</span><span class="pi-value">MIT</span></span></div><div class="pi-compat"><span class="pi-chip"><span class="pi-chip-label">NativePHP</span><span class="pi-chip-value">^3.0</span></span><span class="pi-chip"><span class="pi-chip-label">iOS</span><span class="pi-chip-value">15.0+</span></span><span class="pi-chip"><span class="pi-chip-label">Android</span><span class="pi-chip-value">21+</span></span></div><div class="pi-links"><a href="https://github.com/edinhocostaf/plugin-directions" class="pi-link" target="_blank" rel="noopener">GitHub →</a></div></div>
+
+# Directions
+
+Real-route distance and ETA from one origin to multiple destinations. iOS uses MapKit `MKDirections` (on-device, no server). Android uses OSRM over HTTP (self-hosted).
+
+> **Note:** Android requires a self-hosted `osrm-backend` server.
+
+## Features
+
+- **Batch queries** — single origin to many destinations in one call
+- **iOS** — on-device MapKit routing, no server needed
+- **Android** — OSRM HTTP routing (configurable self-hosted backend)
+- **Graceful fallback** — every destination always gets a response (`ok: true/false`)
+- **`Directions::isSupported()`** — check engine availability at runtime
+- **Configurable** `max_destinations` (default 25) and `timeout`
+- **Concurrent call support** via correlation IDs (UUID)
+- **Error codes** — `unsupported`, `timeout`, `over_limit`, `no_route`, `failed`
+- **JavaScript API** with TypeScript definitions for Livewire and Inertia (Vue/React)
+
+## Installation
+
+```bash
+composer require guppylab/plugin-directions
+php artisan native:plugin:register guppylab/plugin-directions
+```
+
+---
+
+# Push Notifications
+
+> guppylab
+
+<div class="plugin-info"><div class="pi-meta"><span class="pi-item"><span class="pi-label">Author</span><span class="pi-value">guppylab</span></span><span class="pi-item"><span class="pi-label">Plugin Type</span><span class="pi-badge pi-badge-community">Community Plugin</span></span><span class="pi-item"><span class="pi-label">Price</span><span class="pi-badge pi-badge-free">Free</span></span><span class="pi-item"><span class="pi-label">Version</span><span class="pi-value">v2.1.0</span></span><span class="pi-item"><span class="pi-label">License</span><span class="pi-value">MIT</span></span></div><div class="pi-compat"><span class="pi-chip"><span class="pi-chip-label">NativePHP</span><span class="pi-chip-value">^3.0</span></span><span class="pi-chip"><span class="pi-chip-label">iOS</span><span class="pi-chip-value">15.0+</span></span><span class="pi-chip"><span class="pi-chip-label">Android</span><span class="pi-chip-value">21+</span></span></div><div class="pi-links"><a href="https://github.com/guppylab/plugin-push" class="pi-link" target="_blank" rel="noopener">GitHub →</a></div></div>
+
+# Push Notifications
+
+Push notifications for NativePHP Mobile — direct APNs (`.p8` key, no Firebase SDK) on iOS and Firebase Cloud Messaging on Android.
+
+## Features
+
+- **iOS** — direct APNs via `.p8` key, no Firebase dependency
+- **Android** — FCM with `google-services.json`
+- **`MessageReceived`** event — fires for foreground and silent/data-only pushes
+- **`NotificationTapped`** event — fires on tap including cold-start taps
+- **`TokenGenerated`** event — device token registration
+- **`Push::unenroll()`** — delete token and stop receiving pushes
+- **`Push::setBadge(n)` / `Push::clearBadge()`** — iOS badge count control
+- **`Push::isSupported()`** — detect simulator or missing `google-services.json`
+- **Permission states** — `granted`, `denied`, `not_determined`, `provisional`, `ephemeral`
+- **Provisional permission** support on iOS
+- **JavaScript API** with TypeScript definitions for Livewire v3/v4 and Inertia (Vue/React)
+
+## Installation
+
+```bash
+composer require guppylab/plugin-push
+php artisan native:plugin:register guppylab/plugin-push
+php artisan vendor:publish --tag=push-config
 ```
