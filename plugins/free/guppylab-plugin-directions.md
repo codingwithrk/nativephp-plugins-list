@@ -2,7 +2,7 @@
 name: "Directions"
 author: "guppylab"
 price: "Free"
-version: "2.0.1"
+version: "3.0.0"
 license: "MIT"
 github: "https://github.com/edinhocostaf/plugin-directions"
 support: "https://github.com/edinhocostaf/plugin-directions/issues"

@@ -2,7 +2,7 @@
 name: "Push Notifications"
 author: "guppylab"
 price: "Free"
-version: "2.1.0"
+version: "3.0.0"
 license: "MIT"
 github: "https://github.com/guppylab/plugin-push"
 support: "https://github.com/guppylab/plugin-push/issues"
