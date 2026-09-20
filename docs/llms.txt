@@ -42,6 +42,7 @@
 - /plugins/paid/codypchristian-nativephp-stripe: Cody P Christian
 - /plugins/paid/codypchristian-nativephp-iap: Cody P Christian
 - /plugins/paid/partek-native-share: Paul (PARTek)
+- /plugins/paid/partek-native-maps: Paul (PARTek)
 - /plugins/free/bhargavdetroja-google-mobile-ads: Bhargav Detroja
 - /plugins/free/s2br-nativephp-mobile-splashscreen: Israel Pereira
 - /plugins/free/developernauts-nativephp-mobile-locales: Developernauts
@@ -112,3 +113,4 @@
 - /plugins/free/donmanueldev-nativephp-charts: donmanueldev
 - /plugins/free/guppylab-plugin-directions: guppylab
 - /plugins/free/guppylab-plugin-push: guppylab
+- /plugins/free/kevinbatdorf-nativephp-launcher: Kevin Batdorf

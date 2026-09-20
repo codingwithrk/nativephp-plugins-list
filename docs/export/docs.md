@@ -2615,6 +2615,58 @@ php artisan native:plugin:register partek/native-share
 
 ---
 
+# Native Maps
+
+> Paul (PARTek)
+
+<div class="plugin-info"><div class="pi-meta"><span class="pi-item"><span class="pi-label">Author</span><span class="pi-value">Paul (PARTek)</span></span><span class="pi-item"><span class="pi-label">Plugin Type</span><span class="pi-badge pi-badge-community">Community Plugin</span></span><span class="pi-item"><span class="pi-label">Price</span><span class="pi-badge pi-badge-paid">$99</span></span><span class="pi-item"><span class="pi-label">Version</span><span class="pi-value">v1.0.0</span></span><span class="pi-item"><span class="pi-label">License</span><span class="pi-value">Proprietary</span></span></div><div class="pi-compat"><span class="pi-chip"><span class="pi-chip-label">NativePHP</span><span class="pi-chip-value">^4.0</span></span><span class="pi-chip"><span class="pi-chip-label">iOS</span><span class="pi-chip-value">18.0+</span></span><span class="pi-chip"><span class="pi-chip-label">Android</span><span class="pi-chip-value">26+</span></span></div><div class="pi-links"><a href="https://nativephp.com/plugins/partek/native-maps" class="pi-link pi-link-buy" target="_blank" rel="noopener">Buy on NativePHP →</a></div></div>
+
+# Native Maps
+
+Fully native maps for NativePHP Mobile — Apple MapKit (`MKMapView`) on iOS, Google Maps via Jetpack Compose on Android. No WebView, no JS map library.
+
+> **Android setup required:** Add a Google Maps API key via a Gradle manifest placeholder (see below). iOS uses MapKit with no API key.
+
+## Features
+
+- **`<native:parqore-map>`** Blade component — drop a full map anywhere in your UI
+- **Markers** — add, update, and remove pins with custom icons and info windows
+- **Camera control** — `NativeMaps::animateCamera()`, `NativeMaps::moveCamera()`, `NativeMaps::fitCoordinates()`, `NativeMaps::focusMarker()`, `NativeMaps::visibleRegion()`
+- **iOS** — MapKit `MKMapView`, no API key, no configuration
+- **Android** — Jetpack Compose `GoogleMap`, requires a Google Maps API key
+- **`nativephp-ui-plugin`** (SuperNative EDGE component) — requires NativePHP Mobile `^4.0`
+
+## Installation
+
+```bash
+composer config repositories.nativephp-plugins composer https://plugins.nativephp.com
+composer config http-basic.plugins.nativephp.com your@email.com your-license-key
+php artisan vendor:publish --tag=nativephp-plugins-provider
+composer require partek/native-maps
+php artisan native:plugin:register partek/native-maps
+php artisan native:run
+```
+
+### Android: Google Maps API key
+
+In your app module's `build.gradle`:
+
+```gradle
+android {
+    defaultConfig {
+        manifestPlaceholders["GOOGLE_MAPS_API_KEY"] = project.findProperty("GOOGLE_MAPS_API_KEY") ?: ""
+    }
+}
+```
+
+In a local, uncommitted `gradle.properties`:
+
+```properties
+GOOGLE_MAPS_API_KEY=your-google-maps-api-key-here
+```
+
+---
+
 # Google Mobile Ads
 
 > Bhargav Detroja
@@ -13707,3 +13759,38 @@ composer require guppylab/plugin-push
 php artisan native:plugin:register guppylab/plugin-push
 php artisan vendor:publish --tag=push-config
 ```
+
+---
+
+# Android Launcher
+
+> Kevin Batdorf
+
+<div class="plugin-info"><div class="pi-meta"><span class="pi-item"><span class="pi-label">Author</span><span class="pi-value">Kevin Batdorf</span></span><span class="pi-item"><span class="pi-label">Plugin Type</span><span class="pi-badge pi-badge-community">Community Plugin</span></span><span class="pi-item"><span class="pi-label">Price</span><span class="pi-badge pi-badge-free">Free</span></span><span class="pi-item"><span class="pi-label">Version</span><span class="pi-value">v0.1.0</span></span><span class="pi-item"><span class="pi-label">License</span><span class="pi-value">MIT</span></span></div><div class="pi-compat"><span class="pi-chip"><span class="pi-chip-label">NativePHP</span><span class="pi-chip-value">^4.5</span></span><span class="pi-chip"><span class="pi-chip-label">iOS</span><span class="pi-chip-value">15.0+</span></span><span class="pi-chip"><span class="pi-chip-label">Android</span><span class="pi-chip-value">30+</span></span></div><div class="pi-links"><a href="https://github.com/KevinBatdorf/nativephp-launcher" class="pi-link" target="_blank" rel="noopener">GitHub →</a></div></div>
+
+# Android Launcher
+
+Turn your NativePHP app into an Android home screen launcher — list installed apps, open them, and handle multi-display layouts.
+
+> **Android only.** iOS reports every function as unsupported (no home screen to replace). Requires Android 11+ (API 30).
+
+## Features
+
+- **`Launcher::apps()`** — returns all installed apps with `label`, `package`, `activity`, and `icon` path
+- **`Launcher::open($package, $display, $activity)`** — launch any installed app (optionally on a specific display)
+- **`Launcher::isDefaultHome()`** — check if your app is the current default launcher
+- **`Launcher::currentHome()`** — returns the current default home app package
+- **`Launcher::openHomeSettings()`** — navigates the user to Settings → Default apps → Home app to switch launchers
+- **`HomeRequested($displayId)`** event — fired when Android requests the home screen (great for multi-display)
+- **`IsHomeScreen` trait** — apply to your root component so the back button stays at the root instead of minimizing
+- **`QUERY_ALL_PACKAGES` permission** — declared in the manifest; accepted by Google Play for launcher use cases
+- **JavaScript API** — `resources/js/Launcher.js` export for Inertia/SPA apps
+
+## Installation
+
+```bash
+composer require kevinbatdorf/nativephp-launcher
+php artisan native:plugin:register kevinbatdorf/nativephp-launcher
+```
+
+After install, your app will appear in Android's home-app picker. Call `Launcher::openHomeSettings()` to take the user directly there.

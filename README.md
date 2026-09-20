@@ -44,6 +44,7 @@ Listed all are created and maintained by independent developers, not the NativeP
 - [Native Stripe Payments](plugins/paid/codypchristian-nativephp-stripe.md) — Cody P Christian
 - [IAP Apple & Google](plugins/paid/codypchristian-nativephp-iap.md) — Cody P Christian
 - [Native Share](plugins/paid/partek-native-share.md) — Paul (PARTek)
+- [Native Maps](plugins/paid/partek-native-maps.md) — Paul (PARTek)
 
 ---
 
@@ -119,6 +120,7 @@ Listed all are created and maintained by independent developers, not the NativeP
 - [NativePHP Charts](plugins/free/donmanueldev-nativephp-charts.md) — donmanueldev
 - [Directions](plugins/free/guppylab-plugin-directions.md) — guppylab
 - [Push Notifications](plugins/free/guppylab-plugin-push.md) — guppylab
+- [Android Launcher](plugins/free/kevinbatdorf-nativephp-launcher.md) — Kevin Batdorf
 
 ---
 

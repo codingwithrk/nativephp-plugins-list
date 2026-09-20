@@ -273,6 +273,13 @@
         "headings": "Features Installation"
     },
     {
+        "title": "Native Maps",
+        "description": "Paul (PARTek)",
+        "url": "/plugins/paid/partek-native-maps",
+        "content": "AuthorPaul (PARTek)Plugin TypeCommunity PluginPrice$99Versionv1.0.0LicenseProprietaryNativePHP^4.0iOS18.0+Android26+Buy on NativePHP → Fully native maps for NativePHP Mobile — Apple MapKit (MKMapView) on iOS, Google Maps via Jetpack Compose on Android. No WebView, no JS map library. Android setup required: Add a Google Maps API key via a Gradle manifest placeholder (see below). iOS uses MapKit with no API key. Features <native:parqore-map> Blade component — drop a full map anywhere in your UI Markers — add, update, and remove pins with custom icons and info windows Camera control — NativeMaps::animateCamera(), NativeMaps::moveCamera(), NativeMaps::fitCoordinates(), NativeMaps::focusMarker(), NativeMaps::visibleRegion() iOS — MapKit MKMapView, no API key, no configuration Android — Jetpack Compose GoogleMap, requires a Google Maps API key nativephp-ui-plugin (SuperNative EDGE component) — requires NativePHP Mobile ^4.0 Installation composer config repositories.nativephp-plugins composer https://plugins.nativephp.com composer config http-basic.plugins.nativephp.com your@email.com your-license-key php artisan vendor:publish --tag=nativephp-plugins-provider composer require partek/native-maps php artisan native:plugin:register partek/native-maps php artisan native:run Android: Google Maps API key In your app module's build.gradle: android { defaultConfig { manifestPlaceholders[\"GOOGLE_MAPS_API_KEY\"] = project.findProperty(\"GOOGLE_MAPS_API_KEY\") ?: \"\" } } In a local, uncommitted gradle.properties: GOOGLE_MAPS_API_KEY=your-google-maps-api-key-here",
+        "headings": "Features Installation Android: Google Maps API key"
+    },
+    {
         "title": "Google Mobile Ads",
         "description": "Bhargav Detroja",
         "url": "/plugins/free/bhargavdetroja-google-mobile-ads",
@@ -760,6 +767,13 @@
         "description": "guppylab",
         "url": "/plugins/free/guppylab-plugin-push",
         "content": "AuthorguppylabPlugin TypeCommunity PluginPriceFreeVersionv3.0.0LicenseMITNativePHP^3.0iOS15.0+Android21+GitHub → Push notifications for NativePHP Mobile — direct APNs (.p8 key, no Firebase SDK) on iOS and Firebase Cloud Messaging on Android. Features iOS — direct APNs via .p8 key, no Firebase dependency Android — FCM with google-services.json MessageReceived event — fires for foreground and silent/data-only pushes NotificationTapped event — fires on tap including cold-start taps TokenGenerated event — device token registration Push::unenroll() — delete token and stop receiving pushes Push::setBadge(n) / Push::clearBadge() — iOS badge count control Push::isSupported() — detect simulator or missing google-services.json Permission states — granted, denied, not_determined, provisional, ephemeral Provisional permission support on iOS JavaScript API with TypeScript definitions for Livewire v3/v4 and Inertia (Vue/React) Installation composer require guppylab/plugin-push php artisan native:plugin:register guppylab/plugin-push php artisan vendor:publish --tag=push-config",
+        "headings": "Features Installation"
+    },
+    {
+        "title": "Android Launcher",
+        "description": "Kevin Batdorf",
+        "url": "/plugins/free/kevinbatdorf-nativephp-launcher",
+        "content": "AuthorKevin BatdorfPlugin TypeCommunity PluginPriceFreeVersionv0.1.0LicenseMITNativePHP^4.5iOS15.0+Android30+GitHub → Turn your NativePHP app into an Android home screen launcher — list installed apps, open them, and handle multi-display layouts. Android only. iOS reports every function as unsupported (no home screen to replace). Requires Android 11+ (API 30). Features Launcher::apps() — returns all installed apps with label, package, activity, and icon path Launcher::open($package, $display, $activity) — launch any installed app (optionally on a specific display) Launcher::isDefaultHome() — check if your app is the current default launcher Launcher::currentHome() — returns the current default home app package Launcher::openHomeSettings() — navigates the user to Settings → Default apps → Home app to switch launchers HomeRequested($displayId) event — fired when Android requests the home screen (great for multi-display) IsHomeScreen trait — apply to your root component so the back button stays at the root instead of minimizing QUERY_ALL_PACKAGES permission — declared in the manifest; accepted by Google Play for launcher use cases JavaScript API — resources/js/Launcher.js export for Inertia/SPA apps Installation composer require kevinbatdorf/nativephp-launcher php artisan native:plugin:register kevinbatdorf/nativephp-launcher After install, your app will appear in Android's home-app picker. Call Launcher::openHomeSettings() to take the user directly there.",
         "headings": "Features Installation"
     }
 ]
