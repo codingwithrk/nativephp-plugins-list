@@ -2,7 +2,7 @@
 name: "Retro Emulator"
 author: "Kevin Batdorf"
 price: "Free"
-version: "0.1.3"
+version: "0.1.4"
 license: "MIT"
 github: "https://github.com/KevinBatdorf/nativephp-retro-emulator"
 support: "https://github.com/KevinBatdorf/nativephp-retro-emulator/issues"
