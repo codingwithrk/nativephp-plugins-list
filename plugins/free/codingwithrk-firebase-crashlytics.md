@@ -2,7 +2,7 @@
 name: "Firebase Crashlytics"
 author: "CodingwithRK"
 price: "Free"
-version: "1.0.0"
+version: "1.0.1"
 license: "MIT"
 github: "https://github.com/codingwithrk/firebase-crashlytics"
 support: "https://github.com/codingwithrk/firebase-crashlytics/issues"
