@@ -117,3 +117,4 @@
 - /plugins/free/guppylab-plugin-directions: guppylab
 - /plugins/free/guppylab-plugin-push: guppylab
 - /plugins/free/kevinbatdorf-nativephp-launcher: Kevin Batdorf
+- /plugins/free/noehassiel-confetti: noehassiel

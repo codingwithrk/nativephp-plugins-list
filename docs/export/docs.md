@@ -13955,3 +13955,37 @@ php artisan native:plugin:register kevinbatdorf/nativephp-launcher
 ```
 
 After install, your app will appear in Android's home-app picker. Call `Launcher::openHomeSettings()` to take the user directly there.
+
+---
+
+# Confetti Celebration
+
+> noehassiel
+
+<div class="plugin-info"><div class="pi-meta"><span class="pi-item"><span class="pi-label">Author</span><span class="pi-value">noehassiel</span></span><span class="pi-item"><span class="pi-label">Plugin Type</span><span class="pi-badge pi-badge-community">Community Plugin</span></span><span class="pi-item"><span class="pi-label">Price</span><span class="pi-badge pi-badge-free">Free</span></span><span class="pi-item"><span class="pi-label">Version</span><span class="pi-value">v1.0.1</span></span><span class="pi-item"><span class="pi-label">License</span><span class="pi-value">Proprietary</span></span></div><div class="pi-compat"><span class="pi-chip"><span class="pi-chip-label">NativePHP</span><span class="pi-chip-value">^4.0</span></span><span class="pi-chip"><span class="pi-chip-label">iOS</span><span class="pi-chip-value">16.0+</span></span><span class="pi-chip"><span class="pi-chip-label">Android</span><span class="pi-chip-value">26+</span></span></div><div class="pi-links"><a href="https://github.com/noehassiel/nativephp-confetti" class="pi-link" target="_blank" rel="noopener">GitHub →</a></div></div>
+
+# Confetti Celebration
+
+Native confetti particle animations for NativePHP Mobile — Konfetti (Jetpack Compose) on Android, a SwiftUI particle system on iOS. Layers over live UI without blocking touches.
+
+## Features
+
+- **`<native:confetti>`** SuperNative EDGE component — place last inside a `<native:stack>` to overlay other content
+- **6 presets** — `burst`, `rain`, `cannon`, `explode`, `festive`, `corners` (`corners` fires two cannons from bottom corners angling inward)
+- **`Confetti::burst(?$ref)`** — trigger from any PHP context (service class, queued job, action bar)
+- **`fire-token`** attribute — increment any integer to fire a burst; useful in Livewire/Blade flows
+- **Fully customizable** — colors (Tailwind names, hex, CSS), particle count, duration, angle, spread, speed, damping, position, fade-out
+- **Non-interactive** — particles never intercept touches on underlying UI
+- **Zero idle cost** — no animation loop runs until `fire-token` first changes after mount
+- **`_finished` callback** — fires once every particle from the burst has died
+- **`ConfettiBurstFailed` event** — fires when `Confetti::burst($ref)` finds no mounted matching element
+- **JS API** — `import { burst, Events } from 'noehassiel-confetti'` for Inertia/SPA apps
+
+## Installation
+
+```bash
+composer require noehassiel/confetti
+php artisan vendor:publish --tag=nativephp-plugins-provider
+php artisan native:plugin:register noehassiel/confetti
+php artisan native:run
+```
