@@ -2667,6 +2667,167 @@ GOOGLE_MAPS_API_KEY=your-google-maps-api-key-here
 
 ---
 
+# Passkeys
+
+> Paul (PARTek)
+
+<div class="plugin-info"><div class="pi-meta"><span class="pi-item"><span class="pi-label">Author</span><span class="pi-value">Paul (PARTek)</span></span><span class="pi-item"><span class="pi-label">Plugin Type</span><span class="pi-badge pi-badge-community">Community Plugin</span></span><span class="pi-item"><span class="pi-label">Price</span><span class="pi-badge pi-badge-paid">$99</span></span><span class="pi-item"><span class="pi-label">Version</span><span class="pi-value">v1.0.0</span></span><span class="pi-item"><span class="pi-label">License</span><span class="pi-value">Proprietary</span></span></div><div class="pi-compat"><span class="pi-chip"><span class="pi-chip-label">NativePHP</span><span class="pi-chip-value">^4.0</span></span><span class="pi-chip"><span class="pi-chip-label">iOS</span><span class="pi-chip-value">18.0+</span></span><span class="pi-chip"><span class="pi-chip-label">Android</span><span class="pi-chip-value">26+</span></span></div><div class="pi-links"><a href="https://nativephp.com/plugins/partek/passkeys" class="pi-link pi-link-buy" target="_blank" rel="noopener">Buy on NativePHP →</a></div></div>
+
+# Passkeys
+
+End-to-end FIDO2/WebAuthn passkeys for NativePHP Mobile — native OS UI (`AuthenticationServices` on iOS, `Credential Manager` on Android) backed by a full Laravel relying-party server.
+
+> **Note:** Apple Associated Domains (iOS) and Android Digital Asset Links must be configured manually on your domain and in Xcode/Gradle.
+
+## Features
+
+- **Native OS biometric UI** — Face ID / Touch ID on iOS; biometric/screen-lock on Android
+- **Full Laravel RP server** — challenge generation, single-use `ChallengeStore`, cryptographic verification via `web-auth/webauthn-lib`
+- **`CredentialRepository` contract** — you implement and bind it; the plugin never assumes your user model shape
+- **Four ready-made routes** — registration options, registration complete, authentication options, authentication complete
+- **Discoverable sign-in** — omit login hint to let the user pick a passkey from the OS sheet
+- **Testing fake** — `Passkeys::fake()` with assertions for unit tests
+- **JS bridge** — `create`, `createdCredential`, `authenticate`, `authenticatedAssertion`, `cancel` for Inertia/SPA apps
+- **Events** — `PasskeyCreated`, `PasskeyCreationCancelled`, `PasskeyCreationFailed`
+
+## Facade API
+
+| Method | Purpose |
+|---|---|
+| `Passkeys::registrationOptions($user)` | Build WebAuthn registration options |
+| `Passkeys::create($regOptions)` | Present native passkey creation UI; returns `$requestId` |
+| `Passkeys::createdCredential($requestId)` | Retrieve raw credential after `PasskeyCreated` fires |
+| `Passkeys::completeRegistration($user, $credential, $challengeKey)` | Verify and persist via `CredentialRepository` |
+| `Passkeys::authenticationOptions(?$loginHint)` | Build WebAuthn sign-in options |
+| `Passkeys::authenticate($authOptions)` | Present native passkey sign-in UI; returns `$requestId` |
+| `Passkeys::authenticatedAssertion($requestId)` | Retrieve raw assertion after sign-in |
+| `Passkeys::completeAuthentication($assertion, $challengeKey)` | Verify, resolve user, call `Auth::login($user)` |
+
+## Installation
+
+```bash
+composer config repositories.nativephp-plugins composer https://plugins.nativephp.com
+composer config http-basic.plugins.nativephp.com your@email.com your-license-key
+php artisan vendor:publish --tag=nativephp-plugins-provider
+composer require partek/passkeys
+php artisan native:plugin:register partek/passkeys
+php artisan vendor:publish --tag=passkeys-config
+php artisan native:run
+```
+
+---
+
+# Print Studio
+
+> Paul (PARTek)
+
+<div class="plugin-info"><div class="pi-meta"><span class="pi-item"><span class="pi-label">Author</span><span class="pi-value">Paul (PARTek)</span></span><span class="pi-item"><span class="pi-label">Plugin Type</span><span class="pi-badge pi-badge-community">Community Plugin</span></span><span class="pi-item"><span class="pi-label">Price</span><span class="pi-badge pi-badge-paid">$99</span></span><span class="pi-item"><span class="pi-label">Version</span><span class="pi-value">v1.0.2</span></span><span class="pi-item"><span class="pi-label">License</span><span class="pi-value">Proprietary</span></span></div><div class="pi-compat"><span class="pi-chip"><span class="pi-chip-label">NativePHP</span><span class="pi-chip-value">^4.0</span></span><span class="pi-chip"><span class="pi-chip-label">iOS</span><span class="pi-chip-value">18.0+</span></span><span class="pi-chip"><span class="pi-chip-label">Android</span><span class="pi-chip-value">26+</span></span></div><div class="pi-links"><a href="https://nativephp.com/plugins/partek/print-studio" class="pi-link pi-link-buy" target="_blank" rel="noopener">Buy on NativePHP →</a></div></div>
+
+# Print Studio
+
+Native document printing and PDF generation for NativePHP Mobile — `UIPrintInteractionController` on iOS, `PrintManager` on Android. Drive the OS print sheet or render directly to a PDF file, all from PHP.
+
+> Not a thermal/ESC-POS receipt SDK. Not a cloud print service. Receipt paper sizes are layout presets only.
+
+## Features
+
+- **Print HTML, Blade views, plain text, existing PDF/HTML files, and images** via the `PrintStudio` facade
+- **`->print()`** — presents the native OS print dialog asynchronously
+- **`->toPdf()`** — renders content to a PDF on disk (no print dialog)
+- **Paper sizes** — Letter, Legal, A4, A5, ShippingLabel 4×6, Receipt 58mm/80mm, Custom
+- **Portrait/Landscape**, margins, copies (Android), DPI for PDF output
+- **Security** — `PathGuard` path traversal protection, `storage_root` confinement, overwrite protection by default
+- **Testing fake** — `PrintStudio::fake()` with `assertPrinted()`, `assertPdfGenerated()`, `assertCancelled()`, `->failing()` simulation
+- **JS API** — `printHtml`, `printPdfFile`, `printImageFile`, `generatePdf`, `cancel` for Inertia/SPA apps
+- **Events** — `PrintJobCreated`, `PrintJobPresented`, `PrintJobCompleted`, `PrintJobCancelled`, `PrintJobFailed`, `PdfGenerated`, `PdfGenerationFailed`
+
+## Facade API
+
+```php
+PrintStudio::html($html)->paper(PaperSize::A4)->orientation(Orientation::Portrait)->print();
+PrintStudio::view('invoice', $data)->paper(PaperSize::Letter)->toPdf('invoice.pdf');
+PrintStudio::text($plainText)->print();
+PrintStudio::pdf($existingPdfPath)->print();
+PrintStudio::image($imagePath, ImageFit::Contain)->toPdf('photo.pdf');
+PrintStudio::cancel($jobId);
+```
+
+## Installation
+
+```bash
+composer config repositories.nativephp-plugins composer https://plugins.nativephp.com
+composer config http-basic.plugins.nativephp.com your@email.com your-license-key
+php artisan vendor:publish --tag=nativephp-plugins-provider
+composer require partek/print-studio
+php artisan native:plugin:register partek/print-studio
+php artisan native:run
+```
+
+---
+
+# Document Intelligence
+
+> Paul (PARTek)
+
+<div class="plugin-info"><div class="pi-meta"><span class="pi-item"><span class="pi-label">Author</span><span class="pi-value">Paul (PARTek)</span></span><span class="pi-item"><span class="pi-label">Plugin Type</span><span class="pi-badge pi-badge-community">Community Plugin</span></span><span class="pi-item"><span class="pi-label">Price</span><span class="pi-badge pi-badge-paid">$99</span></span><span class="pi-item"><span class="pi-label">Version</span><span class="pi-value">v1.0.1</span></span><span class="pi-item"><span class="pi-label">License</span><span class="pi-value">Proprietary</span></span></div><div class="pi-compat"><span class="pi-chip"><span class="pi-chip-label">NativePHP</span><span class="pi-chip-value">^4.0</span></span><span class="pi-chip"><span class="pi-chip-label">iOS</span><span class="pi-chip-value">18.0+</span></span><span class="pi-chip"><span class="pi-chip-label">Android</span><span class="pi-chip-value">26+</span></span></div><div class="pi-links"><a href="https://nativephp.com/plugins/partek/document-intelligence" class="pi-link pi-link-buy" target="_blank" rel="noopener">Buy on NativePHP →</a></div></div>
+
+# Document Intelligence
+
+Native multi-page document scanning and on-device OCR for NativePHP Mobile — VisionKit + Apple Vision on iOS, ML Kit Document Scanner + Text Recognition on Android. No cloud upload, no third-party API key.
+
+## Features
+
+- **Native scanner UI** — automatic edge detection, perspective correction, and cropping
+- **On-device OCR** — Apple Vision (iOS) / ML Kit Text Recognition (Android); no network calls
+- **Multi-page support** — scan up to 100 pages per session (configurable)
+- **Optional PDF generation** from captured pages (`->outputPdf()`)
+- **Recognize existing images** — `DocumentIntelligence::recognize($path)` for OCR on any stored image
+- **Structured OCR output** — `OcrResult` → `OcrPage` → `OcrBlock` → `OcrLine` → `OcrElement`, each with normalized bounding boxes (0.0–1.0) and nullable confidence scores
+- **Security** — `PathGuard` path traversal protection, `storage_root` confinement, `max_image_dimension` cap (default 8000px)
+- **Testing fake** — `DocumentIntelligence::fake()` for unit tests without a device
+- **JS API** — `scan`, `result`, `cancel`, `recognize` for Inertia/SPA apps
+- **Events** — `ScanStarted`, `ScanProgress`, `ScanCompleted`, `ScanCancelled`, `ScanFailed`
+
+## Facade API
+
+```php
+// Start a scan
+$scanId = DocumentIntelligence::scan(
+    ScanOptions::make(maxPages: 10)
+        ->outputPdf()
+        ->recognizeText()
+        ->imageFormat(ImageFormat::Jpeg)
+        ->quality(0.85)
+);
+
+// Retrieve result after ScanCompleted fires
+$result = DocumentIntelligence::result($scanId);
+// $result->pages — ScannedPage[], $result->pdfPath
+
+// OCR on an existing image
+$ocr = DocumentIntelligence::recognize(storage_path('scans/page.jpg'));
+// $ocr->fullText(), $ocr->pages[0]->blocks
+
+// Cancel an in-flight scan
+DocumentIntelligence::cancel($scanId);
+
+// Clean up temp files older than 1 day
+DocumentIntelligence::purgeTemporaryFiles();
+```
+
+## Installation
+
+```bash
+composer config repositories.nativephp-plugins composer https://plugins.nativephp.com
+composer config http-basic.plugins.nativephp.com your@email.com your-license-key
+php artisan vendor:publish --tag=nativephp-plugins-provider
+composer require partek/document-intelligence
+php artisan native:plugin:register partek/document-intelligence
+php artisan native:run
+```
+
+---
+
 # Google Mobile Ads
 
 > Bhargav Detroja

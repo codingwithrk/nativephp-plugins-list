@@ -45,6 +45,9 @@ Listed all are created and maintained by independent developers, not the NativeP
 - [IAP Apple & Google](plugins/paid/codypchristian-nativephp-iap.md) — Cody P Christian
 - [Native Share](plugins/paid/partek-native-share.md) — Paul (PARTek)
 - [Native Maps](plugins/paid/partek-native-maps.md) — Paul (PARTek)
+- [Passkeys](plugins/paid/partek-passkeys.md) — Paul (PARTek)
+- [Print Studio](plugins/paid/partek-print-studio.md) — Paul (PARTek)
+- [Document Intelligence](plugins/paid/partek-document-intelligence.md) — Paul (PARTek)
 
 ---
 
