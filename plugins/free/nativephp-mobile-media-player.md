@@ -2,7 +2,7 @@
 name: "Mobile Media Player"
 author: "Shane Rosenthal"
 price: "Free"
-version: "1.0.1"
+version: "1.0.2"
 license: "MIT"
 github: "https://github.com/NativePHP/mobile-media-player"
 support: "https://nativephp.com/support"

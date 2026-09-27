@@ -2,7 +2,7 @@
 name: "NativePHP Mobile Network"
 author: "Bifrost Technology"
 price: "Free"
-version: "1.0.2"
+version: "1.1.0"
 license: "MIT"
 github: "https://github.com/NativePHP/mobile-network"
 support: "https://nativephp.com/support"
