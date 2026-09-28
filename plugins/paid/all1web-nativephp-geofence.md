@@ -2,7 +2,7 @@
 name: "Background Geofencing"
 author: "Neo Nos"
 price: "$49"
-version: "0.2.3"
+version: "0.2.5"
 license: "Proprietary"
 source: "https://nativephp.com/plugins/all1web/nativephp-geofence"
 support: "https://github.com/all1web/plugin-assets/issues"
