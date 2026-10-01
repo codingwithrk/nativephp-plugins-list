@@ -48,6 +48,7 @@ Listed all are created and maintained by independent developers, not the NativeP
 - [Passkeys](plugins/paid/partek-passkeys.md) — Paul (PARTek)
 - [Print Studio](plugins/paid/partek-print-studio.md) — Paul (PARTek)
 - [Document Intelligence](plugins/paid/partek-document-intelligence.md) — Paul (PARTek)
+- [Live Activities](plugins/paid/vos-nativephp-live-activities.md) — Pauline Vos
 
 ---
 

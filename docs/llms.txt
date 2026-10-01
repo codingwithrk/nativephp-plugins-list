@@ -46,6 +46,7 @@
 - /plugins/paid/partek-passkeys: Paul (PARTek)
 - /plugins/paid/partek-print-studio: Paul (PARTek)
 - /plugins/paid/partek-document-intelligence: Paul (PARTek)
+- /plugins/paid/vos-nativephp-live-activities: Pauline Vos
 - /plugins/free/bhargavdetroja-google-mobile-ads: Bhargav Detroja
 - /plugins/free/s2br-nativephp-mobile-splashscreen: Israel Pereira
 - /plugins/free/developernauts-nativephp-mobile-locales: Developernauts

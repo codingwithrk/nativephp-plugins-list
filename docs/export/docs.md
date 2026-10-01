@@ -2828,6 +2828,42 @@ php artisan native:run
 
 ---
 
+# Live Activities
+
+> Pauline Vos
+
+<div class="plugin-info"><div class="pi-meta"><span class="pi-item"><span class="pi-label">Author</span><span class="pi-value">Pauline Vos</span></span><span class="pi-item"><span class="pi-label">Plugin Type</span><span class="pi-badge pi-badge-community">Community Plugin</span></span><span class="pi-item"><span class="pi-label">Price</span><span class="pi-badge pi-badge-paid">$49</span></span><span class="pi-item"><span class="pi-label">Version</span><span class="pi-value">v1.0.0</span></span><span class="pi-item"><span class="pi-label">License</span><span class="pi-value">Proprietary</span></span></div><div class="pi-compat"><span class="pi-chip"><span class="pi-chip-label">NativePHP</span><span class="pi-chip-value">^4.5</span></span><span class="pi-chip"><span class="pi-chip-label">PHP</span><span class="pi-chip-value">^8.4</span></span><span class="pi-chip"><span class="pi-chip-label">Laravel</span><span class="pi-chip-value">^12</span></span><span class="pi-chip"><span class="pi-chip-label">iOS</span><span class="pi-chip-value">18.0+</span></span><span class="pi-chip"><span class="pi-chip-label">Android</span><span class="pi-chip-value">29+</span></span></div><div class="pi-links"><a href="https://nativephp.com/plugins/vos/nativephp-live-activities" class="pi-link pi-link-buy" target="_blank" rel="noopener">Buy on NativePHP →</a></div></div>
+
+# Live Activities
+
+Local iOS Live Activities and Android ongoing progress notifications — lock screen widgets, Dynamic Island presence, and progress tracking without a push notification server.
+
+## Features
+
+- **iOS Live Activities** — displayed on the lock screen and in the Dynamic Island (iOS 18+)
+- **Android ongoing progress notifications** — optionally promoted to Android Live Updates (Android 10+)
+- **Progress bar** — 0.0–1.0 float, renders as a native progress indicator
+- **Title & subtitle** — update in real time from PHP
+- **Bundled Lucide icons** — `circle-dashed`, `utensils`, `truck`, `circle-check`, `package`, `clock`, `download`, `navigation`; colored via hex `#RRGGBB`
+- **`LiveActivity::start($content)`** — create a new activity, returns an ID
+- **`LiveActivity::update($id, $content)`** — push a content update to a running activity
+- **`LiveActivity::end($id)`** — dismiss the activity
+- **`LiveActivity::all()`** — list all running activities
+- **`LiveActivity::capabilities()`** — check what the current device/OS supports
+
+## Installation
+
+```bash
+composer config repositories.nativephp-plugins composer https://plugins.nativephp.com
+composer config http-basic.plugins.nativephp.com your@email.com your-license-key
+php artisan vendor:publish --tag=nativephp-plugins-provider
+composer require vos/nativephp-live-activities
+php artisan native:plugin:register vos/nativephp-live-activities
+php artisan native:run
+```
+
+---
+
 # Google Mobile Ads
 
 > Bhargav Detroja
