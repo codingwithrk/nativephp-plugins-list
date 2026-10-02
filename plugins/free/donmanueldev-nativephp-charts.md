@@ -2,7 +2,7 @@
 name: "NativePHP Charts"
 author: "donmanueldev"
 price: "Free"
-version: "1.2.0"
+version: "1.2.1"
 license: "MIT"
 github: "https://github.com/donmanueldev/nativephp-charts"
 support: "https://github.com/donmanueldev/nativephp-charts/issues"
