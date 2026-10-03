@@ -2,7 +2,7 @@
 name: "Document Intelligence"
 author: "Paul (PARTek)"
 price: "$99"
-version: "1.0.1"
+version: "1.1.0"
 license: "Proprietary"
 source: "https://nativephp.com/plugins/partek/document-intelligence"
 support: "https://nativephp.com/plugins/partek/document-intelligence"

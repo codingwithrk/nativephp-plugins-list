@@ -2,7 +2,7 @@
 name: "Home Screen Shortcuts"
 author: "Paul (PARTek)"
 price: "$49"
-version: "3.0.2"
+version: "3.1.0"
 license: "Proprietary"
 source: "https://nativephp.com/plugins/partek/home-screen-shortcuts"
 support: "https://nativephp.com/plugins/partek/home-screen-shortcuts"

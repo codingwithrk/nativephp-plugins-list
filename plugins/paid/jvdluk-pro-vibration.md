@@ -2,7 +2,7 @@
 name: "ProVibration"
 author: "JVDLUK"
 price: "$49"
-version: "1.0.1"
+version: "1.1.1"
 license: "Proprietary"
 source: "https://nativephp.com/plugins/jvdluk/pro-vibration"
 support: "support@jvdluk.com"
