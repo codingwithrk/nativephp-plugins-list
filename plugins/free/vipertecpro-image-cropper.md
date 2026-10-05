@@ -2,7 +2,7 @@
 name: "Image Cropper"
 author: "Vipul Walia"
 price: "Free"
-version: "1.3.0"
+version: "1.3.1"
 license: "MIT"
 github: "https://github.com/vipertecpro/image-cropper"
 support: "https://github.com/vipertecpro/image-cropper/issues"
