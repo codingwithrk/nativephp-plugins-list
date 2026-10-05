@@ -14025,3 +14025,35 @@ php artisan vendor:publish --tag=nativephp-plugins-provider
 php artisan native:plugin:register noehassiel/confetti
 php artisan native:run
 ```
+
+---
+
+# Dynamic Notifications
+
+> Shane Rosenthal
+
+<div class="plugin-info"><div class="pi-meta"><span class="pi-item"><span class="pi-label">Author</span><span class="pi-value">Shane Rosenthal</span></span><span class="pi-item"><span class="pi-label">Plugin Type</span><span class="pi-badge pi-badge-first-party">1st Party Plugin</span></span><span class="pi-item"><span class="pi-label">Price</span><span class="pi-badge pi-badge-free">Free</span></span><span class="pi-item"><span class="pi-label">Version</span><span class="pi-value">v0.1.1</span></span><span class="pi-item"><span class="pi-label">License</span><span class="pi-value">MIT</span></span></div><div class="pi-compat"><span class="pi-chip"><span class="pi-chip-label">NativePHP</span><span class="pi-chip-value">^4.5.0</span></span><span class="pi-chip"><span class="pi-chip-label">iOS</span><span class="pi-chip-value">18.2+</span></span><span class="pi-chip"><span class="pi-chip-label">Android</span><span class="pi-chip-value">Not supported (iOS only)</span></span></div><div class="pi-links"><a href="https://github.com/NativePHP/mobile-dynamic-notifications" class="pi-link" target="_blank" rel="noopener">GitHub →</a></div></div>
+
+# Dynamic Notifications
+
+Dynamic Island-style in-app notifications for NativePHP Mobile on iOS 18.2+. Pure SwiftUI — no JavaScript animation engines, no third-party SDKs.
+
+> **iOS only.** Android is not supported.
+
+## Features
+
+- **Dynamic Island-style UI** — fluid animated pill notification overlay, native SwiftUI
+- **`DynamicNotifications::show($content)`** — display a notification with title, message, SF Symbol, accent color, and duration
+- **`DynamicNotifications::dismiss()`** — dismiss the current notification programmatically
+- **`NotificationTapped` event** — fires when the user taps the notification
+- **`NotificationDismissed` event** — fires when the notification is dismissed (auto or manual)
+- **Accessibility** — Reduce Motion, Dynamic Type, and VoiceOver support
+
+## Installation
+
+```bash
+composer require nativephp/mobile-dynamic-notifications
+php artisan native:plugin:register nativephp/mobile-dynamic-notifications
+```
+
+Rebuild your iOS app (`php artisan native:run ios`) to compile the SwiftUI code.

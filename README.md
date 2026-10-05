@@ -126,6 +126,7 @@ Listed all are created and maintained by independent developers, not the NativeP
 - [Push Notifications](plugins/free/guppylab-plugin-push.md) — guppylab
 - [Android Launcher](plugins/free/kevinbatdorf-nativephp-launcher.md) — Kevin Batdorf
 - [Confetti Celebration](plugins/free/noehassiel-confetti.md) — noehassiel
+- [Dynamic Notifications](plugins/free/nativephp-mobile-dynamic-notifications.md) — Shane Rosenthal
 
 ---
 

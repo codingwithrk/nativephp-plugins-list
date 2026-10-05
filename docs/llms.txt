@@ -119,3 +119,4 @@
 - /plugins/free/guppylab-plugin-push: guppylab
 - /plugins/free/kevinbatdorf-nativephp-launcher: Kevin Batdorf
 - /plugins/free/noehassiel-confetti: noehassiel
+- /plugins/free/nativephp-mobile-dynamic-notifications: Shane Rosenthal
