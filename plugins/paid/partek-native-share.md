@@ -2,7 +2,7 @@
 name: "Native Share"
 author: "Paul (PARTek)"
 price: "$29"
-version: "1.2.0"
+version: "2.0.0"
 license: "Proprietary"
 source: "https://nativephp.com/plugins/partek/native-share"
 support: "https://nativephp.com/plugins/partek/native-share"

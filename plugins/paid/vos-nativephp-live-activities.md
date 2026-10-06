@@ -2,7 +2,7 @@
 name: "Live Activities"
 author: "Pauline Vos"
 price: "$49"
-version: "1.1.0"
+version: "1.2.0"
 license: "Proprietary"
 source: "https://nativephp.com/plugins/vos/nativephp-live-activities"
 support: "https://twitter.com/vanamerongen"
