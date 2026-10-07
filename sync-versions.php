@@ -149,7 +149,7 @@ $updated = [];
 $skipped = [];
 $noChange = 0;
 
-foreach (['free', 'paid'] as $category) {
+foreach (['free', 'paid', 'official'] as $category) {
     foreach (glob("{$root}/plugins/{$category}/*.md") ?: [] as $file) {
         $raw           = file_get_contents($file);
         [$meta, $body] = parseFrontmatter($raw);
@@ -171,8 +171,8 @@ foreach (['free', 'paid'] as $category) {
 
         $latestVersion = null;
 
-        if ($category === 'paid' && $sourceUrl !== '') {
-            // Paid plugins: scrape nativephp.com
+        if ($sourceUrl !== '') {
+            // Paid plugins (any category with a source URL): scrape nativephp.com
             $latestVersion = latestFromNativephpCom($sourceUrl);
         } else {
             // Free plugins: check Packagist

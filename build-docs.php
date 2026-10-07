@@ -166,14 +166,14 @@ function pluginCard(array $meta): string
 
 $buildDir = __DIR__ . '/.build';
 
-foreach (['free', 'paid'] as $cat) {
+foreach (['free', 'paid', 'official'] as $cat) {
     $dir = "$buildDir/plugins/$cat";
     if (! is_dir($dir)) {
         mkdir($dir, 0777, true);
     }
 }
 
-foreach (['free', 'paid'] as $category) {
+foreach (['free', 'paid', 'official'] as $category) {
     foreach (glob(__DIR__ . "/plugins/$category/*.md") ?: [] as $srcFile) {
         $raw           = (string) file_get_contents($srcFile);
         [$meta, $body] = parseFrontmatter($raw);
@@ -202,7 +202,7 @@ Docsmith::make()
 
 // ── Cleanup ──────────────────────────────────────────────────────────────────
 
-foreach (['free', 'paid'] as $cat) {
+foreach (['free', 'paid', 'official'] as $cat) {
     foreach (glob("$buildDir/plugins/$cat/*.md") ?: [] as $f) {
         unlink($f);
     }

@@ -1,6 +1,41 @@
 # NativePHP Plugins List
 
-Listed all are created and maintained by independent developers, not the NativePHP team. Please review each plugin source code, license, and maintenance status before using it in production.
+A curated directory of plugins for [NativePHP Mobile](https://nativephp.com). Please review each plugin's source code, license, and maintenance status before using it in production.
+
+---
+
+## 🏠 NativePHP Official
+
+Plugins published and maintained by the NativePHP team (Bifrost Technology & core contributors) under the `nativephp/` namespace.
+
+**Free**
+
+- [Mobile Dialog](plugins/official/nativephp-mobile-dialog.md) — Bifrost Technology
+- [Mobile System](plugins/official/nativephp-mobile-system.md) — Bifrost Technology
+- [Mobile Browser](plugins/official/nativephp-mobile-browser.md) — Bifrost Technology
+- [Mobile File](plugins/official/nativephp-mobile-file.md) — Bifrost Technology
+- [Mobile Share](plugins/official/nativephp-mobile-share.md) — Bifrost Technology
+- [Mobile Network](plugins/official/nativephp-mobile-network.md) — Bifrost Technology
+- [Mobile Microphone](plugins/official/nativephp-mobile-microphone.md) — Bifrost Technology
+- [Mobile Device](plugins/official/nativephp-mobile-device.md) — Bifrost Technology
+- [Mobile Camera](plugins/official/nativephp-mobile-camera.md) — Bifrost Technology
+- [Mobile Media Player](plugins/official/nativephp-mobile-media-player.md) — Shane Rosenthal
+- [Mobile Vibe](plugins/official/nativephp-mobile-vibe.md) — Shane Rosenthal
+- [Mobile Clipboard](plugins/official/nativephp-mobile-clipboard.md) — Shane Rosenthal
+- [Mobile UI](plugins/official/nativephp-mobile-ui.md) — Shane Rosenthal
+- [Dynamic Notifications](plugins/official/nativephp-mobile-dynamic-notifications.md) — Shane Rosenthal
+
+**Paid**
+
+- [Background Tasks](plugins/official/nativephp-mobile-background-tasks.md) — Bifrost Technology
+- [Local Notifications](plugins/official/nativephp-mobile-local-notifications.md) — Bifrost Technology
+- [Biometrics](plugins/official/nativephp-mobile-biometrics.md) — Bifrost Technology
+- [Firebase](plugins/official/nativephp-mobile-firebase.md) — Bifrost Technology
+- [Secure Storage](plugins/official/nativephp-mobile-secure-storage.md) — Bifrost Technology
+- [Scanner](plugins/official/nativephp-mobile-scanner.md) — Bifrost Technology
+- [Geolocation](plugins/official/nativephp-mobile-geolocation.md) — Bifrost Technology
+- [Mobile BLE](plugins/official/nativephp-mobile-ble.md) — Bifrost Technology
+- [Skia](plugins/official/nativephp-mobile-skia.md) — Bifrost Technology
 
 ---
 
@@ -14,15 +49,7 @@ Listed all are created and maintained by independent developers, not the NativeP
 - [Mobile Calendar](plugins/paid/srwiez-nativephp-mobile-calendar.md) — Eser Deniz
 - [Mobile Screenshots](plugins/paid/srwiez-nativephp-mobile-screenshots.md) — Eser Deniz
 - [Social Auth](plugins/paid/ikromjon-nativephp-mobile-social-auth.md) — Ikromjon Ochilov
-- [Background Tasks](plugins/paid/nativephp-mobile-background-tasks.md) — Bifrost Technology
-- [Local Notifications](plugins/paid/nativephp-mobile-local-notifications.md) — Bifrost Technology
-- [Biometrics](plugins/paid/nativephp-mobile-biometrics.md) — Bifrost Technology
-- [Firebase](plugins/paid/nativephp-mobile-firebase.md) — Bifrost Technology
-- [Secure Storage](plugins/paid/nativephp-mobile-secure-storage.md) — Bifrost Technology
-- [Scanner](plugins/paid/nativephp-mobile-scanner.md) — Bifrost Technology
-- [Geolocation](plugins/paid/nativephp-mobile-geolocation.md) — Bifrost Technology
 - [In-App Purchases](plugins/paid/developernauts-nativephp-inapp-purchases.md) — Developernauts
-- [Mobile BLE](plugins/paid/nativephp-mobile-ble.md) — Bifrost Technology
 - [Tether Client](plugins/paid/tether-nativephp-client.md) — Lukas Rakauskas
 - [Home Screen Shortcuts](plugins/paid/partek-home-screen-shortcuts.md) — Paul (PARTek)
 - [Text to Speech](plugins/paid/partek-text-to-speech.md) — Paul (PARTek)
@@ -69,19 +96,6 @@ Listed all are created and maintained by independent developers, not the NativeP
 - [No Screenshot](plugins/free/codingwithrk-no-screenshot.md) — CodingwithRK
 - [Package Info](plugins/free/codingwithrk-package-info.md) — CodingwithRK
 - [Mobile Screen](plugins/free/srwiez-nativephp-mobile-screen.md) — Eser Deniz
-- [Mobile Dialog](plugins/free/nativephp-mobile-dialog.md) — Bifrost Technology
-- [Mobile System](plugins/free/nativephp-mobile-system.md) — Bifrost Technology
-- [Mobile Browser](plugins/free/nativephp-mobile-browser.md) — Bifrost Technology
-- [Mobile File](plugins/free/nativephp-mobile-file.md) — Bifrost Technology
-- [Mobile Share](plugins/free/nativephp-mobile-share.md) — Bifrost Technology
-- [Mobile Network](plugins/free/nativephp-mobile-network.md) — Bifrost Technology
-- [Mobile Microphone](plugins/free/nativephp-mobile-microphone.md) — Bifrost Technology
-- [Mobile Device](plugins/free/nativephp-mobile-device.md) — Bifrost Technology
-- [Mobile Camera](plugins/free/nativephp-mobile-camera.md) — Bifrost Technology
-- [Mobile Media Player](plugins/free/nativephp-mobile-media-player.md) — Shane Rosenthal
-- [Mobile Vibe](plugins/free/nativephp-mobile-vibe.md) — Shane Rosenthal
-- [Mobile Clipboard](plugins/free/nativephp-mobile-clipboard.md) — Shane Rosenthal
-- [Mobile UI](plugins/free/nativephp-mobile-ui.md) — Shane Rosenthal
 - [Image Resizer](plugins/free/coyotito-image-resizer.md) — asciito
 - [Mobile Photos](plugins/free/voicecode-mobile-photos.md) — Voicecode
 - [Image Lightbox](plugins/free/pteal79-plugin-image-lightbox.md) — Peter Teal
@@ -126,10 +140,9 @@ Listed all are created and maintained by independent developers, not the NativeP
 - [Push Notifications](plugins/free/guppylab-plugin-push.md) — guppylab
 - [Android Launcher](plugins/free/kevinbatdorf-nativephp-launcher.md) — Kevin Batdorf
 - [Confetti Celebration](plugins/free/noehassiel-confetti.md) — noehassiel
-- [Dynamic Notifications](plugins/free/nativephp-mobile-dynamic-notifications.md) — Shane Rosenthal
 
 ---
 
 ## 🤝 Contributing
 
-To add a plugin, create a Markdown file in `plugins/paid/` or `plugins/free/` following the naming convention `{author}-{package}.md`, then add a link entry in the relevant section above.
+To add a plugin, create a Markdown file in `plugins/paid/`, `plugins/free/`, or `plugins/official/` following the naming convention `{author}-{package}.md`, then add a link entry in the relevant section above.

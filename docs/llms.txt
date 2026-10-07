@@ -4,6 +4,29 @@
 ## Docs
 
 - /: Listed all are created and maintained by independent developers, not the NativePHP team. Please review each plugin source code, license, and maintenance status before using it in production.
+- /plugins/official/nativephp-mobile-dialog: Bifrost Technology
+- /plugins/official/nativephp-mobile-system: Bifrost Technology
+- /plugins/official/nativephp-mobile-browser: Bifrost Technology
+- /plugins/official/nativephp-mobile-file: Bifrost Technology
+- /plugins/official/nativephp-mobile-share: Bifrost Technology
+- /plugins/official/nativephp-mobile-network: Bifrost Technology
+- /plugins/official/nativephp-mobile-microphone: Bifrost Technology
+- /plugins/official/nativephp-mobile-device: Bifrost Technology
+- /plugins/official/nativephp-mobile-camera: Bifrost Technology
+- /plugins/official/nativephp-mobile-media-player: Shane Rosenthal
+- /plugins/official/nativephp-mobile-vibe: Shane Rosenthal
+- /plugins/official/nativephp-mobile-clipboard: Shane Rosenthal
+- /plugins/official/nativephp-mobile-ui: Shane Rosenthal
+- /plugins/official/nativephp-mobile-dynamic-notifications: Shane Rosenthal
+- /plugins/official/nativephp-mobile-background-tasks: Bifrost Technology
+- /plugins/official/nativephp-mobile-local-notifications: Bifrost Technology
+- /plugins/official/nativephp-mobile-biometrics: Bifrost Technology
+- /plugins/official/nativephp-mobile-firebase: Bifrost Technology
+- /plugins/official/nativephp-mobile-secure-storage: Bifrost Technology
+- /plugins/official/nativephp-mobile-scanner: Bifrost Technology
+- /plugins/official/nativephp-mobile-geolocation: Bifrost Technology
+- /plugins/official/nativephp-mobile-ble: Bifrost Technology
+- /plugins/official/nativephp-mobile-skia: Bifrost Technology
 - /plugins/paid/jvdluk-pro-vibration: JVDLUK
 - /plugins/paid/weswecan-nfc: weswecan
 - /plugins/paid/weswecan-nativephp-mobile-apple-intelligence-foundation-models: weswecan
@@ -12,15 +35,7 @@
 - /plugins/paid/srwiez-nativephp-mobile-calendar: Eser Deniz
 - /plugins/paid/srwiez-nativephp-mobile-screenshots: Eser Deniz
 - /plugins/paid/ikromjon-nativephp-mobile-social-auth: Ikromjon Ochilov
-- /plugins/paid/nativephp-mobile-background-tasks: Bifrost Technology
-- /plugins/paid/nativephp-mobile-local-notifications: Bifrost Technology
-- /plugins/paid/nativephp-mobile-biometrics: Bifrost Technology
-- /plugins/paid/nativephp-mobile-firebase: Bifrost Technology
-- /plugins/paid/nativephp-mobile-secure-storage: Bifrost Technology
-- /plugins/paid/nativephp-mobile-scanner: Bifrost Technology
-- /plugins/paid/nativephp-mobile-geolocation: Bifrost Technology
 - /plugins/paid/developernauts-nativephp-inapp-purchases: Developernauts
-- /plugins/paid/nativephp-mobile-ble: Bifrost Technology
 - /plugins/paid/tether-nativephp-client: Lukas Rakauskas
 - /plugins/paid/partek-home-screen-shortcuts: Paul (PARTek)
 - /plugins/paid/partek-text-to-speech: Paul (PARTek)
@@ -62,19 +77,6 @@
 - /plugins/free/codingwithrk-no-screenshot: CodingwithRK
 - /plugins/free/codingwithrk-package-info: CodingwithRK
 - /plugins/free/srwiez-nativephp-mobile-screen: Eser Deniz
-- /plugins/free/nativephp-mobile-dialog: Bifrost Technology
-- /plugins/free/nativephp-mobile-system: Bifrost Technology
-- /plugins/free/nativephp-mobile-browser: Bifrost Technology
-- /plugins/free/nativephp-mobile-file: Bifrost Technology
-- /plugins/free/nativephp-mobile-share: Bifrost Technology
-- /plugins/free/nativephp-mobile-network: Bifrost Technology
-- /plugins/free/nativephp-mobile-microphone: Bifrost Technology
-- /plugins/free/nativephp-mobile-device: Bifrost Technology
-- /plugins/free/nativephp-mobile-camera: Bifrost Technology
-- /plugins/free/nativephp-mobile-media-player: Shane Rosenthal
-- /plugins/free/nativephp-mobile-vibe: Shane Rosenthal
-- /plugins/free/nativephp-mobile-clipboard: Shane Rosenthal
-- /plugins/free/nativephp-mobile-ui: Shane Rosenthal
 - /plugins/free/coyotito-image-resizer: asciito
 - /plugins/free/voicecode-mobile-photos: Voicecode
 - /plugins/free/pteal79-plugin-image-lightbox: Peter Teal
@@ -119,4 +121,3 @@
 - /plugins/free/guppylab-plugin-push: guppylab
 - /plugins/free/kevinbatdorf-nativephp-launcher: Kevin Batdorf
 - /plugins/free/noehassiel-confetti: noehassiel
-- /plugins/free/nativephp-mobile-dynamic-notifications: Shane Rosenthal
