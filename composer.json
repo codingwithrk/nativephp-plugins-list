@@ -3,7 +3,10 @@
     "php": ">=8.3"
   },
   "config": {
-    "sort-packages": true
+    "sort-packages": true,
+    "platform": {
+      "php": "8.3.0"
+    }
   },
   "require-dev": {
     "mrpunyapal/docsmith": "^0.5.2"
