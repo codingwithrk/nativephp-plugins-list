@@ -4,120 +4,120 @@
 ## Docs
 
 - /: Listed all are created and maintained by independent developers, not the NativePHP team. Please review each plugin source code, license, and maintenance status before using it in production.
-- /plugins/official/nativephp-mobile-dialog: Bifrost Technology
-- /plugins/official/nativephp-mobile-system: Bifrost Technology
-- /plugins/official/nativephp-mobile-browser: Bifrost Technology
-- /plugins/official/nativephp-mobile-file: Bifrost Technology
-- /plugins/official/nativephp-mobile-share: Bifrost Technology
-- /plugins/official/nativephp-mobile-network: Bifrost Technology
-- /plugins/official/nativephp-mobile-microphone: Bifrost Technology
-- /plugins/official/nativephp-mobile-device: Bifrost Technology
-- /plugins/official/nativephp-mobile-camera: Bifrost Technology
-- /plugins/official/nativephp-mobile-media-player: Shane Rosenthal
-- /plugins/official/nativephp-mobile-vibe: Shane Rosenthal
-- /plugins/official/nativephp-mobile-clipboard: Shane Rosenthal
-- /plugins/official/nativephp-mobile-ui: Shane Rosenthal
 - /plugins/official/nativephp-mobile-dynamic-notifications: Shane Rosenthal
+- /plugins/official/nativephp-mobile-browser: Bifrost Technology
+- /plugins/official/nativephp-mobile-camera: Bifrost Technology
+- /plugins/official/nativephp-mobile-clipboard: Shane Rosenthal
+- /plugins/official/nativephp-mobile-device: Bifrost Technology
+- /plugins/official/nativephp-mobile-dialog: Bifrost Technology
+- /plugins/official/nativephp-mobile-file: Bifrost Technology
+- /plugins/official/nativephp-mobile-media-player: Shane Rosenthal
+- /plugins/official/nativephp-mobile-microphone: Bifrost Technology
+- /plugins/official/nativephp-mobile-network: Bifrost Technology
+- /plugins/official/nativephp-mobile-share: Bifrost Technology
+- /plugins/official/nativephp-mobile-system: Bifrost Technology
+- /plugins/official/nativephp-mobile-ui: Shane Rosenthal
+- /plugins/official/nativephp-mobile-vibe: Shane Rosenthal
 - /plugins/official/nativephp-mobile-background-tasks: Bifrost Technology
-- /plugins/official/nativephp-mobile-local-notifications: Bifrost Technology
 - /plugins/official/nativephp-mobile-biometrics: Bifrost Technology
 - /plugins/official/nativephp-mobile-firebase: Bifrost Technology
-- /plugins/official/nativephp-mobile-secure-storage: Bifrost Technology
-- /plugins/official/nativephp-mobile-scanner: Bifrost Technology
 - /plugins/official/nativephp-mobile-geolocation: Bifrost Technology
+- /plugins/official/nativephp-mobile-local-notifications: Bifrost Technology
 - /plugins/official/nativephp-mobile-ble: Bifrost Technology
+- /plugins/official/nativephp-mobile-scanner: Bifrost Technology
+- /plugins/official/nativephp-mobile-secure-storage: Bifrost Technology
 - /plugins/official/nativephp-mobile-skia: Bifrost Technology
-- /plugins/paid/jvdluk-pro-vibration: JVDLUK
-- /plugins/paid/weswecan-nfc: weswecan
-- /plugins/paid/weswecan-nativephp-mobile-apple-intelligence-foundation-models: weswecan
-- /plugins/paid/weswecan-nativephp-mobile-osc: weswecan
-- /plugins/paid/srwiez-nativephp-mobile-contacts: Eser Deniz
-- /plugins/paid/srwiez-nativephp-mobile-calendar: Eser Deniz
-- /plugins/paid/srwiez-nativephp-mobile-screenshots: Eser Deniz
-- /plugins/paid/ikromjon-nativephp-mobile-social-auth: Ikromjon Ochilov
-- /plugins/paid/developernauts-nativephp-inapp-purchases: Developernauts
-- /plugins/paid/tether-nativephp-client: Lukas Rakauskas
-- /plugins/paid/partek-home-screen-shortcuts: Paul (PARTek)
-- /plugins/paid/partek-text-to-speech: Paul (PARTek)
-- /plugins/paid/partek-force-update: Paul (PARTek)
-- /plugins/paid/partek-media-pipeline: Paul (PARTek)
-- /plugins/paid/partek-speech-to-text: Paul (PARTek)
-- /plugins/paid/lrakauskas-nativephp-google-admob: Lukas Rakauskas
-- /plugins/paid/all1web-nativephp-share-target: Neo Nos
-- /plugins/paid/rubenvdb-nativephp-widgets: Borgman Digital
 - /plugins/paid/all1web-nativephp-actions-anywhere: Neo Nos
-- /plugins/paid/all1web-nativephp-widgets: Neo Nos
-- /plugins/paid/nativecodeforge-nativephp-datepicker: camiant
-- /plugins/paid/nativecodeforge-nativephp-timepicker: camiant
-- /plugins/paid/noehassiel-filepicker: noehassiel
-- /plugins/paid/codypchristian-nativephp-nsfw-checker: Cody P Christian
-- /plugins/paid/thelemon2020-nativephp-shazamkit: thelemon2020
+- /plugins/paid/weswecan-nativephp-mobile-apple-intelligence-foundation-models: weswecan
 - /plugins/paid/all1web-nativephp-geofence: Neo Nos
+- /plugins/paid/nativecodeforge-nativephp-datepicker: camiant
+- /plugins/paid/partek-document-intelligence: Paul (PARTek)
+- /plugins/paid/noehassiel-filepicker: noehassiel
+- /plugins/paid/partek-force-update: Paul (PARTek)
 - /plugins/paid/codypchristian-nativephp-admob: Cody P Christian
-- /plugins/paid/codypchristian-nativephp-stripe: Cody P Christian
+- /plugins/paid/lrakauskas-nativephp-google-admob: Lukas Rakauskas
+- /plugins/paid/partek-home-screen-shortcuts: Paul (PARTek)
+- /plugins/paid/all1web-nativephp-widgets: Neo Nos
 - /plugins/paid/codypchristian-nativephp-iap: Cody P Christian
-- /plugins/paid/partek-native-share: Paul (PARTek)
+- /plugins/paid/developernauts-nativephp-inapp-purchases: Developernauts
+- /plugins/paid/vos-nativephp-live-activities: Pauline Vos
+- /plugins/paid/partek-media-pipeline: Paul (PARTek)
+- /plugins/paid/srwiez-nativephp-mobile-calendar: Eser Deniz
+- /plugins/paid/srwiez-nativephp-mobile-contacts: Eser Deniz
+- /plugins/paid/srwiez-nativephp-mobile-screenshots: Eser Deniz
 - /plugins/paid/partek-native-maps: Paul (PARTek)
+- /plugins/paid/partek-native-share: Paul (PARTek)
+- /plugins/paid/codypchristian-nativephp-stripe: Cody P Christian
+- /plugins/paid/weswecan-nfc: weswecan
+- /plugins/paid/codypchristian-nativephp-nsfw-checker: Cody P Christian
+- /plugins/paid/weswecan-nativephp-mobile-osc: weswecan
 - /plugins/paid/partek-passkeys: Paul (PARTek)
 - /plugins/paid/partek-print-studio: Paul (PARTek)
-- /plugins/paid/partek-document-intelligence: Paul (PARTek)
-- /plugins/paid/vos-nativephp-live-activities: Pauline Vos
-- /plugins/free/bhargavdetroja-google-mobile-ads: Bhargav Detroja
-- /plugins/free/s2br-nativephp-mobile-splashscreen: Israel Pereira
-- /plugins/free/developernauts-nativephp-mobile-locales: Developernauts
-- /plugins/free/mobikul-mobikul-loader: Mobikul
-- /plugins/free/wilsonatb-in-app-update: Wilson Tovar
-- /plugins/free/codingwithrk-double-back-to-close: CodingwithRK
+- /plugins/paid/jvdluk-pro-vibration: JVDLUK
+- /plugins/paid/thelemon2020-nativephp-shazamkit: thelemon2020
+- /plugins/paid/all1web-nativephp-share-target: Neo Nos
+- /plugins/paid/ikromjon-nativephp-mobile-social-auth: Ikromjon Ochilov
+- /plugins/paid/partek-speech-to-text: Paul (PARTek)
+- /plugins/paid/tether-nativephp-client: Lukas Rakauskas
+- /plugins/paid/partek-text-to-speech: Paul (PARTek)
+- /plugins/paid/nativecodeforge-nativephp-timepicker: camiant
+- /plugins/paid/rubenvdb-nativephp-widgets: Borgman Digital
+- /plugins/free/blessedzulu-nativephp-admob: Blessed Zulu
 - /plugins/free/bhargavdetroja-nativephp-all-permission-handle: Bhargav Detroja
-- /plugins/free/kevinbatdorf-nativephp-fullscreen: Kevin Batdorf
-- /plugins/free/wilsonatb-nativephp-in-app-reviews: Wilson Tovar
-- /plugins/free/geof-dev-nativephp-store-review: Geof
-- /plugins/free/theunwindfront-nativephp-audio: Sagar Pansuriya
+- /plugins/free/kevinbatdorf-nativephp-launcher: Kevin Batdorf
 - /plugins/free/djurovicigoor-app-lifecycle: Igor Djurovic
-- /plugins/free/codingwithrk-no-screenshot: CodingwithRK
-- /plugins/free/codingwithrk-package-info: CodingwithRK
-- /plugins/free/srwiez-nativephp-mobile-screen: Eser Deniz
-- /plugins/free/coyotito-image-resizer: asciito
-- /plugins/free/voicecode-mobile-photos: Voicecode
-- /plugins/free/pteal79-plugin-image-lightbox: Peter Teal
-- /plugins/free/ikromjon1998-nativephp-mobile-local-notifications: Ikromjon Ochilov
-- /plugins/free/xlipedc-media-library: Felipe Almeida
-- /plugins/free/1338-nativephp-tflite: 1338
-- /plugins/free/voicecode-innerr-media-permissions: Michael Blijleven
-- /plugins/free/ikromjon1998-nativephp-mobile-document-scanner: Ikromjon Ochilov
-- /plugins/free/kromaric-offlinesync: Kromaric
-- /plugins/free/graymattertechnology-nativephp-mobile-haptics: GrayMatter Technology
+- /plugins/free/theunwindfront-nativephp-audio: Sagar Pansuriya
+- /plugins/free/noehassiel-confetti: noehassiel
+- /plugins/free/smronju-nativephp-contacts-picker: Mohammad Shoriful Islam Ronju
+- /plugins/free/codingwithrk-nativephp-datetime-picker: CodingwithRK
+- /plugins/free/fabianpnke-mobile-device-timezone: fabianpnke
+- /plugins/free/guppylab-plugin-directions: guppylab
+- /plugins/free/smronju-nativephp-document-picker: Mohammad Shoriful Islam Ronju
+- /plugins/free/codingwithrk-double-back-to-close: CodingwithRK
 - /plugins/free/unlocnl-nativephp-enhanced-splash: Unloc
-- /plugins/free/unlocnl-nativephp-svg-component: Unloc
+- /plugins/free/codingwithrk-firebase-crashlytics: CodingwithRK
+- /plugins/free/tarikmanoar-firebase-pnv: Tarik Manoar
+- /plugins/free/vikas5914-fluidaudio: Vikas Kapadiya
+- /plugins/free/kevinbatdorf-nativephp-fullscreen: Kevin Batdorf
+- /plugins/free/bhargavdetroja-google-mobile-ads: Bhargav Detroja
+- /plugins/free/captenmasin-nativephp-health-connect: captenmasin
+- /plugins/free/vipertecpro-image-cropper: Vipul Walia
+- /plugins/free/pteal79-plugin-image-lightbox: Peter Teal
+- /plugins/free/coyotito-image-resizer: asciito
+- /plugins/free/wilsonatb-nativephp-in-app-reviews: Wilson Tovar
+- /plugins/free/wilsonatb-in-app-update: Wilson Tovar
+- /plugins/free/voicecode-innerr-media-permissions: Michael Blijleven
+- /plugins/free/codypchristian-nativephp-lottie: Cody P Christian
+- /plugins/free/xlipedc-media-library: Felipe Almeida
+- /plugins/free/stitch-digital-mobile-call-detection: Stitch Digital
+- /plugins/free/ikromjon1998-nativephp-mobile-document-scanner: Ikromjon Ochilov
+- /plugins/free/graymattertechnology-nativephp-mobile-haptics: GrayMatter Technology
 - /plugins/free/blessedzulu-nativephp-mobile-haptics: Blessed Zulu
+- /plugins/free/wojt-janowski-mobile-la518-recorder: Wojt Janowski
+- /plugins/free/ikromjon1998-nativephp-mobile-local-notifications: Ikromjon Ochilov
+- /plugins/free/developernauts-nativephp-mobile-locales: Developernauts
+- /plugins/free/voicecode-mobile-photos: Voicecode
+- /plugins/free/srwiez-nativephp-mobile-screen: Eser Deniz
+- /plugins/free/stupidbrains-mobile-sfx: Kirill
+- /plugins/free/s2br-nativephp-mobile-splashscreen: Israel Pereira
+- /plugins/free/mobikul-mobikul-loader: Mobikul
+- /plugins/free/donmanueldev-nativephp-charts: donmanueldev
+- /plugins/free/victorycodedev-nativephp-fetch: Efekpogua Victory
+- /plugins/free/codingwithrk-no-screenshot: CodingwithRK
+- /plugins/free/kromaric-offlinesync: Kromaric
+- /plugins/free/codingwithrk-package-info: CodingwithRK
+- /plugins/free/bhargavdetroja-nativephp-play-games-services: Bhargav Detroja
+- /plugins/free/fatlum-nativephp-push: Fatlum Gjinofci
+- /plugins/free/guppylab-plugin-push: guppylab
+- /plugins/free/kevinbatdorf-nativephp-retro-emulator: Kevin Batdorf
+- /plugins/free/khalidmaquilang-sensors-plus: khalidmaquilang
+- /plugins/free/noehassiel-signature-pad: noehassiel
+- /plugins/free/atendwa-nativephp-sms-reader: Anthony Tendwa
+- /plugins/free/codingwithrk-nativephp-social-auth: CodingwithRK
+- /plugins/free/geof-dev-nativephp-store-review: Geof
 - /plugins/free/matildevoldsen-super-codehighlight: Matildevoldsen
 - /plugins/free/matildevoldsen-super-markdown: Matildevoldsen
-- /plugins/free/captenmasin-nativephp-health-connect: captenmasin
-- /plugins/free/stitch-digital-mobile-call-detection: Stitch Digital
-- /plugins/free/wojt-janowski-mobile-la518-recorder: Wojt Janowski
-- /plugins/free/atendwa-nativephp-sms-reader: Anthony Tendwa
-- /plugins/free/blessedzulu-nativephp-admob: Blessed Zulu
-- /plugins/free/tarikmanoar-firebase-pnv: Tarik Manoar
-- /plugins/free/fatlum-nativephp-push: Fatlum Gjinofci
-- /plugins/free/fabianpnke-mobile-device-timezone: fabianpnke
-- /plugins/free/codingwithrk-firebase-crashlytics: CodingwithRK
-- /plugins/free/vipertecpro-image-cropper: Vipul Walia
-- /plugins/free/all1web-nativephp-wifi-scan: Neo Nos
-- /plugins/free/codypchristian-nativephp-lottie: Cody P Christian
-- /plugins/free/bhargavdetroja-nativephp-play-games-services: Bhargav Detroja
-- /plugins/free/victorycodedev-nativephp-fetch: Efekpogua Victory
+- /plugins/free/unlocnl-nativephp-svg-component: Unloc
+- /plugins/free/1338-nativephp-tflite: 1338
 - /plugins/free/victorycodedev-toastkit: Efekpogua Victory
-- /plugins/free/kevinbatdorf-nativephp-retro-emulator: Kevin Batdorf
-- /plugins/free/noehassiel-signature-pad: noehassiel
-- /plugins/free/khalidmaquilang-sensors-plus: khalidmaquilang
-- /plugins/free/vikas5914-fluidaudio: Vikas Kapadiya
-- /plugins/free/codingwithrk-nativephp-datetime-picker: CodingwithRK
-- /plugins/free/stupidbrains-mobile-sfx: Kirill
-- /plugins/free/codingwithrk-nativephp-social-auth: CodingwithRK
-- /plugins/free/smronju-nativephp-contacts-picker: Mohammad Shoriful Islam Ronju
-- /plugins/free/smronju-nativephp-document-picker: Mohammad Shoriful Islam Ronju
-- /plugins/free/donmanueldev-nativephp-charts: donmanueldev
-- /plugins/free/guppylab-plugin-directions: guppylab
-- /plugins/free/guppylab-plugin-push: guppylab
-- /plugins/free/kevinbatdorf-nativephp-launcher: Kevin Batdorf
-- /plugins/free/noehassiel-confetti: noehassiel
+- /plugins/free/all1web-nativephp-wifi-scan: Neo Nos
