@@ -2,7 +2,7 @@
 name: "Enhanced Splash"
 author: "Unloc"
 price: "Free"
-version: "1.0.0"
+version: "1.1.0"
 license: "MIT"
 github: "https://github.com/unlocnl/nativephp-enhanced-splash"
 support: "https://github.com/unlocnl/nativephp-enhanced-splash/issues"
