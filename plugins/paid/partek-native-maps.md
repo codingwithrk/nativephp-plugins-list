@@ -2,7 +2,7 @@
 name: "Native Maps"
 author: "Paul (PARTek)"
 price: "$99"
-version: "1.0.0"
+version: "1.1.1"
 license: "Proprietary"
 source: "https://nativephp.com/plugins/partek/native-maps"
 support: "https://nativephp.com/plugins/partek/native-maps"

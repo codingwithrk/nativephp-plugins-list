@@ -2,7 +2,7 @@
 name: "Passkeys"
 author: "Paul (PARTek)"
 price: "$99"
-version: "1.1.1"
+version: "1.1.2"
 license: "Proprietary"
 source: "https://nativephp.com/plugins/partek/passkeys"
 support: "https://nativephp.com/plugins/partek/passkeys"

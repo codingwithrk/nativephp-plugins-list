@@ -2,7 +2,7 @@
 name: "Media Pipeline"
 author: "Paul (PARTek)"
 price: "$99"
-version: "1.0.6"
+version: "1.1.0"
 license: "Proprietary"
 source: "https://nativephp.com/plugins/partek/media-pipeline"
 support: "https://nativephp.com/plugins/partek/media-pipeline"
