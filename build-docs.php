@@ -150,7 +150,9 @@ function pluginCard(array $meta): string
     }
 
     if ($source !== '') {
-        $links[] = '<a href="' . esc($source) . '" class="pi-link pi-link-buy" target="_blank" rel="noopener">Buy on NativePHP →</a>';
+        $sourceHost = parse_url($source, PHP_URL_HOST) ?? '';
+        $buyLabel = str_contains($sourceHost, 'nativephp.com') ? 'Buy on NativePHP →' : 'Buy on Marketplace →';
+        $links[] = '<a href="' . esc($source) . '" class="pi-link pi-link-buy" target="_blank" rel="noopener">' . $buyLabel . '</a>';
     }
 
     if ($links !== []) {

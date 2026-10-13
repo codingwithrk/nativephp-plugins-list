@@ -4127,6 +4127,42 @@ php artisan native:install --force
 
 ---
 
+# NativePHP Razorpay SDK
+
+> CodingwithRK
+
+<div class="plugin-info"><div class="pi-meta"><span class="pi-item"><span class="pi-label">Author</span><span class="pi-value">CodingwithRK</span></span><span class="pi-item"><span class="pi-label">Plugin Type</span><span class="pi-badge pi-badge-community">Community Plugin</span></span><span class="pi-item"><span class="pi-label">Price</span><span class="pi-badge pi-badge-paid">₹2,500</span></span><span class="pi-item"><span class="pi-label">Version</span><span class="pi-value">v1.0.0</span></span><span class="pi-item"><span class="pi-label">License</span><span class="pi-value">Proprietary</span></span></div><div class="pi-compat"><span class="pi-chip"><span class="pi-chip-label">NativePHP</span><span class="pi-chip-value">^3.0|^4.0</span></span><span class="pi-chip"><span class="pi-chip-label">iOS</span><span class="pi-chip-value">18.0+</span></span><span class="pi-chip"><span class="pi-chip-label">Android</span><span class="pi-chip-value">29+</span></span></div><div class="pi-links"><a href="https://marketplace.codingwithrk.com/products/nativephp-razorpay-sdk" class="pi-link pi-link-buy" target="_blank" rel="noopener">Buy on Marketplace →</a></div></div>
+
+# NativePHP Razorpay SDK
+
+Native Razorpay Standard Checkout for NativePHP Mobile — opens the native Razorpay payment UI on both iOS and Android and delivers results asynchronously through NativePHP events.
+
+> **Server-side verification required:** After a successful payment, verify the Razorpay signature on your server before fulfilling any order. The Razorpay secret key is never bundled in the plugin; it is passed securely at runtime.
+
+## Features
+
+- **Native checkout UI** — opens the official Razorpay Standard Checkout UI natively on iOS and Android (no WebView)
+- **Async event delivery** — payment results (success, failure, external wallet) arrive as NativePHP events
+- **Prefilled customer data** — pass `contact` and `email` to pre-populate the checkout form
+- **Customizable theme** — configure checkout theme colors to match your app brand
+- **PHP & JavaScript API** — full support for both Blade/PHP and Inertia/SPA flows
+- **Server-side signature verification** — verify `razorpay_order_id`, `razorpay_payment_id`, and `razorpay_signature` before order fulfilment
+
+## Installation
+
+```bash
+composer require codingwithrk/nativephp-razorpay-sdk
+php artisan native:plugin:register codingwithrk/nativephp-razorpay-sdk
+php artisan native:run
+```
+
+## Support
+
+- Email: connect@codingwithrk.com
+- Marketplace: <https://marketplace.codingwithrk.com/products/nativephp-razorpay-sdk>
+
+---
+
 # NFC
 
 > weswecan

@@ -62,6 +62,7 @@ Plugins published and maintained by the NativePHP team (Bifrost Technology & cor
 - [Native Maps](plugins/paid/partek-native-maps.md) — Paul (PARTek)
 - [Native Share](plugins/paid/partek-native-share.md) — Paul (PARTek)
 - [Native Stripe Payments](plugins/paid/codypchristian-nativephp-stripe.md) — Cody P Christian
+- [NativePHP Razorpay SDK](plugins/paid/codingwithrk-nativephp-razorpay-sdk.md) — CodingwithRK
 - [NFC](plugins/paid/weswecan-nfc.md) — weswecan
 - [NSFW Content Checker](plugins/paid/codypchristian-nativephp-nsfw-checker.md) — Cody P Christian
 - [Open Sound Control (OSC)](plugins/paid/weswecan-nativephp-mobile-osc.md) — weswecan
