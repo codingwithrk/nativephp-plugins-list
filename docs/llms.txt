@@ -49,6 +49,7 @@
 - /plugins/paid/partek-native-share: Paul (PARTek)
 - /plugins/paid/codypchristian-nativephp-stripe: Cody P Christian
 - /plugins/paid/codingwithrk-nativephp-razorpay-sdk: CodingwithRK
+- /plugins/paid/codingwithrk-nativephp-ui: CodingwithRK
 - /plugins/paid/weswecan-nfc: weswecan
 - /plugins/paid/codypchristian-nativephp-nsfw-checker: Cody P Christian
 - /plugins/paid/weswecan-nativephp-mobile-osc: weswecan

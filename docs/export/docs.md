@@ -4163,6 +4163,54 @@ php artisan native:run
 
 ---
 
+# NativePHP UI
+
+> CodingwithRK
+
+<div class="plugin-info"><div class="pi-meta"><span class="pi-item"><span class="pi-label">Author</span><span class="pi-value">CodingwithRK</span></span><span class="pi-item"><span class="pi-label">Plugin Type</span><span class="pi-badge pi-badge-community">Community Plugin</span></span><span class="pi-item"><span class="pi-label">Price</span><span class="pi-badge pi-badge-paid">₹5,000</span></span><span class="pi-item"><span class="pi-label">Version</span><span class="pi-value">v1.0.1</span></span><span class="pi-item"><span class="pi-label">License</span><span class="pi-value">Proprietary</span></span></div><div class="pi-compat"><span class="pi-chip"><span class="pi-chip-label">NativePHP</span><span class="pi-chip-value">^4.5</span></span><span class="pi-chip"><span class="pi-chip-label">iOS</span><span class="pi-chip-value">18.2+</span></span><span class="pi-chip"><span class="pi-chip-label">Android</span><span class="pi-chip-value">26+</span></span></div><div class="pi-links"><a href="https://marketplace.codingwithrk.com/products/nativephp-ui" class="pi-link pi-link-buy" target="_blank" rel="noopener">Buy on Marketplace →</a></div></div>
+
+# NativePHP UI
+
+30+ components and 50+ Blade tags that render as native SwiftUI and Jetpack Compose views — a complete UI kit for NativePHP Mobile, no native code required.
+
+> Built on NativePHP's EDGE elements. No rebuild needed to update components — everything is pure PHP on top of the SuperNative layer.
+
+## Features
+
+- **30+ components, 50+ tags** — Button, Badge, Card, Alert, Accordion, Tabs, Toggle, Dialog, Sheet, Drawer, Item Groups, Empty States, and more
+- **shadcn/ui design system** — neutral, zinc, slate, stone, and gray base colors with configurable accent themes
+- **Automatic light/dark mode** — adapts to the device's system appearance with no extra configuration
+- **Two-way binding** — `native:model` for forms, inputs, switches, checkboxes, and radio groups
+- **SwiftUI on iOS, Jetpack Compose on Android** — truly native rendering, not WebView
+- **AI agent skills** — Claude Code and Codex skills included for AI-assisted development
+
+## Core Components
+
+| Category | Components |
+|---|---|
+| **Display** | Badge, Card, Alert, Empty State, Typography |
+| **Forms** | Input, Textarea, Switch, Checkbox, Radio Group |
+| **Navigation** | Tabs, Accordion, Item Group |
+| **Overlays** | Dialog, Sheet, Drawer |
+| **Actions** | Button, Toggle |
+
+## Installation
+
+```bash
+composer require codingwithrk/nativephp-ui
+php artisan native:plugin:register codingwithrk/nativephp-ui
+php artisan vendor:publish --tag=nativephp-ui-config
+php artisan native:run
+```
+
+## Docs & Support
+
+- Docs: <https://nativephp-ui.codingwithrk.com>
+- Email: connect@codingwithrk.com
+- Marketplace: <https://marketplace.codingwithrk.com/products/nativephp-ui>
+
+---
+
 # NFC
 
 > weswecan
