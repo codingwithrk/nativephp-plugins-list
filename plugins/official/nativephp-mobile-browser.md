@@ -2,7 +2,7 @@
 name: "NativePHP Mobile Browser"
 author: "Bifrost Technology"
 price: "Free"
-version: "1.1.0"
+version: "1.2.0"
 license: "MIT"
 github: "https://github.com/NativePHP/mobile-browser"
 support: "https://nativephp.com/support"
