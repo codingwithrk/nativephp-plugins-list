@@ -2,7 +2,7 @@
 name: "NativePHP Mobile Camera"
 author: "Bifrost Technology"
 price: "Free"
-version: "1.0.4"
+version: "1.1.0"
 license: "MIT"
 github: "https://github.com/NativePHP/mobile-camera"
 support: "https://nativephp.com/support"
