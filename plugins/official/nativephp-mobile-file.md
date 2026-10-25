@@ -2,7 +2,7 @@
 name: "NativePHP Mobile File"
 author: "Bifrost Technology"
 price: "Free"
-version: "1.0.2"
+version: "1.0.3"
 license: "MIT"
 github: "https://github.com/NativePHP/mobile-file"
 support: "https://nativephp.com/support"
