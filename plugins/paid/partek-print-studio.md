@@ -2,7 +2,7 @@
 name: "Print Studio"
 author: "Paul (PARTek)"
 price: "$99"
-version: "1.1.3"
+version: "1.1.4"
 license: "Proprietary"
 source: "https://nativephp.com/plugins/partek/print-studio"
 support: "https://nativephp.com/plugins/partek/print-studio"
