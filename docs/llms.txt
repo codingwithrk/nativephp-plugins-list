@@ -48,6 +48,7 @@
 - /plugins/paid/partek-native-maps: Paul (PARTek)
 - /plugins/paid/partek-native-share: Paul (PARTek)
 - /plugins/paid/codypchristian-nativephp-stripe: Cody P Christian
+- /plugins/paid/partek-native-translate: Paul (PARTek)
 - /plugins/paid/codingwithrk-nativephp-razorpay-sdk: CodingwithRK
 - /plugins/paid/codingwithrk-nativephp-ui: CodingwithRK
 - /plugins/paid/weswecan-nfc: weswecan
@@ -57,6 +58,7 @@
 - /plugins/paid/partek-print-studio: Paul (PARTek)
 - /plugins/paid/jvdluk-pro-vibration: JVDLUK
 - /plugins/paid/thelemon2020-nativephp-shazamkit: thelemon2020
+- /plugins/paid/firsthand-nativephp-share-sheet: Molly Klein (The Firsthand Co.)
 - /plugins/paid/all1web-nativephp-share-target: Neo Nos
 - /plugins/paid/ikromjon-nativephp-mobile-social-auth: Ikromjon Ochilov
 - /plugins/paid/partek-speech-to-text: Paul (PARTek)
@@ -89,6 +91,7 @@
 - /plugins/free/wilsonatb-nativephp-in-app-reviews: Wilson Tovar
 - /plugins/free/wilsonatb-in-app-update: Wilson Tovar
 - /plugins/free/voicecode-innerr-media-permissions: Michael Blijleven
+- /plugins/free/vos-nativephp-live-activities-free: Pauline Vos
 - /plugins/free/codypchristian-nativephp-lottie: Cody P Christian
 - /plugins/free/xlipedc-media-library: Felipe Almeida
 - /plugins/free/stitch-digital-mobile-call-detection: Stitch Digital

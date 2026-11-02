@@ -4127,6 +4127,45 @@ php artisan native:install --force
 
 ---
 
+# Native Translate
+
+> Paul (PARTek)
+
+<div class="plugin-info"><div class="pi-meta"><span class="pi-item"><span class="pi-label">Author</span><span class="pi-value">Paul (PARTek)</span></span><span class="pi-item"><span class="pi-label">Plugin Type</span><span class="pi-badge pi-badge-community">Community Plugin</span></span><span class="pi-item"><span class="pi-label">Price</span><span class="pi-badge pi-badge-paid">$49</span></span><span class="pi-item"><span class="pi-label">Version</span><span class="pi-value">v1.1.1</span></span><span class="pi-item"><span class="pi-label">License</span><span class="pi-value">Proprietary</span></span></div><div class="pi-compat"><span class="pi-chip"><span class="pi-chip-label">NativePHP</span><span class="pi-chip-value">^4.6.1</span></span><span class="pi-chip"><span class="pi-chip-label">iOS</span><span class="pi-chip-value">18.0+</span></span><span class="pi-chip"><span class="pi-chip-label">Android</span><span class="pi-chip-value">23+</span></span></div><div class="pi-links"><a href="https://nativephp.com/plugins/partek/native-translate" class="pi-link pi-link-buy" target="_blank" rel="noopener">Buy on NativePHP →</a></div></div>
+
+# Native Translate
+
+On-device text translation for NativePHP Mobile — no cloud API, no developer-supplied credentials. Uses the OS translation models on iOS and Android.
+
+> **iOS note:** Device only, not the Simulator. Some features require iOS 26+; the iOS 18–25 fallback has not been fully tested on a device.
+
+## Features
+
+- **On-device only** — no network after language models are downloaded; no API keys required
+- **Single-string and batch translation** — one explicit source/target language pair per batch
+- **Automatic source-language detection** — reports uncertainty instead of guessing
+- **Model management** — check status, prepare (download) a language pair, delete models (Android only; iOS has no deletion API)
+- **Job cancellation** — with honest reporting of platform differences
+- **Async results** — delivered as Laravel events
+- **PHP facade + JavaScript API** — `Translate` facade and a JS bridge for Inertia/SPA apps
+- **Typed failure codes** — `MODEL_REQUIRED`, `NETWORK_UNAVAILABLE`, and more
+- **Testing helpers** — facade fake for application tests; no device needed
+
+## Installation
+
+```bash
+composer config repositories.nativephp-plugins composer https://plugins.nativephp.com
+composer config http-basic.plugins.nativephp.com your@email.com your-license-key
+php artisan vendor:publish --tag=nativephp-plugins-provider
+composer require partek/native-translate
+php artisan native:plugin:register partek/native-translate
+php artisan native:run
+```
+
+> **Vite alias required:** Add an alias for the plugin's JavaScript in your `vite.config.js`, as NativePHP does not alias it automatically.
+
+---
+
 # NativePHP Razorpay SDK
 
 > CodingwithRK
@@ -4660,6 +4699,54 @@ composer config http-basic.plugins.nativephp.com your@email.com your-license-key
 composer require thelemon2020/nativephp-shazamkit
 php artisan native:plugin:register thelemon2020/nativephp-shazamkit
 ```
+
+---
+
+# Share Sheet
+
+> Molly Klein (The Firsthand Co.)
+
+<div class="plugin-info"><div class="pi-meta"><span class="pi-item"><span class="pi-label">Author</span><span class="pi-value">Molly Klein (The Firsthand Co.)</span></span><span class="pi-item"><span class="pi-label">Plugin Type</span><span class="pi-badge pi-badge-community">Community Plugin</span></span><span class="pi-item"><span class="pi-label">Price</span><span class="pi-badge pi-badge-paid">$49</span></span><span class="pi-item"><span class="pi-label">Version</span><span class="pi-value">v1.0.2</span></span><span class="pi-item"><span class="pi-label">License</span><span class="pi-value">Proprietary</span></span></div><div class="pi-compat"><span class="pi-chip"><span class="pi-chip-label">NativePHP</span><span class="pi-chip-value">^4.0</span></span><span class="pi-chip"><span class="pi-chip-label">PHP</span><span class="pi-chip-value">^8.3</span></span><span class="pi-chip"><span class="pi-chip-label">Laravel</span><span class="pi-chip-value">^11|^12|^13</span></span><span class="pi-chip"><span class="pi-chip-label">iOS</span><span class="pi-chip-value">18.0+</span></span><span class="pi-chip"><span class="pi-chip-label">Android</span><span class="pi-chip-value">29+</span></span></div><div class="pi-links"><a href="https://nativephp.com/plugins/firsthand/nativephp-share-sheet" class="pi-link pi-link-buy" target="_blank" rel="noopener">Buy on NativePHP →</a></div></div>
+
+# Share Sheet
+
+Receive links, text, photos, and files shared into your app from the iOS and Android share sheets — a real iOS Share Extension with no Swift required.
+
+> **iOS App Group required:** Register an App Group matching your app ID in Apple's developer portal and assign it to both your app and the share extension. A paid Apple Developer account is needed. Run `php artisan share-sheet:doctor` to check your setup.
+
+## Features
+
+- **Receives links, text, photos, and files** from the OS share sheet on both platforms
+- **Real iOS Share Extension** — users share directly from any app; no Shortcuts workaround
+- **Single PHP API** — `ShareSheet::pending()` collects items when the user returns to your app
+- **JavaScript API** — `pending()` for Inertia/Vue/React apps
+- **HEIC → JPEG** — iPhone HEIC photos are converted to JPEG by default
+- **Confirmation UI** — shown over the sharing app before the user returns to yours
+- **Content persisted on device** until your code acts on it
+- **`share-sheet:doctor`** — diagnoses setup issues (iOS App Group, entitlements, etc.)
+- **Facade fake** — test share handling without a device
+- **Frontend support** — Livewire 3/4, Inertia + Vue, Inertia + React
+
+## Installation
+
+```bash
+composer config repositories.nativephp-plugins composer https://plugins.nativephp.com
+composer config http-basic.plugins.nativephp.com your@email.com your-license-key
+php artisan vendor:publish --tag=nativephp-plugins-provider
+composer require firsthand/nativephp-share-sheet
+php artisan native:plugin:register firsthand/nativephp-share-sheet
+php artisan native:run
+```
+
+### Inertia / SPA JavaScript
+
+```bash
+npm install ./vendor/firsthand/nativephp-share-sheet
+```
+
+### Support
+
+Email: support@thefirsthandco.com
 
 ---
 
@@ -9076,6 +9163,49 @@ php artisan native:plugin:list
 | `NSPhotoLibraryAddUsageDescription` | This app needs permission to save photos and videos to your library.                    |
 
 To change the wording, edit `nativephp.json` in this package and rebuild the iOS app.
+
+---
+
+# Live Activities (Free)
+
+> Pauline Vos
+
+<div class="plugin-info"><div class="pi-meta"><span class="pi-item"><span class="pi-label">Author</span><span class="pi-value">Pauline Vos</span></span><span class="pi-item"><span class="pi-label">Plugin Type</span><span class="pi-badge pi-badge-community">Community Plugin</span></span><span class="pi-item"><span class="pi-label">Price</span><span class="pi-badge pi-badge-free">Free</span></span><span class="pi-item"><span class="pi-label">Version</span><span class="pi-value">v1.0.1</span></span><span class="pi-item"><span class="pi-label">License</span><span class="pi-value">MIT</span></span></div><div class="pi-compat"><span class="pi-chip"><span class="pi-chip-label">NativePHP</span><span class="pi-chip-value">^4.5</span></span><span class="pi-chip"><span class="pi-chip-label">PHP</span><span class="pi-chip-value">^8.4</span></span><span class="pi-chip"><span class="pi-chip-label">Laravel</span><span class="pi-chip-value">^12</span></span><span class="pi-chip"><span class="pi-chip-label">iOS</span><span class="pi-chip-value">18.0+</span></span><span class="pi-chip"><span class="pi-chip-label">Android</span><span class="pi-chip-value">29+</span></span></div><div class="pi-links"><a href="https://github.com/paulinevos/nativephp-live-activities-free" class="pi-link" target="_blank" rel="noopener">GitHub →</a></div></div>
+
+# Live Activities (Free)
+
+Start, update, and end Live Activities from PHP — Lock Screen and Dynamic Island on iOS, ongoing progress notifications on Android. A free edition with bundled icons; the [paid edition](https://nativephp.com/plugins/vos/nativephp-live-activities) adds custom icons, countdowns, ETA, deep links, and a fluent API.
+
+> **Free and paid editions share a PHP namespace and cannot be installed together.** Remove this package before upgrading to the paid edition.
+
+> **Android 13+:** The plugin does not handle the notification-permission request required on Android 13 and above.
+
+## Features
+
+- **`LiveActivities` facade** — `start()`, `update()`, `end()`, `list()`, `capabilities()`
+- **Progress bar** — numeric value `0.0–1.0`
+- **Eight bundled Lucide icons** — `circle-dashed`, `utensils`, `truck`, `circle-check`, `package`, `clock`, `download`, `navigation`
+- **Six-digit hex accent color**
+- **Title and subtitle**
+- **Platform capability check** — `capabilities()` reports whether Live Activities are supported and whether the permission is enabled
+- **Local updates only** — the app must be running to update an activity; server-driven push updates are in the paid edition
+
+## iOS vs Android
+
+| | iOS | Android |
+|---|---|---|
+| **Display** | Lock Screen + Dynamic Island | Ongoing notification |
+| **Minimum** | iOS 18.0 | API 29 (Android 10) |
+| **Live Update promotion** | Dynamic Island | Android 13+ where system allows |
+
+## Installation
+
+```bash
+composer require vos/nativephp-live-activities-free
+php artisan vendor:publish --tag=nativephp-plugins-provider
+php artisan native:plugin:register vos/nativephp-live-activities-free
+php artisan native:run
+```
 
 ---
 

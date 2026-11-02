@@ -62,6 +62,7 @@ Plugins published and maintained by the NativePHP team (Bifrost Technology & cor
 - [Native Maps](plugins/paid/partek-native-maps.md) — Paul (PARTek)
 - [Native Share](plugins/paid/partek-native-share.md) — Paul (PARTek)
 - [Native Stripe Payments](plugins/paid/codypchristian-nativephp-stripe.md) — Cody P Christian
+- [Native Translate](plugins/paid/partek-native-translate.md) — Paul (PARTek)
 - [NativePHP Razorpay SDK](plugins/paid/codingwithrk-nativephp-razorpay-sdk.md) — CodingwithRK
 - [NativePHP UI](plugins/paid/codingwithrk-nativephp-ui.md) — CodingwithRK
 - [NFC](plugins/paid/weswecan-nfc.md) — weswecan
@@ -71,6 +72,7 @@ Plugins published and maintained by the NativePHP team (Bifrost Technology & cor
 - [Print Studio](plugins/paid/partek-print-studio.md) — Paul (PARTek)
 - [ProVibration](plugins/paid/jvdluk-pro-vibration.md) — JVDLUK
 - [ShazamKit](plugins/paid/thelemon2020-nativephp-shazamkit.md) — thelemon2020
+- [Share Sheet](plugins/paid/firsthand-nativephp-share-sheet.md) — Molly Klein (The Firsthand Co.)
 - [Share Target](plugins/paid/all1web-nativephp-share-target.md) — Neo Nos
 - [Social Auth](plugins/paid/ikromjon-nativephp-mobile-social-auth.md) — Ikromjon Ochilov
 - [Speech to Text](plugins/paid/partek-speech-to-text.md) — Paul (PARTek)
@@ -108,6 +110,7 @@ Plugins published and maintained by the NativePHP team (Bifrost Technology & cor
 - [In App Reviews](plugins/free/wilsonatb-nativephp-in-app-reviews.md) — Wilson Tovar
 - [In App Update](plugins/free/wilsonatb-in-app-update.md) — Wilson Tovar
 - [Innerr Media Permissions](plugins/free/voicecode-innerr-media-permissions.md) — Michael Blijleven
+- [Live Activities (Free)](plugins/free/vos-nativephp-live-activities-free.md) — Pauline Vos
 - [Lottie EDGE Component](plugins/free/codypchristian-nativephp-lottie.md) — Cody P Christian
 - [Media Library](plugins/free/xlipedc-media-library.md) — Felipe Almeida
 - [Mobile Call Detection](plugins/free/stitch-digital-mobile-call-detection.md) — Stitch Digital
