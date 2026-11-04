@@ -71,6 +71,7 @@ Plugins published and maintained by the NativePHP team (Bifrost Technology & cor
 - [Passkeys](plugins/paid/partek-passkeys.md) — Paul (PARTek)
 - [Print Studio](plugins/paid/partek-print-studio.md) — Paul (PARTek)
 - [ProVibration](plugins/paid/jvdluk-pro-vibration.md) — JVDLUK
+- [Routing](plugins/paid/guppylab-routing.md) — guppylab
 - [ShazamKit](plugins/paid/thelemon2020-nativephp-shazamkit.md) — thelemon2020
 - [Share Sheet](plugins/paid/firsthand-nativephp-share-sheet.md) — Molly Klein (The Firsthand Co.)
 - [Share Target](plugins/paid/all1web-nativephp-share-target.md) — Neo Nos

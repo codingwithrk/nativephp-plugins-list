@@ -4671,6 +4671,45 @@ Fired when a pattern finishes. Payload: `int $totalDuration` (ms), `int $stepCou
 
 ---
 
+# Routing
+
+> guppylab
+
+<div class="plugin-info"><div class="pi-meta"><span class="pi-item"><span class="pi-label">Author</span><span class="pi-value">guppylab</span></span><span class="pi-item"><span class="pi-label">Plugin Type</span><span class="pi-badge pi-badge-community">Community Plugin</span></span><span class="pi-item"><span class="pi-label">Price</span><span class="pi-badge pi-badge-paid">$49</span></span><span class="pi-item"><span class="pi-label">Version</span><span class="pi-value">v4.3.2</span></span><span class="pi-item"><span class="pi-label">License</span><span class="pi-value">Proprietary</span></span></div><div class="pi-compat"><span class="pi-chip"><span class="pi-chip-label">NativePHP</span><span class="pi-chip-value">^3.0|^4.0</span></span><span class="pi-chip"><span class="pi-chip-label">iOS</span><span class="pi-chip-value">15.0+</span></span><span class="pi-chip"><span class="pi-chip-label">Android</span><span class="pi-chip-value">21+</span></span></div><div class="pi-links"><a href="https://nativephp.com/plugins/guppylab/routing" class="pi-link pi-link-buy" target="_blank" rel="noopener">Buy on NativePHP →</a></div></div>
+
+# Routing
+
+Real-route distance and ETA from one origin to many destinations — iOS via MapKit (no API key), Android via a configurable routing provider.
+
+> **Android routing provider required:** Configure one of Mapbox, openrouteservice, Geoapify, Google Maps, or a self-hosted OSRM server in your Android setup.
+
+> **iOS transit:** Transit mode requires iOS 16+.
+
+## Features
+
+- **Multi-destination routing** — distance and ETA to multiple destinations in one call; each result always returns so you can fall back to a straight-line estimate
+- **iOS MapKit on-device** — `MKDirections` at no extra cost, no API key
+- **Android providers** — Mapbox, openrouteservice, Geoapify, Google Maps, or self-hosted OSRM
+- **Transport modes** — driving, walking, cycling, transit (platform/provider dependent)
+- **Route options** — avoid tolls, avoid highways, departure time, arrival time
+- **Navigation handoff** — open turn-by-turn navigation in Apple Maps, Google Maps, or Waze
+- **Place search** — search for points of interest or addresses
+- **Reverse geocoding** — coordinates to a human-readable address
+- **PHP & JavaScript API** — Livewire (PHP facade) and Inertia/Vue/React (TypeScript definitions included)
+
+## Installation
+
+```bash
+composer config repositories.nativephp-plugins composer https://plugins.nativephp.com
+composer config --global http-basic.plugins.nativephp.com your@email.com your-license-key
+composer require guppylab/routing:"^4.3.1"
+php artisan native:plugin:register guppylab/routing
+php artisan native:plugin:validate guppylab/routing
+php artisan native:run
+```
+
+---
+
 # ShazamKit
 
 > thelemon2020

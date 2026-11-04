@@ -57,6 +57,7 @@
 - /plugins/paid/partek-passkeys: Paul (PARTek)
 - /plugins/paid/partek-print-studio: Paul (PARTek)
 - /plugins/paid/jvdluk-pro-vibration: JVDLUK
+- /plugins/paid/guppylab-routing: guppylab
 - /plugins/paid/thelemon2020-nativephp-shazamkit: thelemon2020
 - /plugins/paid/firsthand-nativephp-share-sheet: Molly Klein (The Firsthand Co.)
 - /plugins/paid/all1web-nativephp-share-target: Neo Nos
