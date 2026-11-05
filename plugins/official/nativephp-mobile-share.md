@@ -2,7 +2,7 @@
 name: "NativePHP Mobile Share"
 author: "Bifrost Technology"
 price: "Free"
-version: "1.1.0"
+version: "1.1.1"
 license: "MIT"
 github: "https://github.com/NativePHP/mobile-share"
 support: "https://nativephp.com/support"

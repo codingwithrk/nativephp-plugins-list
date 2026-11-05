@@ -2,7 +2,7 @@
 name: "Native Translate"
 author: "Paul (PARTek)"
 price: "$49"
-version: "1.1.1"
+version: "1.1.2"
 license: "Proprietary"
 source: "https://nativephp.com/plugins/partek/native-translate"
 support: "https://nativephp.com/plugins/partek/native-translate"
