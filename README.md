@@ -41,15 +41,20 @@ Plugins published and maintained by the NativePHP team (Bifrost Technology & cor
 
 ## 💰 Paid Plugins
 
+- [Accessibility](plugins/paid/partek-accessibility.md) — Paul (PARTek)
 - [Actions Anywhere](plugins/paid/all1web-nativephp-actions-anywhere.md) — Neo Nos
+- [App Icons](plugins/paid/firsthand-nativephp-app-icons.md) — Molly Klein (The Firsthand Co.)
 - [Apple Intelligence Foundation Models](plugins/paid/weswecan-nativephp-mobile-apple-intelligence-foundation-models.md) — weswecan
 - [Background Geofencing](plugins/paid/all1web-nativephp-geofence.md) — Neo Nos
+- [Consent](plugins/paid/firsthand-nativephp-consent.md) — Molly Klein (The Firsthand Co.)
 - [DatePicker](plugins/paid/nativecodeforge-nativephp-datepicker.md) — camiant
 - [Document Intelligence](plugins/paid/partek-document-intelligence.md) — Paul (PARTek)
+- [Face Tracking](plugins/paid/kirilldakhnyuk-nativephp-face-tracking.md) — Kirill Dakhnyuk
 - [FilePicker](plugins/paid/noehassiel-filepicker.md) — noehassiel
 - [Force Update](plugins/paid/partek-force-update.md) — Paul (PARTek)
 - [Google AdMob](plugins/paid/codypchristian-nativephp-admob.md) — Cody P Christian
 - [Google AdMob](plugins/paid/lrakauskas-nativephp-google-admob.md) — Lukas Rakauskas
+- [Health](plugins/paid/firsthand-nativephp-health.md) — Molly Klein (The Firsthand Co.)
 - [Home Screen Shortcuts](plugins/paid/partek-home-screen-shortcuts.md) — Paul (PARTek)
 - [Home Screen Widgets](plugins/paid/all1web-nativephp-widgets.md) — Neo Nos
 - [IAP Apple & Google](plugins/paid/codypchristian-nativephp-iap.md) — Cody P Christian
@@ -69,8 +74,10 @@ Plugins published and maintained by the NativePHP team (Bifrost Technology & cor
 - [NSFW Content Checker](plugins/paid/codypchristian-nativephp-nsfw-checker.md) — Cody P Christian
 - [Open Sound Control (OSC)](plugins/paid/weswecan-nativephp-mobile-osc.md) — weswecan
 - [Passkeys](plugins/paid/partek-passkeys.md) — Paul (PARTek)
+- [Picture in Picture](plugins/paid/firsthand-nativephp-pip.md) — Molly Klein (The Firsthand Co.)
 - [Print Studio](plugins/paid/partek-print-studio.md) — Paul (PARTek)
 - [ProVibration](plugins/paid/jvdluk-pro-vibration.md) — JVDLUK
+- [Rich Push](plugins/paid/firsthand-nativephp-rich-push.md) — Molly Klein (The Firsthand Co.)
 - [Routing](plugins/paid/guppylab-routing.md) — guppylab
 - [ShazamKit](plugins/paid/thelemon2020-nativephp-shazamkit.md) — thelemon2020
 - [Share Sheet](plugins/paid/firsthand-nativephp-share-sheet.md) — Molly Klein (The Firsthand Co.)
@@ -80,6 +87,8 @@ Plugins published and maintained by the NativePHP team (Bifrost Technology & cor
 - [Tether Client](plugins/paid/tether-nativephp-client.md) — Lukas Rakauskas
 - [Text to Speech](plugins/paid/partek-text-to-speech.md) — Paul (PARTek)
 - [TimePicker](plugins/paid/nativecodeforge-nativephp-timepicker.md) — camiant
+- [Wallet](plugins/paid/firsthand-nativephp-wallet.md) — Molly Klein (The Firsthand Co.)
+- [Wallet Passes](plugins/paid/partek-wallet-passes.md) — Paul (PARTek)
 - [Widgets](plugins/paid/rubenvdb-nativephp-widgets.md) — Borgman Digital
 
 ---
@@ -91,6 +100,7 @@ Plugins published and maintained by the NativePHP team (Bifrost Technology & cor
 - [Android Launcher](plugins/free/kevinbatdorf-nativephp-launcher.md) — Kevin Batdorf
 - [App Lifecycle](plugins/free/djurovicigoor-app-lifecycle.md) — Igor Djurovic
 - [Audio](plugins/free/theunwindfront-nativephp-audio.md) — Sagar Pansuriya
+- [Charts](plugins/free/smronju-nativephp-charts.md) — Mohammad Shoriful Islam Ronju
 - [Confetti Celebration](plugins/free/noehassiel-confetti.md) — noehassiel
 - [Contacts Picker](plugins/free/smronju-nativephp-contacts-picker.md) — Mohammad Shoriful Islam Ronju
 - [Datetime Picker](plugins/free/codingwithrk-nativephp-datetime-picker.md) — CodingwithRK

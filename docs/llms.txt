@@ -27,15 +27,20 @@
 - /plugins/official/nativephp-mobile-scanner: Bifrost Technology
 - /plugins/official/nativephp-mobile-secure-storage: Bifrost Technology
 - /plugins/official/nativephp-mobile-skia: Bifrost Technology
+- /plugins/paid/partek-accessibility: Paul (PARTek)
 - /plugins/paid/all1web-nativephp-actions-anywhere: Neo Nos
+- /plugins/paid/firsthand-nativephp-app-icons: Molly Klein (The Firsthand Co.)
 - /plugins/paid/weswecan-nativephp-mobile-apple-intelligence-foundation-models: weswecan
 - /plugins/paid/all1web-nativephp-geofence: Neo Nos
+- /plugins/paid/firsthand-nativephp-consent: Molly Klein (The Firsthand Co.)
 - /plugins/paid/nativecodeforge-nativephp-datepicker: camiant
 - /plugins/paid/partek-document-intelligence: Paul (PARTek)
+- /plugins/paid/kirilldakhnyuk-nativephp-face-tracking: Kirill Dakhnyuk
 - /plugins/paid/noehassiel-filepicker: noehassiel
 - /plugins/paid/partek-force-update: Paul (PARTek)
 - /plugins/paid/codypchristian-nativephp-admob: Cody P Christian
 - /plugins/paid/lrakauskas-nativephp-google-admob: Lukas Rakauskas
+- /plugins/paid/firsthand-nativephp-health: Molly Klein (The Firsthand Co.)
 - /plugins/paid/partek-home-screen-shortcuts: Paul (PARTek)
 - /plugins/paid/all1web-nativephp-widgets: Neo Nos
 - /plugins/paid/codypchristian-nativephp-iap: Cody P Christian
@@ -55,8 +60,10 @@
 - /plugins/paid/codypchristian-nativephp-nsfw-checker: Cody P Christian
 - /plugins/paid/weswecan-nativephp-mobile-osc: weswecan
 - /plugins/paid/partek-passkeys: Paul (PARTek)
+- /plugins/paid/firsthand-nativephp-pip: Molly Klein (The Firsthand Co.)
 - /plugins/paid/partek-print-studio: Paul (PARTek)
 - /plugins/paid/jvdluk-pro-vibration: JVDLUK
+- /plugins/paid/firsthand-nativephp-rich-push: Molly Klein (The Firsthand Co.)
 - /plugins/paid/guppylab-routing: guppylab
 - /plugins/paid/thelemon2020-nativephp-shazamkit: thelemon2020
 - /plugins/paid/firsthand-nativephp-share-sheet: Molly Klein (The Firsthand Co.)
@@ -66,12 +73,15 @@
 - /plugins/paid/tether-nativephp-client: Lukas Rakauskas
 - /plugins/paid/partek-text-to-speech: Paul (PARTek)
 - /plugins/paid/nativecodeforge-nativephp-timepicker: camiant
+- /plugins/paid/firsthand-nativephp-wallet: Molly Klein (The Firsthand Co.)
+- /plugins/paid/partek-wallet-passes: Paul (PARTek)
 - /plugins/paid/rubenvdb-nativephp-widgets: Borgman Digital
 - /plugins/free/blessedzulu-nativephp-admob: Blessed Zulu
 - /plugins/free/bhargavdetroja-nativephp-all-permission-handle: Bhargav Detroja
 - /plugins/free/kevinbatdorf-nativephp-launcher: Kevin Batdorf
 - /plugins/free/djurovicigoor-app-lifecycle: Igor Djurovic
 - /plugins/free/theunwindfront-nativephp-audio: Sagar Pansuriya
+- /plugins/free/smronju-nativephp-charts: Mohammad Shoriful Islam Ronju
 - /plugins/free/noehassiel-confetti: noehassiel
 - /plugins/free/smronju-nativephp-contacts-picker: Mohammad Shoriful Islam Ronju
 - /plugins/free/codingwithrk-nativephp-datetime-picker: CodingwithRK

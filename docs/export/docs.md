@@ -3066,6 +3066,43 @@ php artisan native:run
 
 ---
 
+# Accessibility
+
+> Paul (PARTek)
+
+<div class="plugin-info"><div class="pi-meta"><span class="pi-item"><span class="pi-label">Author</span><span class="pi-value">Paul (PARTek)</span></span><span class="pi-item"><span class="pi-label">Plugin Type</span><span class="pi-badge pi-badge-community">Community Plugin</span></span><span class="pi-item"><span class="pi-label">Price</span><span class="pi-badge pi-badge-paid">$99</span></span><span class="pi-item"><span class="pi-label">Version</span><span class="pi-value">v1.0.1</span></span><span class="pi-item"><span class="pi-label">License</span><span class="pi-value">Proprietary</span></span></div><div class="pi-compat"><span class="pi-chip"><span class="pi-chip-label">NativePHP</span><span class="pi-chip-value">^4.6.1</span></span><span class="pi-chip"><span class="pi-chip-label">PHP</span><span class="pi-chip-value">^8.2</span></span><span class="pi-chip"><span class="pi-chip-label">Laravel</span><span class="pi-chip-value">^10|^11|^12|^13</span></span><span class="pi-chip"><span class="pi-chip-label">iOS</span><span class="pi-chip-value">18.0+</span></span><span class="pi-chip"><span class="pi-chip-label">Android</span><span class="pi-chip-value">26+</span></span></div><div class="pi-links"><a href="https://nativephp.com/plugins/partek/accessibility" class="pi-link pi-link-buy" target="_blank" rel="noopener">Buy on NativePHP →</a></div></div>
+
+# Accessibility
+
+Screen-reader support, accessibility setting detection, focus management, and a dev-time audit overlay for NativePHP Mobile — VoiceOver on iOS, TalkBack on Android.
+
+> No Android permissions, Gradle dependencies, Info.plist keys, entitlements, or Apple developer portal changes required.
+
+## Features
+
+- **Screen-reader announcements** — polite and assertive priority via VoiceOver (iOS) and TalkBack (Android); language option on iOS only
+- **Accessibility settings detection** — screen reader, reduce motion, bold text, contrast, reduce transparency, invert colors, text scale; reports supported / best-effort / unsupported per value
+- **`AccessibilitySettingsChanged` event** — fires when an OS setting changes while observing
+- **Focus management** — move focus to the WebView; set focus to page heading after Livewire, Inertia, or history navigation
+- **Focus trap** — locks focus inside modals and bottom sheets, makes background inert
+- **JavaScript module** — `announce()`, settings-to-CSS mapping, Alpine.js plugin
+- **Dev-time audit overlay** — 16 rules, shown in-app when `APP_DEBUG=true`; does not certify WCAG or legal compliance
+- **PHP API** — `Accessibility` facade, Blade components, typed settings DTO, `Accessibility::fake()` for testing
+- **Privacy** — `ACCESSIBILITY_SETTINGS_REPORTING=false` disables settings reporting; no data is transmitted
+
+## Installation
+
+```bash
+composer config repositories.nativephp-plugins composer https://plugins.nativephp.com
+composer config http-basic.plugins.nativephp.com your@email.com your-license-key
+php artisan vendor:publish --tag=nativephp-plugins-provider
+composer require partek/accessibility
+php artisan native:plugin:register partek/accessibility
+php artisan native:run
+```
+
+---
+
 # Actions Anywhere
 
 > Neo Nos
@@ -3102,6 +3139,45 @@ php artisan vendor:publish --tag=appintents-config
 
 ```bash
 php artisan appintents:doctor
+```
+
+---
+
+# App Icons
+
+> Molly Klein (The Firsthand Co.)
+
+<div class="plugin-info"><div class="pi-meta"><span class="pi-item"><span class="pi-label">Author</span><span class="pi-value">Molly Klein (The Firsthand Co.)</span></span><span class="pi-item"><span class="pi-label">Plugin Type</span><span class="pi-badge pi-badge-community">Community Plugin</span></span><span class="pi-item"><span class="pi-label">Price</span><span class="pi-badge pi-badge-paid">$29</span></span><span class="pi-item"><span class="pi-label">Version</span><span class="pi-value">v1.0.1</span></span><span class="pi-item"><span class="pi-label">License</span><span class="pi-value">Proprietary</span></span></div><div class="pi-compat"><span class="pi-chip"><span class="pi-chip-label">NativePHP</span><span class="pi-chip-value">^4.0</span></span><span class="pi-chip"><span class="pi-chip-label">PHP</span><span class="pi-chip-value">^8.3</span></span><span class="pi-chip"><span class="pi-chip-label">Laravel</span><span class="pi-chip-value">^11|^12|^13</span></span><span class="pi-chip"><span class="pi-chip-label">iOS</span><span class="pi-chip-value">18.0+</span></span><span class="pi-chip"><span class="pi-chip-label">Android</span><span class="pi-chip-value">29+</span></span></div><div class="pi-links"><a href="https://nativephp.com/plugins/firsthand/nativephp-app-icons" class="pi-link pi-link-buy" target="_blank" rel="noopener">Buy on NativePHP →</a></div></div>
+
+# App Icons
+
+Let users switch between alternate app icons — dark mode, seasonal, or member-reward icons — from PHP or JavaScript, with no Xcode or Android Studio edits required.
+
+> **PHP GD extension required** at build time for icon processing.
+> **iPad:** Set `'ipad' => true` in `config/nativephp.php`.
+> **iOS:** Apple always shows a system notice after an icon switch.
+> **Android:** Switches happen when the user leaves the app by default; set `APP_ICONS_ANDROID_SWITCH=immediate` to switch instantly.
+
+## Features
+
+- **Automatic build-time setup** — icons added to the iOS asset catalog and Android adaptive icon set during each `native:run`
+- **Build-time validation** — catches wrong sizes, non-PNG files, and invalid names before the build
+- **`AppIcon::set()`, `reset()`, `current()`, `available()`** PHP API
+- **JavaScript API** — for Inertia/SPA flows
+- **`AppIconChanged` event** — reports the outcome of each switch
+- **Testing support** — via NativePHP's testing suite
+- **Icon requirements** — 1024×1024 square PNG files; list them in `config/app-icons.php`
+
+## Installation
+
+```bash
+composer config repositories.nativephp-plugins composer https://plugins.nativephp.com
+composer config http-basic.plugins.nativephp.com your@email.com your-license-key
+php artisan vendor:publish --tag=nativephp-plugins-provider
+composer require firsthand/nativephp-app-icons
+php artisan native:plugin:register firsthand/nativephp-app-icons
+php artisan vendor:publish --tag=app-icons-config
+php artisan native:run
 ```
 
 ---
@@ -3241,6 +3317,44 @@ php artisan native:install android --force
 
 ---
 
+# Consent
+
+> Molly Klein (The Firsthand Co.)
+
+<div class="plugin-info"><div class="pi-meta"><span class="pi-item"><span class="pi-label">Author</span><span class="pi-value">Molly Klein (The Firsthand Co.)</span></span><span class="pi-item"><span class="pi-label">Plugin Type</span><span class="pi-badge pi-badge-community">Community Plugin</span></span><span class="pi-item"><span class="pi-label">Price</span><span class="pi-badge pi-badge-paid">$29</span></span><span class="pi-item"><span class="pi-label">Version</span><span class="pi-value">v1.0.1</span></span><span class="pi-item"><span class="pi-label">License</span><span class="pi-value">Proprietary</span></span></div><div class="pi-compat"><span class="pi-chip"><span class="pi-chip-label">NativePHP</span><span class="pi-chip-value">^4.0</span></span><span class="pi-chip"><span class="pi-chip-label">PHP</span><span class="pi-chip-value">^8.3</span></span><span class="pi-chip"><span class="pi-chip-label">Laravel</span><span class="pi-chip-value">^11|^12|^13</span></span><span class="pi-chip"><span class="pi-chip-label">iOS</span><span class="pi-chip-value">18.0+</span></span><span class="pi-chip"><span class="pi-chip-label">Android</span><span class="pi-chip-value">29+</span></span></div><div class="pi-links"><a href="https://nativephp.com/plugins/firsthand/nativephp-consent" class="pi-link pi-link-buy" target="_blank" rel="noopener">Buy on NativePHP →</a></div></div>
+
+# Consent
+
+Google UMP consent form and Apple App Tracking Transparency prompt for NativePHP Mobile — only shown to users who need to answer (EEA, UK, Switzerland).
+
+> **Requires:** An AdMob account with a published consent message, and AdMob app IDs configured in your environment.
+
+## Features
+
+- **Google UMP consent form** — shown only where legally required (EEA, UK, Switzerland); skipped elsewhere
+- **Apple ATT prompt** — requested on iOS after Google's form
+- **`Consent::canRequestAds()`** — tells you when ads can safely be requested
+- **Re-openable privacy settings** — provides the form users can reopen, as required by EEA regulations
+- **Build-time config** — adds tracking wording and AdMob app IDs to both platforms without duplicating an ID an ads plugin already added
+- **PHP & JavaScript APIs** — Livewire, Blade, Vue, React, Inertia; TypeScript types included
+- **Events** — `ConsentUpdated`, `TrackingAnswered`
+- **Testing** — bridge-faking test helper and options to simulate the EEA
+- **Ads-agnostic** — works with any ads plugin; does not load ads itself
+
+## Installation
+
+```bash
+composer config repositories.nativephp-plugins composer https://plugins.nativephp.com
+composer config http-basic.plugins.nativephp.com your@email.com your-license-key
+php artisan vendor:publish --tag=nativephp-plugins-provider
+composer require firsthand/nativephp-consent
+php artisan native:plugin:register firsthand/nativephp-consent
+php artisan vendor:publish --tag=consent-config
+php artisan native:run
+```
+
+---
+
 # DatePicker
 
 > camiant
@@ -3330,6 +3444,45 @@ composer config http-basic.plugins.nativephp.com your@email.com your-license-key
 php artisan vendor:publish --tag=nativephp-plugins-provider
 composer require partek/document-intelligence
 php artisan native:plugin:register partek/document-intelligence
+php artisan native:run
+```
+
+---
+
+# Face Tracking
+
+> Kirill Dakhnyuk
+
+<div class="plugin-info"><div class="pi-meta"><span class="pi-item"><span class="pi-label">Author</span><span class="pi-value">Kirill Dakhnyuk</span></span><span class="pi-item"><span class="pi-label">Plugin Type</span><span class="pi-badge pi-badge-community">Community Plugin</span></span><span class="pi-item"><span class="pi-label">Price</span><span class="pi-badge pi-badge-paid">$29</span></span><span class="pi-item"><span class="pi-label">Version</span><span class="pi-value">v1.0.0</span></span><span class="pi-item"><span class="pi-label">License</span><span class="pi-value">Proprietary</span></span></div><div class="pi-compat"><span class="pi-chip"><span class="pi-chip-label">NativePHP</span><span class="pi-chip-value">^4.5.2</span></span><span class="pi-chip"><span class="pi-chip-label">PHP</span><span class="pi-chip-value">^8.4</span></span><span class="pi-chip"><span class="pi-chip-label">iOS</span><span class="pi-chip-value">16.0+</span></span><span class="pi-chip"><span class="pi-chip-label">Android</span><span class="pi-chip-value">24+</span></span></div><div class="pi-links"><a href="https://nativephp.com/plugins/kirilldakhnyuk/nativephp-face-tracking" class="pi-link pi-link-buy" target="_blank" rel="noopener">Buy on NativePHP →</a></div></div>
+
+# Face Tracking
+
+Real-time face gesture detection for NativePHP Mobile — 13 preset gestures plus custom combos, powered by MediaPipe on Android and ARKit on iOS.
+
+> **iOS:** Device only, not the Simulator. Requires a device with face-tracking support.
+> **Android:** Beta. Front camera required. Gaze direction and some blend shapes are unavailable.
+
+## Gesture Presets (13)
+
+Blink, smile, left wink, right wink, jaw open, brow raise, tilt left, tilt right, tilt up, tilt down, nod, shake, tongue out *(iOS only)*
+
+## Features
+
+- **Custom gestures** — combine expression or head-angle conditions with configurable threshold, duration, and cooldown
+- **`<native:face-tracking-preview>`** — camera preview component with mirror option, face mesh display (iOS only), and hidden-tracking mode
+- **Face data snapshots** — read blend shapes, head rotation/position, and gaze direction on demand
+- **Events** — gesture detected, face detected, face lost, frame updated, tracking failure
+- **Streaming** — optional regular face-data updates at 1–30 events per second
+- **Bundled MediaPipe model** — Apache 2.0 licensed
+
+## Installation
+
+```bash
+composer config repositories.nativephp-plugins composer https://plugins.nativephp.com
+composer config http-basic.plugins.nativephp.com your@email.com your-license-key
+php artisan vendor:publish --tag=nativephp-plugins-provider
+composer require kirilldakhnyuk/nativephp-face-tracking
+php artisan native:plugin:register kirilldakhnyuk/nativephp-face-tracking
 php artisan native:run
 ```
 
@@ -3464,6 +3617,51 @@ php artisan native:plugin:register lrakauskas/nativephp-google-admob
 ## Prerequisites
 
 A Google AdMob account with app IDs and ad unit IDs configured for both iOS and Android.
+
+---
+
+# Health
+
+> Molly Klein (The Firsthand Co.)
+
+<div class="plugin-info"><div class="pi-meta"><span class="pi-item"><span class="pi-label">Author</span><span class="pi-value">Molly Klein (The Firsthand Co.)</span></span><span class="pi-item"><span class="pi-label">Plugin Type</span><span class="pi-badge pi-badge-community">Community Plugin</span></span><span class="pi-item"><span class="pi-label">Price</span><span class="pi-badge pi-badge-paid">$99</span></span><span class="pi-item"><span class="pi-label">Version</span><span class="pi-value">v1.0.1</span></span><span class="pi-item"><span class="pi-label">License</span><span class="pi-value">Proprietary</span></span></div><div class="pi-compat"><span class="pi-chip"><span class="pi-chip-label">NativePHP</span><span class="pi-chip-value">^4.0</span></span><span class="pi-chip"><span class="pi-chip-label">PHP</span><span class="pi-chip-value">^8.3</span></span><span class="pi-chip"><span class="pi-chip-label">Laravel</span><span class="pi-chip-value">^11|^12|^13</span></span><span class="pi-chip"><span class="pi-chip-label">iOS</span><span class="pi-chip-value">18.0+</span></span><span class="pi-chip"><span class="pi-chip-label">Android</span><span class="pi-chip-value">29+</span></span></div><div class="pi-links"><a href="https://nativephp.com/plugins/firsthand/nativephp-health" class="pi-link pi-link-buy" target="_blank" rel="noopener">Buy on NativePHP →</a></div></div>
+
+# Health
+
+Read and write health data from HealthKit (iOS) and Health Connect (Android) using the same PHP and JavaScript API.
+
+> **iOS:** Enable the HealthKit capability for your app ID in Apple's developer portal.
+> **Android:** Health Connect is built in from Android 14. On Android 10–13, it installs from Google Play. Complete the Health Connect declaration in Play Console before publishing.
+> **Google Play:** A Health Connect declaration is required.
+
+## Supported Data Types
+
+| Read | Write |
+|---|---|
+| Steps, activity, heart rate, weight, sleep, workouts | Weight, height, water |
+
+## Features
+
+- **Unified API** — same method names and units across HealthKit and Health Connect
+- **PHP & JavaScript** — Livewire, Blade, Inertia + Vue/React
+- **Unit preferences** — shows values in the user's preferred units with conversion helpers
+- **De-duplication** — totals avoid double-counting when a phone and watch record the same activity
+- **Latest reading on demand** — returns the most recent value for any data type
+- **Permission result event** — fires after the OS permission dialog is answered
+- **Config-driven** — declare the data types you read/write in `config/health.php`; set permission wording and privacy URL in env
+- **Testing helper** — script the bridge without a device
+
+## Installation
+
+```bash
+composer config repositories.nativephp-plugins composer https://plugins.nativephp.com
+composer config http-basic.plugins.nativephp.com your@email.com your-license-key
+php artisan vendor:publish --tag=nativephp-plugins-provider
+composer require firsthand/nativephp-health
+php artisan native:plugin:register firsthand/nativephp-health
+php artisan vendor:publish --tag=health-config
+php artisan native:run
+```
 
 ---
 
@@ -4524,6 +4722,39 @@ php artisan native:run
 
 ---
 
+# Picture in Picture
+
+> Molly Klein (The Firsthand Co.)
+
+<div class="plugin-info"><div class="pi-meta"><span class="pi-item"><span class="pi-label">Author</span><span class="pi-value">Molly Klein (The Firsthand Co.)</span></span><span class="pi-item"><span class="pi-label">Plugin Type</span><span class="pi-badge pi-badge-community">Community Plugin</span></span><span class="pi-item"><span class="pi-label">Price</span><span class="pi-badge pi-badge-paid">$99</span></span><span class="pi-item"><span class="pi-label">Version</span><span class="pi-value">v1.0.1</span></span><span class="pi-item"><span class="pi-label">License</span><span class="pi-value">Proprietary</span></span></div><div class="pi-compat"><span class="pi-chip"><span class="pi-chip-label">NativePHP</span><span class="pi-chip-value">^4.0</span></span><span class="pi-chip"><span class="pi-chip-label">PHP</span><span class="pi-chip-value">^8.3</span></span><span class="pi-chip"><span class="pi-chip-label">Laravel</span><span class="pi-chip-value">^11|^12|^13</span></span><span class="pi-chip"><span class="pi-chip-label">iOS</span><span class="pi-chip-value">18.0+</span></span><span class="pi-chip"><span class="pi-chip-label">Android</span><span class="pi-chip-value">29+</span></span></div><div class="pi-links"><a href="https://nativephp.com/plugins/firsthand/nativephp-pip" class="pi-link pi-link-buy" target="_blank" rel="noopener">Buy on NativePHP →</a></div></div>
+
+# Picture in Picture
+
+Float video into a corner so users can keep watching while using other apps — Apple AVPlayer on iOS, Google Media3 on Android. No permissions required.
+
+## Features
+
+- **Floating window** — video shrinks into a corner and keeps playing while the user switches apps; moveable, resizable, and restorable to full screen
+- **Auto-float** — leaving the app during playback floats the video automatically (`autoPip: false` to disable)
+- **Casting** — cast button appears when a compatible TV is on the same Wi-Fi; AirPlay on iOS, Chromecast/Google TV on Android; HTTPS videos only
+- **Playback control** — `pause()`, `resume()`, `seek()`, `stop()` while floating or casting
+- **`VideoStateChanged` event** — reports `playing`, `paused`, `floating`, `casting`, `ended`, `closed`, and position in seconds
+- **Lock-screen controls** — both native players expose media controls on the lock screen
+- **Formats** — MP4, HLS (`.m3u8`) streams, and device-local video files
+
+## Installation
+
+```bash
+composer config repositories.nativephp-plugins composer https://plugins.nativephp.com
+composer config http-basic.plugins.nativephp.com your@email.com your-license-key
+php artisan vendor:publish --tag=nativephp-plugins-provider
+composer require firsthand/nativephp-pip
+php artisan native:plugin:register firsthand/nativephp-pip
+php artisan native:run
+```
+
+---
+
 # Print Studio
 
 > Paul (PARTek)
@@ -4668,6 +4899,41 @@ Fired when a single vibration finishes. Payload: `int $duration`, `float $intens
 ### `PatternCompleted`
 
 Fired when a pattern finishes. Payload: `int $totalDuration` (ms), `int $stepCount`.
+
+---
+
+# Rich Push
+
+> Molly Klein (The Firsthand Co.)
+
+<div class="plugin-info"><div class="pi-meta"><span class="pi-item"><span class="pi-label">Author</span><span class="pi-value">Molly Klein (The Firsthand Co.)</span></span><span class="pi-item"><span class="pi-label">Plugin Type</span><span class="pi-badge pi-badge-community">Community Plugin</span></span><span class="pi-item"><span class="pi-label">Price</span><span class="pi-badge pi-badge-paid">$49</span></span><span class="pi-item"><span class="pi-label">Version</span><span class="pi-value">v1.0.3</span></span><span class="pi-item"><span class="pi-label">License</span><span class="pi-value">Proprietary</span></span></div><div class="pi-compat"><span class="pi-chip"><span class="pi-chip-label">NativePHP</span><span class="pi-chip-value">^4.0</span></span><span class="pi-chip"><span class="pi-chip-label">PHP</span><span class="pi-chip-value">^8.3</span></span><span class="pi-chip"><span class="pi-chip-label">Laravel</span><span class="pi-chip-value">^11|^12|^13</span></span><span class="pi-chip"><span class="pi-chip-label">iOS</span><span class="pi-chip-value">18.0+</span></span><span class="pi-chip"><span class="pi-chip-label">Android</span><span class="pi-chip-value">29+</span></span></div><div class="pi-links"><a href="https://nativephp.com/plugins/firsthand/nativephp-rich-push" class="pi-link pi-link-buy" target="_blank" rel="noopener">Buy on NativePHP →</a></div></div>
+
+# Rich Push
+
+Add images, GIFs, and video previews to push notifications. Works alongside your existing push plugin — adds a Notification Service Extension to your iOS Xcode project automatically on each build.
+
+> **iOS prerequisite:** Push notifications capability must be enabled for your app ID and `push_notifications` set to `true` in `config/nativephp.php`.
+
+## Features
+
+- **Rich media** — images on both platforms; GIFs and video on iOS
+- **iOS media limits** — images/GIFs up to 10 MB, video up to 50 MB, audio up to 5 MB; must use HTTPS
+- **Graceful fallback** — if media is too large, slow, or missing, the notification still arrives as plain text
+- **Multiple send options** — `RichPush::send()`, Laravel notification channel, `rich-push:send` Artisan command, or `RichPushMessage` for Firebase/other services
+- **Foreground display** — configurable via `RICH_PUSH_FOREGROUND`: `banner` (default), `list`, or `none`
+- **Tap handling** — custom data received on tap, including taps that launch a closed app
+- **JavaScript helpers** — Vue and React with TypeScript types
+
+## Installation
+
+```bash
+composer config repositories.nativephp-plugins composer https://plugins.nativephp.com
+composer config http-basic.plugins.nativephp.com your@email.com your-license-key
+php artisan vendor:publish --tag=nativephp-plugins-provider
+composer require firsthand/nativephp-rich-push
+php artisan native:plugin:register firsthand/nativephp-rich-push
+php artisan native:run
+```
 
 ---
 
@@ -5402,6 +5668,79 @@ composer config http-basic.plugins.nativephp.com your@email.com your-license-key
 php artisan vendor:publish --tag=nativephp-plugins-provider
 composer require nativecodeforge/nativephp-timepicker
 php artisan native:plugin:register nativecodeforge/nativephp-timepicker
+```
+
+---
+
+# Wallet
+
+> Molly Klein (The Firsthand Co.)
+
+<div class="plugin-info"><div class="pi-meta"><span class="pi-item"><span class="pi-label">Author</span><span class="pi-value">Molly Klein (The Firsthand Co.)</span></span><span class="pi-item"><span class="pi-label">Plugin Type</span><span class="pi-badge pi-badge-community">Community Plugin</span></span><span class="pi-item"><span class="pi-label">Price</span><span class="pi-badge pi-badge-paid">$99</span></span><span class="pi-item"><span class="pi-label">Version</span><span class="pi-value">v1.0.1</span></span><span class="pi-item"><span class="pi-label">License</span><span class="pi-value">Proprietary</span></span></div><div class="pi-compat"><span class="pi-chip"><span class="pi-chip-label">NativePHP</span><span class="pi-chip-value">^4.0</span></span><span class="pi-chip"><span class="pi-chip-label">PHP</span><span class="pi-chip-value">^8.3</span></span><span class="pi-chip"><span class="pi-chip-label">Laravel</span><span class="pi-chip-value">^11|^12|^13</span></span><span class="pi-chip"><span class="pi-chip-label">iOS</span><span class="pi-chip-value">18.0+</span></span><span class="pi-chip"><span class="pi-chip-label">Android</span><span class="pi-chip-value">29+</span></span></div><div class="pi-links"><a href="https://nativephp.com/plugins/firsthand/nativephp-wallet" class="pi-link pi-link-buy" target="_blank" rel="noopener">Buy on NativePHP →</a></div></div>
+
+# Wallet
+
+Add passes to Apple Wallet (iOS) and Google Wallet (Android) with a single `Wallet::add()` call.
+
+> **iOS:** Passes must be signed with a Pass Type ID certificate. No entitlement or capability needed. Pairs well with `spatie/laravel-mobile-pass` for pass generation.
+>
+> **Android:** Only Google Wallet save links work. Apple `.pkpass` files are rejected. A Google Pay & Wallet Console issuer account is required.
+
+## Features
+
+- **`Wallet::add()`** — opens Apple's add-to-Wallet sheet on iOS and Google Wallet save sheet on Android
+- **Flexible pass input** — pass URL (with optional headers), `.pkpass` file in the app bundle, or raw `.pkpass` bytes
+- **`PassAddFinished` event** — reports `added`, `closed`, `invalid`, or `failed` on iOS
+- **`Wallet::status()`** — reports the platform and whether a pass can be added
+- **`<native:wallet-add-button>`** — Apple's official button on iOS; renders nothing on Android
+- **JavaScript helpers** — `add()`, `onPassAddFinished()` for Vue and React
+
+## Installation
+
+```bash
+composer config repositories.nativephp-plugins composer https://plugins.nativephp.com
+composer config http-basic.plugins.nativephp.com your@email.com your-license-key
+php artisan vendor:publish --tag=nativephp-plugins-provider
+composer require firsthand/nativephp-wallet
+php artisan native:plugin:register firsthand/nativephp-wallet
+php artisan native:run
+```
+
+---
+
+# Wallet Passes
+
+> Paul (PARTek)
+
+<div class="plugin-info"><div class="pi-meta"><span class="pi-item"><span class="pi-label">Author</span><span class="pi-value">Paul (PARTek)</span></span><span class="pi-item"><span class="pi-label">Plugin Type</span><span class="pi-badge pi-badge-community">Community Plugin</span></span><span class="pi-item"><span class="pi-label">Price</span><span class="pi-badge pi-badge-paid">$99</span></span><span class="pi-item"><span class="pi-label">Version</span><span class="pi-value">v2.0.0</span></span><span class="pi-item"><span class="pi-label">License</span><span class="pi-value">Proprietary</span></span></div><div class="pi-compat"><span class="pi-chip"><span class="pi-chip-label">NativePHP</span><span class="pi-chip-value">^4.6.1</span></span><span class="pi-chip"><span class="pi-chip-label">PHP</span><span class="pi-chip-value">^8.2</span></span><span class="pi-chip"><span class="pi-chip-label">Laravel</span><span class="pi-chip-value">^10|^11|^12|^13</span></span><span class="pi-chip"><span class="pi-chip-label">iOS</span><span class="pi-chip-value">18.0+</span></span><span class="pi-chip"><span class="pi-chip-label">Android</span><span class="pi-chip-value">29+</span></span></div><div class="pi-links"><a href="https://nativephp.com/plugins/partek/wallet-passes" class="pi-link pi-link-buy" target="_blank" rel="noopener">Buy on NativePHP →</a></div></div>
+
+# Wallet Passes
+
+Add Google Wallet passes to Android devices from NativePHP Mobile.
+
+> **Android only (Google Wallet).** iOS calls return `unsupported_platform`. A Google Wallet API issuer account and service account are required. The plugin does not sign JWTs.
+
+## Features
+
+- **Capability check** — `WalletPasses::canAdd()` with a stable reason when Google Wallet is unavailable
+- **Add passes** — opens the Google Wallet save sheet via the official Wallet SDK; reports `added`, `cancelled`, or `failed`
+- **Save token validation** — validates the token's format in PHP before it reaches the native bridge
+- **JavaScript module** — Inertia, Vue, React, and plain JS support
+- **Optional HTTP routes** — off by default
+- **Testing** — fake and test helpers for NativePHP's test harness
+- **No Android permissions** required; adds one transparent, non-exported activity
+- **No network requests** of its own
+
+## Installation
+
+```bash
+composer config repositories.nativephp-plugins composer https://plugins.nativephp.com
+composer config http-basic.plugins.nativephp.com your@email.com your-license-key
+php artisan vendor:publish --tag=nativephp-plugins-provider
+composer require partek/wallet-passes
+php artisan native:plugin:register partek/wallet-passes
+php artisan vendor:publish --tag=wallet-passes-config
+php artisan native:run android
 ```
 
 ---
@@ -7003,6 +7342,40 @@ For questions or issues, contact **pansuriya.sagar94@gmail.com** or open a [GitH
 ## 📄 License
 
 The MIT License (MIT). Please see [License File](LICENSE) for more information.
+
+---
+
+# Charts
+
+> Mohammad Shoriful Islam Ronju
+
+<div class="plugin-info"><div class="pi-meta"><span class="pi-item"><span class="pi-label">Author</span><span class="pi-value">Mohammad Shoriful Islam Ronju</span></span><span class="pi-item"><span class="pi-label">Plugin Type</span><span class="pi-badge pi-badge-community">Community Plugin</span></span><span class="pi-item"><span class="pi-label">Price</span><span class="pi-badge pi-badge-free">Free</span></span><span class="pi-item"><span class="pi-label">Version</span><span class="pi-value">v1.1.0</span></span><span class="pi-item"><span class="pi-label">License</span><span class="pi-value">MIT</span></span></div><div class="pi-compat"><span class="pi-chip"><span class="pi-chip-label">NativePHP</span><span class="pi-chip-value">^3.0|^4.0</span></span><span class="pi-chip"><span class="pi-chip-label">iOS</span><span class="pi-chip-value">15.0+</span></span><span class="pi-chip"><span class="pi-chip-label">Android</span><span class="pi-chip-value">24+</span></span></div><div class="pi-links"><a href="https://github.com/smronju/nativephp-charts" class="pi-link" target="_blank" rel="noopener">GitHub →</a></div></div>
+
+# Charts
+
+Native charts for NativePHP Mobile — no WebView, no JavaScript charting library. Renders directly on the device via a single `<native:chart>` Blade element.
+
+> **Android-first:** Verified on a real Android device. iOS has compiled but has not yet been verified on a device or simulator.
+
+## Supported Chart Types
+
+Line, Area, Bar, Scatter, Candlestick, Radar, Pie, Doughnut
+
+## Features
+
+- **`<native:chart>`** Blade element — `type` selects the shape, `series` supplies the data
+- **Theme-driven colors** — inherits your app's color theme automatically
+- **Candlestick colors** — configurable rising and falling colors
+- **Composable with EDGE text** — add axis labels, legends, and tooltips using `<native:text>` in Blade (the plugin does not render these itself)
+
+## Installation
+
+```bash
+composer require smronju/nativephp-charts
+php artisan vendor:publish --tag=nativephp-plugins-provider
+php artisan native:plugin:register smronju/nativephp-charts
+php artisan native:run
+```
 
 ---
 
