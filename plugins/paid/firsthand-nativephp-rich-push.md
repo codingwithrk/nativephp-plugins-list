@@ -2,7 +2,7 @@
 name: "Rich Push"
 author: "Molly Klein (The Firsthand Co.)"
 price: "$49"
-version: "1.0.3"
+version: "1.1.0"
 license: "Proprietary"
 source: "https://nativephp.com/plugins/firsthand/nativephp-rich-push"
 support: "https://nativephp.com/plugins/firsthand/nativephp-rich-push"
