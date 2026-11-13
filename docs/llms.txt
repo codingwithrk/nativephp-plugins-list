@@ -14,6 +14,7 @@
 - /plugins/official/nativephp-mobile-media-player: Shane Rosenthal
 - /plugins/official/nativephp-mobile-microphone: Bifrost Technology
 - /plugins/official/nativephp-mobile-network: Bifrost Technology
+- /plugins/official/nativephp-mobile-ota: Bifrost Technology
 - /plugins/official/nativephp-mobile-share: Bifrost Technology
 - /plugins/official/nativephp-mobile-system: Bifrost Technology
 - /plugins/official/nativephp-mobile-ui: Shane Rosenthal

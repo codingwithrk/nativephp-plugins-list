@@ -77,6 +77,13 @@
         "headings": "Overview Installation Usage PHP (Livewire/Blade) JavaScript (Vue/React/Inertia) Response Object Examples Conditional Data Sync JavaScript Connection Check Platform Behavior Android iOS Testing Helpers"
     },
     {
+        "title": "Mobile OTA",
+        "description": "Bifrost Technology",
+        "url": "/plugins/official/nativephp-mobile-ota",
+        "content": "AuthorBifrost TechnologyPlugin Type1st Party PluginPriceFreeVersionv1.0.1LicenseMITNativePHP^3.3.11|^4.6.1iOS18.2+Android26+GitHub → Over-the-air PHP updates for NativePHP Mobile — push new routes, controllers, Livewire components, Blade views, CSS, JavaScript, and images to installed devices without a store review. Bifrost required: OTA updates are signed by Bifrost for a specific app, Arc, and native setup. A Bifrost project is required; the plugin cannot point to a custom update server. Ship a new store build from Bifrost after installing so the app can locate its updates. What cannot be updated OTA: Compiled native content — adding/updating plugins, updating nativephp/mobile, or changing native settings in config/nativephp.php (app ID, permissions, deep links) — still requires a new store build. Update Modes Set NATIVEPHP_OTA_MODE to control how updates are applied: Mode Behaviour manual Your code drives every step (default) prompt User is asked before applying silent Updates download and apply automatically Facade API Method Purpose Ota::check() Check whether an update is available Ota::downloadAndApply() Download and apply the latest update Ota::rollback() Roll back to the previous release Ota::status() Current OTA status Ota::currentRelease() Details about the installed release Events UpdateAvailable, UpdateDownloaded, UpdateApplied, RolledBack, UpdateFailed Installation composer require nativephp/mobile-ota php artisan native:plugin:register nativephp/mobile-ota php artisan native:run After installing, ship a new store build from Bifrost to embed the project and Arc details the app needs to find its updates.",
+        "headings": "Update Modes Facade API Events Installation"
+    },
+    {
         "title": "Mobile Share",
         "description": "Bifrost Technology",
         "url": "/plugins/official/nativephp-mobile-share",

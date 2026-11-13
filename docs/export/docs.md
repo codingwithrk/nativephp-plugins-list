@@ -1564,6 +1564,56 @@ Note that `status()` decodes the bridge's JSON response without the `true` flag,
 
 ---
 
+# Mobile OTA
+
+> Bifrost Technology
+
+<div class="plugin-info"><div class="pi-meta"><span class="pi-item"><span class="pi-label">Author</span><span class="pi-value">Bifrost Technology</span></span><span class="pi-item"><span class="pi-label">Plugin Type</span><span class="pi-badge pi-badge-first-party">1st Party Plugin</span></span><span class="pi-item"><span class="pi-label">Price</span><span class="pi-badge pi-badge-free">Free</span></span><span class="pi-item"><span class="pi-label">Version</span><span class="pi-value">v1.0.1</span></span><span class="pi-item"><span class="pi-label">License</span><span class="pi-value">MIT</span></span></div><div class="pi-compat"><span class="pi-chip"><span class="pi-chip-label">NativePHP</span><span class="pi-chip-value">^3.3.11|^4.6.1</span></span><span class="pi-chip"><span class="pi-chip-label">iOS</span><span class="pi-chip-value">18.2+</span></span><span class="pi-chip"><span class="pi-chip-label">Android</span><span class="pi-chip-value">26+</span></span></div><div class="pi-links"><a href="https://github.com/NativePHP/mobile-ota" class="pi-link" target="_blank" rel="noopener">GitHub →</a></div></div>
+
+# Mobile OTA
+
+Over-the-air PHP updates for NativePHP Mobile — push new routes, controllers, Livewire components, Blade views, CSS, JavaScript, and images to installed devices without a store review.
+
+> **Bifrost required:** OTA updates are signed by Bifrost for a specific app, Arc, and native setup. A Bifrost project is required; the plugin cannot point to a custom update server. Ship a new store build from Bifrost after installing so the app can locate its updates.
+
+> **What cannot be updated OTA:** Compiled native content — adding/updating plugins, updating `nativephp/mobile`, or changing native settings in `config/nativephp.php` (app ID, permissions, deep links) — still requires a new store build.
+
+## Update Modes
+
+Set `NATIVEPHP_OTA_MODE` to control how updates are applied:
+
+| Mode | Behaviour |
+|---|---|
+| `manual` | Your code drives every step (default) |
+| `prompt` | User is asked before applying |
+| `silent` | Updates download and apply automatically |
+
+## Facade API
+
+| Method | Purpose |
+|---|---|
+| `Ota::check()` | Check whether an update is available |
+| `Ota::downloadAndApply()` | Download and apply the latest update |
+| `Ota::rollback()` | Roll back to the previous release |
+| `Ota::status()` | Current OTA status |
+| `Ota::currentRelease()` | Details about the installed release |
+
+## Events
+
+`UpdateAvailable`, `UpdateDownloaded`, `UpdateApplied`, `RolledBack`, `UpdateFailed`
+
+## Installation
+
+```bash
+composer require nativephp/mobile-ota
+php artisan native:plugin:register nativephp/mobile-ota
+php artisan native:run
+```
+
+After installing, ship a new store build from Bifrost to embed the project and Arc details the app needs to find its updates.
+
+---
+
 # Mobile Share
 
 > Bifrost Technology

@@ -20,6 +20,7 @@ Plugins published and maintained by the NativePHP team (Bifrost Technology & cor
 - [Mobile Media Player](plugins/official/nativephp-mobile-media-player.md) — Shane Rosenthal
 - [Mobile Microphone](plugins/official/nativephp-mobile-microphone.md) — Bifrost Technology
 - [Mobile Network](plugins/official/nativephp-mobile-network.md) — Bifrost Technology
+- [Mobile OTA](plugins/official/nativephp-mobile-ota.md) — Bifrost Technology
 - [Mobile Share](plugins/official/nativephp-mobile-share.md) — Bifrost Technology
 - [Mobile System](plugins/official/nativephp-mobile-system.md) — Bifrost Technology
 - [Mobile UI](plugins/official/nativephp-mobile-ui.md) — Shane Rosenthal
