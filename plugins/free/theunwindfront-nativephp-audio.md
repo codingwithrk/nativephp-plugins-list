@@ -2,7 +2,7 @@
 name: "NativePHP Audio"
 author: "Sagar Pansuriya"
 price: "Free"
-version: "1.3.1"
+version: "1.4.1"
 license: "MIT"
 github: "https://github.com/theunwindfront/nativephp-audio"
 support: "theunwindfront@gmail.com"
