@@ -4260,6 +4260,48 @@ public function onScreenshotDetected(): void
 
 ---
 
+# Native Calls
+
+> Paul (PARTek)
+
+<div class="plugin-info"><div class="pi-meta"><span class="pi-item"><span class="pi-label">Author</span><span class="pi-value">Paul (PARTek)</span></span><span class="pi-item"><span class="pi-label">Plugin Type</span><span class="pi-badge pi-badge-community">Community Plugin</span></span><span class="pi-item"><span class="pi-label">Price</span><span class="pi-badge pi-badge-paid">$99</span></span><span class="pi-item"><span class="pi-label">Version</span><span class="pi-value">v1.1.0</span></span><span class="pi-item"><span class="pi-label">License</span><span class="pi-value">Proprietary</span></span></div><div class="pi-compat"><span class="pi-chip"><span class="pi-chip-label">NativePHP</span><span class="pi-chip-value">^4.6.1</span></span><span class="pi-chip"><span class="pi-chip-label">PHP</span><span class="pi-chip-value">^8.2</span></span><span class="pi-chip"><span class="pi-chip-label">iOS</span><span class="pi-chip-value">18.0+</span></span><span class="pi-chip"><span class="pi-chip-label">Android</span><span class="pi-chip-value">28+</span></span></div><div class="pi-links"><a href="https://nativephp.com/plugins/partek/native-calls" class="pi-link pi-link-buy" target="_blank" rel="noopener">Buy on NativePHP →</a></div></div>
+
+# Native Calls
+
+Native incoming and outgoing call UI for NativePHP Mobile — CallKit on iOS (including VoIP push while the app is closed), Telecom framework on Android. Does not carry audio or video; your calling SDK handles media.
+
+> **iOS VoIP push:** Enable push notifications in `config/nativephp.php` and send pushes with an APNs key.
+>
+> **iOS limitation:** One call at a time; CallKit is unavailable on the China App Store.
+>
+> **Android closed-app ringing:** Requires a push service not included in this version.
+>
+> **Google Play:** A full-screen intent declaration is required (granted by default for calling apps).
+
+## Features
+
+- **Incoming call UI** — full CallKit screen on iOS (including from closed state via VoIP push); Answer/Decline notification on Android via Telecom framework
+- **Outgoing calls** — shown in the device's recent calls list
+- **In-call controls** — mute, hold, and audio-session events for your calling SDK
+- **Built-in in-call screen** — caller name, timer, Mute, and End buttons (can be disabled)
+- **Ring timeout** — unanswered calls end as missed with a "Missed call" notification
+- **Recovery** — reports `app_restarted` for calls cut off by an app restart
+- **Android locked-screen** — checks full-screen intent permission and opens settings if not granted
+- **Testing helpers** — fakes for the native bridge and in-call screen actions
+
+## Installation
+
+```bash
+composer config repositories.nativephp-plugins composer https://plugins.nativephp.com
+composer config http-basic.plugins.nativephp.com your@email.com your-license-key
+php artisan vendor:publish --tag=nativephp-plugins-provider
+composer require partek/native-calls
+php artisan native:plugin:register partek/native-calls
+php artisan native:run
+```
+
+---
+
 # Native Maps
 
 > Paul (PARTek)
@@ -5627,6 +5669,44 @@ php artisan native:plugin:register partek/speech-to-text
 
 ---
 
+# Swipe Actions
+
+> Robert (AtlasNatives)
+
+<div class="plugin-info"><div class="pi-meta"><span class="pi-item"><span class="pi-label">Author</span><span class="pi-value">Robert (AtlasNatives)</span></span><span class="pi-item"><span class="pi-label">Plugin Type</span><span class="pi-badge pi-badge-community">Community Plugin</span></span><span class="pi-item"><span class="pi-label">Price</span><span class="pi-badge pi-badge-paid">$29</span></span><span class="pi-item"><span class="pi-label">Version</span><span class="pi-value">v1.0.2</span></span><span class="pi-item"><span class="pi-label">License</span><span class="pi-value">Proprietary</span></span></div><div class="pi-compat"><span class="pi-chip"><span class="pi-chip-label">NativePHP</span><span class="pi-chip-value">^4.6</span></span><span class="pi-chip"><span class="pi-chip-label">iOS</span><span class="pi-chip-value">15.0+</span></span><span class="pi-chip"><span class="pi-chip-label">Android</span><span class="pi-chip-value">26+</span></span></div><div class="pi-links"><a href="https://nativephp.com/plugins/atlasnatives/nativephp-swipe-actions" class="pi-link pi-link-buy" target="_blank" rel="noopener">Buy on NativePHP →</a></div></div>
+
+# Swipe Actions
+
+Native swipe actions for NativePHP Mobile list items — wrap any content in `<native:swipe-row>` and declare trailing or leading actions with `<native:swipe-action>`.
+
+> **Requires** `nativephp/mobile-ui` 0.8+ and native (EDGE) screens.
+>
+> **iOS SwiftUI renderer** ships with the plugin but has not yet been verified on a device.
+
+## Features
+
+- **`<native:swipe-row>`** — wraps any content; one row can be open at a time
+- **Leading and trailing sides** — leading (right-swipe) and trailing (left-swipe) actions
+- **Flexible styling** — hex colors, Tailwind palette names, or theme tokens (follows dark mode)
+- **Destructive actions** — marked actions turn red automatically when no color is set
+- **Optional labels under icons** — configurable icon size and action width
+- **Snap behaviour** — rows snap open past half the actions' combined width
+- **Conditional actions** — wrap in `@if` / `@foreach`, or build in PHP with `SwipeRow::make()` and `SwipeAction::make()`
+- **Accessibility** — TalkBack actions menu (Android) and VoiceOver actions rotor (iOS)
+
+## Installation
+
+```bash
+composer config repositories.nativephp-plugins composer https://plugins.nativephp.com
+composer config http-basic.plugins.nativephp.com your@email.com your-license-key
+php artisan vendor:publish --tag=nativephp-plugins-provider
+composer require atlasnatives/nativephp-swipe-actions
+php artisan native:plugin:register atlasnatives/nativephp-swipe-actions
+php artisan native:run
+```
+
+---
+
 # Tether Client
 
 > Lukas Rakauskas
@@ -5718,6 +5798,46 @@ composer config http-basic.plugins.nativephp.com your@email.com your-license-key
 php artisan vendor:publish --tag=nativephp-plugins-provider
 composer require nativecodeforge/nativephp-timepicker
 php artisan native:plugin:register nativecodeforge/nativephp-timepicker
+```
+
+---
+
+# Video Rooms
+
+> Paul (PARTek)
+
+<div class="plugin-info"><div class="pi-meta"><span class="pi-item"><span class="pi-label">Author</span><span class="pi-value">Paul (PARTek)</span></span><span class="pi-item"><span class="pi-label">Plugin Type</span><span class="pi-badge pi-badge-community">Community Plugin</span></span><span class="pi-item"><span class="pi-label">Price</span><span class="pi-badge pi-badge-paid">$99</span></span><span class="pi-item"><span class="pi-label">Version</span><span class="pi-value">v1.0.1</span></span><span class="pi-item"><span class="pi-label">License</span><span class="pi-value">Proprietary</span></span></div><div class="pi-compat"><span class="pi-chip"><span class="pi-chip-label">NativePHP</span><span class="pi-chip-value">^4.6.1</span></span><span class="pi-chip"><span class="pi-chip-label">iOS</span><span class="pi-chip-value">18.0+</span></span><span class="pi-chip"><span class="pi-chip-label">Android</span><span class="pi-chip-value">26+</span></span></div><div class="pi-links"><a href="https://nativephp.com/plugins/partek/video-rooms" class="pi-link pi-link-buy" target="_blank" rel="noopener">Buy on NativePHP →</a></div></div>
+
+# Video Rooms
+
+Native video calling for NativePHP Mobile via LiveKit — one call opens a full-screen native video room with mute, camera, flip, and hang-up controls.
+
+> **LiveKit server required:** LiveKit Cloud (free tier available) or self-hosted. You need the server URL, API key, and API secret.
+>
+> The API secret stays on your server — `AccessToken::make()` creates room tokens server-side so the secret never reaches the device.
+
+## Features
+
+- **`VideoRooms::join()`** — one call opens a native full-screen video room
+- **In-call controls** — mute, camera on/off, flip camera, hang up
+- **Server-side tokens** — `AccessToken::make()` Laravel helper signs room tokens
+- **Events** — `RoomConnected`, `RoomDisconnected`, `ParticipantJoined`, `ParticipantLeft`, `LocalMediaChanged`
+- **Voice-only mode** — and listen-only viewer support
+- **iOS background audio** — video keeps playing via audio background mode
+- **Adaptive video** — LiveKit adaptive stream and dynacast enabled
+- **Portrait-friendly** — video stays upright regardless of device orientation
+- **Testing helpers** — fakes for NativePHP's bridge
+- **JavaScript API** — `join()` and `leave()`
+
+## Installation
+
+```bash
+composer config repositories.nativephp-plugins composer https://plugins.nativephp.com
+composer config http-basic.plugins.nativephp.com your@email.com your-license-key
+php artisan vendor:publish --tag=nativephp-plugins-provider
+composer require partek/video-rooms
+php artisan native:plugin:register partek/video-rooms
+php artisan native:run
 ```
 
 ---
@@ -6898,6 +7018,38 @@ php artisan native:plugin:register kevinbatdorf/nativephp-launcher
 ```
 
 After install, your app will appear in Android's home-app picker. Call `Launcher::openHomeSettings()` to take the user directly there.
+
+---
+
+# App Guard
+
+> Wojt Janowski
+
+<div class="plugin-info"><div class="pi-meta"><span class="pi-item"><span class="pi-label">Author</span><span class="pi-value">Wojt Janowski</span></span><span class="pi-item"><span class="pi-label">Plugin Type</span><span class="pi-badge pi-badge-community">Community Plugin</span></span><span class="pi-item"><span class="pi-label">Price</span><span class="pi-badge pi-badge-free">Free</span></span><span class="pi-item"><span class="pi-label">Version</span><span class="pi-value">v1.0.1</span></span><span class="pi-item"><span class="pi-label">License</span><span class="pi-value">MIT</span></span></div><div class="pi-compat"><span class="pi-chip"><span class="pi-chip-label">NativePHP</span><span class="pi-chip-value">^4.7</span></span><span class="pi-chip"><span class="pi-chip-label">PHP</span><span class="pi-chip-value">^8.4</span></span><span class="pi-chip"><span class="pi-chip-label">iOS</span><span class="pi-chip-value">18.0+</span></span><span class="pi-chip"><span class="pi-chip-label">Android</span><span class="pi-chip-value">29+</span></span></div><div class="pi-links"><a href="https://github.com/firstlightui/app-guard" class="pi-link" target="_blank" rel="noopener">GitHub →</a></div></div>
+
+# App Guard
+
+Privacy cover, app lock, return shield, sensitive clipboard, and lifecycle events for NativePHP Mobile.
+
+> **PIN feature** requires `nativephp/mobile-secure-storage` at runtime (not a Composer dependency).
+> **Biometric unlock** pairs well with `nativephp/mobile-biometrics`.
+
+## Features
+
+- **Privacy cover** — blurs the app in the iOS app switcher; uses `FLAG_SECURE` on Android (also blocks screenshots)
+- **Return shield** — covers the app before its first frame after a timeout; shows your image, splash screen, or app icon
+- **App lock** — headless lock service with optional PIN support and `app-lock` route middleware to keep protected screens closed while locked
+- **Sensitive copy** — copies text to a device-only clipboard that clears itself after up to one hour
+- **Lifecycle events** — `Backgrounded` and `Foregrounded` with time-away measured natively
+
+## Installation
+
+```bash
+composer require firstlightui/app-guard
+php artisan native:plugin:register firstlightui/app-guard
+php artisan vendor:publish --tag=app-guard-config
+php artisan native:run
+```
 
 ---
 
@@ -9628,6 +9780,48 @@ To change the wording, edit `nativephp.json` in this package and rebuild the iOS
 
 ---
 
+# LAN Transfer
+
+> Tendai Karuma
+
+<div class="plugin-info"><div class="pi-meta"><span class="pi-item"><span class="pi-label">Author</span><span class="pi-value">Tendai Karuma</span></span><span class="pi-item"><span class="pi-label">Plugin Type</span><span class="pi-badge pi-badge-community">Community Plugin</span></span><span class="pi-item"><span class="pi-label">Price</span><span class="pi-badge pi-badge-free">Free</span></span><span class="pi-item"><span class="pi-label">Version</span><span class="pi-value">v1.0.0</span></span><span class="pi-item"><span class="pi-label">License</span><span class="pi-value">MIT</span></span></div><div class="pi-compat"><span class="pi-chip"><span class="pi-chip-label">NativePHP</span><span class="pi-chip-value">^4.0</span></span><span class="pi-chip"><span class="pi-chip-label">iOS</span><span class="pi-chip-value">15.0+</span></span><span class="pi-chip"><span class="pi-chip-label">Android</span><span class="pi-chip-value">29+</span></span></div><div class="pi-links"><a href="https://github.com/protendai/nativephp-lan" class="pi-link" target="_blank" rel="noopener">GitHub →</a></div></div>
+
+# LAN Transfer
+
+Local-network file transfer for NativePHP Mobile — devices discover each other over UDP multicast or HTTP subnet probing and exchange files without the internet.
+
+> **No encryption:** Traffic is plain HTTP. Device fingerprints are not authentication.
+>
+> **iOS multicast:** Sending to a multicast group requires Apple's multicast entitlement.
+>
+> **iOS storage:** Received files stay in the app sandbox; no public-folder option on iOS.
+>
+> **iOS Wi-Fi status:** Always reported as enabled on iOS.
+>
+> **`native:jump` is not sufficient** — rebuild with `php artisan native:run` after installing.
+
+## Features
+
+- **Device discovery** — UDP multicast every 5 seconds; falls back to HTTP probing of the /24 subnet (handles routers that drop multicast)
+- **Receive server** — embedded HTTP server streams uploads to disk; on Android can write to the public Downloads folder
+- **Access control** — your PHP code decides who may send; each request waits for your app's response
+- **Sending** — uses Laravel's `Http` client (testable with `Http::fake()`)
+- **PIN protection** — optional PIN per transfer; wrong PINs trigger a lockout after repeated failures
+- **Testing** — FakeBridge macros in the service provider
+- **Utilities** — file/media pickers, thumbnails, open-file helper
+- **Protocol** — derived from LocalSend v2; does not interoperate with the LocalSend app
+
+## Installation
+
+```bash
+composer require protendai/nativephp-lan
+php artisan native:plugin:register protendai/nativephp-lan
+php artisan vendor:publish --tag=lan-config
+php artisan native:run
+```
+
+---
+
 # Live Activities (Free)
 
 > Pauline Vos
@@ -11155,6 +11349,43 @@ The test suite covers locale normalisation, BCP 47 → platform-native format co
 
 ---
 
+# Mobile OCR
+
+> Tendai Karuma
+
+<div class="plugin-info"><div class="pi-meta"><span class="pi-item"><span class="pi-label">Author</span><span class="pi-value">Tendai Karuma</span></span><span class="pi-item"><span class="pi-label">Plugin Type</span><span class="pi-badge pi-badge-community">Community Plugin</span></span><span class="pi-item"><span class="pi-label">Price</span><span class="pi-badge pi-badge-free">Free</span></span><span class="pi-item"><span class="pi-label">Version</span><span class="pi-value">v1.0.0</span></span><span class="pi-item"><span class="pi-label">License</span><span class="pi-value">MIT</span></span></div><div class="pi-compat"><span class="pi-chip"><span class="pi-chip-label">NativePHP</span><span class="pi-chip-value">^4.0</span></span><span class="pi-chip"><span class="pi-chip-label">iOS</span><span class="pi-chip-value">13.0+</span></span><span class="pi-chip"><span class="pi-chip-label">Android</span><span class="pi-chip-value">21+</span></span></div><div class="pi-links"><a href="https://github.com/protendai/nativephp-mobile-ocr" class="pi-link" target="_blank" rel="noopener">GitHub →</a></div></div>
+
+# Mobile OCR
+
+On-device text recognition for NativePHP Mobile — Apple Vision on iOS, Google ML Kit on Android. No API key, no server, works offline.
+
+> **Printed Latin-script text only.** Handwriting and non-Latin scripts are not supported in this version. One image per call.
+>
+> **`native:jump` is not sufficient** — rebuild with `php artisan native:run` after installing (native code must compile in).
+
+## Features
+
+- **Three methods:**
+  - `Ocr::capture()` — opens the back camera and recognises text
+  - `Ocr::scan()` — opens the platform document scanner
+  - `Ocr::recognize($path)` — reads an existing image file
+- **Positional output** — each recognised line includes its position on the page
+- **Layout helpers** — `Layout::rows()` and `Layout::valueBeside()` rebuild rows and pair labels with values
+- **Event-driven results** — `TextRecognized`, `RecognitionFailed`, `ScanCancelled`
+- **JavaScript module** — ES module for Inertia + Vue/React
+- **Testing** — adds OCR assertions to NativePHP's `FakeBridge`
+
+## Installation
+
+```bash
+composer require protendai/nativephp-mobile-ocr
+php artisan vendor:publish --tag=nativephp-plugins-provider
+php artisan native:plugin:register protendai/nativephp-mobile-ocr
+php artisan native:run
+```
+
+---
+
 # Mobile Photos
 
 > Voicecode
@@ -12395,6 +12626,46 @@ This plugin follows semantic versioning.
 ## Preview
 
 Loader UI example inside a NativePHP Mobile login screen:
+
+---
+
+# NativePHP Billing
+
+> Tendai Karuma
+
+<div class="plugin-info"><div class="pi-meta"><span class="pi-item"><span class="pi-label">Author</span><span class="pi-value">Tendai Karuma</span></span><span class="pi-item"><span class="pi-label">Plugin Type</span><span class="pi-badge pi-badge-community">Community Plugin</span></span><span class="pi-item"><span class="pi-label">Price</span><span class="pi-badge pi-badge-free">Free</span></span><span class="pi-item"><span class="pi-label">Version</span><span class="pi-value">v1.1.0</span></span><span class="pi-item"><span class="pi-label">License</span><span class="pi-value">MIT</span></span></div><div class="pi-compat"><span class="pi-chip"><span class="pi-chip-label">NativePHP</span><span class="pi-chip-value">^4.0</span></span><span class="pi-chip"><span class="pi-chip-label">iOS</span><span class="pi-chip-value">15.0+</span></span><span class="pi-chip"><span class="pi-chip-label">Android</span><span class="pi-chip-value">21+</span></span></div><div class="pi-links"><a href="https://github.com/protendai/nativephp-billing" class="pi-link" target="_blank" rel="noopener">GitHub →</a></div></div>
+
+# NativePHP Billing
+
+In-app purchases and subscriptions for NativePHP Mobile — StoreKit 2 on iOS, Google Play Billing 8 on Android — via a single facade and event API.
+
+> **Store setup required:** Google Play needs a testing track upload and products created in Monetize with Play. App Store Connect needs the Paid Apps agreement and products created under In-App Purchases or Subscriptions.
+>
+> **Server-side verification:** Requires a Google Cloud service account (Android) or App Store Server API key (iOS).
+
+## Features
+
+- **Subscriptions** — base plans, free trials, introductory prices, upgrades and downgrades
+- **One-time products** — consumable and non-consumable
+- **Restore & acknowledge** — `restore()`, `acknowledge()`, `consume()`
+- **Server-side verification** — purchase tokens (Android) and signed JWS transactions (iOS)
+- **PHP & JavaScript** — Livewire/EDGE components and Inertia + Vue/React
+- **Event-driven, non-blocking** — each call returns a request ID; results arrive as events
+- **Testing** — `Native::test(...)` FakeBridge macros
+
+## Limitations
+
+- Promotional offers, win-back offers, offer code redemption, and the manage-subscriptions sheet are not yet supported on iOS
+- External offers, user choice billing, and alternative billing are not supported
+- Only one purchase sheet can be open at a time
+
+## Installation
+
+```bash
+composer require protendai/nativephp-billing
+php artisan native:plugin:register protendai/nativephp-billing
+php artisan native:run
+```
 
 ---
 
@@ -14733,6 +15004,45 @@ use Victorycodedev\Toastkit\Events\ToastShown;
 use Victorycodedev\Toastkit\Events\ToastDismissed;
 use Victorycodedev\Toastkit\Events\ToastActionPressed;
 ```
+
+---
+
+# Wi-Fi Direct
+
+> Tendai Karuma
+
+<div class="plugin-info"><div class="pi-meta"><span class="pi-item"><span class="pi-label">Author</span><span class="pi-value">Tendai Karuma</span></span><span class="pi-item"><span class="pi-label">Plugin Type</span><span class="pi-badge pi-badge-community">Community Plugin</span></span><span class="pi-item"><span class="pi-label">Price</span><span class="pi-badge pi-badge-free">Free</span></span><span class="pi-item"><span class="pi-label">Version</span><span class="pi-value">v1.0.0</span></span><span class="pi-item"><span class="pi-label">License</span><span class="pi-value">MIT</span></span></div><div class="pi-compat"><span class="pi-chip"><span class="pi-chip-label">NativePHP</span><span class="pi-chip-value">^4.0</span></span><span class="pi-chip"><span class="pi-chip-label">iOS</span><span class="pi-chip-value">15.0+</span></span><span class="pi-chip"><span class="pi-chip-label">Android</span><span class="pi-chip-value">29+</span></span></div><div class="pi-links"><a href="https://github.com/protendai/nativephp-wifi-direct" class="pi-link" target="_blank" rel="noopener">GitHub →</a></div></div>
+
+# Wi-Fi Direct
+
+Phone-to-phone networking with no router or internet — one device hosts a Wi-Fi Direct group, the other joins, and both communicate over sockets or HTTP at `192.168.49.1`.
+
+> **iOS joining is experimental.** In testing, joins sometimes time out; a fallback (e.g. shared Wi-Fi) is recommended for production.
+>
+> **iOS Info.plist:** Add camera and local network usage descriptions (required for QR scanning and host communication).
+>
+> **Permission conflict:** If another plugin or your app declares plain location permissions, a manifest conflict may occur. See the plugin docs for resolution steps.
+>
+> **Security:** The group passphrase appears in NativePHP's event logs — treat debug logs as sensitive.
+
+## Features
+
+- **Host/join** — Android can host and join; iOS can only join an Android group (experimental)
+- **QR code pairing** — QR generation and scanning included
+- **Silent join on Android 10+** — no system invitation dialog shown to the user
+- **5 GHz support** — can be faster than routing through a home router
+- **PHP facade + JavaScript library + test helpers**
+- **`native:jump` is not sufficient** — rebuild with `php artisan native:run` after installing (native code must compile in)
+
+## Installation
+
+```bash
+composer require protendai/nativephp-wifi-direct
+php artisan native:plugin:register protendai/nativephp-wifi-direct
+php artisan native:run
+```
+
+Add a Vite alias pointing to `resources/js/index.js` inside the package for the JavaScript library.
 
 ---
 

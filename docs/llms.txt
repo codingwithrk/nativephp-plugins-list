@@ -51,6 +51,7 @@
 - /plugins/paid/srwiez-nativephp-mobile-calendar: Eser Deniz
 - /plugins/paid/srwiez-nativephp-mobile-contacts: Eser Deniz
 - /plugins/paid/srwiez-nativephp-mobile-screenshots: Eser Deniz
+- /plugins/paid/partek-native-calls: Paul (PARTek)
 - /plugins/paid/partek-native-maps: Paul (PARTek)
 - /plugins/paid/partek-native-share: Paul (PARTek)
 - /plugins/paid/codypchristian-nativephp-stripe: Cody P Christian
@@ -71,15 +72,18 @@
 - /plugins/paid/all1web-nativephp-share-target: Neo Nos
 - /plugins/paid/ikromjon-nativephp-mobile-social-auth: Ikromjon Ochilov
 - /plugins/paid/partek-speech-to-text: Paul (PARTek)
+- /plugins/paid/atlasnatives-nativephp-swipe-actions: Robert (AtlasNatives)
 - /plugins/paid/tether-nativephp-client: Lukas Rakauskas
 - /plugins/paid/partek-text-to-speech: Paul (PARTek)
 - /plugins/paid/nativecodeforge-nativephp-timepicker: camiant
+- /plugins/paid/partek-video-rooms: Paul (PARTek)
 - /plugins/paid/firsthand-nativephp-wallet: Molly Klein (The Firsthand Co.)
 - /plugins/paid/partek-wallet-passes: Paul (PARTek)
 - /plugins/paid/rubenvdb-nativephp-widgets: Borgman Digital
 - /plugins/free/blessedzulu-nativephp-admob: Blessed Zulu
 - /plugins/free/bhargavdetroja-nativephp-all-permission-handle: Bhargav Detroja
 - /plugins/free/kevinbatdorf-nativephp-launcher: Kevin Batdorf
+- /plugins/free/firstlightui-app-guard: Wojt Janowski
 - /plugins/free/djurovicigoor-app-lifecycle: Igor Djurovic
 - /plugins/free/theunwindfront-nativephp-audio: Sagar Pansuriya
 - /plugins/free/smronju-nativephp-charts: Mohammad Shoriful Islam Ronju
@@ -103,6 +107,7 @@
 - /plugins/free/wilsonatb-nativephp-in-app-reviews: Wilson Tovar
 - /plugins/free/wilsonatb-in-app-update: Wilson Tovar
 - /plugins/free/voicecode-innerr-media-permissions: Michael Blijleven
+- /plugins/free/protendai-nativephp-lan: Tendai Karuma
 - /plugins/free/vos-nativephp-live-activities-free: Pauline Vos
 - /plugins/free/codypchristian-nativephp-lottie: Cody P Christian
 - /plugins/free/xlipedc-media-library: Felipe Almeida
@@ -113,11 +118,13 @@
 - /plugins/free/wojt-janowski-mobile-la518-recorder: Wojt Janowski
 - /plugins/free/ikromjon1998-nativephp-mobile-local-notifications: Ikromjon Ochilov
 - /plugins/free/developernauts-nativephp-mobile-locales: Developernauts
+- /plugins/free/protendai-nativephp-mobile-ocr: Tendai Karuma
 - /plugins/free/voicecode-mobile-photos: Voicecode
 - /plugins/free/srwiez-nativephp-mobile-screen: Eser Deniz
 - /plugins/free/stupidbrains-mobile-sfx: Kirill
 - /plugins/free/s2br-nativephp-mobile-splashscreen: Israel Pereira
 - /plugins/free/mobikul-mobikul-loader: Mobikul
+- /plugins/free/protendai-nativephp-billing: Tendai Karuma
 - /plugins/free/donmanueldev-nativephp-charts: donmanueldev
 - /plugins/free/victorycodedev-nativephp-fetch: Efekpogua Victory
 - /plugins/free/codingwithrk-no-screenshot: CodingwithRK
@@ -137,4 +144,5 @@
 - /plugins/free/unlocnl-nativephp-svg-component: Unloc
 - /plugins/free/1338-nativephp-tflite: 1338
 - /plugins/free/victorycodedev-toastkit: Efekpogua Victory
+- /plugins/free/protendai-nativephp-wifi-direct: Tendai Karuma
 - /plugins/free/all1web-nativephp-wifi-scan: Neo Nos

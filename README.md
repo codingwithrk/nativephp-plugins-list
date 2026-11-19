@@ -65,6 +65,7 @@ Plugins published and maintained by the NativePHP team (Bifrost Technology & cor
 - [Mobile Calendar](plugins/paid/srwiez-nativephp-mobile-calendar.md) — Eser Deniz
 - [Mobile Contacts](plugins/paid/srwiez-nativephp-mobile-contacts.md) — Eser Deniz
 - [Mobile Screenshots](plugins/paid/srwiez-nativephp-mobile-screenshots.md) — Eser Deniz
+- [Native Calls](plugins/paid/partek-native-calls.md) — Paul (PARTek)
 - [Native Maps](plugins/paid/partek-native-maps.md) — Paul (PARTek)
 - [Native Share](plugins/paid/partek-native-share.md) — Paul (PARTek)
 - [Native Stripe Payments](plugins/paid/codypchristian-nativephp-stripe.md) — Cody P Christian
@@ -85,9 +86,11 @@ Plugins published and maintained by the NativePHP team (Bifrost Technology & cor
 - [Share Target](plugins/paid/all1web-nativephp-share-target.md) — Neo Nos
 - [Social Auth](plugins/paid/ikromjon-nativephp-mobile-social-auth.md) — Ikromjon Ochilov
 - [Speech to Text](plugins/paid/partek-speech-to-text.md) — Paul (PARTek)
+- [Swipe Actions](plugins/paid/atlasnatives-nativephp-swipe-actions.md) — Robert (AtlasNatives)
 - [Tether Client](plugins/paid/tether-nativephp-client.md) — Lukas Rakauskas
 - [Text to Speech](plugins/paid/partek-text-to-speech.md) — Paul (PARTek)
 - [TimePicker](plugins/paid/nativecodeforge-nativephp-timepicker.md) — camiant
+- [Video Rooms](plugins/paid/partek-video-rooms.md) — Paul (PARTek)
 - [Wallet](plugins/paid/firsthand-nativephp-wallet.md) — Molly Klein (The Firsthand Co.)
 - [Wallet Passes](plugins/paid/partek-wallet-passes.md) — Paul (PARTek)
 - [Widgets](plugins/paid/rubenvdb-nativephp-widgets.md) — Borgman Digital
@@ -99,6 +102,7 @@ Plugins published and maintained by the NativePHP team (Bifrost Technology & cor
 - [AdMob](plugins/free/blessedzulu-nativephp-admob.md) — Blessed Zulu
 - [All Permission Handler](plugins/free/bhargavdetroja-nativephp-all-permission-handle.md) — Bhargav Detroja
 - [Android Launcher](plugins/free/kevinbatdorf-nativephp-launcher.md) — Kevin Batdorf
+- [App Guard](plugins/free/firstlightui-app-guard.md) — Wojt Janowski
 - [App Lifecycle](plugins/free/djurovicigoor-app-lifecycle.md) — Igor Djurovic
 - [Audio](plugins/free/theunwindfront-nativephp-audio.md) — Sagar Pansuriya
 - [Charts](plugins/free/smronju-nativephp-charts.md) — Mohammad Shoriful Islam Ronju
@@ -122,6 +126,7 @@ Plugins published and maintained by the NativePHP team (Bifrost Technology & cor
 - [In App Reviews](plugins/free/wilsonatb-nativephp-in-app-reviews.md) — Wilson Tovar
 - [In App Update](plugins/free/wilsonatb-in-app-update.md) — Wilson Tovar
 - [Innerr Media Permissions](plugins/free/voicecode-innerr-media-permissions.md) — Michael Blijleven
+- [LAN Transfer](plugins/free/protendai-nativephp-lan.md) — Tendai Karuma
 - [Live Activities (Free)](plugins/free/vos-nativephp-live-activities-free.md) — Pauline Vos
 - [Lottie EDGE Component](plugins/free/codypchristian-nativephp-lottie.md) — Cody P Christian
 - [Media Library](plugins/free/xlipedc-media-library.md) — Felipe Almeida
@@ -132,11 +137,13 @@ Plugins published and maintained by the NativePHP team (Bifrost Technology & cor
 - [Mobile LA518 Recorder](plugins/free/wojt-janowski-mobile-la518-recorder.md) — Wojt Janowski
 - [Mobile Local Notifications](plugins/free/ikromjon1998-nativephp-mobile-local-notifications.md) — Ikromjon Ochilov
 - [Mobile Locales](plugins/free/developernauts-nativephp-mobile-locales.md) — Developernauts
+- [Mobile OCR](plugins/free/protendai-nativephp-mobile-ocr.md) — Tendai Karuma
 - [Mobile Photos](plugins/free/voicecode-mobile-photos.md) — Voicecode
 - [Mobile Screen](plugins/free/srwiez-nativephp-mobile-screen.md) — Eser Deniz
 - [Mobile SFX](plugins/free/stupidbrains-mobile-sfx.md) — Kirill
 - [Mobile Splashscreen](plugins/free/s2br-nativephp-mobile-splashscreen.md) — Israel Pereira
 - [Mobikul Loader](plugins/free/mobikul-mobikul-loader.md) — Mobikul
+- [NativePHP Billing](plugins/free/protendai-nativephp-billing.md) — Tendai Karuma
 - [NativePHP Charts](plugins/free/donmanueldev-nativephp-charts.md) — donmanueldev
 - [NativePHP Fetch](plugins/free/victorycodedev-nativephp-fetch.md) — Efekpogua Victory
 - [No Screenshot](plugins/free/codingwithrk-no-screenshot.md) — CodingwithRK
@@ -156,6 +163,7 @@ Plugins published and maintained by the NativePHP team (Bifrost Technology & cor
 - [SVG Component](plugins/free/unlocnl-nativephp-svg-component.md) — Unloc
 - [TFLite Plugin](plugins/free/1338-nativephp-tflite.md) — 1338
 - [ToastKit](plugins/free/victorycodedev-toastkit.md) — Efekpogua Victory
+- [Wi-Fi Direct](plugins/free/protendai-nativephp-wifi-direct.md) — Tendai Karuma
 - [WiFi Radar](plugins/free/all1web-nativephp-wifi-scan.md) — Neo Nos
 
 ---
