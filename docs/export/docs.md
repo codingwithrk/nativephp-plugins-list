@@ -8468,6 +8468,50 @@ v2.x runtime (no plugin auto-loader), wire the native side in manually:
 
 ---
 
+# Firstlight UI
+
+> Wojt Janowski
+
+<div class="plugin-info"><div class="pi-meta"><span class="pi-item"><span class="pi-label">Author</span><span class="pi-value">Wojt Janowski</span></span><span class="pi-item"><span class="pi-label">Plugin Type</span><span class="pi-badge pi-badge-community">Community Plugin</span></span><span class="pi-item"><span class="pi-label">Price</span><span class="pi-badge pi-badge-free">Free</span></span><span class="pi-item"><span class="pi-label">Version</span><span class="pi-value">v1.1.1</span></span><span class="pi-item"><span class="pi-label">License</span><span class="pi-value">MIT</span></span></div><div class="pi-compat"><span class="pi-chip"><span class="pi-chip-label">NativePHP</span><span class="pi-chip-value">^4.8</span></span><span class="pi-chip"><span class="pi-chip-label">PHP</span><span class="pi-chip-value">^8.4</span></span><span class="pi-chip"><span class="pi-chip-label">iOS</span><span class="pi-chip-value">18.2+</span></span><span class="pi-chip"><span class="pi-chip-label">Android</span><span class="pi-chip-value">29+</span></span></div><div class="pi-links"><a href="https://github.com/firstlightui/nativephp" class="pi-link" target="_blank" rel="noopener">GitHub →</a></div></div>
+
+# Firstlight UI
+
+The app-shell layer for NativePHP Mobile — genuine SwiftUI controls on iOS and Jetpack Compose Material 3 on Android, exposed behind a Blade API with Laravel validation, forms, lists, dialogs, and feedback.
+
+> **Requires** `nativephp/mobile-ui` ^0.10.0.
+>
+> **Re-run** `php artisan native:install --force` after every Firstlight update to keep native code in sync.
+
+## Features
+
+- **Native controls** — Button, Checkbox, Select, Switch, Tabs, Text Field, Date and Time Picker, List, Modal, Bottom Sheet, Callout, and more; SwiftUI on iOS, Material 3 on Android
+- **Laravel validation** — `$rules` or Form Requests; native field error slots and form-level errors; `submit()` runs once per tap
+- **Gates and Policies** — standard Laravel authorization works inside screens
+- **Paginated lists** — cursor- and page-based pagination with native scroll and load-more behavior
+- **Accessibility** — VoiceOver and TalkBack labels, spoken validation errors, Dynamic Type, right-to-left layout, Reduce Motion
+- **Localization** — Firstlight labels use Laravel lang files; date and time pickers follow the app locale and timezone
+- **Haptics** — optional haptic feedback on controls; `Haptics::success()` callable from PHP
+- **Testing** — `ScreenAssertions` for Pest on NativePHP's `Native::test()` harness; `Feedback::fake()`
+- **Coding-agent support** — Boost guideline, two skills (`firstlight-init`, `building-firstlight-screens`), `llms.txt` / `llms-full.txt`
+- **Recipes** — list/detail flow, searchable list, large list, form screen, settings screen, photo upload, app lock
+
+## Installation
+
+```bash
+composer require firstlightui/nativephp
+php artisan native:plugin:register firstlightui/nativephp
+php artisan native:install --force
+php artisan native:run
+```
+
+Scaffold a screen and its test:
+
+```bash
+php artisan make:firstlight-screen MyScreen
+```
+
+---
+
 # FluidAudio
 
 > Vikas Kapadiya

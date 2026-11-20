@@ -116,6 +116,7 @@ Plugins published and maintained by the NativePHP team (Bifrost Technology & cor
 - [Enhanced Splash](plugins/free/unlocnl-nativephp-enhanced-splash.md) — Unloc
 - [Firebase Crashlytics](plugins/free/codingwithrk-firebase-crashlytics.md) — CodingwithRK
 - [Firebase Phone Number Verification](plugins/free/tarikmanoar-firebase-pnv.md) — Tarik Manoar
+- [Firstlight UI](plugins/free/firstlightui-nativephp.md) — Wojt Janowski
 - [FluidAudio](plugins/free/vikas5914-fluidaudio.md) — Vikas Kapadiya
 - [Fullscreen](plugins/free/kevinbatdorf-nativephp-fullscreen.md) — Kevin Batdorf
 - [Google Mobile Ads](plugins/free/bhargavdetroja-google-mobile-ads.md) — Bhargav Detroja

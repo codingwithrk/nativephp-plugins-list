@@ -658,6 +658,13 @@
         "headings": "How it works Requirements Installation Android setup (google-services) Usage Verify a phone number Check device/SIM support first Listen for the result ⚠️ Security: trust the token, not the number Test mode (no SIM, no billing) API reference FirebasePNV facade PendingVerification / PendingSupportInfo (fluent) Events Native bridge functions Project layout Manual integration (NativePHP Mobile v2.x) Support"
     },
     {
+        "title": "Firstlight UI",
+        "description": "Wojt Janowski",
+        "url": "/plugins/free/firstlightui-nativephp",
+        "content": "AuthorWojt JanowskiPlugin TypeCommunity PluginPriceFreeVersionv1.1.1LicenseMITNativePHP^4.8PHP^8.4iOS18.2+Android29+GitHub → The app-shell layer for NativePHP Mobile — genuine SwiftUI controls on iOS and Jetpack Compose Material 3 on Android, exposed behind a Blade API with Laravel validation, forms, lists, dialogs, and feedback. Requires nativephp/mobile-ui ^0.10.0. Re-run php artisan native:install --force after every Firstlight update to keep native code in sync. Features Native controls — Button, Checkbox, Select, Switch, Tabs, Text Field, Date and Time Picker, List, Modal, Bottom Sheet, Callout, and more; SwiftUI on iOS, Material 3 on Android Laravel validation — $rules or Form Requests; native field error slots and form-level errors; submit() runs once per tap Gates and Policies — standard Laravel authorization works inside screens Paginated lists — cursor- and page-based pagination with native scroll and load-more behavior Accessibility — VoiceOver and TalkBack labels, spoken validation errors, Dynamic Type, right-to-left layout, Reduce Motion Localization — Firstlight labels use Laravel lang files; date and time pickers follow the app locale and timezone Haptics — optional haptic feedback on controls; Haptics::success() callable from PHP Testing — ScreenAssertions for Pest on NativePHP's Native::test() harness; Feedback::fake() Coding-agent support — Boost guideline, two skills (firstlight-init, building-firstlight-screens), llms.txt / llms-full.txt Recipes — list/detail flow, searchable list, large list, form screen, settings screen, photo upload, app lock Installation composer require firstlightui/nativephp php artisan native:plugin:register firstlightui/nativephp php artisan native:install --force php artisan native:run Scaffold a screen and its test: php artisan make:firstlight-screen MyScreen",
+        "headings": "Features Installation"
+    },
+    {
         "title": "FluidAudio",
         "description": "Vikas Kapadiya",
         "url": "/plugins/free/vikas5914-fluidaudio",

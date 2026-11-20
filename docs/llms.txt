@@ -97,6 +97,7 @@
 - /plugins/free/unlocnl-nativephp-enhanced-splash: Unloc
 - /plugins/free/codingwithrk-firebase-crashlytics: CodingwithRK
 - /plugins/free/tarikmanoar-firebase-pnv: Tarik Manoar
+- /plugins/free/firstlightui-nativephp: Wojt Janowski
 - /plugins/free/vikas5914-fluidaudio: Vikas Kapadiya
 - /plugins/free/kevinbatdorf-nativephp-fullscreen: Kevin Batdorf
 - /plugins/free/bhargavdetroja-google-mobile-ads: Bhargav Detroja
