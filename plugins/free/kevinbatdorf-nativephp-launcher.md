@@ -2,7 +2,7 @@
 name: "Android Launcher"
 author: "Kevin Batdorf"
 price: "Free"
-version: "0.1.0"
+version: "0.2.0"
 license: "MIT"
 github: "https://github.com/KevinBatdorf/nativephp-launcher"
 support: "https://github.com/KevinBatdorf/nativephp-launcher/issues"
